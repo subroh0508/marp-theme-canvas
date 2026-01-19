@@ -1,5 +1,0 @@
-# Marp CLI configuration
-allowLocalFiles: true
-html: true
-themesSet:
-  - css/*.css
