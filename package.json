@@ -1,13 +1,22 @@
 {
   "name": "@subroh0508/marp-theme-canvas",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A simple Marp theme with minimal styling",
+  "files": [
+    "css",
+    "scss",
+    "LICENSE"
+  ],
   "scripts": {
     "serve": "marp --allow-local-files --html --theme-set css/*.css -s demo",
     "build": "for f in scss/*.scss; do sass --no-source-map $f css/$(basename ${f%.scss}.css); done"
   },
-  "keywords": [],
+  "keywords": [
+    "marp",
+    "marp-theme",
+    "slide",
+    "presentation"
+  ],
   "author": {
     "name": "Subroh Nishikori",
     "email": "subroh.0508@gmail.com"
