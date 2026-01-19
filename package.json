@@ -1,0 +1,16 @@
+{
+  "name": "@subroh0508/marp-theme-canvas",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": {
+    "name": "Subroh Nishikori",
+    "email": "subroh.0508@gmail.com"
+  },
+  "license": "MIT",
+  "packageManager": "pnpm@10.28.1"
+}
