@@ -12,5 +12,9 @@
     "email": "subroh.0508@gmail.com"
   },
   "license": "MIT",
-  "packageManager": "pnpm@10.28.1"
+  "packageManager": "pnpm@10.28.1",
+  "devDependencies": {
+    "@marp-team/marp-cli": "^4.2.3",
+    "sass": "^1.97.2"
+  }
 }
