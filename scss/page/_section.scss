@@ -1,0 +1,20 @@
+// ===== _section.scss =====
+// 中扉ページ用スタイル
+//
+// 使用方法: <!-- _class: section -->
+
+@mixin configure($font-size, $font-weight: bold) {
+  &.section {
+    // p: セクションタイトル
+    // 上下中央揃え、左寄せ
+    p {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      font-size: $font-size;
+      font-weight: $font-weight;
+      margin: 0;
+    }
+  }
+}

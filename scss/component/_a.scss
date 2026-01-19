@@ -1,0 +1,13 @@
+// ===== _a.scss =====
+// リンク（aタグ）のスタイル
+
+@mixin configure($color-text) {
+  a {
+    color: $color-text;
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}

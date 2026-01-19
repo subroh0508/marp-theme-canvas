@@ -1,0 +1,12 @@
+// ===== _footer.scss =====
+// Marpスライドのフッタースタイル
+
+@mixin configure($margin-x, $margin-y, $font-size, $color-text) {
+  footer {
+    position: absolute;
+    bottom: $margin-y;
+    left: $margin-x;
+    font-size: $font-size;
+    color: $color-text;
+  }
+}

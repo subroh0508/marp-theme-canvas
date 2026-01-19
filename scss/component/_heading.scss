@@ -1,0 +1,71 @@
+// ===== _heading.scss =====
+// Marpスライドの見出しスタイル（h1-h6）
+
+@mixin configure(
+  $line-height,
+  $font-size-h1: 1em,
+  $font-size-h2: 1em,
+  $font-size-h3: 1em,
+  $font-size-h4: 1em,
+  $font-size-h5: 1em,
+  $font-size-h6: 1em,
+  $font-weight-h1: bold,
+  $font-weight-h2: bold,
+  $font-weight-h3: bold,
+  $font-weight-h4: bold,
+  $font-weight-h5: normal,
+  $font-weight-h6: normal,
+  $color-text-h1: inherit,
+  $color-text-h2: inherit,
+  $color-text-h3: inherit,
+  $color-text-h4: inherit,
+  $color-text-h5: inherit,
+  $color-text-h6: inherit
+) {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    line-height: $line-height;
+    margin: 0 0 0.5em;
+  }
+
+  h1 {
+    font-size: $font-size-h1;
+    font-weight: $font-weight-h1;
+    color: $color-text-h1;
+  }
+
+  h2 {
+    font-size: $font-size-h2;
+    font-weight: $font-weight-h2;
+    color: $color-text-h2;
+    margin: 0 0 0.8em;
+  }
+
+  h3 {
+    font-size: $font-size-h3;
+    font-weight: $font-weight-h3;
+    color: $color-text-h3;
+  }
+
+  h4 {
+    font-size: $font-size-h4;
+    font-weight: $font-weight-h4;
+    color: $color-text-h4;
+  }
+
+  h5 {
+    font-size: $font-size-h5;
+    font-weight: $font-weight-h5;
+    color: $color-text-h5;
+  }
+
+  h6 {
+    font-size: $font-size-h6;
+    font-weight: $font-weight-h6;
+    color: $color-text-h6;
+  }
+}

@@ -1,0 +1,15 @@
+// ===== _toc.scss =====
+// 目次ページ用スタイル
+//
+// 使用方法: <!-- _class: toc -->
+
+@mixin configure($font-size, $line-height) {
+  &.toc {
+    // リスト: 目次項目（直接の子要素のみ）
+    > ul,
+    > ol {
+      font-size: $font-size;
+      line-height: $line-height;
+    }
+  }
+}

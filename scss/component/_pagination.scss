@@ -1,0 +1,14 @@
+// ===== _pagination.scss =====
+// Marpスライドのページ番号スタイル（section::after）
+// Marpの paginate: true 指定時に表示される要素
+
+@mixin configure($margin-x, $margin-y, $font-size, $color-text) {
+  &::after {
+    position: absolute;
+    padding: 0;
+    right: $margin-x;
+    bottom: $margin-y;
+    font-size: $font-size;
+    color: $color-text;
+  }
+}

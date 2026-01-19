@@ -1,0 +1,41 @@
+// ===== _dark.scss =====
+// Prettylights シンタックスハイライト（Dark テーマ）
+// github-markdown-css v5.8.1
+// https://github.com/sindresorhus/github-markdown-css/blob/v5.8.1/github-markdown-dark.css
+
+@use 'base';
+
+// ===== Dark テーマカラー =====
+$pl-comment: #9198a1;
+$pl-constant: #79c0ff;
+$pl-entity: #d2a8ff;
+$pl-entity-tag: #7ee787;
+$pl-keyword: #ff7b72;
+$pl-string: #a5d6ff;
+$pl-variable: #ffa657;
+$pl-storage-modifier: #f0f6fc;
+$pl-markup-heading: #1f6feb;
+$pl-markup-list: #f2cc60;
+$pl-markup-inserted-text: #aff5b4;
+$pl-markup-inserted-bg: #033a16;
+$pl-markup-deleted-text: #ffdcd7;
+$pl-markup-deleted-bg: #67060c;
+
+@mixin configure {
+  @include base.configure(
+    $pl-comment,
+    $pl-constant,
+    $pl-entity,
+    $pl-entity-tag,
+    $pl-keyword,
+    $pl-string,
+    $pl-variable,
+    $pl-storage-modifier,
+    $pl-markup-heading,
+    $pl-markup-list,
+    $pl-markup-inserted-text,
+    $pl-markup-inserted-bg,
+    $pl-markup-deleted-text,
+    $pl-markup-deleted-bg
+  );
+}

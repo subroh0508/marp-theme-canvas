@@ -1,0 +1,38 @@
+// ===== _agenda.scss =====
+// アジェンダページ用スタイル
+// 「今日話すこと」「Learning Outcome」等を冒頭に提示するページ
+//
+// 使用方法: <!-- _class: agenda -->
+
+@mixin configure(
+  $font-size-heading,
+  $font-size-body,
+  $line-height-heading,
+  $line-height-body,
+  $font-weight-heading: bold,
+  $font-weight-body: normal
+) {
+  &.agenda {
+    // リスト: 直接の子要素
+    > ul,
+    > ol {
+      font-size: $font-size-heading;
+      font-weight: $font-weight-heading;
+      line-height: $line-height-heading;
+
+      // ネストされたリスト（第2レベル）
+      ul,
+      ol {
+        font-size: calc(#{$font-size-body} / #{$font-size-heading} * 1em);
+        font-weight: $font-weight-body;
+        line-height: $line-height-body;
+
+        // 第3レベル以降はサイズを維持
+        ul,
+        ol {
+          font-size: 1em;
+        }
+      }
+    }
+  }
+}

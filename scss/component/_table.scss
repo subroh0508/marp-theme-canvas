@@ -1,0 +1,29 @@
+// ===== _table.scss =====
+// github-markdown-css から table 用スタイルを抽出
+// https://github.com/sindresorhus/github-markdown-css
+
+@mixin configure($color-row-bg, $color-header-bg, $color-even-row-bg, $color-border-vert, $color-border-horz) {
+  table {
+    border-spacing: 0;
+    border-collapse: collapse;
+    display: block;
+    width: max-content;
+    max-width: 100%;
+    overflow: auto;
+  }
+  th, td {
+    padding: 6px 13px;
+    border: 1px solid $color-border-vert;
+  }
+  th {
+    font-weight: 600;
+    background-color: $color-header-bg;
+  }
+  tr {
+    background-color: $color-row-bg;
+    border-top: 1px solid $color-border-horz;
+  }
+  tr:nth-child(2n) {
+    background-color: $color-even-row-bg;
+  }
+}

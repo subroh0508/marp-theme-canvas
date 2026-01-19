@@ -1,0 +1,17 @@
+// ===== _text-decorator.scss =====
+// テキスト装飾スタイル（strong, mark, rp）
+
+@mixin configure($font-weight-bold, $font-weight-normal, $color-text-highlight) {
+  strong {
+    font-weight: $font-weight-bold;
+  }
+
+  mark {
+    font-weight: $font-weight-bold;
+    background-color: $color-text-highlight;
+  }
+
+  rp {
+    font-weight: $font-weight-normal;
+  }
+}

@@ -1,0 +1,30 @@
+// ===== _code.scss =====
+// github-markdown-css から code 用スタイルを抽出
+// https://github.com/sindresorhus/github-markdown-css
+
+@mixin configure($font-mono, $color-bg, $color-fg) {
+  code, tt {
+    font-family: $font-mono;
+    padding: .2em .4em;
+    font-size: 85%;
+    white-space: break-spaces;
+    background-color: $color-bg;
+    border-radius: 6px;
+  }
+  pre {
+    font-family: $font-mono;
+    padding: 16px;
+    overflow: auto;
+    font-size: 85%;
+    line-height: 1.45;
+    color: $color-fg;
+    background-color: $color-bg;
+    border-radius: 6px;
+  }
+  pre > code {
+    padding: 0;
+    background: transparent;
+    border: 0;
+    white-space: pre;
+  }
+}

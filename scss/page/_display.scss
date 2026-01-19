@@ -1,0 +1,39 @@
+// ===== _display.scss =====
+// 短い文章を大きく表示したり、1枚の写真や図を目立たせるページ用スタイル
+//
+// 使用方法: <!-- _class: display -->
+
+@mixin configure(
+  $font-size,
+  $font-weight-bold: bold,
+  $font-weight-normal: normal
+) {
+  &.display {
+    // 上下左右中央揃え
+    justify-content: center;
+    align-items: center;
+
+    // p: メイン文章（上下左右中央揃え）
+    p {
+      margin: 0;
+      text-align: center;
+    }
+
+    // imgが存在しない場合、pタグを大きく表示
+    &:not(:has(img)) p {
+      font-size: $font-size;
+      font-weight: $font-weight-bold;
+    }
+
+    // img: 画像（上下左右中央揃え）
+    img {
+      display: block;
+      margin: 0 0;
+    }
+
+    // pタグが存在する場合、imgの下にマージンを追加
+    &:has(p) img {
+      margin: 0 0 1em;
+    }
+  }
+}

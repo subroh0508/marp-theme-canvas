@@ -1,0 +1,12 @@
+// ===== _header.scss =====
+// Marpスライドのヘッダースタイル
+
+@mixin configure($margin-x, $margin-y, $font-size, $color-text) {
+  header {
+    position: absolute;
+    top: $margin-y;
+    left: $margin-x;
+    font-size: $font-size;
+    color: $color-text;
+  }
+}
