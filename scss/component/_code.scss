@@ -1,6 +1,7 @@
 // ===== _code.scss =====
-// github-markdown-css から code 用スタイルを抽出
-// https://github.com/sindresorhus/github-markdown-css
+// コードブロック用スタイル
+// github-markdown-css v5.8.1 を改変
+// https://github.com/sindresorhus/github-markdown-css/blob/v5.8.1/github-markdown.css
 
 @mixin configure($font-mono, $color-bg, $color-fg) {
   code, tt {

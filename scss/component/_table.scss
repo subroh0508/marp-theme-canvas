@@ -1,6 +1,7 @@
 // ===== _table.scss =====
-// github-markdown-css から table 用スタイルを抽出
-// https://github.com/sindresorhus/github-markdown-css
+// テーブル用スタイル
+// github-markdown-css v5.8.1 を改変
+// https://github.com/sindresorhus/github-markdown-css/blob/v5.8.1/github-markdown.css
 
 @mixin configure($color-row-bg, $color-header-bg, $color-even-row-bg, $color-border-vert, $color-border-horz) {
   table {
