@@ -1,0 +1,13 @@
+@charset "utf-8";
+
+/*!
+ * Prettylights - GitHub風シンタックスハイライトテーマ
+ *
+ * @use '@subroh0508/marp-theme-canvas/scss/component/prettylights';
+ * @use '@subroh0508/marp-theme-canvas/scss/component/prettylights/light';
+ * @use '@subroh0508/marp-theme-canvas/scss/component/prettylights/dark';
+ */
+
+@forward 'base' as base-*;
+@forward 'light' as light-*;
+@forward 'dark' as dark-*;

@@ -1,0 +1,14 @@
+@charset "utf-8";
+
+/*!
+ * Page Styles - 特定用途に特化したページスタイル
+ *
+ * @use '@subroh0508/marp-theme-canvas/scss/page';
+ * @use '@subroh0508/marp-theme-canvas/scss/page/title';
+ */
+
+@forward 'agenda' as agenda-*;
+@forward 'display' as display-*;
+@forward 'section' as section-*;
+@forward 'title' as title-*;
+@forward 'toc' as toc-*;

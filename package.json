@@ -2,6 +2,39 @@
   "name": "@subroh0508/marp-theme-canvas",
   "version": "1.0.0",
   "description": "A simple Marp theme with minimal styling",
+  "sass": "scss/_index.scss",
+  "exports": {
+    ".": {
+      "sass": "./scss/_index.scss"
+    },
+    "./white-canvas": {
+      "sass": "./scss/white-canvas.scss",
+      "style": "./css/white-canvas.css"
+    },
+    "./black-canvas": {
+      "sass": "./scss/black-canvas.scss",
+      "style": "./css/black-canvas.css"
+    },
+    "./scss": {
+      "sass": "./scss/_index.scss"
+    },
+    "./scss/*": {
+      "sass": "./scss/*"
+    },
+    "./scss/component": {
+      "sass": "./scss/component/_index.scss"
+    },
+    "./scss/component/*": {
+      "sass": "./scss/component/*"
+    },
+    "./scss/page": {
+      "sass": "./scss/page/_index.scss"
+    },
+    "./scss/page/*": {
+      "sass": "./scss/page/*"
+    },
+    "./css/*": "./css/*"
+  },
   "files": [
     "css",
     "scss",
@@ -9,7 +42,7 @@
   ],
   "scripts": {
     "serve": "marp --allow-local-files --html --theme-set css/*.css -s demo",
-    "build": "for f in scss/*.scss; do sass --no-source-map $f css/$(basename ${f%.scss}.css); done"
+    "build": "for f in scss/[!_]*.scss; do sass --no-source-map $f css/$(basename ${f%.scss}.css); done"
   },
   "keywords": [
     "marp",

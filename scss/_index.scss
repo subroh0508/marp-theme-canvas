@@ -1,0 +1,27 @@
+@charset "utf-8";
+
+/*!
+ * Marp Theme Canvas - 極力余計なスタイリングを廃した、シンプルなスライドテーマ
+ *
+ * Usage:
+ *   // 全モジュールをインポート
+ *   @use '@subroh0508/marp-theme-canvas/scss';
+ *
+ *   // コンポーネントのみ
+ *   @use '@subroh0508/marp-theme-canvas/scss/component';
+ *
+ *   // 特定のコンポーネント
+ *   @use '@subroh0508/marp-theme-canvas/scss/component/heading';
+ *
+ *   // ページスタイルのみ
+ *   @use '@subroh0508/marp-theme-canvas/scss/page';
+ *
+ *   // 特定のページスタイル
+ *   @use '@subroh0508/marp-theme-canvas/scss/page/title';
+ */
+
+// コンポーネント
+@forward 'component' as component-*;
+
+// ページスタイル
+@forward 'page' as page-*;

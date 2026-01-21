@@ -1,0 +1,23 @@
+@charset "utf-8";
+
+/*!
+ * Components - スライド共通で使用する要素のスタイル
+ *
+ * @use '@subroh0508/marp-theme-canvas/scss/component';
+ * @use '@subroh0508/marp-theme-canvas/scss/component/heading';
+ */
+
+@forward 'a' as a-*;
+@forward 'blockquote' as blockquote-*;
+@forward 'code' as code-*;
+@forward 'columns' as columns-*;
+@forward 'footer' as footer-*;
+@forward 'header' as header-*;
+@forward 'heading' as heading-*;
+@forward 'pagination' as pagination-*;
+@forward 'section' as section-*;
+@forward 'table' as table-*;
+@forward 'text-decorator' as text-decorator-*;
+
+// シンタックスハイライト
+@forward 'prettylights' as prettylights-*;
