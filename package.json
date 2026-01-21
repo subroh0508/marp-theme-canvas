@@ -1,7 +1,18 @@
 {
   "name": "@subroh0508/marp-theme-canvas",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "A simple Marp theme with minimal styling",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/subroh0508/marp-theme-canvas.git"
+  },
+  "homepage": "https://github.com/subroh0508/marp-theme-canvas#readme",
+  "bugs": {
+    "url": "https://github.com/subroh0508/marp-theme-canvas/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "sass": "scss/_index.scss",
   "exports": {
     ".": {
