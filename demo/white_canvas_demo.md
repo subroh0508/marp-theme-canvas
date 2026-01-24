@@ -106,6 +106,15 @@ Font size doesn't increase when an image is present
 
 ---
 
+<!-- _class: display -->
+<!-- _header: "Demo Slide (page/_display.scss)" -->
+
+<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/album/4fEBChYDmfbCjnItjY8KRq?utm_source=generator" width="50%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+iframes are also supported
+
+---
+
 <!-- _class: section -->
 <!-- _paginate: false -->
 <!-- _header: "White Canvas Demo" -->
