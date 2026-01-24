@@ -1,55 +1,55 @@
 # Marp Theme Canvas
 
-シンプル・ミニマルなMarpテーマ
+Simple and minimal Marp theme
 
-## プロジェクト構成
+## Project Structure
 
 ```
 scss/
-├── theme/              # テーマモジュール（@useで取り込み可能）
+├── theme/              # Theme modules (importable via @use)
 │   ├── _white-canvas.scss
 │   └── _black-canvas.scss
-├── page/               # ページスタイル（title、section、toc、agenda、display）
-├── component/          # 共通コンポーネント（heading、table、code、blockquote等）
-├── white-canvas.scss   # ライトテーマ出力ファイル
-└── black-canvas.scss   # ダークテーマ出力ファイル
+├── page/               # Page styles (title, section, toc, agenda, display)
+├── component/          # Common components (heading, table, code, blockquote, etc.)
+├── white-canvas.scss   # Light theme output file
+└── black-canvas.scss   # Dark theme output file
 ```
 
-## 共通命名規約
+## Naming Conventions
 
-- ファイル名: `_名前.scss`（アンダースコアプレフィックス必須、Sassパーシャル）
-- 名前: kebab-case（例: `title`, `text-decorator`）
+- File names: `_name.scss` (underscore prefix required, Sass partial)
+- Names: kebab-case (e.g., `title`, `text-decorator`)
 
-## @mixin configure() 規約
+## @mixin configure() Convention
 
-全てのスタイルファイルは `@mixin configure()` でカプセル化する。
+All style files are encapsulated with `@mixin configure()`.
 
-### 引数の設計
+### Argument Design
 
-- **必須引数**: デフォルト値なし、リストの先頭に配置
-- **任意引数**: デフォルト値あり、リストの後方に配置
-- **命名**: セマンティックな名前を使用
+- **Required arguments**: No default value, placed at the beginning of the list
+- **Optional arguments**: Has default value, placed at the end of the list
+- **Naming**: Use semantic names
 
-### 引数の命名パターン
+### Argument Naming Patterns
 
-| 接頭辞 | 用途 | 例 |
-|--------|------|-----|
-| `$font-size-*` | フォントサイズ | `$font-size-title`, `$font-size-body` |
-| `$font-weight-*` | フォントウェイト | `$font-weight-bold`, `$font-weight-normal` |
-| `$font-family` | フォントファミリー | `$font-family`, `$font-mono` |
-| `$color-*` | 色 | `$color-text`, `$color-bg`, `$color-border` |
-| `$line-height-*` | 行間 | `$line-height-heading`, `$line-height-body` |
-| `$margin-*` | マージン | `$margin-x`, `$margin-y` |
-| `$padding-*` | パディング | `$padding-x`, `$padding-y` |
-| `$border-radius` | 角丸 | `$border-radius` |
+| Prefix | Purpose | Example |
+|--------|---------|---------|
+| `$font-size-*` | Font size | `$font-size-title`, `$font-size-body` |
+| `$font-weight-*` | Font weight | `$font-weight-bold`, `$font-weight-normal` |
+| `$font-family` | Font family | `$font-family`, `$font-mono` |
+| `$color-*` | Color | `$color-text`, `$color-bg`, `$color-border` |
+| `$line-height-*` | Line height | `$line-height-heading`, `$line-height-body` |
+| `$margin-*` | Margin | `$margin-x`, `$margin-y` |
+| `$padding-*` | Padding | `$padding-x`, `$padding-y` |
+| `$border-radius` | Border radius | `$border-radius` |
 
-## 実装上のルール
+## Implementation Rules
 
-- **CSS変数の宣言・参照はテーマファイルのみ**: `var(--*)` の宣言および参照は以下のファイルでのみ許可
-  - `scss/` 直下のテーマ出力ファイル（`white-canvas.scss`、`black-canvas.scss`）
-  - `scss/theme/` 配下のテーマモジュール（`_white-canvas.scss`、`_black-canvas.scss`）
-  - 理由: Marp用Markdownファイルのフロントマターでインラインスタイルとして変数を上書きし、スライドごとにスタイルを柔軟にカスタマイズできるようにするため
-  - 例: Markdownファイルで `--color-primary` を上書き
+- **CSS variable declaration/reference only in theme files**: `var(--*)` declaration and reference is only allowed in the following files:
+  - Theme output files directly under `scss/` (`white-canvas.scss`, `black-canvas.scss`)
+  - Theme modules under `scss/theme/` (`_white-canvas.scss`, `_black-canvas.scss`)
+  - Reason: To allow flexible customization of styles per slide by overriding variables as inline styles in the frontmatter of Marp Markdown files
+  - Example: Overriding `--color-primary` in a Markdown file
     ```markdown
     ---
     theme: white-canvas
@@ -60,11 +60,11 @@ scss/
       }
     ---
     ```
-- **page/ component/ 配下では禁止**: サブディレクトリ内のスタイルファイルでは CSS変数を直接参照しない。必要な値は全て `@mixin configure()` の引数として受け取る
-  - 理由: テーマとスタイルの疎結合を保つため
-  - テーマ側で `@include` 時に CSS変数を引数として渡す
+- **Forbidden in page/ and component/**: Style files in subdirectories should not directly reference CSS variables. All required values should be received as arguments to `@mixin configure()`
+  - Reason: To maintain loose coupling between themes and styles
+  - The theme passes CSS variables as arguments when calling `@include`
 
-## コメント規約
+## Comment Conventions
 
-- **テーマ出力ファイル**（`white-canvas.scss`、`black-canvas.scss`）: 先頭のコメントは `/*!` で始める（Marpメタデータ `@theme`、`@size` 等を含むため、CSSに出力される必要がある）
-- **その他のファイル**（`_index.scss`、`theme/`、`page/`、`component/` 配下）: `//` コメントを使用（CSSに出力されない）
+- **Theme output files** (`white-canvas.scss`, `black-canvas.scss`): Comments at the beginning should start with `/*!` (because Marp metadata like `@theme`, `@size`, etc. need to be output to CSS)
+- **Other files** (`_index.scss`, files under `theme/`, `page/`, `component/`): Use `//` comments (not output to CSS)

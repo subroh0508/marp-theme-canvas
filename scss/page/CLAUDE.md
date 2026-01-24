@@ -1,28 +1,28 @@
 # page
 
-特定用途に特化したページスタイル（Marpのclass指定で切り替え）
+Page styles specialized for specific purposes (switched via Marp class directive)
 
-## ファイル構成
+## File Structure
 
 ```scss
-// ===== _ファイル名.scss =====
-// スタイルの説明（どのようなページに使うか）
+// ===== _filename.scss =====
+// Style description (what kind of page it's used for)
 //
-// 使用方法: <!-- _class: クラス名 -->
+// Usage: <!-- _class: classname -->
 
-@mixin configure($引数1, $引数2, $引数3: デフォルト値) {
-  &.クラス名 {
-    // セレクタの役割をコメントで説明
-    セレクタ {
-      プロパティ: 値;
+@mixin configure($arg1, $arg2, $arg3: default) {
+  &.classname {
+    // Explain the role of selectors with comments
+    selector {
+      property: value;
     }
   }
 }
 ```
 
-## スコープ設定
+## Scope Settings
 
-必ず `&.クラス名` でラップする（親の `section` に依存）
+Always wrap with `&.classname` (depends on parent `section`)
 
 ```scss
 &.toc {
@@ -33,14 +33,14 @@
 }
 ```
 
-## コメント規約
+## Comment Conventions
 
-- **セレクタの役割**: 各セレクタの前にコメントで用途を説明
-- **レイアウト情報**: flexの配置方法など、視覚的な配置をコメント
+- **Selector role**: Explain the purpose with a comment before each selector
+- **Layout information**: Comment on visual arrangement such as flex positioning
 
 ```scss
-// h1: タイトル文字列
-// section上8割を占有、上下中央揃え、左寄せ
+// h1: Title text
+// Occupies top 80% of section, vertically centered, left-aligned
 h1 {
   font-size: $font-size-title;
   flex: 0 0 80%;
@@ -48,9 +48,9 @@ h1 {
 }
 ```
 
-## テーマからの呼び出し
+## Usage from Theme
 
-`white-canvas.scss` などテーマファイルで `section` ブロック内から呼び出す:
+Use within the `section` block in theme files like `white-canvas.scss`:
 
 ```scss
 @use './page/title' as page-title;
@@ -63,12 +63,12 @@ section {
 }
 ```
 
-## 既存のページスタイル一覧
+## Existing Page Styles
 
-| ファイル | クラス名 | 用途 |
-|----------|----------|------|
-| `_title.scss` | `title` | タイトルページ（h1 + メタデータ） |
-| `_toc.scss` | `toc` | 目次ページ |
-| `_agenda.scss` | `agenda` | アジェンダ（今日話すこと等） |
-| `_section.scss` | `section` | 中扉ページ |
-| `_display.scss` | `display` | 大きく表示（文章または画像） |
+| File | Class Name | Purpose |
+|------|------------|---------|
+| `_title.scss` | `title` | Title page (h1 + metadata) |
+| `_toc.scss` | `toc` | Table of contents page |
+| `_agenda.scss` | `agenda` | Agenda (topics to cover today, etc.) |
+| `_section.scss` | `section` | Section divider page |
+| `_display.scss` | `display` | Large display (text or image) |
