@@ -1,5 +1,7 @@
 # Canvas
 
+日本語 | [English](./README.md)
+
 [![npm version](https://img.shields.io/npm/v/@subroh0508/marp-theme-canvas)](https://www.npmjs.com/package/@subroh0508/marp-theme-canvas)
 [![license](https://img.shields.io/npm/l/@subroh0508/marp-theme-canvas)](./LICENSE)
 
