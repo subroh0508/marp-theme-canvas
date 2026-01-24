@@ -17,7 +17,7 @@ style: |
 
 # White Canvas Demo
 
-Last updated: 2026/01/19
+Version v0.0.3
 Subroh Nishikori @subroh_0508
 
 ---
