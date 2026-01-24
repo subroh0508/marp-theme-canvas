@@ -52,7 +52,7 @@
     "LICENSE"
   ],
   "scripts": {
-    "serve": "marp --allow-local-files --html --theme-set css/*.css -s demo",
+    "serve": "marp --allow-local-files --html -s demo",
     "build": "for f in scss/[!_]*.scss; do sass --no-source-map $f css/$(basename ${f%.scss}.css); done"
   },
   "keywords": [
