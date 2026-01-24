@@ -3,7 +3,7 @@ marp: true
 theme: white-canvas
 paginate: true
 header: ""
-footer: "2026年1月"
+footer: "Footer"
 style: |
   :root {
     --color-primary: #3b91c4;
@@ -13,230 +13,230 @@ style: |
 
 <!-- _class: title -->
 <!-- _paginate: false -->
-<!-- _header: "White Canvas動作確認" -->
+<!-- _header: "White Canvas Demo" -->
 
-# White Canvas動作確認
+# White Canvas Demo
 
-最終更新: 2026/01/19
-にしこりさぶろ〜 @subroh_0508
+Last updated: 2026/01/19
+Subroh Nishikori @subroh_0508
 
 ---
 
 <!-- _class: agenda -->
-<!-- _header: "White Canvas動作確認" -->
+<!-- _header: "White Canvas Demo" -->
 
-## White Canvasテーマ構成
+## White Canvas Theme Structure
 
 - **component/**
-  - スライド共通で使用する要素のスタイル
-  - 見出し、テキスト装飾、引用、テーブル、コード等
+  - Styles for elements commonly used across slides
+  - Headings, text decorations, blockquotes, tables, code, etc.
 - **page/**
-  - 特定の用途に特化したページスタイル
-  - タイトル、中扉、目次、アジェンダ、ディスプレイ
+  - Page styles specialized for specific purposes
+  - Title, section divider, table of contents, agenda, display
 
 ---
 
 <!-- _class: section -->
 <!-- _paginate: false -->
-<!-- _header: "White Canvas動作確認" -->
+<!-- _header: "White Canvas Demo" -->
 
 Page Styles
 
 ---
 
 <!-- _class: title -->
-<!-- _header: "デモスライド（page/_title.scss）" -->
+<!-- _header: "Demo Slide (page/_title.scss)" -->
 
-# タイトルページ<br/>複数行になるとこのような表示<small>〜サブタイトルを添えて〜</small>
+# Title Page<br/>Multiple lines display like this<small>- With a subtitle -</small>
 
-イベント名・発表日
-発表者名
+Event name / Presentation date
+Presenter name
 
 ---
 
 <!-- _class: section -->
-<!-- _header: "デモスライド（page/_section.scss）" -->
+<!-- _header: "Demo Slide (page/_section.scss)" -->
 
-中扉ページのデモ
+Section Divider Page Demo
 
 ---
 
 <!-- _class: toc -->
-<!-- _header: "デモスライド（page/_toc.scss）" -->
+<!-- _header: "Demo Slide (page/_toc.scss)" -->
 
-## 目次
+## Table of Contents
 
-1. 最初のセクション
-1. 2番目のセクション
-   - サブセクション その1
-   - サブセクション その2
-1. 3番目のセクション
+1. First Section
+1. Second Section
+   - Subsection 1
+   - Subsection 2
+1. Third Section
 
 ---
 
 <!-- _class: agenda -->
-<!-- _header: "デモスライド（page/_agenda.scss）" -->
+<!-- _header: "Demo Slide (page/_agenda.scss)" -->
 
-## 今日話すこと
+## Today's Topics
 
-◯◯なみなさんに、以下3つの知見を持ち帰って欲しい！
+I want everyone to take away these 3 key insights!
 
-- 知見1
-  - 詳細な説明文がここに入ります
-  - 補足情報など
-- 知見2
-  - 詳細な説明文がここに入ります
-- 知見3
-
----
-
-<!-- _class: display -->
-<!-- _header: "デモスライド（page/_display.scss）" -->
-
-短い文章を大きく表示して目立たせる
+- Insight 1
+  - Detailed explanation goes here
+  - Additional information
+- Insight 2
+  - Detailed explanation goes here
+- Insight 3
 
 ---
 
 <!-- _class: display -->
-<!-- _header: "デモスライド（page/_display.scss）" -->
+<!-- _header: "Demo Slide (page/_display.scss)" -->
+
+Display short text prominently
+
+---
+
+<!-- _class: display -->
+<!-- _header: "Demo Slide (page/_display.scss)" -->
 
 ![](https://picsum.photos/720?image=70)
 
-画像がある場合は文字サイズは大きくならない
+Font size doesn't increase when an image is present
 
 ---
 
 <!-- _class: section -->
 <!-- _paginate: false -->
-<!-- _header: "White Canvas動作確認" -->
+<!-- _header: "White Canvas Demo" -->
 
 Component Styles
 
 ---
 
-<!-- _header: "デモスライド（component/_section.scss）" -->
+<!-- _header: "Demo Slide (component/_section.scss)" -->
 
-## スライド本体のレイアウト
+## Slide Body Layout
 
-`component/_section.scss` はスライド全体の基本レイアウトを定義します。
+`component/_section.scss` defines the base layout for the entire slide.
 
-- 幅・高さ
-- パディング
-- 背景色・文字色
-- フォント設定
-- リストのインデント
-
----
-
-<!-- _header: "デモスライド（component/_heading.scss）" -->
-
-# 見出し1（H1）
-## 見出し2（H2）
-### 見出し3（H3）
-#### 見出し4（H4）
-##### 見出し5（H5）
-###### 見出し6（H6）
-
-通常の段落テキストです。見出しとの余白・フォントサイズの差を確認してください。
+- Width and height
+- Padding
+- Background color and text color
+- Font settings
+- List indentation
 
 ---
 
-<!-- _header: "デモスライド（component/_text-decorator.scss）" -->
+<!-- _header: "Demo Slide (component/_heading.scss)" -->
 
-## テキスト装飾
+# Heading 1 (H1)
+## Heading 2 (H2)
+### Heading 3 (H3)
+#### Heading 4 (H4)
+##### Heading 5 (H5)
+###### Heading 6 (H6)
 
-**太字（Bold）** のテキストです。
-
-*斜体（Italic）* のテキストです。
-
-***太字かつ斜体*** のテキストです。
-
-~~取り消し線（Strikethrough）~~ のテキストです。
-
-<mark>ハイライトテキスト</mark>を含む文章です。
-
-<ruby>**難読漢字**<rp>（</rp><rt>なんどくかんじ</rt><rp>）</rp></ruby>にルビを振ることができます。
+This is normal paragraph text. Check the spacing and font size differences from headings.
 
 ---
 
-<!-- _header: "デモスライド（component/_blockquote.scss）" -->
+<!-- _header: "Demo Slide (component/_text-decorator.scss)" -->
 
-## 引用（Blockquote）
+## Text Decoration
 
-> これは引用文です。
-> 複数行にまたがることもできます。
+**Bold** text.
 
-通常テキストとの余白を確認してください。
+*Italic* text.
 
-> ネストされた引用
-> > 引用の中の引用
+***Bold and italic*** text.
 
----
+~~Strikethrough~~ text.
 
-<!-- _header: "デモスライド（component/_table.scss）" -->
+A sentence containing <mark>highlighted text</mark>.
 
-## テーブル（基本）
-
-※スタイルは [github-markdown-css](https://github.com/sindresorhus/github-markdown-css) を踏襲
-
-| 項目 | 説明 | 備考 |
-|------|------|------|
-| Marp | Markdownプレゼン | オープンソース |
-| VS Code | エディタ | 拡張機能対応 |
-| CLI | コマンドライン | PDF出力可能 |
+You can add <ruby>**ruby text**<rp>(</rp><rt>furigana</rt><rp>)</rp></ruby> annotations.
 
 ---
 
-<!-- _header: "デモスライド（component/_table.scss）" -->
+<!-- _header: "Demo Slide (component/_blockquote.scss)" -->
 
-## テーブル（配置指定）
+## Blockquote
 
-※スタイルは [github-markdown-css](https://github.com/sindresorhus/github-markdown-css) を踏襲
+> This is a blockquote.
+> It can span multiple lines.
 
-| 左寄せ | 中央寄せ | 右寄せ |
-|:-------|:--------:|-------:|
-| あ | い | う |
-| 左 | 中央 | 右 |
+Check the spacing from normal text.
+
+> Nested blockquote
+> > A quote within a quote
+
+---
+
+<!-- _header: "Demo Slide (component/_table.scss)" -->
+
+## Table (Basic)
+
+*Styles follow [github-markdown-css](https://github.com/sindresorhus/github-markdown-css)
+
+| Item | Description | Notes |
+|------|-------------|-------|
+| Marp | Markdown presentations | Open source |
+| VS Code | Editor | Extension support |
+| CLI | Command line | PDF export available |
+
+---
+
+<!-- _header: "Demo Slide (component/_table.scss)" -->
+
+## Table (Alignment)
+
+*Styles follow [github-markdown-css](https://github.com/sindresorhus/github-markdown-css)
+
+| Left | Center | Right |
+|:-----|:------:|------:|
+| A | B | C |
+| Left | Center | Right |
 | 123 | 456 | 789 |
 
 ---
 
-<!-- _header: "デモスライド（component/_code.scss）" -->
+<!-- _header: "Demo Slide (component/_code.scss)" -->
 
-## インラインコード
+## Inline Code
 
-※スタイルは [github-markdown-css](https://github.com/sindresorhus/github-markdown-css) を踏襲
+*Styles follow [github-markdown-css](https://github.com/sindresorhus/github-markdown-css)
 
-`インラインコード` を含むテキストです。
+Text containing `inline code`.
 
-通常テキスト、**太字**、*斜体*、`コード`を組み合わせた文章です。
+A sentence combining normal text, **bold**, *italic*, and `code`.
 
 ---
 
-<!-- _header: "デモスライド（component/_code.scss, prettylights/）" -->
+<!-- _header: "Demo Slide (component/_code.scss, prettylights/)" -->
 
-## コードブロック
+## Code Block
 
-※スタイルは [github-markdown-css](https://github.com/sindresorhus/github-markdown-css) を踏襲
+*Styles follow [github-markdown-css](https://github.com/sindresorhus/github-markdown-css)
 
 ```javascript
-// JavaScriptのサンプル
+// JavaScript sample
 function greet(name) {
-  console.log(`こんにちは、${name}さん！`);
+  console.log(`Hello, ${name}!`);
 }
-greet("世界");
+greet("World");
 ```
 
 ---
 
-<!-- _header: "デモスライド（component/_code.scss, prettylights/）" -->
+<!-- _header: "Demo Slide (component/_code.scss, prettylights/)" -->
 
-## コードブロック（複数言語）
+## Code Block (Multiple Languages)
 
-※スタイルは [github-markdown-css](https://github.com/sindresorhus/github-markdown-css) を踏襲
+*Styles follow [github-markdown-css](https://github.com/sindresorhus/github-markdown-css)
 
 ```python
-# Pythonのサンプル
+# Python sample
 def factorial(n):
     if n <= 1:
         return 1
@@ -244,19 +244,19 @@ def factorial(n):
 ```
 
 ```bash
-# シェルスクリプト
+# Shell script
 echo "Hello, Marp!"
 ```
 
 ---
 
-<!-- _header: "デモスライド（component/_header.scss, _footer.scss, _pagination.scss）" -->
+<!-- _header: "Demo Slide (component/_header.scss, _footer.scss, _pagination.scss)" -->
 
-## ヘッダー・フッター・ページ番号
+## Header, Footer, Page Number
 
-- **ヘッダー**: スライド上部に表示（このスライドでは対応SCSSファイル名）
-- **フッター**: スライド下部に表示（このスライドでは「2026年1月」）
-- **ページ番号**: 右下に表示
+- **Header**: Displayed at the top of the slide (shows SCSS file name in this slide)
+- **Footer**: Displayed at the bottom of the slide (shows "January 2026" in this slide)
+- **Page number**: Displayed at the bottom right
 
 ---
 
@@ -264,9 +264,9 @@ echo "Hello, Marp!"
 <!-- _header: "" -->
 <!-- _footer: "" -->
 
-## ヘッダー・フッター・ページ番号（非表示）
+## Header, Footer, Page Number (Hidden)
 
-このスライドでは以下を設定して非表示にしています：
+This slide hides them with the following settings:
 
 - `_paginate: false`
 - `_header: ""`
@@ -275,65 +275,65 @@ echo "Hello, Marp!"
 ---
 
 <!-- _class: columns -->
-<!-- _header: "デモスライド（component/_columns.scss）" -->
+<!-- _header: "Demo Slide (component/_columns.scss)" -->
 
 <div class="column">
 
-## 使い方1: `_class: columns`
+## Usage 1: `_class: columns`
 
-スライド全体がカラムレイアウトになる
+The entire slide becomes a column layout
 
-- `<!-- _class: columns -->` を指定
-- `<div class="column">` のみ記述
-- スライド全体を分割したい場合に便利
+- Specify `<!-- _class: columns -->`
+- Only write `<div class="column">`
+- Useful when you want to split the entire slide
 
 </div>
 <div class="column">
 
-## 右カラム
+## Right Column
 
-`<div class="columns">` は不要
+`<div class="columns">` is not needed
 
-- 項目A
-- 項目B
-- 項目C
+- Item A
+- Item B
+- Item C
 
 </div>
 
 ---
 
-<!-- _header: "デモスライド（component/_columns.scss）" -->
+<!-- _header: "Demo Slide (component/_columns.scss)" -->
 
-## 使い方2: `<div class="columns">`
+## Usage 2: `<div class="columns">`
 
-> カラムの前後にテキストを配置できる
+> You can place text before and after columns
 
 <div class="columns">
 <div class="column">
 
-**左カラム**
+**Left Column**
 
-- 項目A
-- 項目B
+- Item A
+- Item B
 
 </div>
 <div class="column">
 
-**右カラム**
+**Right Column**
 
-- 項目C
-- 項目D
+- Item C
+- Item D
 
 </div>
 </div>
 
-> カラムの後にも文章を続けて書ける
+> You can continue writing after the columns
 
 ---
 
-<!-- _header: "デモスライド（component/_columns.scss）" -->
+<!-- _header: "Demo Slide (component/_columns.scss)" -->
 
-## カラムレイアウト（幅指定）
+## Column Layout (Width Specified)
 
 <div class="columns">
 <div class="column-4">
@@ -343,12 +343,12 @@ echo "Hello, Marp!"
 </div>
 <div class="column-6">
 
-**テキストコンテンツ**
+**Text Content**
 
-画像とテキストを横並びにする場合のレイアウト例
+Layout example for placing images and text side by side
 
-- `column-4`: 4の比率
-- `column-6`: 6の比率
+- `column-4`: Ratio of 4
+- `column-6`: Ratio of 6
 
 </div>
 </div>
@@ -357,71 +357,71 @@ echo "Hello, Marp!"
 
 <!-- _class: section -->
 <!-- _paginate: false -->
-<!-- _header: "White Canvas動作確認" -->
+<!-- _header: "White Canvas Demo" -->
 
-その他
-
----
-
-<!-- _header: "デモスライド（リスト）" -->
-
-## リスト
-
-### 順序なしリスト
-
-- リスト項目1
-- リスト項目2
-  - ネストされた項目2-1
-  - ネストされた項目2-2
-- リスト項目3
+Others
 
 ---
 
-<!-- _header: "デモスライド（リスト）" -->
+<!-- _header: "Demo Slide (Lists)" -->
 
-## リスト
+## Lists
 
-### 順序付きリスト
+### Unordered List
 
-1. 最初の項目
-2. 2番目の項目
-   1. ネストされた番号付き項目
-   2. ネストされた番号付き項目
-3. 3番目の項目
-
----
-
-<!-- _header: "デモスライド（リスト）" -->
-
-## リスト
-
-### 順序なしリスト（クリックでアイテムを1つずつ表示）
-
-* リスト項目1
-* リスト項目2
-  - ネストされた項目2-1
-  - ネストされた項目2-2
-* リスト項目3
+- List item 1
+- List item 2
+  - Nested item 2-1
+  - Nested item 2-2
+- List item 3
 
 ---
 
-<!-- _header: "デモスライド（リンク）" -->
+<!-- _header: "Demo Slide (Lists)" -->
 
-## リンク
+## Lists
 
-- [Marp公式サイト](https://marp.app/)
+### Ordered List
+
+1. First item
+2. Second item
+   1. Nested numbered item
+   2. Nested numbered item
+3. Third item
+
+---
+
+<!-- _header: "Demo Slide (Lists)" -->
+
+## Lists
+
+### Unordered List (Click to reveal items one by one)
+
+* List item 1
+* List item 2
+  - Nested item 2-1
+  - Nested item 2-2
+* List item 3
+
+---
+
+<!-- _header: "Demo Slide (Links)" -->
+
+## Links
+
+- [Marp Official Site](https://marp.app/)
 - [GitHub - Marp](https://github.com/marp-team/marp)
-- 自動リンク: https://marp.app/
+- Auto-link: https://marp.app/
 
 ---
 
-<!-- _header: "デモスライド（数式）" -->
+<!-- _header: "Demo Slide (Math)" -->
 
-## 数式（KaTeX）
+## Math (KaTeX)
 
-インライン数式: $E = mc^2$
+Inline math: $E = mc^2$
 
-ブロック数式:
+Block math:
 
 $$
 \sum_{i=1}^{n} i = \frac{n(n+1)}{2}
@@ -433,103 +433,103 @@ $$
 
 ---
 
-<!-- _header: "デモスライド（画像）" -->
+<!-- _header: "Demo Slide (Images)" -->
 
-## 画像（基本）
+## Images (Basic)
 
 ![width:200px](https://marp.app/assets/marp.svg)
 
-画像の下にキャプションテキストを配置
+Caption text placed below the image
 
 ---
 
-<!-- _header: "デモスライド（画像）" -->
+<!-- _header: "Demo Slide (Images)" -->
 
-## 画像サイズ指定
+## Image Size Specification
 
 ![width:100px](https://marp.app/assets/marp.svg) ![width:150px](https://marp.app/assets/marp.svg) ![width:200px](https://marp.app/assets/marp.svg)
 
-`![width:Npx]` で幅を指定できます
+You can specify width with `![width:Npx]`
 
 ---
 
-<!-- _header: "デモスライド（背景画像）" -->
+<!-- _header: "Demo Slide (Background Images)" -->
 
-## 背景画像（左配置）
+## Background Image (Left)
 
 ![bg left:40%](https://picsum.photos/720?image=29)
 
-- 背景画像を左側に配置
-- コンテンツは右側に表示
-- `bg left:40%` で幅を指定
+- Background image placed on the left
+- Content displayed on the right
+- Specify width with `bg left:40%`
 
 ---
 
-<!-- _header: "デモスライド（背景画像）" -->
+<!-- _header: "Demo Slide (Background Images)" -->
 
-## 背景画像（右配置）
+## Background Image (Right)
 
 ![bg right:40%](https://picsum.photos/720?image=27)
 
-- 背景画像を右側に配置
-- コンテンツは左側に表示
-- `bg right:40%` で幅を指定
+- Background image placed on the right
+- Content displayed on the left
+- Specify width with `bg right:40%`
 
 ---
 
-<!-- _header: "デモスライド（背景画像）" -->
+<!-- _header: "Demo Slide (Background Images)" -->
 
-## 背景画像（フィット）
+## Background Image (Fit)
 
 ![bg fit](https://picsum.photos/720?image=30)
 
-背景画像をスライドにフィットさせます
+Fits the background image to the slide
 
 ---
 
-<!-- _header: "デモスライド（背景画像）" -->
+<!-- _header: "Demo Slide (Background Images)" -->
 
-## 背景画像（複数）
+## Background Image (Multiple)
 
 ![bg](https://picsum.photos/720?image=1)
 ![bg](https://picsum.photos/720?image=20)
 ![bg](https://picsum.photos/720?image=40)
 
-3枚の背景画像を横に並べて表示
+Display 3 background images side by side
 
 ---
 
-<!-- _header: "デモスライド（HTML要素）" -->
+<!-- _header: "Demo Slide (HTML Elements)" -->
 
-## HTML要素
+## HTML Elements
 
 <div style="background: #f0f0f0; padding: 1em; border-radius: 8px;">
-カスタムスタイルを適用したボックス
+A box with custom styles applied
 </div>
 
 <br>
 
-<sub>下付き</sub>文字と<sup>上付き</sup>文字
+<sub>Subscript</sub> and <sup>superscript</sup> text
 
 ---
 
-<!-- _header: "デモスライド（絵文字）" -->
+<!-- _header: "Demo Slide (Emoji)" -->
 
-## 絵文字
+## Emoji
 
 :smile: :heart: :thumbsup: :rocket: :star:
 
-:warning: 注意事項
-:bulb: ヒント
-:memo: メモ
+:warning: Warning
+:bulb: Tip
+:memo: Note
 
-※ 絵文字のサポートはテーマ・環境に依存します
+*Emoji support depends on the theme and environment
 
 ---
 
-<!-- _header: "デモスライド（スコープ付きスタイル）" -->
+<!-- _header: "Demo Slide (Scoped Style)" -->
 
-## スコープ付きスタイル
+## Scoped Style
 
 <style scoped>
 h2 {
@@ -541,14 +541,14 @@ p {
 }
 </style>
 
-このスライドのみに適用されるカスタムスタイルです。
+Custom styles applied only to this slide.
 
-見出しは赤色、段落テキストはグレーで小さめに表示されます。
+The heading is red, and paragraph text is smaller and gray.
 
 ---
 
 <!-- _class: display -->
 <!-- _paginate: false -->
-<!-- _header: "White Canvas動作確認" -->
+<!-- _header: "White Canvas Demo" -->
 
-ありがとうございました
+Thank you
