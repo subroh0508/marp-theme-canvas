@@ -16,7 +16,7 @@
 
     // Top-left quotation mark
     &::before {
-      content: '“';
+      content: "\201C";
       position: absolute;
       left: 0.2em;
       font-size: 2em;
