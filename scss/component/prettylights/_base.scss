@@ -3,6 +3,12 @@
 // marp-core v4.2.0 を改変
 // https://github.com/marp-team/marp-core/blob/v4.2.0/themes/default.scss
 
+/*!
+ * MIT License
+ * Copyright (c) 2018 Marp team (marp-team@marp.app)
+ * https://github.com/marp-team/marp-core/blob/main/LICENSE
+ */
+
 @mixin configure(
   $comment,                 // コメント (pl-c)
   $constant,                // 定数 (pl-c1)
