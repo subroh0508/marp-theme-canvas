@@ -1,12 +1,19 @@
-# scss
+# Marp Theme Canvas
 
-Marpテーマ用SCSSファイル
+シンプル・ミニマルなMarpテーマ
 
-## ディレクトリ構成
+## プロジェクト構成
 
-- `theme/` - テーマモジュール（@useで取り込み可能なwhite-canvas、black-canvas）
-- `page/` - 特定用途に特化したページスタイル（title、section、toc、agenda、display）
-- `component/` - スライド共通で使用する要素のスタイル（heading、table、code、blockquote等）
+```
+scss/
+├── theme/              # テーマモジュール（@useで取り込み可能）
+│   ├── _white-canvas.scss
+│   └── _black-canvas.scss
+├── page/               # ページスタイル（title、section、toc、agenda、display）
+├── component/          # 共通コンポーネント（heading、table、code、blockquote等）
+├── white-canvas.scss   # ライトテーマ出力ファイル
+└── black-canvas.scss   # ダークテーマ出力ファイル
+```
 
 ## 共通命名規約
 
