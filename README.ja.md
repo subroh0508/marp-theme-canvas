@@ -7,8 +7,10 @@
 
 シンプル・ミニマルなMarpテーマ。余計な装飾を廃し、コンテンツに集中できるデザインです。
 
-<!-- スクリーンショット -->
-<!-- ![Canvas Theme Screenshot](./screenshot.png) -->
+## デモ
+
+- [White Canvas Demo](https://subroh0508.github.io/marp-theme-canvas/white_canvas_demo.html)
+- [Black Canvas Demo](https://subroh0508.github.io/marp-theme-canvas/black_canvas_demo.html)
 
 ## 特徴
 
