@@ -32,9 +32,6 @@
     "./scss/black-canvas": {
       "sass": "./scss/theme/_black-canvas.scss"
     },
-    "./scss/theme": {
-      "sass": "./scss/theme/_index.scss"
-    },
     "./scss/theme/*": {
       "sass": "./scss/theme/*"
     },
