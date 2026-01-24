@@ -26,14 +26,16 @@
     }
 
     // img, iframe: メディア要素（上下左右中央揃え）
-    img,
+    // emojiクラスは除外
+    img:not(.emoji),
     iframe {
       display: block;
       margin: 0 0;
     }
 
     // pタグが存在する場合、メディア要素の下にマージンを追加
-    &:has(p) img,
+    // emojiクラスは除外
+    &:has(p) img:not(.emoji),
     &:has(p) iframe {
       margin: 0 0 1em;
     }

@@ -244,12 +244,12 @@ section.display:not(:has(img, iframe)) p {
   font-size: var(--font-size-display);
   font-weight: var(--font-weight-bold);
 }
-section.display img,
+section.display img:not(.emoji),
 section.display iframe {
   display: block;
   margin: 0 0;
 }
-section.display:has(p) img, section.display:has(p) iframe {
+section.display:has(p) img:not(.emoji), section.display:has(p) iframe {
   margin: 0 0 1em;
 }
 section.columns {
