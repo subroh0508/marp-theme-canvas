@@ -4,6 +4,7 @@ Marpテーマ用SCSSファイル
 
 ## ディレクトリ構成
 
+- `theme/` - テーマモジュール（@useで取り込み可能なwhite-canvas、black-canvas）
 - `page/` - 特定用途に特化したページスタイル（title、section、toc、agenda、display）
 - `component/` - スライド共通で使用する要素のスタイル（heading、table、code、blockquote等）
 
@@ -37,7 +38,9 @@ Marpテーマ用SCSSファイル
 
 ## 実装上のルール
 
-- **CSS変数の宣言・参照はテーマファイルのみ**: `var(--*)` の宣言および参照は `scss/` 直下に配置されたテーマファイル（例: `white-canvas.scss`）でのみ許可
+- **CSS変数の宣言・参照はテーマファイルのみ**: `var(--*)` の宣言および参照は以下のファイルでのみ許可
+  - `scss/` 直下のテーマ出力ファイル（`white-canvas.scss`、`black-canvas.scss`）
+  - `scss/theme/` 配下のテーマモジュール（`_white-canvas.scss`、`_black-canvas.scss`）
   - 理由: Marp用Markdownファイルのフロントマターでインラインスタイルとして変数を上書きし、スライドごとにスタイルを柔軟にカスタマイズできるようにするため
   - 例: Markdownファイルで `--color-primary` を上書き
     ```markdown
@@ -54,6 +57,7 @@ Marpテーマ用SCSSファイル
   - 理由: テーマとスタイルの疎結合を保つため
   - テーマ側で `@include` 時に CSS変数を引数として渡す
 
-## 注意事項
+## コメント規約
 
-- コメントは `/*!` で始める（`/*` ではない）ことでCSSに出力される
+- **テーマ出力ファイル**（`white-canvas.scss`、`black-canvas.scss`）: 先頭のコメントは `/*!` で始める（Marpメタデータ `@theme`、`@size` 等を含むため、CSSに出力される必要がある）
+- **その他のファイル**（`_index.scss`、`theme/`、`page/`、`component/` 配下）: `//` コメントを使用（CSSに出力されない）
