@@ -26,6 +26,18 @@
       "sass": "./scss/black-canvas.scss",
       "style": "./css/black-canvas.css"
     },
+    "./scss/white-canvas": {
+      "sass": "./scss/theme/_white-canvas.scss"
+    },
+    "./scss/black-canvas": {
+      "sass": "./scss/theme/_black-canvas.scss"
+    },
+    "./scss/theme": {
+      "sass": "./scss/theme/_index.scss"
+    },
+    "./scss/theme/*": {
+      "sass": "./scss/theme/*"
+    },
     "./scss": {
       "sass": "./scss/_index.scss"
     },

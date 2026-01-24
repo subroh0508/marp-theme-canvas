@@ -1,0 +1,243 @@
+@charset "utf-8";
+
+// White Canvas Module - @use で取り込み可能なテーマモジュール
+//
+// Usage:
+//   @use '@subroh0508/marp-theme-canvas/scss/white-canvas' as white-canvas;
+//
+//   // デフォルト設定で適用
+//   @include white-canvas.apply();
+//
+//   // カスタムCSS変数を追加
+//   @include white-canvas.apply() {
+//     --color-primary: #e11d48;
+//     --color-accent: #fde047;
+//   }
+
+// ===== コンポーネント =====
+@use '../component/prettylights/light' as prettylights;
+@use '../component/table' as table;
+@use '../component/code' as code;
+@use '../component/section' as section;
+@use '../component/pagination' as pagination;
+@use '../component/header' as header;
+@use '../component/footer' as footer;
+@use '../component/heading' as heading;
+@use '../component/blockquote' as blockquote;
+@use '../component/text-decorator' as text-decorator;
+@use '../component/columns' as columns;
+@use '../component/a' as a;
+
+// ===== ページスタイル =====
+@use '../page/title' as page-title;
+@use '../page/section' as page-section;
+@use '../page/toc' as page-toc;
+@use '../page/agenda' as page-agenda;
+@use '../page/display' as page-display;
+
+/// テーマのCSS変数デフォルト値を出力
+/// @content カスタムCSS変数を追加・上書き
+@mixin variables {
+  :root {
+    // --- 色（白黒） ---
+    --color-black: #000;
+    --color-white: #fff;
+
+    // --- 色（グレースケール 7色）: Tailwind slate 300-900 ---
+    --color-grey-lightest: #cbd5e1; // slate-300
+    --color-grey-lighter: #94a3b8;  // slate-400
+    --color-grey-light: #64748b;    // slate-500
+    --color-grey-medium: #475569;   // slate-600
+    --color-grey-dark: #334155;     // slate-700
+    --color-grey-darker: #1e293b;   // slate-800
+    --color-grey-darkest: #0f172a;  // slate-900
+
+    // --- 色（コンポーネント: blockquote） ---
+    --color-blockquote-background: color-mix(in srgb, var(--color-grey-light) 10%, transparent);
+    --color-blockquote-mark: var(--color-grey-medium);
+    --color-blockquote-text: var(--color-grey-medium);
+
+    // --- 色（コンポーネント: table） ---
+    --color-table-row-bg: var(--color-white);
+    --color-table-row-bg-header: var(--color-grey-lightest);
+    --color-table-border: var(--color-grey-light);
+
+    // --- 色（コンポーネント: code） ---
+    --color-code-bg: color-mix(in srgb, var(--color-grey-light) 10%, transparent);
+    --color-code-fg: var(--color-grey-darkest);
+
+    // --- 色（コンポーネント: link） ---
+    --color-link: #2563eb; // Tailwind blue-600
+
+    // --- フォント ---
+    --font-family-base: 'Noto Sans JP', sans-serif;
+    --font-family-mono: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
+
+    // --- フォントサイズ ---
+    --font-size-base: 40px;
+    --font-size-display: 2.5em;
+    --font-size-title: 2em;
+    --font-size-heading: 1.3em;
+    --font-size-medium: 1.15em;
+    --font-size-body: 1em;
+    --font-size-small: 0.85em;
+    --font-size-note: 0.7em;
+
+    // --- フォントウェイト ---
+    --font-weight-normal: 400;
+    --font-weight-bold: 700;
+    --font-weight-black: 900;
+
+    // --- 行間 ---
+    --line-height-tight: 1.2;
+    --line-height-normal: 1.45;
+    --line-height-loose: 2;
+
+    // --- レイアウト ---
+    --slide-padding-x: 80px;
+    --slide-padding-y: 80px;
+    --header-footer-margin-x: 80px;
+    --header-footer-margin-y: 20px;
+    --border-radius: 8px;
+
+    // カスタム変数
+    @content;
+  }
+}
+
+/// テーマのスタイルを適用（CSS変数は含まない）
+@mixin styles {
+  // ===== section（スライド本体） =====
+  section {
+    @include prettylights.configure;
+    @include section.configure(
+      $width: 1920px,
+      $height: 1080px,
+      $padding-x: var(--slide-padding-x),
+      $padding-y: var(--slide-padding-y),
+      $color-bg: var(--color-white),
+      $color-text: var(--color-grey-darkest),
+      $font-family: var(--font-family-base),
+      $font-size: var(--font-size-base),
+      $line-height: var(--line-height-normal),
+      $list-indent: 1.3em
+    );
+    @include pagination.configure(
+      $margin-x: var(--header-footer-margin-x),
+      $margin-y: var(--header-footer-margin-y),
+      $font-size: var(--font-size-note),
+      $color-text: var(--color-grey-medium)
+    );
+
+    // ===== ページスタイル =====
+    @include page-title.configure(
+      $font-size-title: var(--font-size-display),
+      $color-metadata-text: var(--color-grey-light)
+    );
+
+    @include page-section.configure(
+      $font-size: var(--font-size-title)
+    );
+
+    @include page-toc.configure(
+      $font-size: var(--font-size-heading),
+      $line-height: var(--line-height-loose)
+    );
+
+    @include page-agenda.configure(
+      $font-size-heading: var(--font-size-heading),
+      $font-size-body: var(--font-size-body),
+      $line-height-heading: var(--line-height-loose),
+      $line-height-body: var(--line-height-normal),
+      $font-weight-heading: var(--font-weight-bold),
+      $font-weight-body: var(--font-weight-normal)
+    );
+
+    @include page-display.configure(
+      $font-size: var(--font-size-display),
+      $font-weight-bold: var(--font-weight-bold),
+      $font-weight-normal: var(--font-weight-normal)
+    );
+
+    // ===== カラムレイアウト =====
+    @include columns.configure();
+  }
+
+  // ===== header =====
+  @include header.configure(
+    $margin-x: var(--header-footer-margin-x),
+    $margin-y: var(--header-footer-margin-y),
+    $font-size: var(--font-size-note),
+    $color-text: var(--color-grey-medium)
+  );
+
+  // ===== footer =====
+  @include footer.configure(
+    $margin-x: var(--header-footer-margin-x),
+    $margin-y: var(--header-footer-margin-y),
+    $font-size: var(--font-size-note),
+    $color-text: var(--color-grey-medium)
+  );
+
+  // ===== 見出し（h1-h6） =====
+  @include heading.configure(
+    $line-height: var(--line-height-tight),
+    $font-size-h1: var(--font-size-title),
+    $font-size-h2: var(--font-size-heading),
+    $font-size-h3: var(--font-size-medium),
+    $font-weight-h1: var(--font-weight-bold),
+    $font-weight-h2: var(--font-weight-bold),
+    $font-weight-h3: var(--font-weight-bold),
+    $font-weight-h4: var(--font-weight-bold),
+    $font-weight-h5: var(--font-weight-normal),
+    $font-weight-h6: var(--font-weight-normal),
+    $color-text-h2: var(--color-primary)
+  );
+
+  // ===== 引用（blockquote） =====
+  @include blockquote.configure(
+    $font-size: var(--font-size-body),
+    $line-height: var(--line-height-tight),
+    $color-text: var(--color-blockquote-text),
+    $color-bg: var(--color-blockquote-background),
+    $color-mark: var(--color-blockquote-mark),
+    $border-radius: var(--border-radius)
+  );
+
+  // ===== テキスト装飾（strong, mark, rp） =====
+  @include text-decorator.configure(
+    $font-weight-bold: var(--font-weight-bold),
+    $font-weight-normal: var(--font-weight-normal),
+    $color-text-highlight: var(--color-accent)
+  );
+
+  // ===== リンク（a） =====
+  @include a.configure(
+    $color-text: var(--color-link)
+  );
+
+  // ===== table =====
+  @include table.configure(
+    $color-row-bg: var(--color-table-row-bg),
+    $color-header-bg: var(--color-table-row-bg-header),
+    $color-even-row-bg: var(--color-table-row-bg),
+    $color-border-vert: var(--color-table-border),
+    $color-border-horz: var(--color-table-border)
+  );
+
+  // ===== code =====
+  @include code.configure(
+    $font-mono: var(--font-family-mono),
+    $color-bg: var(--color-code-bg),
+    $color-fg: var(--color-code-fg)
+  );
+}
+
+/// テーマを適用（CSS変数 + スタイル）
+/// @content カスタムCSS変数を追加・上書き
+@mixin apply {
+  @include variables {
+    @content;
+  }
+  @include styles;
+}

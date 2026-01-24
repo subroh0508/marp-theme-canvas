@@ -1,0 +1,15 @@
+@charset "utf-8";
+
+// Theme Modules - @use で取り込み可能なテーマモジュール
+//
+// Usage:
+//   @use '@subroh0508/marp-theme-canvas/scss/theme' as theme;
+//
+//   // White Canvas テーマを適用
+//   @include theme.white-canvas-apply();
+//
+//   // Black Canvas テーマを適用
+//   @include theme.black-canvas-apply();
+
+@forward 'white-canvas' as white-canvas-*;
+@forward 'black-canvas' as black-canvas-*;

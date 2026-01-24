@@ -199,6 +199,9 @@ Canvasのスタイルはモジュール化されており、独自テーマ作�
 
 ```
 scss/
+├── theme/              # テーマモジュール
+│   ├── _white-canvas.scss  # ライトテーマ（@use可能）
+│   └── _black-canvas.scss  # ダークテーマ（@use可能）
 ├── component/          # 共通コンポーネント
 │   ├── _heading.scss   # 見出し
 │   ├── _table.scss     # テーブル
@@ -212,27 +215,57 @@ scss/
 │   ├── _toc.scss
 │   ├── _agenda.scss
 │   └── _display.scss
-├── white-canvas.scss   # ライトテーマ
-└── black-canvas.scss   # ダークテーマ
+├── white-canvas.scss   # ライトテーマ（CSS出力用）
+└── black-canvas.scss   # ダークテーマ（CSS出力用）
 ```
 
-### npmからのインポート
+### テーマをカスタマイズして使用
+
+テーマモジュールを `@use` で取り込み、CSS変数をカスタマイズできます。
 
 ```scss
-// 全体をインポート
-@use '@subroh0508/marp-theme-canvas/scss' as canvas;
+/*!
+ * @theme my-custom-theme
+ */
 
-// コンポーネントのみ
+@use '@subroh0508/marp-theme-canvas/scss/white-canvas' as white-canvas;
+
+// Google Fonts（必要に応じて変更）
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap');
+
+// テーマを適用（CSS変数をカスタマイズ）
+@include white-canvas.apply() {
+  --color-primary: #e11d48;
+  --color-accent: #fde047;
+  --font-size-base: 36px;
+}
+```
+
+### 提供されるmixin
+
+| mixin | 説明 |
+|-------|------|
+| `apply()` | CSS変数とスタイルを一括適用。`@content` でCSS変数を追加・上書き可能 |
+| `variables()` | CSS変数のみを出力。`@content` でCSS変数を追加・上書き可能 |
+| `styles()` | スタイルのみを出力（CSS変数は含まない） |
+
+### コンポーネント・ページスタイルの個別利用
+
+```scss
+// テーマモジュール
+@use '@subroh0508/marp-theme-canvas/scss/white-canvas' as white-canvas;
+@use '@subroh0508/marp-theme-canvas/scss/black-canvas' as black-canvas;
+
+// コンポーネント
 @use '@subroh0508/marp-theme-canvas/scss/component' as component;
-
-// 特定のコンポーネント
 @use '@subroh0508/marp-theme-canvas/scss/component/heading' as heading;
 
 // ページスタイル
+@use '@subroh0508/marp-theme-canvas/scss/page' as page;
 @use '@subroh0508/marp-theme-canvas/scss/page/title' as page-title;
 ```
 
-### 使用例
+### コンポーネント単体での使用例
 
 ```scss
 @use '@subroh0508/marp-theme-canvas/scss/component/heading' as heading;
