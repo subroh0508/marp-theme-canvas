@@ -15,6 +15,13 @@ scss/
 └── black-canvas.scss   # Dark theme output file
 ```
 
+## Commands
+
+| Command | Description |
+|---------|-------------|
+| `pnpm serve` | Start Marp dev server for demo (`demo/` directory) |
+| `pnpm build` | Compile SCSS files to CSS (`scss/*.scss` → `css/*.css`) |
+
 ## Naming Conventions
 
 - File names: `_name.scss` (underscore prefix required, Sass partial)
