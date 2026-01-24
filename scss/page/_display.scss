@@ -19,20 +19,22 @@
       text-align: center;
     }
 
-    // imgが存在しない場合、pタグを大きく表示
-    &:not(:has(img)) p {
+    // img, iframeが存在しない場合、pタグを大きく表示
+    &:not(:has(img, iframe)) p {
       font-size: $font-size;
       font-weight: $font-weight-bold;
     }
 
-    // img: 画像（上下左右中央揃え）
-    img {
+    // img, iframe: メディア要素（上下左右中央揃え）
+    img,
+    iframe {
       display: block;
       margin: 0 0;
     }
 
-    // pタグが存在する場合、imgの下にマージンを追加
-    &:has(p) img {
+    // pタグが存在する場合、メディア要素の下にマージンを追加
+    &:has(p) img,
+    &:has(p) iframe {
       margin: 0 0 1em;
     }
   }
