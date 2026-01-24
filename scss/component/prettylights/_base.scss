@@ -1,31 +1,37 @@
 // ===== _base.scss =====
-// シンタックスハイライト用スタイル（highlight.jsクラスへのカラーマッピング）
-// marp-core v4.2.0 を改変
+// Syntax highlighting styles (color mapping for highlight.js classes)
+// Modified from marp-core v4.2.0
 // https://github.com/marp-team/marp-core/blob/v4.2.0/themes/default.scss
 
+/*!
+ * MIT License
+ * Copyright (c) 2018 Marp team (marp-team@marp.app)
+ * https://github.com/marp-team/marp-core/blob/main/LICENSE
+ */
+
 @mixin configure(
-  $comment,                 // コメント (pl-c)
-  $constant,                // 定数 (pl-c1)
-  $entity,                  // エンティティ・関数名 (pl-e, pl-en)
-  $entity-tag,              // タグ名 (pl-ent)
-  $keyword,                 // キーワード (pl-k)
-  $string,                  // 文字列 (pl-s)
-  $variable,                // 変数 (pl-v)
-  $storage-modifier,        // デフォルトテキスト (pl-smi)
-  $markup-heading,          // 見出し (pl-mh)
-  $markup-list,             // リストマーカー (pl-ml)
-  $markup-inserted-text,    // 挿入テキスト色 (pl-mi1)
-  $markup-inserted-bg,      // 挿入背景色 (pl-mi1)
-  $markup-deleted-text,     // 削除テキスト色 (pl-md)
-  $markup-deleted-bg        // 削除背景色 (pl-md)
+  $comment,                 // Comment (pl-c)
+  $constant,                // Constant (pl-c1)
+  $entity,                  // Entity / Function name (pl-e, pl-en)
+  $entity-tag,              // Tag name (pl-ent)
+  $keyword,                 // Keyword (pl-k)
+  $string,                  // String (pl-s)
+  $variable,                // Variable (pl-v)
+  $storage-modifier,        // Default text (pl-smi)
+  $markup-heading,          // Heading (pl-mh)
+  $markup-list,             // List marker (pl-ml)
+  $markup-inserted-text,    // Inserted text color (pl-mi1)
+  $markup-inserted-bg,      // Inserted background color (pl-mi1)
+  $markup-deleted-text,     // Deleted text color (pl-md)
+  $markup-deleted-bg        // Deleted background color (pl-md)
 ) {
   pre {
-    // デフォルト色
+    // Default color
     :where(.hljs) {
       color: $storage-modifier;
     }
 
-    // キーワード系
+    // Keywords
     :where(.hljs-doctag),
     :where(.hljs-keyword),
     :where(.hljs-meta .hljs-keyword),
@@ -36,7 +42,7 @@
       color: $keyword;
     }
 
-    // 関数・クラス名
+    // Functions / Class names
     :where(.hljs-title),
     :where(.hljs-title.class_),
     :where(.hljs-title.class_.inherited__),
@@ -44,7 +50,7 @@
       color: $entity;
     }
 
-    // 定数・属性・数値
+    // Constants / Attributes / Numbers
     :where(.hljs-attr),
     :where(.hljs-attribute),
     :where(.hljs-literal),
@@ -58,27 +64,27 @@
       color: $constant;
     }
 
-    // 文字列・正規表現
+    // Strings / Regular expressions
     :where(.hljs-string),
     :where(.hljs-meta .hljs-string),
     :where(.hljs-regexp) {
       color: $string;
     }
 
-    // 組み込み関数・シンボル
+    // Built-in functions / Symbols
     :where(.hljs-built_in),
     :where(.hljs-symbol) {
       color: $variable;
     }
 
-    // コメント
+    // Comments
     :where(.hljs-code),
     :where(.hljs-comment),
     :where(.hljs-formula) {
       color: $comment;
     }
 
-    // タグ名・セレクタ
+    // Tag names / Selectors
     :where(.hljs-name),
     :where(.hljs-quote),
     :where(.hljs-selector-pseudo),
@@ -86,23 +92,23 @@
       color: $entity-tag;
     }
 
-    // 変数展開
+    // Variable interpolation
     :where(.hljs-subst) {
       color: $storage-modifier;
     }
 
-    // マークアップ: 見出し
+    // Markup: Heading
     :where(.hljs-section) {
       font-weight: bold;
       color: $markup-heading;
     }
 
-    // マークアップ: リスト
+    // Markup: List
     :where(.hljs-bullet) {
       color: $markup-list;
     }
 
-    // マークアップ: 強調
+    // Markup: Emphasis
     :where(.hljs-emphasis) {
       font-style: italic;
       color: $storage-modifier;
@@ -113,13 +119,13 @@
       color: $storage-modifier;
     }
 
-    // diff: 追加行
+    // diff: Added lines
     :where(.hljs-addition) {
       color: $markup-inserted-text;
       background-color: $markup-inserted-bg;
     }
 
-    // diff: 削除行
+    // diff: Deleted lines
     :where(.hljs-deletion) {
       color: $markup-deleted-text;
       background-color: $markup-deleted-bg;

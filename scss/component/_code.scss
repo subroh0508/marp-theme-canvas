@@ -1,7 +1,13 @@
 // ===== _code.scss =====
-// コードブロック用スタイル
-// github-markdown-css v5.8.1 を改変
+// Code block styles
+// Modified from github-markdown-css v5.8.1
 // https://github.com/sindresorhus/github-markdown-css/blob/v5.8.1/github-markdown.css
+
+/*!
+ * MIT License
+ * Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)
+ * https://github.com/sindresorhus/github-markdown-css/blob/main/license
+ */
 
 @mixin configure($font-mono, $color-bg, $color-fg) {
   code, tt {

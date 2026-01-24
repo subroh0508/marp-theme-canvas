@@ -1,36 +1,36 @@
 # prettylights
 
-シンタックスハイライト用スタイル（highlight.jsクラスへのカラーマッピング）
+Syntax highlighting styles (color mapping for highlight.js classes)
 
-## 構成
+## Structure
 
 ```
 prettylights/
-├── _base.scss   # 共通ロジック（引数付きmixin）
-├── _light.scss  # Lightテーマ色定義
-└── _dark.scss   # Darkテーマ色定義
+├── _base.scss   # Common logic (mixin with arguments)
+├── _light.scss  # Light theme color definitions
+└── _dark.scss   # Dark theme color definitions
 ```
 
-## パターン
+## Pattern
 
-- `_base.scss`: highlight.jsクラスへのカラーマッピングを引数付きmixinで定義
-- `_light.scss` / `_dark.scss`: 色変数を定義し、引数なしmixinでbaseを呼び出す
+- `_base.scss`: Defines color mapping for highlight.js classes via mixin with arguments
+- `_light.scss` / `_dark.scss`: Define color variables and call base via argumentless mixin
 
 ```scss
 // _light.scss
 @use 'base';
 
 $pl-comment: #59636e;
-// ... 色定義
+// ... color definitions
 
 @mixin configure {
   @include base.configure($pl-comment, ...);
 }
 ```
 
-## テーマからの呼び出し
+## Usage from Theme
 
-section内で呼び出す:
+Use within section:
 
 ```scss
 @use './component/prettylights/light' as prettylights;

@@ -1,12 +1,12 @@
 // ===== _section.scss =====
-// 中扉ページ用スタイル
+// Styles for section divider page
 //
-// 使用方法: <!-- _class: section -->
+// Usage: <!-- _class: section -->
 
 @mixin configure($font-size, $font-weight: bold) {
   &.section {
-    // p: セクションタイトル
-    // 上下中央揃え、左寄せ
+    // p: Section title
+    // Vertically centered, left-aligned
     p {
       flex: 1;
       display: flex;

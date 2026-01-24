@@ -1,12 +1,12 @@
 @charset "UTF-8";
 /*!
- * Black Canvas - 極力余計なスタイリングを廃した、シンプルなダークスライドテーマ
+ * Black Canvas - A simple dark slide theme with minimal styling
  *
- * 使用時はMarpのインラインスタイル指定で以下の変数を必ず定義してください。
- * - --color-primary: メインカラー（h2の文字色など）
- * - --color-accent: アクセントカラー（markタグの背景色など）
+ * When using, you must define the following variables in Marp's inline style:
+ * - --color-primary: Primary color (e.g., h2 text color)
+ * - --color-accent: Accent color (e.g., mark tag background)
  *
- * 例:
+ * Example:
  *   style: |
  *     :root {
  *       --color-primary: #3b91c4;
@@ -18,8 +18,27 @@
  *
  * @auto-scaling true
  * @size 16:9 1920px 1080px
+ *
+ * MIT License
+ * Copyright (c) 2026 Subroh Nishikori
+ * https://github.com/subroh0508/marp-theme-canvas/blob/main/LICENSE
+ */
+/*!
+ * MIT License
+ * Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)
+ * https://github.com/sindresorhus/github-markdown-css/blob/main/license
  */
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap");
+/*!
+ * MIT License
+ * Copyright (c) 2018 Marp team (marp-team@marp.app)
+ * https://github.com/marp-team/marp-core/blob/main/LICENSE
+ */
+/*!
+ * MIT License
+ * Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)
+ * https://github.com/sindresorhus/github-markdown-css/blob/main/license
+ */
 :root {
   --color-black: #000;
   --color-white: #fff;

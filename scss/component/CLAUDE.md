@@ -1,23 +1,23 @@
 # component
 
-スライド共通で使用する要素のスタイル
+Styles for elements commonly used across slides
 
-## ファイル構成
+## File Structure
 
 ```scss
-// ===== _ファイル名.scss =====
-// コンポーネントの説明
+// ===== _filename.scss =====
+// Component description
 
-@mixin configure($引数1, $引数2, $引数3: デフォルト値) {
-  セレクタ {
-    プロパティ: 値;
+@mixin configure($arg1, $arg2, $arg3: default) {
+  selector {
+    property: value;
   }
 }
 ```
 
-## テーマからの呼び出し
+## Usage from Theme
 
-### section内で呼び出すコンポーネント
+### Components used within section
 
 ```scss
 section {
@@ -27,7 +27,7 @@ section {
 }
 ```
 
-### グローバルスコープで呼び出すコンポーネント
+### Components used in global scope
 
 ```scss
 @include header.configure(...);
@@ -39,17 +39,17 @@ section {
 @include code.configure(...);
 ```
 
-## 既存のコンポーネント一覧
+## Existing Components
 
-| ファイル | 対象セレクタ | 用途 |
-|----------|--------------|------|
-| `_section.scss` | `section` | スライド本体のベーススタイル |
-| `_heading.scss` | `h1`-`h6` | 見出し |
-| `_header.scss` | `header` | ヘッダー |
-| `_footer.scss` | `footer` | フッター |
-| `_pagination.scss` | `section::after` | ページ番号 |
-| `_table.scss` | `table`, `th`, `td`, `tr` | テーブル |
-| `_code.scss` | `code`, `pre`, `tt` | コードブロック |
-| `_blockquote.scss` | `blockquote` | 引用 |
-| `_text-decorator.scss` | `strong`, `mark`, `rp` | テキスト装飾 |
-| `prettylights/*` | `.hljs-*` | シンタックスハイライト |
+| File | Target Selector | Purpose |
+|------|-----------------|---------|
+| `_section.scss` | `section` | Base styles for slide body |
+| `_heading.scss` | `h1`-`h6` | Headings |
+| `_header.scss` | `header` | Header |
+| `_footer.scss` | `footer` | Footer |
+| `_pagination.scss` | `section::after` | Page number |
+| `_table.scss` | `table`, `th`, `td`, `tr` | Table |
+| `_code.scss` | `code`, `pre`, `tt` | Code blocks |
+| `_blockquote.scss` | `blockquote` | Blockquote |
+| `_text-decorator.scss` | `strong`, `mark`, `rp` | Text decoration |
+| `prettylights/*` | `.hljs-*` | Syntax highlighting |

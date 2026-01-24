@@ -1,5 +1,5 @@
 // ===== _section.scss =====
-// Marpスライドのsection（本体）スタイル
+// Styles for Marp slide section (body)
 
 @mixin configure(
   $width,
@@ -26,7 +26,7 @@
   box-sizing: border-box;
   overflow: hidden;
 
-  // コンテンツ要素のmargin-topを0に
+  // Reset margin-top for content elements
   p,
   ul,
   ol,
@@ -35,7 +35,7 @@
     margin-top: 0;
   }
 
-  // リストのインデント調整
+  // Adjust list indentation
   ul,
   ol {
     padding-inline-start: $list-indent;

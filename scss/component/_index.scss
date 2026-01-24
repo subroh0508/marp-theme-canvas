@@ -1,11 +1,9 @@
 @charset "utf-8";
 
-/*!
- * Components - スライド共通で使用する要素のスタイル
- *
- * @use '@subroh0508/marp-theme-canvas/scss/component';
- * @use '@subroh0508/marp-theme-canvas/scss/component/heading';
- */
+// Components - Styles for elements used across all slides
+//
+// @use '@subroh0508/marp-theme-canvas/scss/component';
+// @use '@subroh0508/marp-theme-canvas/scss/component/heading';
 
 @forward 'a' as a-*;
 @forward 'blockquote' as blockquote-*;
@@ -19,5 +17,5 @@
 @forward 'table' as table-*;
 @forward 'text-decorator' as text-decorator-*;
 
-// シンタックスハイライト
+// Syntax highlighting
 @forward 'prettylights' as prettylights-*;

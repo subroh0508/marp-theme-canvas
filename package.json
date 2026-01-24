@@ -26,6 +26,15 @@
       "sass": "./scss/black-canvas.scss",
       "style": "./css/black-canvas.css"
     },
+    "./scss/white-canvas": {
+      "sass": "./scss/theme/_white-canvas.scss"
+    },
+    "./scss/black-canvas": {
+      "sass": "./scss/theme/_black-canvas.scss"
+    },
+    "./scss/theme/*": {
+      "sass": "./scss/theme/*"
+    },
     "./scss": {
       "sass": "./scss/_index.scss"
     },
@@ -52,8 +61,9 @@
     "LICENSE"
   ],
   "scripts": {
-    "serve": "marp --allow-local-files --html --theme-set css/*.css -s demo",
-    "build": "for f in scss/[!_]*.scss; do sass --no-source-map $f css/$(basename ${f%.scss}.css); done"
+    "serve": "marp --allow-local-files --html -s demo",
+    "build": "for f in scss/[!_]*.scss; do sass --no-source-map $f css/$(basename ${f%.scss}.css); done",
+    "build:demo": "marp --allow-local-files --html --input-dir demo --output public"
   },
   "keywords": [
     "marp",

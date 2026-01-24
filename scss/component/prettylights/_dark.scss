@@ -1,11 +1,17 @@
 // ===== _dark.scss =====
-// シンタックスハイライト（Dark テーマ）カラー定義
-// github-markdown-css v5.8.1 を改変
+// Syntax highlighting (Dark theme) color definitions
+// Modified from github-markdown-css v5.8.1
 // https://github.com/sindresorhus/github-markdown-css/blob/v5.8.1/github-markdown-dark.css
+
+/*!
+ * MIT License
+ * Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)
+ * https://github.com/sindresorhus/github-markdown-css/blob/main/license
+ */
 
 @use 'base';
 
-// ===== Dark テーマカラー =====
+// ===== Dark theme colors =====
 $pl-comment: #9198a1;
 $pl-constant: #79c0ff;
 $pl-entity: #d2a8ff;
