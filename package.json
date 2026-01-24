@@ -62,7 +62,8 @@
   ],
   "scripts": {
     "serve": "marp --allow-local-files --html -s demo",
-    "build": "for f in scss/[!_]*.scss; do sass --no-source-map $f css/$(basename ${f%.scss}.css); done"
+    "build": "for f in scss/[!_]*.scss; do sass --no-source-map $f css/$(basename ${f%.scss}.css); done",
+    "build:demo": "marp --allow-local-files --html --input-dir demo --output public"
   },
   "keywords": [
     "marp",
