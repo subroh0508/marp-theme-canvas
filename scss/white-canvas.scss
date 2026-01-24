@@ -1,11 +1,11 @@
 /*!
- * White Canvas - 極力余計なスタイリングを廃した、シンプルなスライドテーマ
+ * White Canvas - A simple slide theme with minimal styling
  *
- * 使用時はMarpのインラインスタイル指定で以下の変数を必ず定義してください。
- * - --color-primary: メインカラー（h2の文字色など）
- * - --color-accent: アクセントカラー（markタグの背景色など）
+ * When using, you must define the following variables in Marp's inline style:
+ * - --color-primary: Primary color (e.g., h2 text color)
+ * - --color-accent: Accent color (e.g., mark tag background)
  *
- * 例:
+ * Example:
  *   style: |
  *     :root {
  *       --color-primary: #3b91c4;
@@ -28,5 +28,5 @@
 // ===== Google Fonts =====
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap');
 
-// ===== テーマを適用 =====
+// ===== Apply theme =====
 @include theme.apply;

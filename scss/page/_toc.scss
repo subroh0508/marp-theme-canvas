@@ -1,11 +1,11 @@
 // ===== _toc.scss =====
-// 目次ページ用スタイル
+// Styles for table of contents page
 //
-// 使用方法: <!-- _class: toc -->
+// Usage: <!-- _class: toc -->
 
 @mixin configure($font-size, $line-height) {
   &.toc {
-    // リスト: 目次項目（直接の子要素のみ）
+    // List: Table of contents items (direct children only)
     > ul,
     > ol {
       font-size: $font-size;

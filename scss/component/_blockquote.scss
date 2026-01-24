@@ -1,5 +1,5 @@
 // ===== _blockquote.scss =====
-// Marpスライドの引用スタイル
+// Blockquote styles for Marp slides
 
 @mixin configure($font-size, $line-height, $color-text, $color-bg, $color-mark, $border-radius) {
   blockquote {
@@ -14,9 +14,9 @@
     background: $color-bg;
     border-radius: $border-radius;
 
-    // 左上の引用符
+    // Top-left quotation mark
     &::before {
-      content: '“';
+      content: '"';
       position: absolute;
       left: 0.2em;
       font-size: 2em;
@@ -24,7 +24,7 @@
       color: $color-mark;
     }
 
-    // 子要素のmargin調整
+    // Adjust margin for child elements
     > :first-child {
       margin-top: 0;
     }

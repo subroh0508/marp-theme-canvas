@@ -1,6 +1,6 @@
 // ===== _light.scss =====
-// シンタックスハイライト（Light テーマ）カラー定義
-// github-markdown-css v5.8.1 を改変
+// Syntax highlighting (Light theme) color definitions
+// Modified from github-markdown-css v5.8.1
 // https://github.com/sindresorhus/github-markdown-css/blob/v5.8.1/github-markdown-light.css
 
 /*!
@@ -11,7 +11,7 @@
 
 @use 'base';
 
-// ===== Light テーマカラー =====
+// ===== Light theme colors =====
 $pl-comment: #59636e;
 $pl-constant: #0550ae;
 $pl-entity: #6639ba;

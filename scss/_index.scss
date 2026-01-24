@@ -1,36 +1,36 @@
 @charset "utf-8";
 
-// Marp Theme Canvas - 極力余計なスタイリングを廃した、シンプルなスライドテーマ
+// Marp Theme Canvas - A simple slide theme with minimal styling
 //
 // Usage:
-//   // 全モジュールをインポート
+//   // Import all modules
 //   @use '@subroh0508/marp-theme-canvas/scss';
 //
-//   // テーマをカスタマイズして使用
+//   // Customize and use theme
 //   @use '@subroh0508/marp-theme-canvas/scss/white-canvas' as white-canvas;
 //   @include white-canvas.apply() {
 //     --color-primary: #e11d48;
 //     --color-accent: #fde047;
 //   }
 //
-//   // コンポーネントのみ
+//   // Components only
 //   @use '@subroh0508/marp-theme-canvas/scss/component';
 //
-//   // 特定のコンポーネント
+//   // Specific component
 //   @use '@subroh0508/marp-theme-canvas/scss/component/heading';
 //
-//   // ページスタイルのみ
+//   // Page styles only
 //   @use '@subroh0508/marp-theme-canvas/scss/page';
 //
-//   // 特定のページスタイル
+//   // Specific page style
 //   @use '@subroh0508/marp-theme-canvas/scss/page/title';
 
-// テーマ
+// Themes
 @forward 'theme/white-canvas' as white-canvas-*;
 @forward 'theme/black-canvas' as black-canvas-*;
 
-// コンポーネント
+// Components
 @forward 'component' as component-*;
 
-// ページスタイル
+// Page styles
 @forward 'page' as page-*;

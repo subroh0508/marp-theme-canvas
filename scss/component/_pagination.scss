@@ -1,6 +1,6 @@
 // ===== _pagination.scss =====
-// Marpスライドのページ番号スタイル（section::after）
-// Marpの paginate: true 指定時に表示される要素
+// Page number styles for Marp slides (section::after)
+// Displayed when Marp's paginate: true is specified
 
 @mixin configure($margin-x, $margin-y, $font-size, $color-text) {
   &::after {

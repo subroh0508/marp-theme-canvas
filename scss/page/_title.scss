@@ -1,12 +1,12 @@
 // ===== _title.scss =====
-// タイトルページ用スタイル
+// Styles for title page
 //
-// 使用方法: <!-- _class: title -->
+// Usage: <!-- _class: title -->
 
 @mixin configure($font-size-title, $color-metadata-text) {
   &.title {
-    // h1: タイトル文字列
-    // section上8割を占有、上下中央揃え、左寄せ
+    // h1: Title text
+    // Occupies 80% of section, vertically centered, left-aligned
     h1 {
       font-size: $font-size-title;
       flex: 0 0 80%;
@@ -16,14 +16,14 @@
       justify-content: center;
       margin: 0;
 
-      // small: サブタイトル
+      // small: Subtitle
       small {
         margin-top: 0.5em;
         font-size: 0.5em;
       }
     }
 
-    // h1直後のp: 日付・イベント名・著者名
+    // p after h1: Date, event name, author name
     h1 + p {
       flex: 1;
       display: flex;

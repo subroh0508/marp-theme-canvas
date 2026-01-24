@@ -1,20 +1,20 @@
 @charset "utf-8";
 
-// Black Canvas Module - @use で取り込み可能なダークテーマモジュール
+// Black Canvas Module - Dark theme module importable via @use
 //
 // Usage:
 //   @use '@subroh0508/marp-theme-canvas/scss/black-canvas' as black-canvas;
 //
-//   // デフォルト設定で適用
+//   // Apply with default settings
 //   @include black-canvas.apply();
 //
-//   // カスタムCSS変数を追加
+//   // Add custom CSS variables
 //   @include black-canvas.apply() {
 //     --color-primary: #e11d48;
 //     --color-accent: #fde047;
 //   }
 
-// ===== コンポーネント =====
+// ===== Components =====
 @use '../component/prettylights/dark' as prettylights;
 @use '../component/table' as table;
 @use '../component/code' as code;
@@ -28,22 +28,22 @@
 @use '../component/columns' as columns;
 @use '../component/a' as a;
 
-// ===== ページスタイル =====
+// ===== Page styles =====
 @use '../page/title' as page-title;
 @use '../page/section' as page-section;
 @use '../page/toc' as page-toc;
 @use '../page/agenda' as page-agenda;
 @use '../page/display' as page-display;
 
-/// テーマのCSS変数デフォルト値を出力
-/// @content カスタムCSS変数を追加・上書き
+/// Output default CSS variable values for theme
+/// @content Add or override custom CSS variables
 @mixin variables {
   :root {
-    // --- 色（白黒） ---
+    // --- Colors (Black & White) ---
     --color-black: #000;
     --color-white: #fff;
 
-    // --- 色（グレースケール 7色）: Tailwind slate 50-300, 800-950 ---
+    // --- Colors (Grayscale - 7 shades): Tailwind slate 50-300, 800-950 ---
     --color-grey-lightest: #f8fafc; // slate-50
     --color-grey-lighter: #f1f5f9;  // slate-100
     --color-grey-light: #e2e8f0;    // slate-200
@@ -52,28 +52,28 @@
     --color-grey-darker: #0f172a;   // slate-900
     --color-grey-darkest: #020617;  // slate-950
 
-    // --- 色（コンポーネント: blockquote） ---
+    // --- Colors (Component: blockquote) ---
     --color-blockquote-background: color-mix(in srgb, var(--color-grey-light) 15%, transparent);
     --color-blockquote-mark: var(--color-grey-medium);
     --color-blockquote-text: var(--color-grey-medium);
 
-    // --- 色（コンポーネント: table） ---
+    // --- Colors (Component: table) ---
     --color-table-row-bg: var(--color-grey-darkest);
     --color-table-row-bg-header: var(--color-grey-dark);
     --color-table-border: var(--color-grey-medium);
 
-    // --- 色（コンポーネント: code） ---
+    // --- Colors (Component: code) ---
     --color-code-bg: color-mix(in srgb, var(--color-grey-light) 15%, transparent);
     --color-code-fg: var(--color-grey-lightest);
 
-    // --- 色（コンポーネント: link） ---
+    // --- Colors (Component: link) ---
     --color-link: #60a5fa; // Tailwind blue-400
 
-    // --- フォント ---
+    // --- Fonts ---
     --font-family-base: 'Noto Sans JP', sans-serif;
     --font-family-mono: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
 
-    // --- フォントサイズ ---
+    // --- Font sizes ---
     --font-size-base: 40px;
     --font-size-display: 2.5em;
     --font-size-title: 2em;
@@ -83,31 +83,31 @@
     --font-size-small: 0.85em;
     --font-size-note: 0.7em;
 
-    // --- フォントウェイト ---
+    // --- Font weights ---
     --font-weight-normal: 400;
     --font-weight-bold: 700;
     --font-weight-black: 900;
 
-    // --- 行間 ---
+    // --- Line heights ---
     --line-height-tight: 1.2;
     --line-height-normal: 1.45;
     --line-height-loose: 2;
 
-    // --- レイアウト ---
+    // --- Layout ---
     --slide-padding-x: 80px;
     --slide-padding-y: 80px;
     --header-footer-margin-x: 80px;
     --header-footer-margin-y: 20px;
     --border-radius: 8px;
 
-    // カスタム変数
+    // Custom variables
     @content;
   }
 }
 
-/// テーマのスタイルを適用（CSS変数は含まない）
+/// Apply theme styles (without CSS variables)
 @mixin styles {
-  // ===== section（スライド本体） =====
+  // ===== section (slide body) =====
   section {
     @include prettylights.configure;
     @include section.configure(
@@ -129,7 +129,7 @@
       $color-text: var(--color-grey-light)
     );
 
-    // ===== ページスタイル =====
+    // ===== Page styles =====
     @include page-title.configure(
       $font-size-title: var(--font-size-display),
       $color-metadata-text: var(--color-grey-medium)
@@ -159,7 +159,7 @@
       $font-weight-normal: var(--font-weight-normal)
     );
 
-    // ===== カラムレイアウト =====
+    // ===== Column layout =====
     @include columns.configure();
   }
 
@@ -179,7 +179,7 @@
     $color-text: var(--color-grey-light)
   );
 
-  // ===== 見出し（h1-h6） =====
+  // ===== Headings (h1-h6) =====
   @include heading.configure(
     $line-height: var(--line-height-tight),
     $font-size-h1: var(--font-size-title),
@@ -194,7 +194,7 @@
     $color-text-h2: var(--color-primary)
   );
 
-  // ===== 引用（blockquote） =====
+  // ===== Blockquote =====
   @include blockquote.configure(
     $font-size: var(--font-size-body),
     $line-height: var(--line-height-tight),
@@ -204,14 +204,14 @@
     $border-radius: var(--border-radius)
   );
 
-  // ===== テキスト装飾（strong, mark, rp） =====
+  // ===== Text decoration (strong, mark, rp) =====
   @include text-decorator.configure(
     $font-weight-bold: var(--font-weight-bold),
     $font-weight-normal: var(--font-weight-normal),
     $color-text-highlight: var(--color-accent)
   );
 
-  // ===== リンク（a） =====
+  // ===== Link (a) =====
   @include a.configure(
     $color-text: var(--color-link)
   );
@@ -233,8 +233,8 @@
   );
 }
 
-/// テーマを適用（CSS変数 + スタイル）
-/// @content カスタムCSS変数を追加・上書き
+/// Apply theme (CSS variables + styles)
+/// @content Add or override custom CSS variables
 @mixin apply {
   @include variables {
     @content;

@@ -1,19 +1,19 @@
 // ===== _columns.scss =====
-// Flexboxベースのカラムレイアウトコンポーネント
+// Flexbox-based column layout component
 //
-// 使い方1: _class: columns（スライド全体がカラムレイアウト）
-// 使い方2: <div class="columns">（部分的なカラムレイアウト）
+// Usage 1: _class: columns (entire slide uses column layout)
+// Usage 2: <div class="columns"> (partial column layout)
 //
-// ※ divタグの直後・直前に空行を入れることでMarkdownが正しく解釈される
+// Note: Add blank lines before/after div tags for proper Markdown parsing
 
 $_column-widths: (2, 3, 4, 6, 7, 8);
 
-// カラム要素の共通スタイル
-// - flex: $n ... 比率ベースの幅指定（gapを考慮した配分になる）
-//                例: column-4 + column-6 = 4:6の比率で配分
-// - min-width: 0 ... Flex子要素のデフォルト値(auto)を上書きし、
-//                    コンテンツサイズに関係なくflex-basisの幅を維持する
-// - > *, p > * { max-width: 100% } ... 子要素および段落内の要素（画像等）をカラム幅に収める
+// Common styles for column elements
+// - flex: $n ... Ratio-based width (distributed considering gap)
+//                e.g., column-4 + column-6 = 4:6 ratio distribution
+// - min-width: 0 ... Override flex child default (auto) to maintain
+//                    flex-basis width regardless of content size
+// - > *, p > * { max-width: 100% } ... Constrain children and paragraph elements (images etc.) to column width
 @mixin _column-children {
   > .column {
     flex: 1;
@@ -39,14 +39,14 @@ $_column-widths: (2, 3, 4, 6, 7, 8);
 }
 
 @mixin configure() {
-  // 使い方1: _class: columns（section自体がFlexコンテナになる）
+  // Usage 1: _class: columns (section itself becomes flex container)
   &.columns {
     flex-direction: row;
     gap: 1em;
     @include _column-children;
   }
 
-  // 使い方2: <div class="columns">（部分的なカラムレイアウト）
+  // Usage 2: <div class="columns"> (partial column layout)
   .columns {
     display: flex;
     gap: 1em;
