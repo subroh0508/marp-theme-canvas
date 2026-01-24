@@ -27,11 +27,11 @@ npm install @subroh0508/marp-theme-canvas
 
 ### CDN / 直接利用
 
-CSSファイルを直接参照することも可能です:
+GitHubのraw URLから直接CSSファイルを参照することも可能です:
 
 ```
-node_modules/@subroh0508/marp-theme-canvas/css/white-canvas.css
-node_modules/@subroh0508/marp-theme-canvas/css/black-canvas.css
+https://raw.githubusercontent.com/subroh0508/marp-theme-canvas/main/css/white-canvas.css
+https://raw.githubusercontent.com/subroh0508/marp-theme-canvas/main/css/black-canvas.css
 ```
 
 ## 使い方
