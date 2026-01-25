@@ -100,6 +100,11 @@
     --header-footer-margin-y: 20px;
     --border-radius: 8px;
 
+    --bullet-list-indent: 1.1em;
+    --numbered-list-indent: 1.1em;
+    --bullet-list-padding-left: 0.2em;
+    --numbered-list-padding-left: 0.2em;
+
     // Custom variables
     @content;
   }
@@ -120,7 +125,10 @@
       $font-family: var(--font-family-base),
       $font-size: var(--font-size-base),
       $line-height: var(--line-height-normal),
-      $list-indent: 1.3em
+      $bullet-list-indent: var(--bullet-list-indent),
+      $numbered-list-indent: var(--numbered-list-indent),
+      $bullet-list-padding-left: var(--bullet-list-padding-left),
+      $numbered-list-padding-left: var(--numbered-list-padding-left)
     );
     @include pagination.configure(
       $margin-x: var(--header-footer-margin-x),
