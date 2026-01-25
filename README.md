@@ -178,6 +178,10 @@ You can override CSS variables in the frontmatter style.
 | `--slide-padding-x` | Slide horizontal padding | `80px` |
 | `--slide-padding-y` | Slide vertical padding | `80px` |
 | `--border-radius` | Border radius | `8px` |
+| `--bullet-list-indent` | Bullet list (ul) indent | `1.1em` |
+| `--numbered-list-indent` | Numbered list (ol) indent | `1.1em` |
+| `--bullet-list-padding-left` | Bullet list item (li) padding | `0.2em` |
+| `--numbered-list-padding-left` | Numbered list item (li) padding | `0.2em` |
 
 ### Customization Example
 
