@@ -79,6 +79,10 @@
   --header-footer-margin-x: 80px;
   --header-footer-margin-y: 20px;
   --border-radius: 8px;
+  --bullet-list-indent: 1.1em;
+  --numbered-list-indent: 1.1em;
+  --bullet-list-padding-left: 0.2em;
+  --numbered-list-padding-left: 0.2em;
 }
 
 section pre :where(.hljs) {
@@ -178,9 +182,17 @@ section blockquote,
 section pre {
   margin-top: 0;
 }
-section ul,
+section ul {
+  padding-inline-start: var(--bullet-list-indent);
+}
+section ul > li {
+  padding-left: var(--bullet-list-padding-left);
+}
 section ol {
-  padding-inline-start: 1.3em;
+  padding-inline-start: var(--numbered-list-indent);
+}
+section ol > li {
+  padding-left: var(--numbered-list-padding-left);
 }
 section::after {
   position: absolute;
@@ -283,6 +295,14 @@ section.columns > .column > *,
 section.columns > .column p > * {
   max-width: 100%;
 }
+section.columns > .column-1 {
+  flex: 1;
+  min-width: 0;
+}
+section.columns > .column-1 > *,
+section.columns > .column-1 p > * {
+  max-width: 100%;
+}
 section.columns > .column-2 {
   flex: 2;
   min-width: 0;
@@ -331,6 +351,22 @@ section.columns > .column-8 > *,
 section.columns > .column-8 p > * {
   max-width: 100%;
 }
+section.columns > .column-9 {
+  flex: 9;
+  min-width: 0;
+}
+section.columns > .column-9 > *,
+section.columns > .column-9 p > * {
+  max-width: 100%;
+}
+section.columns > .column-10 {
+  flex: 10;
+  min-width: 0;
+}
+section.columns > .column-10 > *,
+section.columns > .column-10 p > * {
+  max-width: 100%;
+}
 section .columns {
   display: flex;
   gap: 1em;
@@ -342,6 +378,14 @@ section .columns > .column {
 }
 section .columns > .column > *,
 section .columns > .column p > * {
+  max-width: 100%;
+}
+section .columns > .column-1 {
+  flex: 1;
+  min-width: 0;
+}
+section .columns > .column-1 > *,
+section .columns > .column-1 p > * {
   max-width: 100%;
 }
 section .columns > .column-2 {
@@ -390,6 +434,22 @@ section .columns > .column-8 {
 }
 section .columns > .column-8 > *,
 section .columns > .column-8 p > * {
+  max-width: 100%;
+}
+section .columns > .column-9 {
+  flex: 9;
+  min-width: 0;
+}
+section .columns > .column-9 > *,
+section .columns > .column-9 p > * {
+  max-width: 100%;
+}
+section .columns > .column-10 {
+  flex: 10;
+  min-width: 0;
+}
+section .columns > .column-10 > *,
+section .columns > .column-10 p > * {
   max-width: 100%;
 }
 

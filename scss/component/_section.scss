@@ -11,7 +11,10 @@
   $font-family,
   $font-size,
   $line-height,
-  $list-indent
+  $bullet-list-indent,
+  $numbered-list-indent,
+  $bullet-list-padding-left,
+  $numbered-list-padding-left
 ) {
   width: $width;
   height: $height;
@@ -36,8 +39,19 @@
   }
 
   // Adjust list indentation
-  ul,
+  ul {
+    padding-inline-start: $bullet-list-indent;
+
+    > li {
+      padding-left: $bullet-list-padding-left;
+    }
+  }
+
   ol {
-    padding-inline-start: $list-indent;
+    padding-inline-start: $numbered-list-indent;
+
+    > li {
+      padding-left: $numbered-list-padding-left;
+    }
   }
 }

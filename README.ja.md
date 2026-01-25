@@ -178,6 +178,10 @@ marp --theme node_modules/@subroh0508/marp-theme-canvas/css/white-canvas.css sli
 | `--slide-padding-x` | スライド左右余白 | `80px` |
 | `--slide-padding-y` | スライド上下余白 | `80px` |
 | `--border-radius` | 角丸 | `8px` |
+| `--bullet-list-indent` | 箇条書きリスト(ul)インデント | `1.1em` |
+| `--numbered-list-indent` | 番号付きリスト(ol)インデント | `1.1em` |
+| `--bullet-list-padding-left` | 箇条書きリスト項目(li)の左余白 | `0.2em` |
+| `--numbered-list-padding-left` | 番号付きリスト項目(li)の左余白 | `0.2em` |
 
 ### カスタマイズ例
 

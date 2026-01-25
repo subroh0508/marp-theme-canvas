@@ -76,6 +76,10 @@ The following CSS variables have no default values and must be defined when used
 | `--header-footer-margin-x` | Header/footer/page number horizontal margin | `80px` |
 | `--header-footer-margin-y` | Header/footer/page number vertical margin | `20px` |
 | `--border-radius` | Border radius (blockquote) | `8px` |
+| `--bullet-list-indent` | Bullet list (ul) indent | `1.1em` |
+| `--numbered-list-indent` | Numbered list (ol) indent | `1.1em` |
+| `--bullet-list-padding-left` | Bullet list item (li) padding | `0.2em` |
+| `--numbered-list-padding-left` | Numbered list item (li) padding | `0.2em` |
 
 ## Available Mixins
 
