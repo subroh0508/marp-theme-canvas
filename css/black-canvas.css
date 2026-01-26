@@ -233,7 +233,6 @@ section.section {
 section.section p {
   flex: 0 1;
   display: block;
-  align-items: center;
   font-size: var(--font-size-title);
   font-weight: bold;
   margin: 0;
