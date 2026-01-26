@@ -5,19 +5,20 @@
 
 @mixin configure($font-size-title, $color-metadata-text) {
   &.title {
+    justify-content: center;
+
     // h1: Title text
-    // Occupies 80% of section, vertically centered, left-aligned
+    // Occupies 80% of section, vertically centered
     h1 {
       font-size: $font-size-title;
+      display: block;
       flex: 0 0 80%;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      justify-content: center;
+      align-content: center;
       margin: 0;
 
       // small: Subtitle
       small {
+        display: block;
         margin-top: 0.5em;
         font-size: 0.5em;
       }

@@ -5,13 +5,13 @@
 
 @mixin configure($font-size, $font-weight: bold) {
   &.section {
+    justify-content: center;
+
     // p: Section title
-    // Vertically centered, left-aligned
+    // Vertically centered
     p {
-      flex: 1;
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
+      flex: 0 1;
+      display: block;
       font-size: $font-size;
       font-weight: $font-weight;
       margin: 0;
