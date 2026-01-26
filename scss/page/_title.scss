@@ -5,21 +5,29 @@
 
 @mixin configure($font-size-title, $color-metadata-text) {
   &.title {
+    justify-content: center;
+
     // h1: Title text
     // Occupies 80% of section, vertically centered, left-aligned
     h1 {
       font-size: $font-size-title;
-      flex: 0 0 80%;
       display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      justify-content: center;
+      flex: 0 0 80%;
+      flex-wrap: wrap;
+      justify-content: start;
+      align-items: center;
+      align-content: center;
       margin: 0;
 
       // small: Subtitle
       small {
+        display: block;
         margin-top: 0.5em;
         font-size: 0.5em;
+      }
+
+      img.emoji {
+        margin-top: .1em;
       }
     }
 
