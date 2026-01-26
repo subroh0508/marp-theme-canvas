@@ -47,7 +47,7 @@ Page Styles
 <!-- _class: title -->
 <!-- _header: "Demo Slide (page/_title.scss)" -->
 
-# Title Page :punch: Multiple lines display like this<small>- With a subtitle -</small>
+# Title Page<br/>Multiple lines display like this<small>- With a subtitle -</small>
 
 Event name / Presentation date
 Presenter name

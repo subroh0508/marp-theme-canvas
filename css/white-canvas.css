@@ -207,11 +207,8 @@ section.title {
 }
 section.title h1 {
   font-size: var(--font-size-display);
-  display: flex;
+  display: block;
   flex: 0 0 80%;
-  flex-wrap: wrap;
-  justify-content: start;
-  align-items: center;
   align-content: center;
   margin: 0;
 }
@@ -219,9 +216,6 @@ section.title h1 small {
   display: block;
   margin-top: 0.5em;
   font-size: 0.5em;
-}
-section.title h1 img.emoji {
-  margin-top: 0.1em;
 }
 section.title h1 + p {
   flex: 1;
@@ -233,11 +227,13 @@ section.title h1 + p {
   color: var(--color-grey-light);
   margin: 0;
 }
+section.section {
+  justify-content: center;
+}
 section.section p {
-  flex: 1;
-  display: flex;
+  flex: 0 1;
+  display: block;
   align-items: center;
-  justify-content: flex-start;
   font-size: var(--font-size-title);
   font-weight: bold;
   margin: 0;
