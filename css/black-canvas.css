@@ -274,7 +274,7 @@ section.display p {
   margin: 0;
   text-align: center;
 }
-section.display:not(:has(img, iframe)) p {
+section.display:not(:has(img:not(.emoji), iframe)) p {
   font-size: var(--font-size-display);
   font-weight: var(--font-weight-bold);
 }
