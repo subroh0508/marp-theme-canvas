@@ -1,0 +1,23 @@
+// ===== _hr.scss =====
+// Horizontal rule styles
+
+@mixin _hr($height, $width, $color, $style) {
+  width: $width;
+  border-top: $height $style $color;
+  margin: 0 0 1em;
+}
+
+@mixin configure(
+  $height,
+  $width,
+  $color
+) {
+  hr,
+  &.hr-solid hr {
+    @include _hr($height, $width, $color, solid);
+  }
+
+  &.hr-dashed hr {
+    @include _hr($height, $width, $color, dashed);
+  }
+}

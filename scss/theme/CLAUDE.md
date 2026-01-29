@@ -81,6 +81,14 @@ The following CSS variables have no default values and must be defined when used
 | `--bullet-list-padding-left` | Bullet list item (li) padding | `0.2em` |
 | `--numbered-list-padding-left` | Numbered list item (li) padding | `0.2em` |
 
+### Horizontal Rule
+
+| Variable | Description | white-canvas | black-canvas |
+|----------|-------------|--------------|--------------|
+| `--hr-height` | Line thickness | `1px` | `1px` |
+| `--hr-width` | Line width | `100%` | `100%` |
+| `--hr-color` | Line color | `grey-light` | `grey-medium` |
+
 ## Available Mixins
 
 | Mixin | Description |
