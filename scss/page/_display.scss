@@ -20,7 +20,8 @@
     }
 
     // When img or iframe doesn't exist, display p tag prominently
-    &:not(:has(img, iframe)) p {
+    // Excludes emoji class
+    &:not(:has(img:not(.emoji), iframe)) p {
       font-size: $font-size;
       font-weight: $font-weight-bold;
     }

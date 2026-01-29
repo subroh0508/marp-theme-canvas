@@ -27,6 +27,7 @@
 @use '../component/text-decorator' as text-decorator;
 @use '../component/columns' as columns;
 @use '../component/a' as a;
+@use '../component/hr' as hr;
 
 // ===== Page styles =====
 @use '../page/title' as page-title;
@@ -105,6 +106,11 @@
     --bullet-list-padding-left: 0.2em;
     --numbered-list-padding-left: 0.2em;
 
+    // --- Horizontal rule ---
+    --hr-height: 1px;
+    --hr-width: 100%;
+    --hr-color: var(--color-grey-light);
+
     // Custom variables
     @content;
   }
@@ -169,6 +175,13 @@
 
     // ===== Column layout =====
     @include columns.configure();
+
+    // ===== Horizontal rule =====
+    @include hr.configure(
+      $height: var(--hr-height),
+      $width: var(--hr-width),
+      $color: var(--hr-color)
+    );
   }
 
   // ===== header =====

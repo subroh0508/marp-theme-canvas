@@ -364,6 +364,31 @@ Layout example for placing images and text side by side
 
 ---
 
+<!-- _header: "Demo Slide (component/_hr.scss)" -->
+
+## Horizontal Rule (Default / Solid)
+
+Content above the line
+
+<hr>
+
+Content below the line
+
+---
+
+<!-- _class: hr-dashed -->
+<!-- _header: "Demo Slide (component/_hr.scss)" -->
+
+## Horizontal Rule (Dashed)
+
+Content above the line
+
+<hr>
+
+Content below the line
+
+---
+
 <!-- _class: section -->
 <!-- _paginate: false -->
 <!-- _header: "Black Canvas Demo" -->

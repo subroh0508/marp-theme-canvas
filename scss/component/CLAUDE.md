@@ -24,6 +24,7 @@ section {
   @include section.configure(...);
   @include pagination.configure(...);
   @include prettylights.configure;
+  @include hr.configure(...);
 }
 ```
 
@@ -52,4 +53,5 @@ section {
 | `_code.scss` | `code`, `pre`, `tt` | Code blocks |
 | `_blockquote.scss` | `blockquote` | Blockquote |
 | `_text-decorator.scss` | `strong`, `mark`, `rp` | Text decoration |
+| `_hr.scss` | `hr` | Horizontal rule |
 | `prettylights/*` | `.hljs-*` | Syntax highlighting |
