@@ -17,7 +17,7 @@ style: |
 
 # Black Canvas Demo
 
-Version v0.0.7
+Version v0.0.8
 Subroh Nishikori @subroh_0508
 
 ---
