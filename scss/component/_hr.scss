@@ -3,6 +3,8 @@
 
 @mixin _hr($height, $width, $color, $style) {
   width: $width;
+  // Reset browser default border
+  border: none;
   border-top: $height $style $color;
   margin: 0 0 1em;
 }
