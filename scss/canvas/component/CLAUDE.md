@@ -32,13 +32,13 @@
 CSS変数名: `--{コンポーネント名}-{引数名}`
 
 特別なプレフィックスルール:
-- `_section.scss`: padding関連は `--slide-*`、color/font/line-height関連は `--base-*`
+- `_section.scss`: `--base-*`（padding/color/font/line-height）
 - `_columns.scss`: `--cols-*`
 
 例:
 - `_pagination.scss`の`$margin-x` → `--pagination-margin-x`
 - `_header.scss`の`$font-size` → `--header-font-size`
-- `_section.scss`の`$padding-x` → `--slide-padding-x`
+- `_section.scss`の`$padding-x` → `--base-padding-x`
 - `_section.scss`の`$color-bg` → `--base-color-bg`
 
 ## 既存コンポーネント

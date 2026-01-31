@@ -3,7 +3,7 @@
 @use '../../canvas/element/code' as base;
 
 @include base.configure(
-  $font-mono: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace,
+  $font-mono: var(--font-family-mono),
   $color-bg: color-mix(in srgb, var(--color-grey-light) 15%, transparent),
   $color-fg: var(--color-grey-lightest)
 );

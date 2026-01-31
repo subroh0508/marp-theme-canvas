@@ -3,8 +3,8 @@
 @use '../../canvas/component/header' as base;
 
 @include base.configure(
-  $margin-x: 80px,
-  $margin-y: 20px,
+  $margin-x: var(--outer-margin-x),
+  $margin-y: var(--outer-margin-y),
   $font-size: var(--font-size-xs),
   $color-text: var(--color-grey-light)
 );

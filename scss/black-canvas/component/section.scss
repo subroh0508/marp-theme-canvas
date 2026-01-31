@@ -5,11 +5,11 @@
 @include base.configure(
   $width: 1920px,
   $height: 1080px,
-  $padding-x: 80px,
-  $padding-y: 80px,
+  $padding-x: var(--slide-padding-x),
+  $padding-y: var(--slide-padding-y),
   $color-bg: var(--color-grey-darkest),
   $color-text: var(--color-white),
-  $font-family: 'Noto Sans JP', sans-serif,
+  $font-family: var(--font-family-base),
   $font-size: var(--font-size-base),
   $line-height: var(--line-height-normal)
 );
