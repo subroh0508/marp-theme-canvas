@@ -1,5 +1,5 @@
 /*!
- * White Canvas - A simple slide theme with minimal styling
+ * White Canvas - A simple light slide theme with minimal styling
  *
  * When using, you must define the following variables in Marp's inline style:
  * - --color-primary: Primary color (e.g., h2 text color)
@@ -23,10 +23,45 @@
  * https://github.com/subroh0508/marp-theme-canvas/blob/main/LICENSE
  */
 
-@use './theme/white-canvas' as theme;
+// Token
+@use 'white-canvas/token/color';
+@use 'white-canvas/token/typography';
 
-// ===== Google Fonts =====
+// Element
+@use 'white-canvas/element/heading';
+@use 'white-canvas/element/paragraph';
+@use 'white-canvas/element/list';
+@use 'white-canvas/element/link';
+@use 'white-canvas/element/table';
+@use 'white-canvas/element/code';
+@use 'white-canvas/element/blockquote';
+@use 'white-canvas/element/hr';
+@use 'white-canvas/element/text-decorator';
+@use 'white-canvas/element/prettylights/light';
+
+// Component
+@use 'white-canvas/component/section';
+@use 'white-canvas/component/pagination';
+@use 'white-canvas/component/header';
+@use 'white-canvas/component/footer';
+@use 'white-canvas/component/columns';
+
+// Pattern
+@use 'white-canvas/pattern/title';
+@use 'white-canvas/pattern/toc';
+@use 'white-canvas/pattern/section' as pattern-section;
+@use 'white-canvas/pattern/agenda';
+@use 'white-canvas/pattern/display';
+
+// Google Fonts
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap');
 
-// ===== Apply theme =====
-@include theme.apply;
+:root {
+  --slide-padding-x: 80px;
+  --slide-padding-y: 80px;
+  --font-family-base: 'Noto Sans JP', sans-serif;
+  --font-family-mono: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
+
+  --outer-margin-x: var(--slide-padding-x);
+  --outer-margin-y: 20px;
+}

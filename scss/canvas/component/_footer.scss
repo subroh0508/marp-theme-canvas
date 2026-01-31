@@ -1,0 +1,19 @@
+// ===== _footer.scss =====
+// Footer styles for Marp slides
+
+@mixin configure($margin-x, $margin-y, $font-size, $color-text) {
+  :root {
+    --footer-margin-x: #{$margin-x};
+    --footer-margin-y: #{$margin-y};
+    --footer-font-size: #{$font-size};
+    --footer-color-text: #{$color-text};
+  }
+
+  footer {
+    position: absolute;
+    bottom: var(--footer-margin-y);
+    left: var(--footer-margin-x);
+    font-size: var(--footer-font-size);
+    color: var(--footer-color-text);
+  }
+}

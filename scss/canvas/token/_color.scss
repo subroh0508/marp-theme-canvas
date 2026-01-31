@@ -1,0 +1,33 @@
+// ===== _color.scss =====
+// Color palette design tokens
+
+@mixin configure(
+  $color-blue,
+  $color-black,
+  $color-white,
+  $color-grey-lightest,
+  $color-grey-lighter,
+  $color-grey-light,
+  $color-grey-medium,
+  $color-grey-dark,
+  $color-grey-darker,
+  $color-grey-darkest
+) {
+  :root {
+    // Black & White
+    --color-black: #{$color-black};
+    --color-white: #{$color-white};
+
+    // Grayscale
+    --color-grey-lightest: #{$color-grey-lightest};
+    --color-grey-lighter: #{$color-grey-lighter};
+    --color-grey-light: #{$color-grey-light};
+    --color-grey-medium: #{$color-grey-medium};
+    --color-grey-dark: #{$color-grey-dark};
+    --color-grey-darker: #{$color-grey-darker};
+    --color-grey-darkest: #{$color-grey-darkest};
+
+    // Blue
+    --color-blue: #{$color-blue};
+  }
+}

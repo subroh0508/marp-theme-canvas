@@ -1,0 +1,37 @@
+@charset "UTF-8";
+:root {
+  --blockquote-font-size: var(--font-size-m);
+  --blockquote-line-height: var(--line-height-tight);
+  --blockquote-color-text: var(--color-grey-medium);
+  --blockquote-color-bg: color-mix(in srgb, var(--color-grey-light) 10%, transparent);
+  --blockquote-color-mark: var(--color-grey-medium);
+  --blockquote-border-radius: 8px;
+}
+
+blockquote {
+  position: relative;
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0.5em 0.5em 0.5em 2em;
+  font-size: var(--blockquote-font-size);
+  font-style: italic;
+  line-height: var(--blockquote-line-height);
+  color: var(--blockquote-color-text);
+  background: var(--blockquote-color-bg);
+  border-radius: var(--blockquote-border-radius);
+}
+blockquote::before {
+  content: "“";
+  position: absolute;
+  left: 0.2em;
+  font-size: 2em;
+  line-height: 1;
+  color: var(--blockquote-color-mark);
+}
+blockquote > :first-child {
+  margin-top: 0;
+}
+blockquote > :last-child {
+  margin-bottom: 0;
+}

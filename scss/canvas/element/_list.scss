@@ -1,0 +1,29 @@
+// ===== _list.scss =====
+// List styles for Marp slides (ul, ol)
+
+@mixin configure($ul-indent, $ol-indent, $ul-li-padding-left, $ol-li-padding-left) {
+  :root {
+    --ul-indent: #{$ul-indent};
+    --ol-indent: #{$ol-indent};
+    --ul-li-padding-left: #{$ul-li-padding-left};
+    --ol-li-padding-left: #{$ol-li-padding-left};
+  }
+
+  ul {
+    margin-top: 0;
+    padding-inline-start: var(--ul-indent);
+
+    > li {
+      padding-left: var(--ul-li-padding-left);
+    }
+  }
+
+  ol {
+    margin-top: 0;
+    padding-inline-start: var(--ol-indent);
+
+    > li {
+      padding-left: var(--ol-li-padding-left);
+    }
+  }
+}

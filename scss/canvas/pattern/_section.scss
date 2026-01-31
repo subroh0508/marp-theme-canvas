@@ -1,0 +1,23 @@
+// ===== _section.scss =====
+// Styles for section divider page
+//
+// Usage: <!-- _class: section -->
+
+@mixin configure($font-size, $font-weight: bold) {
+  section.section {
+    --section-font-size: #{$font-size};
+    --section-font-weight: #{$font-weight};
+
+    justify-content: center;
+
+    // p: Section title
+    // Vertically centered
+    p {
+      flex: 0 1;
+      display: block;
+      font-size: var(--section-font-size);
+      font-weight: var(--section-font-weight);
+      margin: 0;
+    }
+  }
+}

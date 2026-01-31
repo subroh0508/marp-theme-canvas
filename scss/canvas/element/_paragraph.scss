@@ -1,0 +1,8 @@
+// ===== _paragraph.scss =====
+// Paragraph styles for Marp slides
+
+@mixin configure() {
+  p {
+    margin-top: 0;
+  }
+}

@@ -23,10 +23,45 @@
  * https://github.com/subroh0508/marp-theme-canvas/blob/main/LICENSE
  */
 
-@use './theme/black-canvas' as theme;
+// Token
+@use 'black-canvas/token/color';
+@use 'black-canvas/token/typography';
 
-// ===== Google Fonts =====
+// Element
+@use 'black-canvas/element/heading';
+@use 'black-canvas/element/paragraph';
+@use 'black-canvas/element/list';
+@use 'black-canvas/element/link';
+@use 'black-canvas/element/table';
+@use 'black-canvas/element/code';
+@use 'black-canvas/element/blockquote';
+@use 'black-canvas/element/hr';
+@use 'black-canvas/element/text-decorator';
+@use 'black-canvas/element/prettylights/dark';
+
+// Component
+@use 'black-canvas/component/section';
+@use 'black-canvas/component/pagination';
+@use 'black-canvas/component/header';
+@use 'black-canvas/component/footer';
+@use 'black-canvas/component/columns';
+
+// Pattern
+@use 'black-canvas/pattern/title';
+@use 'black-canvas/pattern/toc';
+@use 'black-canvas/pattern/section' as pattern-section;
+@use 'black-canvas/pattern/agenda';
+@use 'black-canvas/pattern/display';
+
+// Google Fonts
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap');
 
-// ===== Apply theme =====
-@include theme.apply;
+:root {
+  --slide-padding-x: 80px;
+  --slide-padding-y: 80px;
+  --font-family-base: 'Noto Sans JP', sans-serif;
+  --font-family-mono: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
+
+  --outer-margin-x: var(--slide-padding-x);
+  --outer-margin-y: 20px;
+}

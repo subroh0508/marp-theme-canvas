@@ -1,0 +1,151 @@
+// ===== _base.scss =====
+// Syntax highlighting styles (color mapping for highlight.js classes)
+// Modified from marp-core v4.2.0
+// https://github.com/marp-team/marp-core/blob/v4.2.0/themes/default.scss
+
+/*!
+ * MIT License
+ * Copyright (c) 2018 Marp team (marp-team@marp.app)
+ * https://github.com/marp-team/marp-core/blob/main/LICENSE
+ */
+
+@mixin configure(
+  $comment,                 // Comment (pl-c)
+  $constant,                // Constant (pl-c1)
+  $entity,                  // Entity / Function name (pl-e, pl-en)
+  $entity-tag,              // Tag name (pl-ent)
+  $keyword,                 // Keyword (pl-k)
+  $string,                  // String (pl-s)
+  $variable,                // Variable (pl-v)
+  $storage-modifier,        // Default text (pl-smi)
+  $markup-heading,          // Heading (pl-mh)
+  $markup-list,             // List marker (pl-ml)
+  $markup-inserted-text,    // Inserted text color (pl-mi1)
+  $markup-inserted-bg,      // Inserted background color (pl-mi1)
+  $markup-deleted-text,     // Deleted text color (pl-md)
+  $markup-deleted-bg        // Deleted background color (pl-md)
+) {
+  :root {
+    --pl-color-comment: #{$comment};
+    --pl-color-constant: #{$constant};
+    --pl-color-entity: #{$entity};
+    --pl-color-entity-tag: #{$entity-tag};
+    --pl-color-keyword: #{$keyword};
+    --pl-color-string: #{$string};
+    --pl-color-variable: #{$variable};
+    --pl-color-storage-modifier: #{$storage-modifier};
+    --pl-color-markup-heading: #{$markup-heading};
+    --pl-color-markup-list: #{$markup-list};
+    --pl-color-markup-inserted-text: #{$markup-inserted-text};
+    --pl-color-markup-inserted-bg: #{$markup-inserted-bg};
+    --pl-color-markup-deleted-text: #{$markup-deleted-text};
+    --pl-color-markup-deleted-bg: #{$markup-deleted-bg};
+  }
+
+  pre {
+    // Default color
+    :where(.hljs) {
+      color: var(--pl-color-storage-modifier);
+    }
+
+    // Keywords
+    :where(.hljs-doctag),
+    :where(.hljs-keyword),
+    :where(.hljs-meta .hljs-keyword),
+    :where(.hljs-template-tag),
+    :where(.hljs-template-variable),
+    :where(.hljs-type),
+    :where(.hljs-variable.language_) {
+      color: var(--pl-color-keyword);
+    }
+
+    // Functions / Class names
+    :where(.hljs-title),
+    :where(.hljs-title.class_),
+    :where(.hljs-title.class_.inherited__),
+    :where(.hljs-title.function_) {
+      color: var(--pl-color-entity);
+    }
+
+    // Constants / Attributes / Numbers
+    :where(.hljs-attr),
+    :where(.hljs-attribute),
+    :where(.hljs-literal),
+    :where(.hljs-meta),
+    :where(.hljs-number),
+    :where(.hljs-operator),
+    :where(.hljs-selector-attr),
+    :where(.hljs-selector-class),
+    :where(.hljs-selector-id),
+    :where(.hljs-variable) {
+      color: var(--pl-color-constant);
+    }
+
+    // Strings / Regular expressions
+    :where(.hljs-string),
+    :where(.hljs-meta .hljs-string),
+    :where(.hljs-regexp) {
+      color: var(--pl-color-string);
+    }
+
+    // Built-in functions / Symbols
+    :where(.hljs-built_in),
+    :where(.hljs-symbol) {
+      color: var(--pl-color-variable);
+    }
+
+    // Comments
+    :where(.hljs-code),
+    :where(.hljs-comment),
+    :where(.hljs-formula) {
+      color: var(--pl-color-comment);
+    }
+
+    // Tag names / Selectors
+    :where(.hljs-name),
+    :where(.hljs-quote),
+    :where(.hljs-selector-pseudo),
+    :where(.hljs-selector-tag) {
+      color: var(--pl-color-entity-tag);
+    }
+
+    // Variable interpolation
+    :where(.hljs-subst) {
+      color: var(--pl-color-storage-modifier);
+    }
+
+    // Markup: Heading
+    :where(.hljs-section) {
+      font-weight: bold;
+      color: var(--pl-color-markup-heading);
+    }
+
+    // Markup: List
+    :where(.hljs-bullet) {
+      color: var(--pl-color-markup-list);
+    }
+
+    // Markup: Emphasis
+    :where(.hljs-emphasis) {
+      font-style: italic;
+      color: var(--pl-color-storage-modifier);
+    }
+
+    :where(.hljs-strong) {
+      font-weight: bold;
+      color: var(--pl-color-storage-modifier);
+    }
+
+    // diff: Added lines
+    :where(.hljs-addition) {
+      color: var(--pl-color-markup-inserted-text);
+      background-color: var(--pl-color-markup-inserted-bg);
+    }
+
+    // diff: Deleted lines
+    :where(.hljs-deletion) {
+      color: var(--pl-color-markup-deleted-text);
+      background-color: var(--pl-color-markup-deleted-bg);
+    }
+  }
+}

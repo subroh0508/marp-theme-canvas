@@ -1,0 +1,12 @@
+section.section {
+  --section-font-size: var(--font-size-xxl);
+  --section-font-weight: bold;
+  justify-content: center;
+}
+section.section p {
+  flex: 0 1;
+  display: block;
+  font-size: var(--section-font-size);
+  font-weight: var(--section-font-weight);
+  margin: 0;
+}

@@ -1,0 +1,24 @@
+// ===== _text-decorator.scss =====
+// Text decoration styles (strong, mark, rp)
+
+@mixin configure($strong-font-weight, $mark-font-weight, $mark-color-bg, $rp-font-weight) {
+  :root {
+    --strong-font-weight: #{$strong-font-weight};
+    --mark-font-weight: #{$mark-font-weight};
+    --mark-color-bg: #{$mark-color-bg};
+    --rp-font-weight: #{$rp-font-weight};
+  }
+
+  strong {
+    font-weight: var(--strong-font-weight);
+  }
+
+  mark {
+    font-weight: var(--mark-font-weight);
+    background-color: var(--mark-color-bg);
+  }
+
+  rp {
+    font-weight: var(--rp-font-weight);
+  }
+}

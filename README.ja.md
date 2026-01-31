@@ -161,7 +161,7 @@ marp --theme node_modules/@subroh0508/marp-theme-canvas/css/white-canvas.css sli
 | `--color-grey-dark` | グレー（暗い） | `#334155` (slate-700) | `#1e293b` (slate-800) |
 | `--color-grey-darker` | グレー（より暗い） | `#1e293b` (slate-800) | `#0f172a` (slate-900) |
 | `--color-grey-darkest` | グレー（最も暗い） | `#0f172a` (slate-900) | `#020617` (slate-950) |
-| `--color-link` | リンク色 | `#2563eb` (blue-600) | `#60a5fa` (blue-400) |
+| `--color-blue` | リンク色 | `#2563eb` (blue-600) | `#60a5fa` (blue-400) |
 
 #### フォント
 
@@ -177,11 +177,10 @@ marp --theme node_modules/@subroh0508/marp-theme-canvas/css/white-canvas.css sli
 |--------|------|--------------|
 | `--slide-padding-x` | スライド左右余白 | `80px` |
 | `--slide-padding-y` | スライド上下余白 | `80px` |
-| `--border-radius` | 角丸 | `8px` |
-| `--bullet-list-indent` | 箇条書きリスト(ul)インデント | `1.1em` |
-| `--numbered-list-indent` | 番号付きリスト(ol)インデント | `1.1em` |
-| `--bullet-list-padding-left` | 箇条書きリスト項目(li)の左余白 | `0.2em` |
-| `--numbered-list-padding-left` | 番号付きリスト項目(li)の左余白 | `0.2em` |
+| `--ul-indent` | 箇条書きリスト(ul)インデント | `1.1em` |
+| `--ol-indent` | 番号付きリスト(ol)インデント | `1.1em` |
+| `--ul-li-padding-left` | 箇条書きリスト項目(li)の左余白 | `0.2em` |
+| `--ol-li-padding-left` | 番号付きリスト項目(li)の左余白 | `0.2em` |
 
 ### カスタマイズ例
 
@@ -207,90 +206,95 @@ Canvasのスタイルはモジュール化されており、独自テーマ作�
 
 ```
 scss/
-├── theme/              # テーマモジュール
-│   ├── _white-canvas.scss  # ライトテーマ（@use可能）
-│   └── _black-canvas.scss  # ダークテーマ（@use可能）
-├── component/          # 共通コンポーネント
-│   ├── _heading.scss   # 見出し
-│   ├── _table.scss     # テーブル
-│   ├── _code.scss      # コードブロック
-│   ├── _blockquote.scss # 引用
-│   ├── _columns.scss   # カラムレイアウト
-│   └── ...
-├── page/               # ページスタイル
-│   ├── _title.scss
-│   ├── _section.scss
-│   ├── _toc.scss
-│   ├── _agenda.scss
-│   └── _display.scss
-├── white-canvas.scss   # ライトテーマ（CSS出力用）
-└── black-canvas.scss   # ダークテーマ（CSS出力用）
+├── canvas/                 # ベースmixin（@useでインポート可能）
+│   ├── token/              # デザイントークン（色、タイポグラフィ）
+│   ├── element/            # HTML要素スタイル（見出し、テーブル、コード等）
+│   ├── component/          # 複合コンポーネント（セクション、ヘッダー、フッター等）
+│   └── pattern/            # ページレイアウトパターン（タイトル、目次、アジェンダ等）
+├── white-canvas/           # ライトテーマ設定
+│   ├── token/              # テーマ固有のトークン
+│   ├── element/            # 要素の設定
+│   ├── component/          # コンポーネントの設定
+│   └── pattern/            # パターンの設定
+├── black-canvas/           # ダークテーマ設定
+│   └── （white-canvasと同じ構造）
+├── white-canvas.scss       # ライトテーマのエントリーポイント
+└── black-canvas.scss       # ダークテーマのエントリーポイント
 ```
 
-### テーマをカスタマイズして使用
+### ベースmixinを使用する
 
-テーマモジュールを `@use` で取り込み、CSS変数をカスタマイズできます。
+`canvas/`からベースmixinをインポートしてカスタムテーマを作成できます:
 
 ```scss
 /*!
  * @theme my-custom-theme
  */
 
-@use '@subroh0508/marp-theme-canvas/scss/white-canvas' as white-canvas;
+// ベースmixinをインポート
+@use '@subroh0508/marp-theme-canvas/canvas/element/heading' as heading;
+@use '@subroh0508/marp-theme-canvas/canvas/component/section' as section;
+@use '@subroh0508/marp-theme-canvas/canvas/pattern/title' as title;
 
-// Google Fonts（必要に応じて変更）
+// Google Fonts
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap');
 
-// テーマを適用（CSS変数をカスタマイズ）
-@include white-canvas.apply() {
-  --color-primary: #e11d48;
-  --color-accent: #fde047;
-  --font-size-base: 36px;
-}
-```
-
-### 提供されるmixin
-
-| mixin | 説明 |
-|-------|------|
-| `apply()` | CSS変数とスタイルを一括適用。`@content` でCSS変数を追加・上書き可能 |
-| `variables()` | CSS変数のみを出力。`@content` でCSS変数を追加・上書き可能 |
-| `styles()` | スタイルのみを出力（CSS変数は含まない） |
-
-### コンポーネント・ページスタイルの個別利用
-
-```scss
-// テーマモジュール
-@use '@subroh0508/marp-theme-canvas/scss/white-canvas' as white-canvas;
-@use '@subroh0508/marp-theme-canvas/scss/black-canvas' as black-canvas;
-
-// コンポーネント
-@use '@subroh0508/marp-theme-canvas/scss/component' as component;
-@use '@subroh0508/marp-theme-canvas/scss/component/heading' as heading;
-
-// ページスタイル
-@use '@subroh0508/marp-theme-canvas/scss/page' as page;
-@use '@subroh0508/marp-theme-canvas/scss/page/title' as page-title;
-```
-
-### コンポーネント単体での使用例
-
-```scss
-@use '@subroh0508/marp-theme-canvas/scss/component/heading' as heading;
-@use '@subroh0508/marp-theme-canvas/scss/page/title' as page-title;
-
-section {
-  @include page-title.configure(
-    $font-size-title: 2.5em,
-    $color-metadata-text: #666
-  );
-}
-
+// スタイルを適用
 @include heading.configure(
-  $font-size-h1: 2em,
-  $font-size-h2: 1.5em,
-  $color-text-h2: #3b91c4
+  $h1-font-size: 2em,
+  $h2-font-size: 1.5em,
+  $h1-font-weight: 700,
+  $h2-font-weight: 700,
+  $h3-font-weight: 700,
+  $h4-font-weight: 700,
+  $h5-font-weight: 400,
+  $h6-font-weight: 400,
+  $h1-line-height: 1.2,
+  $h2-line-height: 1.2,
+  $h3-line-height: 1.2,
+  $h4-line-height: 1.2,
+  $h5-line-height: 1.2,
+  $h6-line-height: 1.2,
+  $h2-color-text: var(--color-primary)
 );
+
+@include section.configure(
+  $width: 1920px,
+  $height: 1080px,
+  $padding-x: 80px,
+  $padding-y: 80px,
+  $color-bg: #fff,
+  $color-text: #0f172a,
+  $font-family: 'Noto Sans JP', sans-serif,
+  $font-size: 40px,
+  $line-height: 1.45
+);
+
+@include title.configure(
+  $font-size-title: 2.5em,
+  $color-metadata-text: #64748b
+);
+```
+
+### テーマ設定ファイルをインポートする
+
+設定済みのテーマファイルをインポートすることもできます:
+
+```scss
+// テーマ設定ファイルをインポート
+@use '@subroh0508/marp-theme-canvas/white-canvas/element/heading';
+@use '@subroh0508/marp-theme-canvas/white-canvas/component/section';
+```
+
+### CSSファイルを直接使用する
+
+```js
+// JavaScript/TypeScriptでCSSをインポート
+import '@subroh0508/marp-theme-canvas/white-canvas.css'
+import '@subroh0508/marp-theme-canvas/black-canvas.css'
+
+// 個別のCSSモジュールをインポート
+import '@subroh0508/marp-theme-canvas/white-canvas/element/heading.css'
 ```
 
 ## 開発

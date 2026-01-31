@@ -1,0 +1,22 @@
+section.display {
+  --display-font-size: var(--font-size-x3l);
+  --display-font-weight: var(--font-weight-bold);
+  justify-content: center;
+  align-items: center;
+}
+section.display p {
+  margin: 0;
+  text-align: center;
+}
+section.display:not(:has(img:not(.emoji), iframe)) p {
+  font-size: var(--display-font-size);
+  font-weight: var(--display-font-weight);
+}
+section.display img:not(.emoji),
+section.display iframe {
+  display: block;
+  margin: 0 0;
+}
+section.display:has(p) img:not(.emoji), section.display:has(p) iframe {
+  margin: 0 0 1em;
+}

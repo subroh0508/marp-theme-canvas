@@ -1,0 +1,16 @@
+// black-canvas color configuration
+
+@use '../../canvas/token/color' as base;
+
+@include base.configure(
+  $color-blue: #60a5fa,
+  $color-black: #000,
+  $color-white: #fff,
+  $color-grey-lightest: #f8fafc,
+  $color-grey-lighter: #f1f5f9,
+  $color-grey-light: #e2e8f0,
+  $color-grey-medium: #cbd5e1,
+  $color-grey-dark: #1e293b,
+  $color-grey-darker: #0f172a,
+  $color-grey-darkest: #020617
+);

@@ -1,0 +1,19 @@
+:root {
+  --strong-font-weight: var(--font-weight-bold);
+  --mark-font-weight: var(--font-weight-bold);
+  --mark-color-bg: var(--color-accent);
+  --rp-font-weight: var(--font-weight-normal);
+}
+
+strong {
+  font-weight: var(--strong-font-weight);
+}
+
+mark {
+  font-weight: var(--mark-font-weight);
+  background-color: var(--mark-color-bg);
+}
+
+rp {
+  font-weight: var(--rp-font-weight);
+}

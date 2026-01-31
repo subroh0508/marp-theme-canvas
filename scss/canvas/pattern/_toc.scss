@@ -1,0 +1,18 @@
+// ===== _toc.scss =====
+// Styles for table of contents page
+//
+// Usage: <!-- _class: toc -->
+
+@mixin configure($font-size, $line-height) {
+  section.toc {
+    --toc-list-font-size: #{$font-size};
+    --toc-list-line-height: #{$line-height};
+
+    // List: Table of contents items (direct children only)
+    > ul,
+    > ol {
+      font-size: var(--toc-list-font-size);
+      line-height: var(--toc-list-line-height);
+    }
+  }
+}

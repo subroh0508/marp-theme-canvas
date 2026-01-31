@@ -1,0 +1,15 @@
+// black-canvas section configuration
+
+@use '../../canvas/component/section' as base;
+
+@include base.configure(
+  $width: 1920px,
+  $height: 1080px,
+  $padding-x: var(--slide-padding-x),
+  $padding-y: var(--slide-padding-y),
+  $color-bg: var(--color-grey-darkest),
+  $color-text: var(--color-white),
+  $font-family: var(--font-family-base),
+  $font-size: var(--font-size-base),
+  $line-height: var(--line-height-normal)
+);

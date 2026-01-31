@@ -1,0 +1,47 @@
+// ===== _dark.scss =====
+// Syntax highlighting (Dark theme) color definitions
+// Modified from github-markdown-css v5.8.1
+// https://github.com/sindresorhus/github-markdown-css/blob/v5.8.1/github-markdown-dark.css
+
+/*!
+ * MIT License
+ * Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)
+ * https://github.com/sindresorhus/github-markdown-css/blob/main/license
+ */
+
+@use 'base';
+
+// ===== Dark theme colors =====
+$_pl-comment: #9198a1;
+$_pl-constant: #79c0ff;
+$_pl-entity: #d2a8ff;
+$_pl-entity-tag: #7ee787;
+$_pl-keyword: #ff7b72;
+$_pl-string: #a5d6ff;
+$_pl-variable: #ffa657;
+$_pl-storage-modifier: #f0f6fc;
+$_pl-markup-heading: #1f6feb;
+$_pl-markup-list: #f2cc60;
+$_pl-markup-inserted-text: #aff5b4;
+$_pl-markup-inserted-bg: #033a16;
+$_pl-markup-deleted-text: #ffdcd7;
+$_pl-markup-deleted-bg: #67060c;
+
+@mixin configure {
+  @include base.configure(
+    $_pl-comment,
+    $_pl-constant,
+    $_pl-entity,
+    $_pl-entity-tag,
+    $_pl-keyword,
+    $_pl-string,
+    $_pl-variable,
+    $_pl-storage-modifier,
+    $_pl-markup-heading,
+    $_pl-markup-list,
+    $_pl-markup-inserted-text,
+    $_pl-markup-inserted-bg,
+    $_pl-markup-deleted-text,
+    $_pl-markup-deleted-bg
+  );
+}

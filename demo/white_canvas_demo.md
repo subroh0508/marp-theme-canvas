@@ -283,25 +283,25 @@ This slide hides them with the following settings:
 
 ---
 
-<!-- _class: columns -->
-<!-- _header: "Demo Slide (component/_columns.scss)" -->
+<!-- _class: cols -->
+<!-- _header: "Demo Slide (component/_cols.scss)" -->
 
-<div class="column">
+<div class="col">
 
-## Usage 1: `_class: columns`
+## Usage 1: `_class: cols`
 
 The entire slide becomes a column layout
 
-- Specify `<!-- _class: columns -->`
-- Only write `<div class="column">`
+- Specify `<!-- _class: cols -->`
+- Only write `<div class="col">`
 - Useful when you want to split the entire slide
 
 </div>
-<div class="column">
+<div class="col">
 
 ## Right Column
 
-`<div class="columns">` is not needed
+`<div class="cols">` is not needed
 
 - Item A
 - Item B
@@ -311,14 +311,14 @@ The entire slide becomes a column layout
 
 ---
 
-<!-- _header: "Demo Slide (component/_columns.scss)" -->
+<!-- _header: "Demo Slide (component/_cols.scss)" -->
 
-## Usage 2: `<div class="columns">`
+## Usage 2: `<div class="cols">`
 
 > You can place text before and after columns
 
-<div class="columns">
-<div class="column">
+<div class="cols">
+<div class="col">
 
 **Left Column**
 
@@ -326,7 +326,7 @@ The entire slide becomes a column layout
 - Item B
 
 </div>
-<div class="column">
+<div class="col">
 
 **Right Column**
 
@@ -340,24 +340,24 @@ The entire slide becomes a column layout
 
 ---
 
-<!-- _header: "Demo Slide (component/_columns.scss)" -->
+<!-- _header: "Demo Slide (component/_cols.scss)" -->
 
 ## Column Layout (Width Specified)
 
-<div class="columns">
-<div class="column-4">
+<div class="cols">
+<div class="col-4">
 
 ![](https://picsum.photos/1200/800?image=50)
 
 </div>
-<div class="column-6">
+<div class="col-6">
 
 **Text Content**
 
 Layout example for placing images and text side by side
 
-- `column-4`: Ratio of 4
-- `column-6`: Ratio of 6
+- `col-4`: Ratio of 4
+- `col-6`: Ratio of 6
 
 </div>
 </div>

@@ -1,0 +1,38 @@
+/*!
+ * MIT License
+ * Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)
+ * https://github.com/sindresorhus/github-markdown-css/blob/main/license
+ */
+:root {
+  --code-font-mono: var(--font-family-mono);
+  --code-color-bg: color-mix(in srgb, var(--color-grey-light) 15%, transparent);
+  --code-color-fg: var(--color-grey-lightest);
+}
+
+code, tt {
+  font-family: var(--code-font-mono);
+  padding: 0.2em 0.4em;
+  font-size: 85%;
+  white-space: break-spaces;
+  background-color: var(--code-color-bg);
+  border-radius: 6px;
+}
+
+pre {
+  margin-top: 0;
+  font-family: var(--code-font-mono);
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  color: var(--code-color-fg);
+  background-color: var(--code-color-bg);
+  border-radius: 6px;
+}
+
+pre > code {
+  padding: 0;
+  background: transparent;
+  border: 0;
+  white-space: pre;
+}
