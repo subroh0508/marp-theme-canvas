@@ -1,0 +1,10 @@
+// black-canvas list configuration
+
+@use '../../canvas/element/list' as base;
+
+@include base.configure(
+  $ul-indent: 1.1em,
+  $ol-indent: 1.1em,
+  $ul-li-padding-left: 0.2em,
+  $ol-li-padding-left: 0.2em
+);

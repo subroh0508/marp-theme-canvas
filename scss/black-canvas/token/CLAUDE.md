@@ -1,42 +1,20 @@
 # token
 
-デザイントークン（数値情報）を管理
+black-canvasテーマ用のデザイントークン設定
 
 ## 役割
 
-- カラーパレット
-
-## 定義方法
-
-CSS変数として定義し、変数名はセマンティックにする。
+`canvas/token`で定義されたmixinを呼び出し、テーマ固有の値を設定する。
 
 ## ファイル構造
 
-- `_color.scss` - カラーパレット
+- `_typography.scss` - タイポグラフィ設定（デフォルト値使用）
+- `_color.scss` - カラーパレット設定
 
-## カラーパレット
+## カラーパレット設定
 
-### Black & White
+| 引数 | 値 | 説明 |
+|------|-----|------|
+| `$color-blue` | `#60a5fa` | blue-400 |
 
-| 変数名 | デフォルト値 |
-|--------|-------------|
-| `--color-black` | `#000` |
-| `--color-white` | `#fff` |
-
-### Grayscale (Tailwind slate 50-300, 800-950)
-
-| 変数名 | デフォルト値 | Tailwind |
-|--------|-------------|----------|
-| `--color-grey-lightest` | `#f8fafc` | slate-50 |
-| `--color-grey-lighter` | `#f1f5f9` | slate-100 |
-| `--color-grey-light` | `#e2e8f0` | slate-200 |
-| `--color-grey-medium` | `#cbd5e1` | slate-300 |
-| `--color-grey-dark` | `#1e293b` | slate-800 |
-| `--color-grey-darker` | `#0f172a` | slate-900 |
-| `--color-grey-darkest` | `#020617` | slate-950 |
-
-### Blue
-
-| 変数名 | デフォルト値 | Tailwind |
-|--------|-------------|----------|
-| `--color-blue` | `#60a5fa` | blue-400 |
+その他のグレースケール値はデフォルト値（slate 50-300, 800-950）を使用。

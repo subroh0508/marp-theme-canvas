@@ -1,0 +1,10 @@
+// black-canvas pagination configuration
+
+@use '../../canvas/component/pagination' as base;
+
+@include base.configure(
+  $margin-x: 80px,
+  $margin-y: 20px,
+  $font-size: var(--font-size-xs),
+  $color-text: var(--color-grey-light)
+);

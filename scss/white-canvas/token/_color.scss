@@ -1,33 +1,7 @@
-// ===== _color.scss =====
-// Color palette for white-canvas theme
+// white-canvas color configuration
 
-@mixin configure(
-  $color-black: #000,
-  $color-white: #fff,
-  $color-grey-lightest: #cbd5e1,
-  $color-grey-lighter: #94a3b8,
-  $color-grey-light: #64748b,
-  $color-grey-medium: #475569,
-  $color-grey-dark: #334155,
-  $color-grey-darker: #1e293b,
-  $color-grey-darkest: #0f172a,
+@use '../../canvas/token/color' as base;
+
+@include base.configure(
   $color-blue: #2563eb
-) {
-  :root {
-    // Black & White
-    --color-black: #{$color-black};
-    --color-white: #{$color-white};
-
-    // Grayscale (Tailwind slate 300-900)
-    --color-grey-lightest: #{$color-grey-lightest}; // slate-300
-    --color-grey-lighter: #{$color-grey-lighter};   // slate-400
-    --color-grey-light: #{$color-grey-light};       // slate-500
-    --color-grey-medium: #{$color-grey-medium};     // slate-600
-    --color-grey-dark: #{$color-grey-dark};         // slate-700
-    --color-grey-darker: #{$color-grey-darker};     // slate-800
-    --color-grey-darkest: #{$color-grey-darkest};   // slate-900
-
-    // Blue
-    --color-blue: #{$color-blue}; // blue-600
-  }
-}
+);

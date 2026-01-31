@@ -1,0 +1,8 @@
+// black-canvas display pattern configuration
+
+@use '../../canvas/pattern/display' as base;
+
+@include base.configure(
+  $font-size: var(--font-size-x3l),
+  $font-weight-bold: var(--font-weight-bold)
+);

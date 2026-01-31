@@ -1,0 +1,5 @@
+// black-canvas typography configuration
+
+@use '../../canvas/token/typography' as base;
+
+@include base.configure();
