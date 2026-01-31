@@ -1,0 +1,19 @@
+// ===== _header.scss =====
+// Header styles for Marp slides
+
+@mixin configure($margin-x, $margin-y, $font-size, $color-text) {
+  :root {
+    --header-margin-x: #{$margin-x};
+    --header-margin-y: #{$margin-y};
+    --header-font-size: #{$font-size};
+    --header-color-text: #{$color-text};
+  }
+
+  header {
+    position: absolute;
+    top: var(--header-margin-y);
+    left: var(--header-margin-x);
+    font-size: var(--header-font-size);
+    color: var(--header-color-text);
+  }
+}

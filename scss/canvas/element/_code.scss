@@ -1,0 +1,43 @@
+// ===== _code.scss =====
+// Code block styles
+// Modified from github-markdown-css v5.8.1
+// https://github.com/sindresorhus/github-markdown-css/blob/v5.8.1/github-markdown.css
+
+/*!
+ * MIT License
+ * Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)
+ * https://github.com/sindresorhus/github-markdown-css/blob/main/license
+ */
+
+@mixin configure($font-mono, $color-bg, $color-fg) {
+  :root {
+    --code-font-mono: #{$font-mono};
+    --code-color-bg: #{$color-bg};
+    --code-color-fg: #{$color-fg};
+  }
+
+  code, tt {
+    font-family: var(--code-font-mono);
+    padding: .2em .4em;
+    font-size: 85%;
+    white-space: break-spaces;
+    background-color: var(--code-color-bg);
+    border-radius: 6px;
+  }
+  pre {
+    font-family: var(--code-font-mono);
+    padding: 16px;
+    overflow: auto;
+    font-size: 85%;
+    line-height: 1.45;
+    color: var(--code-color-fg);
+    background-color: var(--code-color-bg);
+    border-radius: 6px;
+  }
+  pre > code {
+    padding: 0;
+    background: transparent;
+    border: 0;
+    white-space: pre;
+  }
+}

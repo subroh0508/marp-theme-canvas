@@ -53,7 +53,7 @@ $_pl-comment: #59636e;
 ## Usage from Theme
 
 ```scss
-@use './canvas/component/prettylights/light' as prettylights;
+@use './canvas/element/prettylights/light' as prettylights;
 
 @include prettylights.configure;
 ```

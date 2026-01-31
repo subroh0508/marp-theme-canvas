@@ -1,0 +1,38 @@
+// ===== _table.scss =====
+// Table styles
+// Modified from github-markdown-css v5.8.1
+// https://github.com/sindresorhus/github-markdown-css/blob/v5.8.1/github-markdown.css
+
+@mixin configure($color-row-bg, $color-header-bg, $color-even-row-bg, $color-border-vert, $color-border-horz) {
+  :root {
+    --table-color-row-bg: #{$color-row-bg};
+    --table-color-header-bg: #{$color-header-bg};
+    --table-color-even-row-bg: #{$color-even-row-bg};
+    --table-color-border-vert: #{$color-border-vert};
+    --table-color-border-horz: #{$color-border-horz};
+  }
+
+  table {
+    border-spacing: 0;
+    border-collapse: collapse;
+    display: block;
+    width: max-content;
+    max-width: 100%;
+    overflow: auto;
+  }
+  th, td {
+    padding: 6px 13px;
+    border: 1px solid var(--table-color-border-vert);
+  }
+  th {
+    font-weight: 600;
+    background-color: var(--table-color-header-bg);
+  }
+  tr {
+    background-color: var(--table-color-row-bg);
+    border-top: 1px solid var(--table-color-border-horz);
+  }
+  tr:nth-child(2n) {
+    background-color: var(--table-color-even-row-bg);
+  }
+}

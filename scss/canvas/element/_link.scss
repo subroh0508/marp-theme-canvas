@@ -1,0 +1,17 @@
+// ===== _link.scss =====
+// Link (a tag) styles
+
+@mixin configure($color-text) {
+  :root {
+    --link-color-text: #{$color-text};
+  }
+
+  a {
+    color: var(--link-color-text);
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}

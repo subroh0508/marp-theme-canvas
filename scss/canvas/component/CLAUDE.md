@@ -15,11 +15,24 @@
 // コンポーネントの説明
 
 @mixin configure($arg1, $arg2, $arg3: default) {
+  :root {
+    --component-arg1: #{$arg1};
+    --component-arg2: #{$arg2};
+    --component-arg3: #{$arg3};
+  }
+
   .classname {
-    property: value;
+    property: var(--component-arg1);
   }
 }
 ```
+
+## 既存コンポーネント
+
+| ファイル | セレクタ | 用途 |
+|---------|---------|------|
+| `_header.scss` | `header` | ヘッダー |
+| `_footer.scss` | `footer` | フッター |
 
 ## 想定コンポーネント
 

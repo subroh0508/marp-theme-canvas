@@ -1,0 +1,45 @@
+// ===== _blockquote.scss =====
+// Blockquote styles for Marp slides
+
+@mixin configure($font-size, $line-height, $color-text, $color-bg, $color-mark, $border-radius) {
+  :root {
+    --blockquote-font-size: #{$font-size};
+    --blockquote-line-height: #{$line-height};
+    --blockquote-color-text: #{$color-text};
+    --blockquote-color-bg: #{$color-bg};
+    --blockquote-color-mark: #{$color-mark};
+    --blockquote-border-radius: #{$border-radius};
+  }
+
+  blockquote {
+    position: relative;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0.5em 0.5em 0.5em 2em;
+    font-size: var(--blockquote-font-size);
+    font-style: italic;
+    line-height: var(--blockquote-line-height);
+    color: var(--blockquote-color-text);
+    background: var(--blockquote-color-bg);
+    border-radius: var(--blockquote-border-radius);
+
+    // Top-left quotation mark
+    &::before {
+      content: "\201C";
+      position: absolute;
+      left: 0.2em;
+      font-size: 2em;
+      line-height: 1;
+      color: var(--blockquote-color-mark);
+    }
+
+    // Adjust margin for child elements
+    > :first-child {
+      margin-top: 0;
+    }
+
+    > :last-child {
+      margin-bottom: 0;
+    }
+  }
+}
