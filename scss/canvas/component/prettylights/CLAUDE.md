@@ -18,20 +18,20 @@ prettylights/
 
 | CSS Variable | Description |
 |--------------|-------------|
-| `--color-pl-comment` | Comments |
-| `--color-pl-constant` | Constants, attributes, numbers |
-| `--color-pl-entity` | Function names, class names |
-| `--color-pl-entity-tag` | Tag names, selectors |
-| `--color-pl-keyword` | Keywords |
-| `--color-pl-string` | Strings, regular expressions |
-| `--color-pl-variable` | Built-in functions, symbols |
-| `--color-pl-storage-modifier` | Default text |
-| `--color-pl-markup-heading` | Headings |
-| `--color-pl-markup-list` | List markers |
-| `--color-pl-markup-inserted-text` | Inserted text color (diff) |
-| `--color-pl-markup-inserted-bg` | Inserted background color (diff) |
-| `--color-pl-markup-deleted-text` | Deleted text color (diff) |
-| `--color-pl-markup-deleted-bg` | Deleted background color (diff) |
+| `--pl-color-comment` | Comments |
+| `--pl-color-constant` | Constants, attributes, numbers |
+| `--pl-color-entity` | Function names, class names |
+| `--pl-color-entity-tag` | Tag names, selectors |
+| `--pl-color-keyword` | Keywords |
+| `--pl-color-string` | Strings, regular expressions |
+| `--pl-color-variable` | Built-in functions, symbols |
+| `--pl-color-storage-modifier` | Default text |
+| `--pl-color-markup-heading` | Headings |
+| `--pl-color-markup-list` | List markers |
+| `--pl-color-markup-inserted-text` | Inserted text color (diff) |
+| `--pl-color-markup-inserted-bg` | Inserted background color (diff) |
+| `--pl-color-markup-deleted-text` | Deleted text color (diff) |
+| `--pl-color-markup-deleted-bg` | Deleted background color (diff) |
 
 ## Pattern
 

@@ -26,26 +26,26 @@
   $markup-deleted-bg        // Deleted background color (pl-md)
 ) {
   :root {
-    --color-pl-comment: #{$comment};
-    --color-pl-constant: #{$constant};
-    --color-pl-entity: #{$entity};
-    --color-pl-entity-tag: #{$entity-tag};
-    --color-pl-keyword: #{$keyword};
-    --color-pl-string: #{$string};
-    --color-pl-variable: #{$variable};
-    --color-pl-storage-modifier: #{$storage-modifier};
-    --color-pl-markup-heading: #{$markup-heading};
-    --color-pl-markup-list: #{$markup-list};
-    --color-pl-markup-inserted-text: #{$markup-inserted-text};
-    --color-pl-markup-inserted-bg: #{$markup-inserted-bg};
-    --color-pl-markup-deleted-text: #{$markup-deleted-text};
-    --color-pl-markup-deleted-bg: #{$markup-deleted-bg};
+    --pl-color-comment: #{$comment};
+    --pl-color-constant: #{$constant};
+    --pl-color-entity: #{$entity};
+    --pl-color-entity-tag: #{$entity-tag};
+    --pl-color-keyword: #{$keyword};
+    --pl-color-string: #{$string};
+    --pl-color-variable: #{$variable};
+    --pl-color-storage-modifier: #{$storage-modifier};
+    --pl-color-markup-heading: #{$markup-heading};
+    --pl-color-markup-list: #{$markup-list};
+    --pl-color-markup-inserted-text: #{$markup-inserted-text};
+    --pl-color-markup-inserted-bg: #{$markup-inserted-bg};
+    --pl-color-markup-deleted-text: #{$markup-deleted-text};
+    --pl-color-markup-deleted-bg: #{$markup-deleted-bg};
   }
 
   pre {
     // Default color
     :where(.hljs) {
-      color: var(--color-pl-storage-modifier);
+      color: var(--pl-color-storage-modifier);
     }
 
     // Keywords
@@ -56,7 +56,7 @@
     :where(.hljs-template-variable),
     :where(.hljs-type),
     :where(.hljs-variable.language_) {
-      color: var(--color-pl-keyword);
+      color: var(--pl-color-keyword);
     }
 
     // Functions / Class names
@@ -64,7 +64,7 @@
     :where(.hljs-title.class_),
     :where(.hljs-title.class_.inherited__),
     :where(.hljs-title.function_) {
-      color: var(--color-pl-entity);
+      color: var(--pl-color-entity);
     }
 
     // Constants / Attributes / Numbers
@@ -78,27 +78,27 @@
     :where(.hljs-selector-class),
     :where(.hljs-selector-id),
     :where(.hljs-variable) {
-      color: var(--color-pl-constant);
+      color: var(--pl-color-constant);
     }
 
     // Strings / Regular expressions
     :where(.hljs-string),
     :where(.hljs-meta .hljs-string),
     :where(.hljs-regexp) {
-      color: var(--color-pl-string);
+      color: var(--pl-color-string);
     }
 
     // Built-in functions / Symbols
     :where(.hljs-built_in),
     :where(.hljs-symbol) {
-      color: var(--color-pl-variable);
+      color: var(--pl-color-variable);
     }
 
     // Comments
     :where(.hljs-code),
     :where(.hljs-comment),
     :where(.hljs-formula) {
-      color: var(--color-pl-comment);
+      color: var(--pl-color-comment);
     }
 
     // Tag names / Selectors
@@ -106,46 +106,46 @@
     :where(.hljs-quote),
     :where(.hljs-selector-pseudo),
     :where(.hljs-selector-tag) {
-      color: var(--color-pl-entity-tag);
+      color: var(--pl-color-entity-tag);
     }
 
     // Variable interpolation
     :where(.hljs-subst) {
-      color: var(--color-pl-storage-modifier);
+      color: var(--pl-color-storage-modifier);
     }
 
     // Markup: Heading
     :where(.hljs-section) {
       font-weight: bold;
-      color: var(--color-pl-markup-heading);
+      color: var(--pl-color-markup-heading);
     }
 
     // Markup: List
     :where(.hljs-bullet) {
-      color: var(--color-pl-markup-list);
+      color: var(--pl-color-markup-list);
     }
 
     // Markup: Emphasis
     :where(.hljs-emphasis) {
       font-style: italic;
-      color: var(--color-pl-storage-modifier);
+      color: var(--pl-color-storage-modifier);
     }
 
     :where(.hljs-strong) {
       font-weight: bold;
-      color: var(--color-pl-storage-modifier);
+      color: var(--pl-color-storage-modifier);
     }
 
     // diff: Added lines
     :where(.hljs-addition) {
-      color: var(--color-pl-markup-inserted-text);
-      background-color: var(--color-pl-markup-inserted-bg);
+      color: var(--pl-color-markup-inserted-text);
+      background-color: var(--pl-color-markup-inserted-bg);
     }
 
     // diff: Deleted lines
     :where(.hljs-deletion) {
-      color: var(--color-pl-markup-deleted-text);
-      background-color: var(--color-pl-markup-deleted-bg);
+      color: var(--pl-color-markup-deleted-text);
+      background-color: var(--pl-color-markup-deleted-bg);
     }
   }
 }
