@@ -13,10 +13,10 @@
   "publishConfig": {
     "access": "public"
   },
-  "sass": "scss/_index.scss",
+  "sass": "./scss/canvas/_index.scss",
   "exports": {
     ".": {
-      "sass": "./scss/_index.scss"
+      "sass": "./scss/canvas/_index.scss"
     },
     "./white-canvas": {
       "sass": "./scss/white-canvas.scss",
@@ -26,34 +26,33 @@
       "sass": "./scss/black-canvas.scss",
       "style": "./css/black-canvas.css"
     },
-    "./scss/white-canvas": {
-      "sass": "./scss/theme/_white-canvas.scss"
+    "./canvas": {
+      "sass": "./scss/canvas/_index.scss"
     },
-    "./scss/black-canvas": {
-      "sass": "./scss/theme/_black-canvas.scss"
+    "./canvas/*": {
+      "sass": "./scss/canvas/*"
     },
-    "./scss/theme/*": {
-      "sass": "./scss/theme/*"
+    "./canvas/token/*": {
+      "sass": "./scss/canvas/token/*"
     },
-    "./scss": {
-      "sass": "./scss/_index.scss"
+    "./canvas/element/*": {
+      "sass": "./scss/canvas/element/*"
     },
-    "./scss/*": {
-      "sass": "./scss/*"
+    "./canvas/element/prettylights/*": {
+      "sass": "./scss/canvas/element/prettylights/*"
     },
-    "./scss/component": {
-      "sass": "./scss/component/_index.scss"
+    "./canvas/component/*": {
+      "sass": "./scss/canvas/component/*"
     },
-    "./scss/component/*": {
-      "sass": "./scss/component/*"
+    "./canvas/pattern/*": {
+      "sass": "./scss/canvas/pattern/*"
     },
-    "./scss/page": {
-      "sass": "./scss/page/_index.scss"
-    },
-    "./scss/page/*": {
-      "sass": "./scss/page/*"
-    },
-    "./css/*": "./css/*"
+    "./white-canvas.css": "./css/white-canvas.css",
+    "./black-canvas.css": "./css/black-canvas.css",
+    "./white-canvas/*.css": "./css/white-canvas/*.css",
+    "./black-canvas/*.css": "./css/black-canvas/*.css",
+    "./white-canvas/*/*.css": "./css/white-canvas/*/*.css",
+    "./black-canvas/*/*.css": "./css/black-canvas/*/*.css"
   },
   "files": [
     "css",
