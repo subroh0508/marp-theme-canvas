@@ -23,19 +23,6 @@
  * https://github.com/subroh0508/marp-theme-canvas/blob/main/LICENSE
  */
 
-// Google Fonts
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap');
-
-:root {
-  --base-padding-x: 80px;
-  --base-padding-y: 80px;
-  --font-family-base: 'Noto Sans JP', sans-serif;
-  --font-family-mono: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
-
-  --outer-margin-x: 20px;
-  --outer-margin-y: var(--base-padding-y);
-}
-
 // Token
 @use 'black-canvas/token/color';
 @use 'black-canvas/token/typography';
@@ -65,3 +52,16 @@
 @use 'black-canvas/pattern/section' as pattern-section;
 @use 'black-canvas/pattern/agenda';
 @use 'black-canvas/pattern/display';
+
+// Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap');
+
+:root {
+  --slide-padding-x: 80px;
+  --slide-padding-y: 80px;
+  --font-family-base: 'Noto Sans JP', sans-serif;
+  --font-family-mono: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
+
+  --outer-margin-x: var(--slide-padding-x);
+  --outer-margin-y: 20px;
+}

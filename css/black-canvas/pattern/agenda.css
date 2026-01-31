@@ -1,0 +1,32 @@
+section.agenda {
+  --agenda-heading-font-size: var(--font-size-xl);
+  --agenda-heading-font-weight: var(--font-weight-bold);
+  --agenda-heading-line-height: var(--line-height-loose);
+  --agenda-body-font-size: var(--font-size-m);
+  --agenda-body-font-weight: var(--font-weight-normal);
+  --agenda-body-line-height: var(--line-height-normal);
+}
+section.agenda > ul,
+section.agenda > ol {
+  font-size: var(--agenda-heading-font-size);
+  font-weight: var(--agenda-heading-font-weight);
+  line-height: var(--agenda-heading-line-height);
+}
+section.agenda > ul ul,
+section.agenda > ul ol,
+section.agenda > ol ul,
+section.agenda > ol ol {
+  font-size: calc(var(--agenda-body-font-size) / var(--agenda-heading-font-size) * 1em);
+  font-weight: var(--agenda-body-font-weight);
+  line-height: var(--agenda-body-line-height);
+}
+section.agenda > ul ul ul,
+section.agenda > ul ul ol,
+section.agenda > ul ol ul,
+section.agenda > ul ol ol,
+section.agenda > ol ul ul,
+section.agenda > ol ul ol,
+section.agenda > ol ol ul,
+section.agenda > ol ol ol {
+  font-size: 1em;
+}

@@ -1,0 +1,15 @@
+:root {
+  --pagination-margin-x: var(--outer-margin-x);
+  --pagination-margin-y: var(--outer-margin-y);
+  --pagination-font-size: var(--font-size-xs);
+  --pagination-color-text: var(--color-grey-light);
+}
+
+section::after {
+  position: absolute;
+  padding: 0;
+  right: var(--pagination-margin-x);
+  bottom: var(--pagination-margin-y);
+  font-size: var(--pagination-font-size);
+  color: var(--pagination-color-text);
+}

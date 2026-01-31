@@ -1,0 +1,103 @@
+/*!
+ * MIT License
+ * Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)
+ * https://github.com/sindresorhus/github-markdown-css/blob/main/license
+ */
+/*!
+ * MIT License
+ * Copyright (c) 2018 Marp team (marp-team@marp.app)
+ * https://github.com/marp-team/marp-core/blob/main/LICENSE
+ */
+:root {
+  --pl-color-comment: #9198a1;
+  --pl-color-constant: #79c0ff;
+  --pl-color-entity: #d2a8ff;
+  --pl-color-entity-tag: #7ee787;
+  --pl-color-keyword: #ff7b72;
+  --pl-color-string: #a5d6ff;
+  --pl-color-variable: #ffa657;
+  --pl-color-storage-modifier: #f0f6fc;
+  --pl-color-markup-heading: #1f6feb;
+  --pl-color-markup-list: #f2cc60;
+  --pl-color-markup-inserted-text: #aff5b4;
+  --pl-color-markup-inserted-bg: #033a16;
+  --pl-color-markup-deleted-text: #ffdcd7;
+  --pl-color-markup-deleted-bg: #67060c;
+}
+
+pre :where(.hljs) {
+  color: var(--pl-color-storage-modifier);
+}
+pre :where(.hljs-doctag),
+pre :where(.hljs-keyword),
+pre :where(.hljs-meta .hljs-keyword),
+pre :where(.hljs-template-tag),
+pre :where(.hljs-template-variable),
+pre :where(.hljs-type),
+pre :where(.hljs-variable.language_) {
+  color: var(--pl-color-keyword);
+}
+pre :where(.hljs-title),
+pre :where(.hljs-title.class_),
+pre :where(.hljs-title.class_.inherited__),
+pre :where(.hljs-title.function_) {
+  color: var(--pl-color-entity);
+}
+pre :where(.hljs-attr),
+pre :where(.hljs-attribute),
+pre :where(.hljs-literal),
+pre :where(.hljs-meta),
+pre :where(.hljs-number),
+pre :where(.hljs-operator),
+pre :where(.hljs-selector-attr),
+pre :where(.hljs-selector-class),
+pre :where(.hljs-selector-id),
+pre :where(.hljs-variable) {
+  color: var(--pl-color-constant);
+}
+pre :where(.hljs-string),
+pre :where(.hljs-meta .hljs-string),
+pre :where(.hljs-regexp) {
+  color: var(--pl-color-string);
+}
+pre :where(.hljs-built_in),
+pre :where(.hljs-symbol) {
+  color: var(--pl-color-variable);
+}
+pre :where(.hljs-code),
+pre :where(.hljs-comment),
+pre :where(.hljs-formula) {
+  color: var(--pl-color-comment);
+}
+pre :where(.hljs-name),
+pre :where(.hljs-quote),
+pre :where(.hljs-selector-pseudo),
+pre :where(.hljs-selector-tag) {
+  color: var(--pl-color-entity-tag);
+}
+pre :where(.hljs-subst) {
+  color: var(--pl-color-storage-modifier);
+}
+pre :where(.hljs-section) {
+  font-weight: bold;
+  color: var(--pl-color-markup-heading);
+}
+pre :where(.hljs-bullet) {
+  color: var(--pl-color-markup-list);
+}
+pre :where(.hljs-emphasis) {
+  font-style: italic;
+  color: var(--pl-color-storage-modifier);
+}
+pre :where(.hljs-strong) {
+  font-weight: bold;
+  color: var(--pl-color-storage-modifier);
+}
+pre :where(.hljs-addition) {
+  color: var(--pl-color-markup-inserted-text);
+  background-color: var(--pl-color-markup-inserted-bg);
+}
+pre :where(.hljs-deletion) {
+  color: var(--pl-color-markup-deleted-text);
+  background-color: var(--pl-color-markup-deleted-bg);
+}
