@@ -1,0 +1,67 @@
+/*!
+ * Black Canvas - A simple dark slide theme with minimal styling
+ *
+ * When using, you must define the following variables in Marp's inline style:
+ * - --color-primary: Primary color (e.g., h2 text color)
+ * - --color-accent: Accent color (e.g., mark tag background)
+ *
+ * Example:
+ *   style: |
+ *     :root {
+ *       --color-primary: #3b91c4;
+ *       --color-accent: #ead7a4;
+ *     }
+ *
+ * @theme black-canvas
+ * @author subroh_0508
+ *
+ * @auto-scaling true
+ * @size 16:9 1920px 1080px
+ *
+ * MIT License
+ * Copyright (c) 2026 Subroh Nishikori
+ * https://github.com/subroh0508/marp-theme-canvas/blob/main/LICENSE
+ */
+
+// Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap');
+
+:root {
+  --base-padding-x: 80px;
+  --base-padding-y: 80px;
+  --font-family-base: 'Noto Sans JP', sans-serif;
+  --font-family-mono: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
+
+  --outer-margin-x: 20px;
+  --outer-margin-y: var(--base-padding-y);
+}
+
+// Token
+@use 'black-canvas/token/color';
+@use 'black-canvas/token/typography';
+
+// Element
+@use 'black-canvas/element/heading';
+@use 'black-canvas/element/paragraph';
+@use 'black-canvas/element/list';
+@use 'black-canvas/element/link';
+@use 'black-canvas/element/table';
+@use 'black-canvas/element/code';
+@use 'black-canvas/element/blockquote';
+@use 'black-canvas/element/hr';
+@use 'black-canvas/element/text-decorator';
+@use 'black-canvas/element/prettylights/dark';
+
+// Component
+@use 'black-canvas/component/section';
+@use 'black-canvas/component/pagination';
+@use 'black-canvas/component/header';
+@use 'black-canvas/component/footer';
+@use 'black-canvas/component/columns';
+
+// Pattern
+@use 'black-canvas/pattern/title';
+@use 'black-canvas/pattern/toc';
+@use 'black-canvas/pattern/section' as pattern-section;
+@use 'black-canvas/pattern/agenda';
+@use 'black-canvas/pattern/display';
