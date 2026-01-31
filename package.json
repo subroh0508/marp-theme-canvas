@@ -62,7 +62,7 @@
   ],
   "scripts": {
     "serve": "marp --allow-local-files --html -s demo",
-    "build": "for f in scss/[!_]*.scss; do sass --no-source-map $f css/$(basename ${f%.scss}.css); done",
+    "build": "find scss -name '[!_]*.scss' -type f | while read f; do out=\"css/${f#scss/}\"; out=\"${out%.scss}.css\"; mkdir -p \"$(dirname \"$out\")\"; sass --no-source-map \"$f\" \"$out\"; done",
     "build:demo": "marp --allow-local-files --html --input-dir demo --output public"
   },
   "keywords": [
