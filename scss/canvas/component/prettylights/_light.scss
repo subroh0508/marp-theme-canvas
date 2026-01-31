@@ -1,0 +1,47 @@
+// ===== _light.scss =====
+// Syntax highlighting (Light theme) color definitions
+// Modified from github-markdown-css v5.8.1
+// https://github.com/sindresorhus/github-markdown-css/blob/v5.8.1/github-markdown-light.css
+
+/*!
+ * MIT License
+ * Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)
+ * https://github.com/sindresorhus/github-markdown-css/blob/main/license
+ */
+
+@use 'base';
+
+// ===== Light theme colors =====
+$_pl-comment: #59636e;
+$_pl-constant: #0550ae;
+$_pl-entity: #6639ba;
+$_pl-entity-tag: #0550ae;
+$_pl-keyword: #cf222e;
+$_pl-string: #0a3069;
+$_pl-variable: #953800;
+$_pl-storage-modifier: #1f2328;
+$_pl-markup-heading: #0550ae;
+$_pl-markup-list: #3b2300;
+$_pl-markup-inserted-text: #116329;
+$_pl-markup-inserted-bg: #dafbe1;
+$_pl-markup-deleted-text: #82071e;
+$_pl-markup-deleted-bg: #ffebe9;
+
+@mixin configure {
+  @include base.configure(
+    $_pl-comment,
+    $_pl-constant,
+    $_pl-entity,
+    $_pl-entity-tag,
+    $_pl-keyword,
+    $_pl-string,
+    $_pl-variable,
+    $_pl-storage-modifier,
+    $_pl-markup-heading,
+    $_pl-markup-list,
+    $_pl-markup-inserted-text,
+    $_pl-markup-inserted-bg,
+    $_pl-markup-deleted-text,
+    $_pl-markup-deleted-bg
+  );
+}
