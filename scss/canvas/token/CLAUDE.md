@@ -56,18 +56,20 @@ CSS変数として定義し、変数名はセマンティックにする。
 
 ### 引数
 
-| 引数名 | 必須 | デフォルト値 | 説明 |
-|--------|------|-------------|------|
-| `$color-blue` | Yes | - | アクセントカラー（リンク等） |
-| `$color-black` | No | `#000` | 黒 |
-| `$color-white` | No | `#fff` | 白 |
-| `$color-grey-lightest` | No | `#f8fafc` | 最も明るいグレー |
-| `$color-grey-lighter` | No | `#f1f5f9` | より明るいグレー |
-| `$color-grey-light` | No | `#e2e8f0` | 明るいグレー |
-| `$color-grey-medium` | No | `#cbd5e1` | 中間グレー |
-| `$color-grey-dark` | No | `#1e293b` | 暗いグレー |
-| `$color-grey-darker` | No | `#0f172a` | より暗いグレー |
-| `$color-grey-darkest` | No | `#020617` | 最も暗いグレー |
+全ての引数が必須。テーマごとに適切な値を指定すること。
+
+| 引数名 | 説明 |
+|--------|------|
+| `$color-blue` | アクセントカラー（リンク等） |
+| `$color-black` | 黒 |
+| `$color-white` | 白 |
+| `$color-grey-lightest` | 最も明るいグレー |
+| `$color-grey-lighter` | より明るいグレー |
+| `$color-grey-light` | 明るいグレー |
+| `$color-grey-medium` | 中間グレー |
+| `$color-grey-dark` | 暗いグレー |
+| `$color-grey-darker` | より暗いグレー |
+| `$color-grey-darkest` | 最も暗いグレー |
 
 ### CSS変数
 
