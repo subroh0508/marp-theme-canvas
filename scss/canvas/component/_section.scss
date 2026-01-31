@@ -22,16 +22,18 @@
     --base-line-height: #{$line-height};
   }
 
-  width: $width;
-  height: $height;
-  padding: var(--slide-padding-y) var(--slide-padding-x);
-  background-color: var(--base-color-bg);
-  color: var(--base-color-text);
-  font-family: var(--base-font-family);
-  font-size: var(--base-font-size);
-  line-height: var(--base-line-height);
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-  overflow: hidden;
+  section {
+    width: $width;
+    height: $height;
+    padding: var(--slide-padding-y) var(--slide-padding-x);
+    background-color: var(--base-color-bg);
+    color: var(--base-color-text);
+    font-family: var(--base-font-family);
+    font-size: var(--base-font-size);
+    line-height: var(--base-line-height);
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
 }

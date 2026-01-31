@@ -20,12 +20,17 @@
     --hr-color: #{$color};
   }
 
-  hr,
-  &.hr-solid hr {
+  hr {
     @include _hr(solid);
   }
 
-  &.hr-dashed hr {
-    @include _hr(dashed);
+  section {
+    &.hr-solid hr {
+      @include _hr(solid);
+    }
+
+    &.hr-dashed hr {
+      @include _hr(dashed);
+    }
   }
 }

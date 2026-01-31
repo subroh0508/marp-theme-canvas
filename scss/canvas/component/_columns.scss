@@ -43,18 +43,20 @@ $_col-widths: (1, 2, 3, 4, 6, 7, 8, 9, 10);
     --cols-gap: #{$gap};
   }
 
-  // Usage 1: _class: cols (section itself becomes flex container)
-  &.cols {
-    flex-direction: row;
-    gap: var(--cols-gap);
-    @include _col-children;
-  }
+  section {
+    // Usage 1: _class: cols (section itself becomes flex container)
+    &.cols {
+      flex-direction: row;
+      gap: var(--cols-gap);
+      @include _col-children;
+    }
 
-  // Usage 2: <div class="cols"> (partial column layout)
-  .cols {
-    display: flex;
-    gap: var(--cols-gap);
-    width: 100%;
-    @include _col-children;
+    // Usage 2: <div class="cols"> (partial column layout)
+    .cols {
+      display: flex;
+      gap: var(--cols-gap);
+      width: 100%;
+      @include _col-children;
+    }
   }
 }

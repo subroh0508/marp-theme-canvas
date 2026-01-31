@@ -10,12 +10,14 @@
     --pagination-color-text: #{$color-text};
   }
 
-  &::after {
-    position: absolute;
-    padding: 0;
-    right: var(--pagination-margin-x);
-    bottom: var(--pagination-margin-y);
-    font-size: var(--pagination-font-size);
-    color: var(--pagination-color-text);
+  section {
+    &::after {
+      position: absolute;
+      padding: 0;
+      right: var(--pagination-margin-x);
+      bottom: var(--pagination-margin-y);
+      font-size: var(--pagination-font-size);
+      color: var(--pagination-color-text);
+    }
   }
 }
