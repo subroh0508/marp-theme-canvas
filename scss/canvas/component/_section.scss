@@ -1,0 +1,37 @@
+// ===== _section.scss =====
+// Styles for Marp slide section (body)
+
+@mixin configure(
+  $width,
+  $height,
+  $padding-x,
+  $padding-y,
+  $color-bg,
+  $color-text,
+  $font-family,
+  $font-size,
+  $line-height
+) {
+  :root {
+    --slide-padding-x: #{$padding-x};
+    --slide-padding-y: #{$padding-y};
+    --base-color-bg: #{$color-bg};
+    --base-color-text: #{$color-text};
+    --base-font-family: #{$font-family};
+    --base-font-size: #{$font-size};
+    --base-line-height: #{$line-height};
+  }
+
+  width: $width;
+  height: $height;
+  padding: var(--slide-padding-y) var(--slide-padding-x);
+  background-color: var(--base-color-bg);
+  color: var(--base-color-text);
+  font-family: var(--base-font-family);
+  font-size: var(--base-font-size);
+  line-height: var(--base-line-height);
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  overflow: hidden;
+}

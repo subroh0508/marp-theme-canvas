@@ -1,0 +1,60 @@
+// ===== _columns.scss =====
+// Flexbox-based column layout component
+//
+// Usage 1: _class: cols (entire slide uses column layout)
+// Usage 2: <div class="cols"> (partial column layout)
+//
+// Note: Add blank lines before/after div tags for proper Markdown parsing
+
+$_col-widths: (1, 2, 3, 4, 6, 7, 8, 9, 10);
+
+// Common styles for column elements
+// - flex: $n ... Ratio-based width (distributed considering gap)
+//                e.g., col-4 + col-6 = 4:6 ratio distribution
+// - min-width: 0 ... Override flex child default (auto) to maintain
+//                    flex-basis width regardless of content size
+// - > *, p > * { max-width: 100% } ... Constrain children and paragraph elements (images etc.) to column width
+@mixin _col-children {
+  > .col {
+    flex: 1;
+    min-width: 0;
+
+    > *,
+    p > * {
+      max-width: 100%;
+    }
+  }
+
+  @each $n in $_col-widths {
+    > .col-#{$n} {
+      flex: $n;
+      min-width: 0;
+
+      > *,
+      p > * {
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+@mixin configure($gap: 1em) {
+  :root {
+    --cols-gap: #{$gap};
+  }
+
+  // Usage 1: _class: cols (section itself becomes flex container)
+  &.cols {
+    flex-direction: row;
+    gap: var(--cols-gap);
+    @include _col-children;
+  }
+
+  // Usage 2: <div class="cols"> (partial column layout)
+  .cols {
+    display: flex;
+    gap: var(--cols-gap);
+    width: 100%;
+    @include _col-children;
+  }
+}

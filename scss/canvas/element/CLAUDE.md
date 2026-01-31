@@ -42,6 +42,8 @@ CSS変数名: `--{要素名}-{引数名}`
 | ファイル | セレクタ | 用途 |
 |---------|---------|------|
 | `_heading.scss` | `h1`-`h6` | 見出し |
+| `_paragraph.scss` | `p` | 段落 |
+| `_list.scss` | `ul`, `ol` | リスト |
 | `_table.scss` | `table`, `th`, `td`, `tr` | テーブル |
 | `_code.scss` | `code`, `pre` | コードブロック |
 | `_blockquote.scss` | `blockquote` | 引用 |
