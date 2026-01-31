@@ -1,0 +1,5 @@
+// white-canvas prettylights light configuration
+
+@use '../../../canvas/element/prettylights/light' as base;
+
+@include base.configure();

@@ -1,0 +1,10 @@
+// white-canvas text-decorator configuration
+
+@use '../../canvas/element/text-decorator' as base;
+
+@include base.configure(
+  $strong-font-weight: var(--font-weight-bold),
+  $mark-font-weight: var(--font-weight-bold),
+  $mark-color-bg: var(--color-accent),
+  $rp-font-weight: var(--font-weight-normal)
+);

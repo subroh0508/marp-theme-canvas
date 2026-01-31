@@ -1,0 +1,12 @@
+// white-canvas agenda pattern configuration
+
+@use '../../canvas/pattern/agenda' as base;
+
+@include base.configure(
+  $font-size-heading: var(--font-size-xl),
+  $font-size-body: var(--font-size-m),
+  $line-height-heading: var(--line-height-loose),
+  $line-height-body: var(--line-height-normal),
+  $font-weight-heading: var(--font-weight-bold),
+  $font-weight-body: var(--font-weight-normal)
+);

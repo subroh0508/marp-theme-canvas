@@ -1,0 +1,796 @@
+@charset "UTF-8";
+/*!
+ * White Canvas - A simple light slide theme with minimal styling
+ *
+ * When using, you must define the following variables in Marp's inline style:
+ * - --color-primary: Primary color (e.g., h2 text color)
+ * - --color-accent: Accent color (e.g., mark tag background)
+ *
+ * Example:
+ *   style: |
+ *     :root {
+ *       --color-primary: #3b91c4;
+ *       --color-accent: #ead7a4;
+ *     }
+ *
+ * @theme white-canvas
+ * @author subroh_0508
+ *
+ * @auto-scaling true
+ * @size 16:9 1920px 1080px
+ *
+ * MIT License
+ * Copyright (c) 2026 Subroh Nishikori
+ * https://github.com/subroh0508/marp-theme-canvas/blob/main/LICENSE
+ */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap");
+:root {
+  --color-black: #000;
+  --color-white: #fff;
+  --color-grey-lightest: #cbd5e1;
+  --color-grey-lighter: #94a3b8;
+  --color-grey-light: #64748b;
+  --color-grey-medium: #475569;
+  --color-grey-dark: #334155;
+  --color-grey-darker: #1e293b;
+  --color-grey-darkest: #0f172a;
+  --color-blue: #2563eb;
+}
+
+:root {
+  --font-size-base: 40px;
+  --font-size-xs: 0.7em;
+  --font-size-s: 0.85em;
+  --font-size-m: 1em;
+  --font-size-l: 1.15em;
+  --font-size-xl: 1.3em;
+  --font-size-xxl: 2em;
+  --font-size-x3l: 2.5em;
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
+  --font-weight-black: 900;
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.45;
+  --line-height-loose: 2;
+}
+
+:root {
+  --h1-font-size: var(--font-size-xxl);
+  --h2-font-size: var(--font-size-xl);
+  --h3-font-size: var(--font-size-l);
+  --h4-font-size: 1em;
+  --h5-font-size: 1em;
+  --h6-font-size: 1em;
+  --h1-font-weight: var(--font-weight-bold);
+  --h2-font-weight: var(--font-weight-bold);
+  --h3-font-weight: var(--font-weight-bold);
+  --h4-font-weight: var(--font-weight-bold);
+  --h5-font-weight: var(--font-weight-normal);
+  --h6-font-weight: var(--font-weight-normal);
+  --h1-line-height: var(--line-height-tight);
+  --h2-line-height: var(--line-height-tight);
+  --h3-line-height: var(--line-height-tight);
+  --h4-line-height: var(--line-height-tight);
+  --h5-line-height: var(--line-height-tight);
+  --h6-line-height: var(--line-height-tight);
+  --h1-color-text: inherit;
+  --h2-color-text: var(--color-primary);
+  --h3-color-text: inherit;
+  --h4-color-text: inherit;
+  --h5-color-text: inherit;
+  --h6-color-text: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 0.5em;
+}
+
+h1 {
+  font-size: var(--h1-font-size);
+  font-weight: var(--h1-font-weight);
+  line-height: var(--h1-line-height);
+  color: var(--h1-color-text);
+}
+
+h2 {
+  font-size: var(--h2-font-size);
+  font-weight: var(--h2-font-weight);
+  line-height: var(--h2-line-height);
+  color: var(--h2-color-text);
+  margin: 0 0 0.8em;
+}
+
+h3 {
+  font-size: var(--h3-font-size);
+  font-weight: var(--h3-font-weight);
+  line-height: var(--h3-line-height);
+  color: var(--h3-color-text);
+}
+
+h4 {
+  font-size: var(--h4-font-size);
+  font-weight: var(--h4-font-weight);
+  line-height: var(--h4-line-height);
+  color: var(--h4-color-text);
+}
+
+h5 {
+  font-size: var(--h5-font-size);
+  font-weight: var(--h5-font-weight);
+  line-height: var(--h5-line-height);
+  color: var(--h5-color-text);
+}
+
+h6 {
+  font-size: var(--h6-font-size);
+  font-weight: var(--h6-font-weight);
+  line-height: var(--h6-line-height);
+  color: var(--h6-color-text);
+}
+
+p {
+  margin-top: 0;
+}
+
+:root {
+  --ul-indent: 1.1em;
+  --ol-indent: 1.1em;
+  --ul-li-padding-left: 0.2em;
+  --ol-li-padding-left: 0.2em;
+}
+
+ul {
+  margin-top: 0;
+  padding-inline-start: var(--ul-indent);
+}
+ul > li {
+  padding-left: var(--ul-li-padding-left);
+}
+
+ol {
+  margin-top: 0;
+  padding-inline-start: var(--ol-indent);
+}
+ol > li {
+  padding-left: var(--ol-li-padding-left);
+}
+
+:root {
+  --link-color-text: var(--color-blue);
+}
+
+a {
+  color: var(--link-color-text);
+  text-decoration: underline;
+}
+a:hover {
+  text-decoration: none;
+}
+
+:root {
+  --table-color-row-bg: var(--color-white);
+  --table-color-header-bg: var(--color-grey-lightest);
+  --table-color-even-row-bg: var(--color-white);
+  --table-color-border-vert: var(--color-grey-light);
+  --table-color-border-horz: var(--color-grey-light);
+}
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+  display: block;
+  width: max-content;
+  max-width: 100%;
+  overflow: auto;
+}
+
+th, td {
+  padding: 6px 13px;
+  border: 1px solid var(--table-color-border-vert);
+}
+
+th {
+  font-weight: 600;
+  background-color: var(--table-color-header-bg);
+}
+
+tr {
+  background-color: var(--table-color-row-bg);
+  border-top: 1px solid var(--table-color-border-horz);
+}
+
+tr:nth-child(2n) {
+  background-color: var(--table-color-even-row-bg);
+}
+
+/*!
+ * MIT License
+ * Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)
+ * https://github.com/sindresorhus/github-markdown-css/blob/main/license
+ */
+:root {
+  --code-font-mono: var(--font-family-mono);
+  --code-color-bg: color-mix(in srgb, var(--color-grey-light) 10%, transparent);
+  --code-color-fg: var(--color-grey-darkest);
+}
+
+code, tt {
+  font-family: var(--code-font-mono);
+  padding: 0.2em 0.4em;
+  font-size: 85%;
+  white-space: break-spaces;
+  background-color: var(--code-color-bg);
+  border-radius: 6px;
+}
+
+pre {
+  margin-top: 0;
+  font-family: var(--code-font-mono);
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  color: var(--code-color-fg);
+  background-color: var(--code-color-bg);
+  border-radius: 6px;
+}
+
+pre > code {
+  padding: 0;
+  background: transparent;
+  border: 0;
+  white-space: pre;
+}
+
+:root {
+  --blockquote-font-size: var(--font-size-m);
+  --blockquote-line-height: var(--line-height-tight);
+  --blockquote-color-text: var(--color-grey-medium);
+  --blockquote-color-bg: color-mix(in srgb, var(--color-grey-light) 10%, transparent);
+  --blockquote-color-mark: var(--color-grey-medium);
+  --blockquote-border-radius: 8px;
+}
+
+blockquote {
+  position: relative;
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0.5em 0.5em 0.5em 2em;
+  font-size: var(--blockquote-font-size);
+  font-style: italic;
+  line-height: var(--blockquote-line-height);
+  color: var(--blockquote-color-text);
+  background: var(--blockquote-color-bg);
+  border-radius: var(--blockquote-border-radius);
+}
+blockquote::before {
+  content: "“";
+  position: absolute;
+  left: 0.2em;
+  font-size: 2em;
+  line-height: 1;
+  color: var(--blockquote-color-mark);
+}
+blockquote > :first-child {
+  margin-top: 0;
+}
+blockquote > :last-child {
+  margin-bottom: 0;
+}
+
+:root {
+  --hr-height: 1px;
+  --hr-width: 100%;
+  --hr-color: var(--color-grey-light);
+}
+
+hr {
+  width: var(--hr-width);
+  border: none;
+  border-top: var(--hr-height) solid var(--hr-color);
+  margin: 0 0 1em;
+}
+
+section.hr-solid hr {
+  width: var(--hr-width);
+  border: none;
+  border-top: var(--hr-height) solid var(--hr-color);
+  margin: 0 0 1em;
+}
+section.hr-dashed hr {
+  width: var(--hr-width);
+  border: none;
+  border-top: var(--hr-height) dashed var(--hr-color);
+  margin: 0 0 1em;
+}
+
+:root {
+  --strong-font-weight: var(--font-weight-bold);
+  --mark-font-weight: var(--font-weight-bold);
+  --mark-color-bg: var(--color-accent);
+  --rp-font-weight: var(--font-weight-normal);
+}
+
+strong {
+  font-weight: var(--strong-font-weight);
+}
+
+mark {
+  font-weight: var(--mark-font-weight);
+  background-color: var(--mark-color-bg);
+}
+
+rp {
+  font-weight: var(--rp-font-weight);
+}
+
+/*!
+ * MIT License
+ * Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)
+ * https://github.com/sindresorhus/github-markdown-css/blob/main/license
+ */
+/*!
+ * MIT License
+ * Copyright (c) 2018 Marp team (marp-team@marp.app)
+ * https://github.com/marp-team/marp-core/blob/main/LICENSE
+ */
+:root {
+  --pl-color-comment: #59636e;
+  --pl-color-constant: #0550ae;
+  --pl-color-entity: #6639ba;
+  --pl-color-entity-tag: #0550ae;
+  --pl-color-keyword: #cf222e;
+  --pl-color-string: #0a3069;
+  --pl-color-variable: #953800;
+  --pl-color-storage-modifier: #1f2328;
+  --pl-color-markup-heading: #0550ae;
+  --pl-color-markup-list: #3b2300;
+  --pl-color-markup-inserted-text: #116329;
+  --pl-color-markup-inserted-bg: #dafbe1;
+  --pl-color-markup-deleted-text: #82071e;
+  --pl-color-markup-deleted-bg: #ffebe9;
+}
+
+pre :where(.hljs) {
+  color: var(--pl-color-storage-modifier);
+}
+pre :where(.hljs-doctag),
+pre :where(.hljs-keyword),
+pre :where(.hljs-meta .hljs-keyword),
+pre :where(.hljs-template-tag),
+pre :where(.hljs-template-variable),
+pre :where(.hljs-type),
+pre :where(.hljs-variable.language_) {
+  color: var(--pl-color-keyword);
+}
+pre :where(.hljs-title),
+pre :where(.hljs-title.class_),
+pre :where(.hljs-title.class_.inherited__),
+pre :where(.hljs-title.function_) {
+  color: var(--pl-color-entity);
+}
+pre :where(.hljs-attr),
+pre :where(.hljs-attribute),
+pre :where(.hljs-literal),
+pre :where(.hljs-meta),
+pre :where(.hljs-number),
+pre :where(.hljs-operator),
+pre :where(.hljs-selector-attr),
+pre :where(.hljs-selector-class),
+pre :where(.hljs-selector-id),
+pre :where(.hljs-variable) {
+  color: var(--pl-color-constant);
+}
+pre :where(.hljs-string),
+pre :where(.hljs-meta .hljs-string),
+pre :where(.hljs-regexp) {
+  color: var(--pl-color-string);
+}
+pre :where(.hljs-built_in),
+pre :where(.hljs-symbol) {
+  color: var(--pl-color-variable);
+}
+pre :where(.hljs-code),
+pre :where(.hljs-comment),
+pre :where(.hljs-formula) {
+  color: var(--pl-color-comment);
+}
+pre :where(.hljs-name),
+pre :where(.hljs-quote),
+pre :where(.hljs-selector-pseudo),
+pre :where(.hljs-selector-tag) {
+  color: var(--pl-color-entity-tag);
+}
+pre :where(.hljs-subst) {
+  color: var(--pl-color-storage-modifier);
+}
+pre :where(.hljs-section) {
+  font-weight: bold;
+  color: var(--pl-color-markup-heading);
+}
+pre :where(.hljs-bullet) {
+  color: var(--pl-color-markup-list);
+}
+pre :where(.hljs-emphasis) {
+  font-style: italic;
+  color: var(--pl-color-storage-modifier);
+}
+pre :where(.hljs-strong) {
+  font-weight: bold;
+  color: var(--pl-color-storage-modifier);
+}
+pre :where(.hljs-addition) {
+  color: var(--pl-color-markup-inserted-text);
+  background-color: var(--pl-color-markup-inserted-bg);
+}
+pre :where(.hljs-deletion) {
+  color: var(--pl-color-markup-deleted-text);
+  background-color: var(--pl-color-markup-deleted-bg);
+}
+
+:root {
+  --base-padding-x: var(--slide-padding-x);
+  --base-padding-y: var(--slide-padding-y);
+  --base-color-bg: var(--color-white);
+  --base-color-text: var(--color-grey-darkest);
+  --base-font-family: var(--font-family-base);
+  --base-font-size: var(--font-size-base);
+  --base-line-height: var(--line-height-normal);
+}
+
+section {
+  width: 1920px;
+  height: 1080px;
+  padding: var(--base-padding-y) var(--base-padding-x);
+  background-color: var(--base-color-bg);
+  color: var(--base-color-text);
+  font-family: var(--base-font-family);
+  font-size: var(--base-font-size);
+  line-height: var(--base-line-height);
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+:root {
+  --pagination-margin-x: var(--outer-margin-x);
+  --pagination-margin-y: var(--outer-margin-y);
+  --pagination-font-size: var(--font-size-xs);
+  --pagination-color-text: var(--color-grey-medium);
+}
+
+section::after {
+  position: absolute;
+  padding: 0;
+  right: var(--pagination-margin-x);
+  bottom: var(--pagination-margin-y);
+  font-size: var(--pagination-font-size);
+  color: var(--pagination-color-text);
+}
+
+:root {
+  --header-margin-x: var(--outer-margin-x);
+  --header-margin-y: var(--outer-margin-y);
+  --header-font-size: var(--font-size-xs);
+  --header-color-text: var(--color-grey-medium);
+}
+
+header {
+  position: absolute;
+  top: var(--header-margin-y);
+  left: var(--header-margin-x);
+  font-size: var(--header-font-size);
+  color: var(--header-color-text);
+}
+
+:root {
+  --footer-margin-x: var(--outer-margin-x);
+  --footer-margin-y: var(--outer-margin-y);
+  --footer-font-size: var(--font-size-xs);
+  --footer-color-text: var(--color-grey-medium);
+}
+
+footer {
+  position: absolute;
+  bottom: var(--footer-margin-y);
+  left: var(--footer-margin-x);
+  font-size: var(--footer-font-size);
+  color: var(--footer-color-text);
+}
+
+:root {
+  --cols-gap: 1em;
+}
+
+section.cols {
+  flex-direction: row;
+  gap: var(--cols-gap);
+}
+section.cols > .col {
+  flex: 1;
+  min-width: 0;
+}
+section.cols > .col > *,
+section.cols > .col p > * {
+  max-width: 100%;
+}
+section.cols > .col-1 {
+  flex: 1;
+  min-width: 0;
+}
+section.cols > .col-1 > *,
+section.cols > .col-1 p > * {
+  max-width: 100%;
+}
+section.cols > .col-2 {
+  flex: 2;
+  min-width: 0;
+}
+section.cols > .col-2 > *,
+section.cols > .col-2 p > * {
+  max-width: 100%;
+}
+section.cols > .col-3 {
+  flex: 3;
+  min-width: 0;
+}
+section.cols > .col-3 > *,
+section.cols > .col-3 p > * {
+  max-width: 100%;
+}
+section.cols > .col-4 {
+  flex: 4;
+  min-width: 0;
+}
+section.cols > .col-4 > *,
+section.cols > .col-4 p > * {
+  max-width: 100%;
+}
+section.cols > .col-6 {
+  flex: 6;
+  min-width: 0;
+}
+section.cols > .col-6 > *,
+section.cols > .col-6 p > * {
+  max-width: 100%;
+}
+section.cols > .col-7 {
+  flex: 7;
+  min-width: 0;
+}
+section.cols > .col-7 > *,
+section.cols > .col-7 p > * {
+  max-width: 100%;
+}
+section.cols > .col-8 {
+  flex: 8;
+  min-width: 0;
+}
+section.cols > .col-8 > *,
+section.cols > .col-8 p > * {
+  max-width: 100%;
+}
+section.cols > .col-9 {
+  flex: 9;
+  min-width: 0;
+}
+section.cols > .col-9 > *,
+section.cols > .col-9 p > * {
+  max-width: 100%;
+}
+section.cols > .col-10 {
+  flex: 10;
+  min-width: 0;
+}
+section.cols > .col-10 > *,
+section.cols > .col-10 p > * {
+  max-width: 100%;
+}
+section .cols {
+  display: flex;
+  gap: var(--cols-gap);
+  width: 100%;
+}
+section .cols > .col {
+  flex: 1;
+  min-width: 0;
+}
+section .cols > .col > *,
+section .cols > .col p > * {
+  max-width: 100%;
+}
+section .cols > .col-1 {
+  flex: 1;
+  min-width: 0;
+}
+section .cols > .col-1 > *,
+section .cols > .col-1 p > * {
+  max-width: 100%;
+}
+section .cols > .col-2 {
+  flex: 2;
+  min-width: 0;
+}
+section .cols > .col-2 > *,
+section .cols > .col-2 p > * {
+  max-width: 100%;
+}
+section .cols > .col-3 {
+  flex: 3;
+  min-width: 0;
+}
+section .cols > .col-3 > *,
+section .cols > .col-3 p > * {
+  max-width: 100%;
+}
+section .cols > .col-4 {
+  flex: 4;
+  min-width: 0;
+}
+section .cols > .col-4 > *,
+section .cols > .col-4 p > * {
+  max-width: 100%;
+}
+section .cols > .col-6 {
+  flex: 6;
+  min-width: 0;
+}
+section .cols > .col-6 > *,
+section .cols > .col-6 p > * {
+  max-width: 100%;
+}
+section .cols > .col-7 {
+  flex: 7;
+  min-width: 0;
+}
+section .cols > .col-7 > *,
+section .cols > .col-7 p > * {
+  max-width: 100%;
+}
+section .cols > .col-8 {
+  flex: 8;
+  min-width: 0;
+}
+section .cols > .col-8 > *,
+section .cols > .col-8 p > * {
+  max-width: 100%;
+}
+section .cols > .col-9 {
+  flex: 9;
+  min-width: 0;
+}
+section .cols > .col-9 > *,
+section .cols > .col-9 p > * {
+  max-width: 100%;
+}
+section .cols > .col-10 {
+  flex: 10;
+  min-width: 0;
+}
+section .cols > .col-10 > *,
+section .cols > .col-10 p > * {
+  max-width: 100%;
+}
+
+section.title {
+  --title-h1-font-size: var(--font-size-x3l);
+  --title-metadata-color-text: var(--color-grey-light);
+  justify-content: center;
+}
+section.title h1 {
+  font-size: var(--title-h1-font-size);
+  display: block;
+  flex: 0 0 80%;
+  align-content: center;
+  margin: 0;
+}
+section.title h1 small {
+  display: block;
+  margin-top: 0.5em;
+  font-size: 0.5em;
+}
+section.title h1 + p {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  text-align: right;
+  color: var(--title-metadata-color-text);
+  margin: 0;
+}
+
+section.toc {
+  --toc-list-font-size: var(--font-size-xl);
+  --toc-list-line-height: var(--line-height-loose);
+}
+section.toc > ul,
+section.toc > ol {
+  font-size: var(--toc-list-font-size);
+  line-height: var(--toc-list-line-height);
+}
+
+section.section {
+  --section-font-size: var(--font-size-xxl);
+  --section-font-weight: bold;
+  justify-content: center;
+}
+section.section p {
+  flex: 0 1;
+  display: block;
+  font-size: var(--section-font-size);
+  font-weight: var(--section-font-weight);
+  margin: 0;
+}
+
+section.agenda {
+  --agenda-heading-font-size: var(--font-size-xl);
+  --agenda-heading-font-weight: var(--font-weight-bold);
+  --agenda-heading-line-height: var(--line-height-loose);
+  --agenda-body-font-size: var(--font-size-m);
+  --agenda-body-font-weight: var(--font-weight-normal);
+  --agenda-body-line-height: var(--line-height-normal);
+}
+section.agenda > ul,
+section.agenda > ol {
+  font-size: var(--agenda-heading-font-size);
+  font-weight: var(--agenda-heading-font-weight);
+  line-height: var(--agenda-heading-line-height);
+}
+section.agenda > ul ul,
+section.agenda > ul ol,
+section.agenda > ol ul,
+section.agenda > ol ol {
+  font-size: calc(var(--agenda-body-font-size) / var(--agenda-heading-font-size) * 1em);
+  font-weight: var(--agenda-body-font-weight);
+  line-height: var(--agenda-body-line-height);
+}
+section.agenda > ul ul ul,
+section.agenda > ul ul ol,
+section.agenda > ul ol ul,
+section.agenda > ul ol ol,
+section.agenda > ol ul ul,
+section.agenda > ol ul ol,
+section.agenda > ol ol ul,
+section.agenda > ol ol ol {
+  font-size: 1em;
+}
+
+section.display {
+  --display-font-size: var(--font-size-x3l);
+  --display-font-weight: var(--font-weight-bold);
+  justify-content: center;
+  align-items: center;
+}
+section.display p {
+  margin: 0;
+  text-align: center;
+}
+section.display:not(:has(img:not(.emoji), iframe)) p {
+  font-size: var(--display-font-size);
+  font-weight: var(--display-font-weight);
+}
+section.display img:not(.emoji),
+section.display iframe {
+  display: block;
+  margin: 0 0;
+}
+section.display:has(p) img:not(.emoji), section.display:has(p) iframe {
+  margin: 0 0 1em;
+}
+
+:root {
+  --slide-padding-x: 80px;
+  --slide-padding-y: 80px;
+  --font-family-base: 'Noto Sans JP', sans-serif;
+  --font-family-mono: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
+  --outer-margin-x: var(--slide-padding-x);
+  --outer-margin-y: 20px;
+}

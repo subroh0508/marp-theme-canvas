@@ -1,0 +1,25 @@
+:root {
+  --hr-height: 1px;
+  --hr-width: 100%;
+  --hr-color: var(--color-grey-light);
+}
+
+hr {
+  width: var(--hr-width);
+  border: none;
+  border-top: var(--hr-height) solid var(--hr-color);
+  margin: 0 0 1em;
+}
+
+section.hr-solid hr {
+  width: var(--hr-width);
+  border: none;
+  border-top: var(--hr-height) solid var(--hr-color);
+  margin: 0 0 1em;
+}
+section.hr-dashed hr {
+  width: var(--hr-width);
+  border: none;
+  border-top: var(--hr-height) dashed var(--hr-color);
+  margin: 0 0 1em;
+}

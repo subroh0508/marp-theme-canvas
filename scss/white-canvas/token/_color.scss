@@ -1,7 +1,0 @@
-// white-canvas color configuration
-
-@use '../../canvas/token/color' as base;
-
-@include base.configure(
-  $color-blue: #2563eb
-);

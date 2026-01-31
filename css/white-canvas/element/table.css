@@ -1,0 +1,35 @@
+:root {
+  --table-color-row-bg: var(--color-white);
+  --table-color-header-bg: var(--color-grey-lightest);
+  --table-color-even-row-bg: var(--color-white);
+  --table-color-border-vert: var(--color-grey-light);
+  --table-color-border-horz: var(--color-grey-light);
+}
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+  display: block;
+  width: max-content;
+  max-width: 100%;
+  overflow: auto;
+}
+
+th, td {
+  padding: 6px 13px;
+  border: 1px solid var(--table-color-border-vert);
+}
+
+th {
+  font-weight: 600;
+  background-color: var(--table-color-header-bg);
+}
+
+tr {
+  background-color: var(--table-color-row-bg);
+  border-top: 1px solid var(--table-color-border-horz);
+}
+
+tr:nth-child(2n) {
+  background-color: var(--table-color-even-row-bg);
+}

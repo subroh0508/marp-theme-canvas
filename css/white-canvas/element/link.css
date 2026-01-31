@@ -1,0 +1,11 @@
+:root {
+  --link-color-text: var(--color-blue);
+}
+
+a {
+  color: var(--link-color-text);
+  text-decoration: underline;
+}
+a:hover {
+  text-decoration: none;
+}

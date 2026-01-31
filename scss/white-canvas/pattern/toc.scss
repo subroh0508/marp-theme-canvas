@@ -1,0 +1,8 @@
+// white-canvas toc pattern configuration
+
+@use '../../canvas/pattern/toc' as base;
+
+@include base.configure(
+  $font-size: var(--font-size-xl),
+  $line-height: var(--line-height-loose)
+);

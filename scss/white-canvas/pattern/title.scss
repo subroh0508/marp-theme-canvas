@@ -1,0 +1,8 @@
+// white-canvas title pattern configuration
+
+@use '../../canvas/pattern/title' as base;
+
+@include base.configure(
+  $font-size-title: var(--font-size-x3l),
+  $color-metadata-text: var(--color-grey-light)
+);

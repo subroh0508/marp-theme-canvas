@@ -1,0 +1,24 @@
+:root {
+  --base-padding-x: var(--slide-padding-x);
+  --base-padding-y: var(--slide-padding-y);
+  --base-color-bg: var(--color-white);
+  --base-color-text: var(--color-grey-darkest);
+  --base-font-family: var(--font-family-base);
+  --base-font-size: var(--font-size-base);
+  --base-line-height: var(--line-height-normal);
+}
+
+section {
+  width: 1920px;
+  height: 1080px;
+  padding: var(--base-padding-y) var(--base-padding-x);
+  background-color: var(--base-color-bg);
+  color: var(--base-color-text);
+  font-family: var(--base-font-family);
+  font-size: var(--base-font-size);
+  line-height: var(--base-line-height);
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  overflow: hidden;
+}

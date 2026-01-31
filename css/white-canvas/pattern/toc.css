@@ -1,0 +1,9 @@
+section.toc {
+  --toc-list-font-size: var(--font-size-xl);
+  --toc-list-line-height: var(--line-height-loose);
+}
+section.toc > ul,
+section.toc > ol {
+  font-size: var(--toc-list-font-size);
+  line-height: var(--toc-list-line-height);
+}

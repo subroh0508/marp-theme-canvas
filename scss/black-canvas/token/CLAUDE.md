@@ -8,8 +8,8 @@ black-canvasテーマ用のデザイントークン設定
 
 ## ファイル構造
 
-- `_typography.scss` - タイポグラフィ設定（デフォルト値使用）
-- `_color.scss` - カラーパレット設定
+- `typography.scss` - タイポグラフィ設定（デフォルト値使用）
+- `color.scss` - カラーパレット設定
 
 ## カラーパレット設定
 

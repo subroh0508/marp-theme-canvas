@@ -1,0 +1,16 @@
+:root {
+  --font-size-base: 40px;
+  --font-size-xs: 0.7em;
+  --font-size-s: 0.85em;
+  --font-size-m: 1em;
+  --font-size-l: 1.15em;
+  --font-size-xl: 1.3em;
+  --font-size-xxl: 2em;
+  --font-size-x3l: 2.5em;
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
+  --font-weight-black: 900;
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.45;
+  --line-height-loose: 2;
+}
