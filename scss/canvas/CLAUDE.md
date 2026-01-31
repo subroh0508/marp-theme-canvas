@@ -1,29 +1,26 @@
 # canvas
 
-canvasテーマのベースとなるスタイル定義
+Base style definitions for canvas themes
 
-## ディレクトリ構成
+## Directory Structure
 
-- token/ - デザイントークン（CSS変数）
-- element/ - HTML要素のスタイル
-- component/ - 複合コンポーネント
-- pattern/ - ページレイアウトパターン
+- `token/` - Design tokens (CSS variables)
+- `element/` - HTML element styles
+- `component/` - Composite components
+- `pattern/` - Page layout patterns
 
-## カラーパレットについて
+## User-Defined Variables
 
-カラーパレットはユーザー定義必須。以下の変数を使用時に定義すること:
+The following CSS variables must be defined by the user when using themes:
 
-| 変数名 | 用途 |
-|--------|------|
-| `--color-primary` | プライマリカラー（h2テキスト等） |
-| `--color-accent` | アクセントカラー（mark背景等） |
-| `--color-text` | 本文テキスト色 |
-| `--color-background` | スライド背景色 |
-| `--color-link` | リンク色 |
+| Variable | Purpose |
+|----------|---------|
+| `--color-primary` | Primary color (h2 text, etc.) |
+| `--color-accent` | Accent color (mark background, etc.) |
 
-## section要素のスタイル制限
+## Section Element Style Restrictions
 
-許可されるプロパティ:
+Allowed properties for section element:
 - width / height
 - padding
 - background-color / color

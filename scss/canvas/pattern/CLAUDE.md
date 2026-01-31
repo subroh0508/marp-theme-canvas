@@ -1,19 +1,19 @@
 # pattern
 
-スライド1ページのレイアウトパターンを定義
+Defines layout patterns for single slide pages
 
-## 定義方法
+## Definition Method
 
-- scssの@mixinとして定義
-- 変数は全てmixinの引数で定義
-- 引数名はセマンティックにする
-- Marpの`<!-- _class: classname -->`で切り替え
+- Define as SCSS @mixin
+- All variables are defined as mixin arguments
+- Use semantic argument names
+- Switch patterns using Marp's `<!-- _class: classname -->`
 
-## ファイル構造テンプレート
+## File Structure Template
 
 ```scss
 // ===== _filename.scss =====
-// パターンの説明
+// Pattern description
 //
 // Usage: <!-- _class: classname -->
 
@@ -28,58 +28,58 @@
 }
 ```
 
-## CSS変数の命名規則
+## CSS Variable Naming Convention
 
-`--{クラス名}-{対象}-{プロパティ名}`
+`--{class-name}-{target}-{property-name}`
 
-- CSS変数は `:root` ではなく各クラス（`.title`, `.toc` 等）配下に定義
-- 対象が単一または自明な場合は省略可能
+- CSS variables are defined under each class (`.title`, `.toc`, etc.), not in `:root`
+- Target can be omitted if single or obvious
 
-| クラス名 | 対象 | 例 |
-|---------|------|-----|
+| Class Name | Target | Example |
+|------------|--------|---------|
 | `title` | `h1`, `metadata` | `--title-h1-font-size`, `--title-metadata-color-text` |
 | `toc` | `list` | `--toc-list-font-size`, `--toc-list-line-height` |
-| `section` | (省略) | `--section-font-size`, `--section-font-weight` |
+| `section` | (omitted) | `--section-font-size`, `--section-font-weight` |
 | `agenda` | `heading`, `body` | `--agenda-heading-font-size`, `--agenda-body-font-size` |
-| `display` | (省略) | `--display-font-size`, `--display-font-weight` |
+| `display` | (omitted) | `--display-font-size`, `--display-font-weight` |
 
-## パターン一覧
+## Pattern List
 
-| ファイル | クラス名 | 用途 |
-|---------|---------|------|
-| `_title.scss` | `title` | 表紙 |
-| `_toc.scss` | `toc` | 目次 |
-| `_section.scss` | `section` | 中扉 |
-| `_display.scss` | `display` | 強調表示 |
-| `_agenda.scss` | `agenda` | アジェンダ |
+| File | Class Name | Purpose |
+|------|------------|---------|
+| `_title.scss` | `title` | Cover page |
+| `_toc.scss` | `toc` | Table of contents |
+| `_section.scss` | `section` | Section divider |
+| `_display.scss` | `display` | Emphasis display |
+| `_agenda.scss` | `agenda` | Agenda |
 
-## 引数とCSS変数のマッピング
+## Argument to CSS Variable Mapping
 
 ### _title.scss
 
-| 引数 | CSS変数名 | 対象 |
-|-----|-----------|------|
+| Argument | CSS Variable | Target |
+|----------|--------------|--------|
 | `$font-size-title` | `--title-h1-font-size` | h1 |
 | `$color-metadata-text` | `--title-metadata-color-text` | h1+p |
 
 ### _toc.scss
 
-| 引数 | CSS変数名 | 対象 |
-|-----|-----------|------|
+| Argument | CSS Variable | Target |
+|----------|--------------|--------|
 | `$font-size` | `--toc-list-font-size` | > ul, > ol |
 | `$line-height` | `--toc-list-line-height` | > ul, > ol |
 
 ### _section.scss
 
-| 引数 | CSS変数名 | 対象 |
-|-----|-----------|------|
+| Argument | CSS Variable | Target |
+|----------|--------------|--------|
 | `$font-size` | `--section-font-size` | p |
 | `$font-weight` | `--section-font-weight` | p |
 
 ### _agenda.scss
 
-| 引数 | CSS変数名 | 対象 |
-|-----|-----------|------|
+| Argument | CSS Variable | Target |
+|----------|--------------|--------|
 | `$font-size-heading` | `--agenda-heading-font-size` | > ul, > ol |
 | `$font-weight-heading` | `--agenda-heading-font-weight` | > ul, > ol |
 | `$line-height-heading` | `--agenda-heading-line-height` | > ul, > ol |
@@ -89,7 +89,7 @@
 
 ### _display.scss
 
-| 引数 | CSS変数名 | 対象 |
-|-----|-----------|------|
+| Argument | CSS Variable | Target |
+|----------|--------------|--------|
 | `$font-size` | `--display-font-size` | p |
 | `$font-weight-bold` | `--display-font-weight` | p |

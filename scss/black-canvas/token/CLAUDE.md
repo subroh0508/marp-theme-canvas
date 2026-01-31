@@ -1,22 +1,22 @@
 # token
 
-black-canvasテーマ用のデザイントークン設定
+Design token configuration for black-canvas theme
 
-## 役割
+## Purpose
 
-`canvas/token`で定義されたmixinを呼び出し、テーマ固有の値を設定する。
+Calls mixins defined in `canvas/token` and sets theme-specific values.
 
-## ファイル構造
+## File Structure
 
-- `typography.scss` - タイポグラフィ設定（デフォルト値使用）
-- `color.scss` - カラーパレット設定
+- `typography.scss` - Typography settings (uses default values)
+- `color.scss` - Color palette settings
 
-## カラーパレット設定
+## Color Palette Settings
 
-Tailwind CSS slate 50-300, 800-950 をベースとしたダークテーマ用カラーパレット。
+Dark theme color palette based on Tailwind CSS slate 50-300, 800-950.
 
-| 引数 | 値 | Tailwind |
-|------|-----|----------|
+| Argument | Value | Tailwind |
+|----------|-------|----------|
 | `$color-blue` | `#60a5fa` | blue-400 |
 | `$color-black` | `#000` | - |
 | `$color-white` | `#fff` | - |

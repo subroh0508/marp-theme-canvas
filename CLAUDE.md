@@ -6,13 +6,20 @@ Simple and minimal Marp theme
 
 ```
 scss/
-├── theme/              # Theme modules (importable via @use)
-│   ├── _white-canvas.scss
-│   └── _black-canvas.scss
-├── page/               # Page styles (title, section, toc, agenda, display)
-├── component/          # Common components (heading, table, code, blockquote, etc.)
-├── white-canvas.scss   # Light theme output file
-└── black-canvas.scss   # Dark theme output file
+├── canvas/                 # Base mixins (importable via @use)
+│   ├── token/              # Design tokens (color, typography)
+│   ├── element/            # HTML element styles (heading, table, code, etc.)
+│   ├── component/          # Composite components (section, header, footer, etc.)
+│   └── pattern/            # Page layout patterns (title, toc, agenda, etc.)
+├── white-canvas/           # Light theme configuration
+│   ├── token/              # Theme-specific tokens
+│   ├── element/            # Element configurations
+│   ├── component/          # Component configurations
+│   └── pattern/            # Pattern configurations
+├── black-canvas/           # Dark theme configuration
+│   └── (same structure as white-canvas)
+├── white-canvas.scss       # Light theme entry point
+└── black-canvas.scss       # Dark theme entry point
 ```
 
 ## Commands
@@ -24,7 +31,7 @@ scss/
 
 ## Naming Conventions
 
-- File names: `_name.scss` (underscore prefix required, Sass partial)
+- File names: `_name.scss` (underscore prefix for Sass partials)
 - Names: kebab-case (e.g., `title`, `text-decorator`)
 
 ## @mixin configure() Convention
@@ -52,11 +59,11 @@ All style files are encapsulated with `@mixin configure()`.
 
 ## Implementation Rules
 
-- **CSS variable declaration/reference only in theme files**: `var(--*)` declaration and reference is only allowed in the following files:
-  - Theme output files directly under `scss/` (`white-canvas.scss`, `black-canvas.scss`)
-  - Theme modules under `scss/theme/` (`_white-canvas.scss`, `_black-canvas.scss`)
-  - Reason: To allow flexible customization of styles per slide by overriding variables as inline styles in the frontmatter of Marp Markdown files
-  - Example: Overriding `--color-primary` in a Markdown file
+- **CSS variable declaration/reference only in theme files**: `var(--*)` declaration and reference is only allowed in:
+  - Theme entry points (`white-canvas.scss`, `black-canvas.scss`)
+  - Theme configuration files (`white-canvas/*/`, `black-canvas/*/`)
+  - Reason: To allow flexible customization of styles per slide by overriding variables as inline styles in Marp Markdown frontmatter
+  - Example:
     ```markdown
     ---
     theme: white-canvas
@@ -67,11 +74,11 @@ All style files are encapsulated with `@mixin configure()`.
       }
     ---
     ```
-- **Forbidden in page/ and component/**: Style files in subdirectories should not directly reference CSS variables. All required values should be received as arguments to `@mixin configure()`
-  - Reason: To maintain loose coupling between themes and styles
-  - The theme passes CSS variables as arguments when calling `@include`
+- **Forbidden in canvas/**: Base mixin files in `canvas/` should not directly reference CSS variables. All required values should be received as arguments to `@mixin configure()`
+  - Reason: To maintain loose coupling between themes and base styles
+  - Theme configuration files pass CSS variables as arguments when calling `@include`
 
 ## Comment Conventions
 
-- **Theme output files** (`white-canvas.scss`, `black-canvas.scss`): Comments at the beginning should start with `/*!` (because Marp metadata like `@theme`, `@size`, etc. need to be output to CSS)
-- **Other files** (`_index.scss`, files under `theme/`, `page/`, `component/`): Use `//` comments (not output to CSS)
+- **Theme entry points** (`white-canvas.scss`, `black-canvas.scss`): Comments at the beginning should start with `/*!` (because Marp metadata like `@theme`, `@size`, etc. need to be output to CSS)
+- **Other files** (`_index.scss`, files under `canvas/`, `white-canvas/`, `black-canvas/`): Use `//` comments (not output to CSS)

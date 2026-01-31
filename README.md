@@ -161,7 +161,7 @@ You can override CSS variables in the frontmatter style.
 | `--color-grey-dark` | Grey (dark) | `#334155` (slate-700) | `#1e293b` (slate-800) |
 | `--color-grey-darker` | Grey (darker) | `#1e293b` (slate-800) | `#0f172a` (slate-900) |
 | `--color-grey-darkest` | Grey (darkest) | `#0f172a` (slate-900) | `#020617` (slate-950) |
-| `--color-link` | Link color | `#2563eb` (blue-600) | `#60a5fa` (blue-400) |
+| `--color-blue` | Link color | `#2563eb` (blue-600) | `#60a5fa` (blue-400) |
 
 #### Fonts
 
@@ -177,11 +177,10 @@ You can override CSS variables in the frontmatter style.
 |----------|-------------|---------|
 | `--slide-padding-x` | Slide horizontal padding | `80px` |
 | `--slide-padding-y` | Slide vertical padding | `80px` |
-| `--border-radius` | Border radius | `8px` |
-| `--bullet-list-indent` | Bullet list (ul) indent | `1.1em` |
-| `--numbered-list-indent` | Numbered list (ol) indent | `1.1em` |
-| `--bullet-list-padding-left` | Bullet list item (li) padding | `0.2em` |
-| `--numbered-list-padding-left` | Numbered list item (li) padding | `0.2em` |
+| `--ul-indent` | Bullet list (ul) indent | `1.1em` |
+| `--ol-indent` | Numbered list (ol) indent | `1.1em` |
+| `--ul-li-padding-left` | Bullet list item (li) padding | `0.2em` |
+| `--ol-li-padding-left` | Numbered list item (li) padding | `0.2em` |
 
 ### Customization Example
 
@@ -207,90 +206,95 @@ Canvas styles are modularized and can be imported individually when creating cus
 
 ```
 scss/
-├── theme/              # Theme modules
-│   ├── _white-canvas.scss  # Light theme (importable via @use)
-│   └── _black-canvas.scss  # Dark theme (importable via @use)
-├── component/          # Common components
-│   ├── _heading.scss   # Headings
-│   ├── _table.scss     # Tables
-│   ├── _code.scss      # Code blocks
-│   ├── _blockquote.scss # Blockquotes
-│   ├── _columns.scss   # Column layout
-│   └── ...
-├── page/               # Page styles
-│   ├── _title.scss
-│   ├── _section.scss
-│   ├── _toc.scss
-│   ├── _agenda.scss
-│   └── _display.scss
-├── white-canvas.scss   # Light theme (for CSS output)
-└── black-canvas.scss   # Dark theme (for CSS output)
+├── canvas/                 # Base mixins (importable via @use)
+│   ├── token/              # Design tokens (color, typography)
+│   ├── element/            # HTML element styles (heading, table, code, etc.)
+│   ├── component/          # Composite components (section, header, footer, etc.)
+│   └── pattern/            # Page layout patterns (title, toc, agenda, etc.)
+├── white-canvas/           # Light theme configuration
+│   ├── token/              # Theme-specific tokens
+│   ├── element/            # Element configurations
+│   ├── component/          # Component configurations
+│   └── pattern/            # Pattern configurations
+├── black-canvas/           # Dark theme configuration
+│   └── (same structure as white-canvas)
+├── white-canvas.scss       # Light theme entry point
+└── black-canvas.scss       # Dark theme entry point
 ```
 
-### Customizing and Using Themes
+### Using Base Mixins
 
-Import theme modules with `@use` and customize CSS variables.
+Import base mixins from `canvas/` to create custom themes:
 
 ```scss
 /*!
  * @theme my-custom-theme
  */
 
-@use '@subroh0508/marp-theme-canvas/scss/white-canvas' as white-canvas;
+// Import base mixins
+@use '@subroh0508/marp-theme-canvas/canvas/element/heading' as heading;
+@use '@subroh0508/marp-theme-canvas/canvas/component/section' as section;
+@use '@subroh0508/marp-theme-canvas/canvas/pattern/title' as title;
 
-// Google Fonts (change as needed)
+// Google Fonts
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap');
 
-// Apply theme (customize CSS variables)
-@include white-canvas.apply() {
-  --color-primary: #e11d48;
-  --color-accent: #fde047;
-  --font-size-base: 36px;
-}
-```
-
-### Available Mixins
-
-| Mixin | Description |
-|-------|-------------|
-| `apply()` | Apply CSS variables and styles at once. Can add/override CSS variables via `@content` |
-| `variables()` | Output CSS variables only. Can add/override CSS variables via `@content` |
-| `styles()` | Output styles only (excludes CSS variables) |
-
-### Using Components and Page Styles Individually
-
-```scss
-// Theme modules
-@use '@subroh0508/marp-theme-canvas/scss/white-canvas' as white-canvas;
-@use '@subroh0508/marp-theme-canvas/scss/black-canvas' as black-canvas;
-
-// Components
-@use '@subroh0508/marp-theme-canvas/scss/component' as component;
-@use '@subroh0508/marp-theme-canvas/scss/component/heading' as heading;
-
-// Page styles
-@use '@subroh0508/marp-theme-canvas/scss/page' as page;
-@use '@subroh0508/marp-theme-canvas/scss/page/title' as page-title;
-```
-
-### Using Components Standalone
-
-```scss
-@use '@subroh0508/marp-theme-canvas/scss/component/heading' as heading;
-@use '@subroh0508/marp-theme-canvas/scss/page/title' as page-title;
-
-section {
-  @include page-title.configure(
-    $font-size-title: 2.5em,
-    $color-metadata-text: #666
-  );
-}
-
+// Apply styles with your values
 @include heading.configure(
-  $font-size-h1: 2em,
-  $font-size-h2: 1.5em,
-  $color-text-h2: #3b91c4
+  $h1-font-size: 2em,
+  $h2-font-size: 1.5em,
+  $h1-font-weight: 700,
+  $h2-font-weight: 700,
+  $h3-font-weight: 700,
+  $h4-font-weight: 700,
+  $h5-font-weight: 400,
+  $h6-font-weight: 400,
+  $h1-line-height: 1.2,
+  $h2-line-height: 1.2,
+  $h3-line-height: 1.2,
+  $h4-line-height: 1.2,
+  $h5-line-height: 1.2,
+  $h6-line-height: 1.2,
+  $h2-color-text: var(--color-primary)
 );
+
+@include section.configure(
+  $width: 1920px,
+  $height: 1080px,
+  $padding-x: 80px,
+  $padding-y: 80px,
+  $color-bg: #fff,
+  $color-text: #0f172a,
+  $font-family: 'Noto Sans JP', sans-serif,
+  $font-size: 40px,
+  $line-height: 1.45
+);
+
+@include title.configure(
+  $font-size-title: 2.5em,
+  $color-metadata-text: #64748b
+);
+```
+
+### Importing Theme Configuration Files
+
+You can also import pre-configured theme files:
+
+```scss
+// Import theme configuration files
+@use '@subroh0508/marp-theme-canvas/white-canvas/element/heading';
+@use '@subroh0508/marp-theme-canvas/white-canvas/component/section';
+```
+
+### Using CSS Files Directly
+
+```js
+// Import CSS in JavaScript/TypeScript
+import '@subroh0508/marp-theme-canvas/white-canvas.css'
+import '@subroh0508/marp-theme-canvas/black-canvas.css'
+
+// Import individual CSS modules
+import '@subroh0508/marp-theme-canvas/white-canvas/element/heading.css'
 ```
 
 ## Development

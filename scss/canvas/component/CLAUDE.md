@@ -1,18 +1,18 @@
 # component
 
-複数のelementの組み合わせや、汎用性の高いクラスを管理
+Manages combinations of multiple elements and highly reusable classes
 
-## 定義方法
+## Definition Method
 
-- scssの@mixinとして定義
-- 変数は全てmixinの引数で定義
-- 引数名はセマンティックにする
+- Define as SCSS @mixin
+- All variables are defined as mixin arguments
+- Use semantic argument names
 
-## ファイル構造テンプレート
+## File Structure Template
 
 ```scss
 // ===== _filename.scss =====
-// コンポーネントの説明
+// Component description
 
 @mixin configure($arg1, $arg2, $arg3: default) {
   :root {
@@ -27,32 +27,32 @@
 }
 ```
 
-## CSS変数の命名規則
+## CSS Variable Naming Convention
 
-CSS変数名: `--{コンポーネント名}-{引数名}`
+CSS variable name: `--{component-name}-{argument-name}`
 
-特別なプレフィックスルール:
-- `_section.scss`: `--base-*`（padding/color/font/line-height）
+Special prefix rules:
+- `_section.scss`: `--base-*` (padding/color/font/line-height)
 - `_columns.scss`: `--cols-*`
 
-例:
-- `_pagination.scss`の`$margin-x` → `--pagination-margin-x`
-- `_header.scss`の`$font-size` → `--header-font-size`
-- `_section.scss`の`$padding-x` → `--base-padding-x`
-- `_section.scss`の`$color-bg` → `--base-color-bg`
+Examples:
+- `_pagination.scss`'s `$margin-x` → `--pagination-margin-x`
+- `_header.scss`'s `$font-size` → `--header-font-size`
+- `_section.scss`'s `$padding-x` → `--base-padding-x`
+- `_section.scss`'s `$color-bg` → `--base-color-bg`
 
-## 既存コンポーネント
+## Existing Components
 
-| ファイル | セレクタ | 用途 |
-|---------|---------|------|
-| `_section.scss` | `section` | スライド本体（width/height/padding/色/フォント） |
-| `_header.scss` | `header` | ヘッダー |
-| `_footer.scss` | `footer` | フッター |
-| `_pagination.scss` | `section::after` | ページ番号 |
-| `_columns.scss` | `.cols`, `.col`, `.col-N` | 複数カラムレイアウト |
+| File | Selector | Purpose |
+|------|----------|---------|
+| `_section.scss` | `section` | Slide body (width/height/padding/colors/font) |
+| `_header.scss` | `header` | Header |
+| `_footer.scss` | `footer` | Footer |
+| `_pagination.scss` | `section::after` | Page number |
+| `_columns.scss` | `.cols`, `.col`, `.col-N` | Multi-column layout |
 
-## 想定コンポーネント
+## Planned Components
 
-| ファイル | クラス名 | 用途 |
-|---------|---------|------|
-| `_figure.scss` | `.figure` | 画像とキャプションの組み合わせ |
+| File | Class Name | Purpose |
+|------|------------|---------|
+| `_figure.scss` | `.figure` | Image with caption |

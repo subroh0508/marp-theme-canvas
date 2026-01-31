@@ -1,33 +1,33 @@
 # token
 
-デザイントークン（数値情報）を管理
+Manages design tokens (numeric values)
 
-## 役割
+## Purpose
 
-- カラーパレット
-- フォントサイズ
-- フォントウェイト
-- ラインの高さ
+- Color palette
+- Font sizes
+- Font weights
+- Line heights
 
-## 定義方法
+## Definition Method
 
-CSS変数として定義し、変数名はセマンティックにする。
+Define as CSS variables with semantic names.
 
-## ファイル構造
+## File Structure
 
-- `_typography.scss` - フォント関連のトークン
-- `_color.scss` - カラーパレット
+- `_typography.scss` - Font-related tokens
+- `_color.scss` - Color palette
 
-## タイポグラフィトークン
+## Typography Tokens
 
 ### Font Size
 
-基準サイズ: `--font-size-base` = 40px
+Base size: `--font-size-base` = 40px
 
-各サイズは `em` 単位で定義され、基準サイズに対する相対値となる。
+Each size is defined in `em` units as relative values to the base size.
 
-| トークン名 | CSS変数名 | 値 | px実値 |
-|-----------|-----------|----|--------------------|
+| Token Name | CSS Variable | Value | px Value |
+|------------|--------------|-------|----------|
 | XS | `--font-size-xs` | 0.7em | 28px |
 | S | `--font-size-s` | 0.85em | 34px |
 | M | `--font-size-m` | 1em | 40px |
@@ -38,50 +38,50 @@ CSS変数として定義し、変数名はセマンティックにする。
 
 ### Font Weight
 
-| トークン名 | CSS変数名 | 値 |
-|-----------|-----------|-----|
+| Token Name | CSS Variable | Value |
+|------------|--------------|-------|
 | normal | `--font-weight-normal` | 400 |
 | bold | `--font-weight-bold` | 700 |
 | black | `--font-weight-black` | 900 |
 
 ### Line Height
 
-| トークン名 | CSS変数名 | 値 |
-|-----------|-----------|-----|
+| Token Name | CSS Variable | Value |
+|------------|--------------|-------|
 | tight | `--line-height-tight` | 1.2 |
 | normal | `--line-height-normal` | 1.45 |
 | loose | `--line-height-loose` | 2 |
 
-## カラーパレットトークン
+## Color Palette Tokens
 
-### 引数
+### Arguments
 
-全ての引数が必須。テーマごとに適切な値を指定すること。
+All arguments are required. Specify appropriate values for each theme.
 
-| 引数名 | 説明 |
-|--------|------|
-| `$color-blue` | アクセントカラー（リンク等） |
-| `$color-black` | 黒 |
-| `$color-white` | 白 |
-| `$color-grey-lightest` | 最も明るいグレー |
-| `$color-grey-lighter` | より明るいグレー |
-| `$color-grey-light` | 明るいグレー |
-| `$color-grey-medium` | 中間グレー |
-| `$color-grey-dark` | 暗いグレー |
-| `$color-grey-darker` | より暗いグレー |
-| `$color-grey-darkest` | 最も暗いグレー |
+| Argument | Description |
+|----------|-------------|
+| `$color-blue` | Accent color (links, etc.) |
+| `$color-black` | Black |
+| `$color-white` | White |
+| `$color-grey-lightest` | Lightest grey |
+| `$color-grey-lighter` | Lighter grey |
+| `$color-grey-light` | Light grey |
+| `$color-grey-medium` | Medium grey |
+| `$color-grey-dark` | Dark grey |
+| `$color-grey-darker` | Darker grey |
+| `$color-grey-darkest` | Darkest grey |
 
-### CSS変数
+### CSS Variables
 
-| 変数名 | 説明 |
-|--------|------|
-| `--color-black` | 黒 |
-| `--color-white` | 白 |
-| `--color-grey-lightest` | 最も明るいグレー |
-| `--color-grey-lighter` | より明るいグレー |
-| `--color-grey-light` | 明るいグレー |
-| `--color-grey-medium` | 中間グレー |
-| `--color-grey-dark` | 暗いグレー |
-| `--color-grey-darker` | より暗いグレー |
-| `--color-grey-darkest` | 最も暗いグレー |
-| `--color-blue` | アクセントカラー |
+| Variable | Description |
+|----------|-------------|
+| `--color-black` | Black |
+| `--color-white` | White |
+| `--color-grey-lightest` | Lightest grey |
+| `--color-grey-lighter` | Lighter grey |
+| `--color-grey-light` | Light grey |
+| `--color-grey-medium` | Medium grey |
+| `--color-grey-dark` | Dark grey |
+| `--color-grey-darker` | Darker grey |
+| `--color-grey-darkest` | Darkest grey |
+| `--color-blue` | Accent color |

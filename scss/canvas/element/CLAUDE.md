@@ -1,19 +1,18 @@
 # element
 
-CommonMark（MarpでサポートされているMarkdown）から
-出力されるHTML要素のスタイルを管理
+Manages styles for HTML elements output from CommonMark (Markdown supported by Marp)
 
-## 定義方法
+## Definition Method
 
-- scssの@mixinとして定義
-- 変数は全てmixinの引数で定義
-- 引数名はセマンティックにする
+- Define as SCSS @mixin
+- All variables are defined as mixin arguments
+- Use semantic argument names
 
-## ファイル構造テンプレート
+## File Structure Template
 
 ```scss
 // ===== _filename.scss =====
-// 要素の説明
+// Element description
 
 @mixin configure($arg1, $arg2, $arg3: default) {
   :root {
@@ -28,26 +27,26 @@ CommonMark（MarpでサポートされているMarkdown）から
 }
 ```
 
-## CSS変数の命名規則
+## CSS Variable Naming Convention
 
-CSS変数名: `--{要素名}-{引数名}`
+CSS variable name: `--{element-name}-{argument-name}`
 
-例:
-- `_blockquote.scss`の`$color-text` → `--blockquote-color-text`
-- `_link.scss`の`$color-text` → `--link-color-text`
-- `_heading.scss`の`$h1-font-size` → `--h1-font-size`（見出しレベルがプレフィックス）
+Examples:
+- `_blockquote.scss`'s `$color-text` → `--blockquote-color-text`
+- `_link.scss`'s `$color-text` → `--link-color-text`
+- `_heading.scss`'s `$h1-font-size` → `--h1-font-size` (heading level as prefix)
 
-## 対象要素
+## Target Elements
 
-| ファイル | セレクタ | 用途 |
-|---------|---------|------|
-| `_heading.scss` | `h1`-`h6` | 見出し |
-| `_paragraph.scss` | `p` | 段落 |
-| `_list.scss` | `ul`, `ol` | リスト |
-| `_table.scss` | `table`, `th`, `td`, `tr` | テーブル |
-| `_code.scss` | `code`, `pre` | コードブロック |
-| `_blockquote.scss` | `blockquote` | 引用 |
-| `_link.scss` | `a` | リンク |
-| `_hr.scss` | `hr` | 水平線 |
-| `_text-decorator.scss` | `strong`, `mark`, `rp` | テキスト装飾 |
-| `prettylights/` | `.hljs-*` | シンタックスハイライト |
+| File | Selector | Purpose |
+|------|----------|---------|
+| `_heading.scss` | `h1`-`h6` | Headings |
+| `_paragraph.scss` | `p` | Paragraphs |
+| `_list.scss` | `ul`, `ol` | Lists |
+| `_table.scss` | `table`, `th`, `td`, `tr` | Tables |
+| `_code.scss` | `code`, `pre` | Code blocks |
+| `_blockquote.scss` | `blockquote` | Blockquotes |
+| `_link.scss` | `a` | Links |
+| `_hr.scss` | `hr` | Horizontal rules |
+| `_text-decorator.scss` | `strong`, `mark`, `rp` | Text decoration |
+| `prettylights/` | `.hljs-*` | Syntax highlighting |
