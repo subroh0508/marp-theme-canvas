@@ -1,0 +1,47 @@
+// ===== _agenda.scss =====
+// Styles for agenda page
+// For pages presenting "Topics for today", "Learning Outcomes", etc. at the beginning
+//
+// Usage: <!-- _class: agenda -->
+
+@mixin configure(
+  $font-size-heading,
+  $font-size-body,
+  $line-height-heading,
+  $line-height-body,
+  $font-weight-heading: bold,
+  $font-weight-body: normal
+) {
+  section.agenda {
+    --agenda-heading-font-size: #{$font-size-heading};
+    --agenda-heading-font-weight: #{$font-weight-heading};
+    --agenda-heading-line-height: #{$line-height-heading};
+    --agenda-body-font-size: #{$font-size-body};
+    --agenda-body-font-weight: #{$font-weight-body};
+    --agenda-body-line-height: #{$line-height-body};
+
+    // List: Direct children
+    > ul,
+    > ol {
+      font-size: var(--agenda-heading-font-size);
+      font-weight: var(--agenda-heading-font-weight);
+      line-height: var(--agenda-heading-line-height);
+
+      // Nested lists (2nd level)
+      ul,
+      ol {
+        font-size: calc(
+          var(--agenda-body-font-size) / var(--agenda-heading-font-size) * 1em
+        );
+        font-weight: var(--agenda-body-font-weight);
+        line-height: var(--agenda-body-line-height);
+
+        // 3rd level and beyond maintain size
+        ul,
+        ol {
+          font-size: 1em;
+        }
+      }
+    }
+  }
+}
