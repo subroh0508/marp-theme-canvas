@@ -1,6 +1,7 @@
 {
   "name": "@subroh0508/marp-theme-canvas",
   "version": "0.1.0",
+  "type": "module",
   "description": "A simple Marp theme with minimal styling",
   "repository": {
     "type": "git",
@@ -64,7 +65,11 @@
     "serve:black": "marp --allow-local-files --html --theme css/black-canvas.css -s demo",
     "build": "find scss -name '[!_]*.scss' -type f | while read f; do out=\"css/${f#scss/}\"; out=\"${out%.scss}.css\"; mkdir -p \"$(dirname \"$out\")\"; sass --no-source-map \"$f\" \"$out\"; done",
     "build:demo:white": "marp --allow-local-files --html --theme css/white-canvas.css --input-dir demo --output public/white-canvas",
-    "build:demo:black": "marp --allow-local-files --html --theme css/black-canvas.css --input-dir demo --output public/black-canvas"
+    "build:demo:black": "marp --allow-local-files --html --theme css/black-canvas.css --input-dir demo --output public/black-canvas",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs",
+    "build:site": "pnpm docs:build && pnpm build:demo:white && pnpm build:demo:black"
   },
   "keywords": [
     "marp",
@@ -80,6 +85,7 @@
   "packageManager": "pnpm@10.28.1",
   "devDependencies": {
     "@marp-team/marp-cli": "^4.2.3",
-    "sass": "^1.97.2"
+    "sass": "^1.97.2",
+    "vitepress": "^1.6.4"
   }
 }
