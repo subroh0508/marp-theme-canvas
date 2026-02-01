@@ -41,13 +41,13 @@ L (12px)
 
 ## Usage
 
-Corner radius tokens are used in:
+Corner radius tokens are currently used in:
 
 - **Blockquote**: `--corner-radius-m` (8px)
-- **Table**: `--corner-radius-m` (8px)
+- **Inline code**: `--corner-radius-m` (8px)
 - **Code block**: `--corner-radius-m` (8px)
-- **Inline code**: `--corner-radius-s` (4px)
-- **Mark**: `--corner-radius-s` (4px)
+
+Note: `--corner-radius-s` and `--corner-radius-l` are defined but not yet used in the theme.
 
 ---
 
