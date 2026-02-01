@@ -9,7 +9,7 @@ A simple and minimal Marp theme. A design that eliminates unnecessary decoration
 
 ## Docs
 
-https://subroh0508.github.io/marp-theme-canvas/
+[subroh0508.github.io/marp-theme-canvas/](https://subroh0508.github.io/marp-theme-canvas/)
 
 ## Features
 
