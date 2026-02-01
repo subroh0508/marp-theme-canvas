@@ -2,8 +2,41 @@
 
 ## white-canvas
 
-<iframe src="/marp-theme-canvas/white-canvas/pattern/section.html" width="100%" height="600" style="border: 1px solid #ccc; border-radius: 8px;"></iframe>
+:::details Embedded Slide
+
+<iframe src="/marp-theme-canvas/white-canvas/pattern/section.html"></iframe>
+
+:::
+
+![](/white-canvas/pattern/section.001.png)
+
+![](/white-canvas/pattern/section.002.png)
+
+![](/white-canvas/pattern/section.003.png)
+
+![](/white-canvas/pattern/section.004.png)
+
+![](/white-canvas/pattern/section.005.png)
+
+![](/white-canvas/pattern/section.006.png)
 
 ## black-canvas
 
-<iframe src="/marp-theme-canvas/black-canvas/pattern/section.html" width="100%" height="600" style="border: 1px solid #ccc; border-radius: 8px;"></iframe>
+:::details Embedded Slide
+
+<iframe src="/marp-theme-canvas/black-canvas/pattern/section.html"></iframe>
+
+:::
+
+![](/black-canvas/pattern/section.001.png)
+
+![](/black-canvas/pattern/section.002.png)
+
+![](/black-canvas/pattern/section.003.png)
+
+![](/black-canvas/pattern/section.004.png)
+
+![](/black-canvas/pattern/section.005.png)
+
+![](/black-canvas/pattern/section.006.png)
+

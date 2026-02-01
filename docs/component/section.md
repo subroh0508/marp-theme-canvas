@@ -2,8 +2,29 @@
 
 ## white-canvas
 
-<iframe src="/marp-theme-canvas/white-canvas/component/section.html" width="100%" height="600" style="border: 1px solid #ccc; border-radius: 8px;"></iframe>
+:::details Embedded Slide
+
+<iframe src="/marp-theme-canvas/white-canvas/component/section.html"></iframe>
+
+:::
+
+![](/white-canvas/component/section.001.png)
+
+![](/white-canvas/component/section.002.png)
+
+![](/white-canvas/component/section.003.png)
 
 ## black-canvas
 
-<iframe src="/marp-theme-canvas/black-canvas/component/section.html" width="100%" height="600" style="border: 1px solid #ccc; border-radius: 8px;"></iframe>
+:::details Embedded Slide
+
+<iframe src="/marp-theme-canvas/black-canvas/component/section.html"></iframe>
+
+:::
+
+![](/black-canvas/component/section.001.png)
+
+![](/black-canvas/component/section.002.png)
+
+![](/black-canvas/component/section.003.png)
+

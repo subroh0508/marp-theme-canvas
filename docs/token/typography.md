@@ -2,8 +2,37 @@
 
 ## white-canvas
 
-<iframe src="/marp-theme-canvas/white-canvas/token/typography.html" width="100%" height="600" style="border: 1px solid #ccc; border-radius: 8px;"></iframe>
+:::details Embedded Slide
+
+<iframe src="/marp-theme-canvas/white-canvas/token/typography.html"></iframe>
+
+:::
+
+![](/white-canvas/token/typography.001.png)
+
+![](/white-canvas/token/typography.002.png)
+
+![](/white-canvas/token/typography.003.png)
+
+![](/white-canvas/token/typography.004.png)
+
+![](/white-canvas/token/typography.005.png)
 
 ## black-canvas
 
-<iframe src="/marp-theme-canvas/black-canvas/token/typography.html" width="100%" height="600" style="border: 1px solid #ccc; border-radius: 8px;"></iframe>
+:::details Embedded Slide
+
+<iframe src="/marp-theme-canvas/black-canvas/token/typography.html"></iframe>
+
+:::
+
+![](/black-canvas/token/typography.001.png)
+
+![](/black-canvas/token/typography.002.png)
+
+![](/black-canvas/token/typography.003.png)
+
+![](/black-canvas/token/typography.004.png)
+
+![](/black-canvas/token/typography.005.png)
+

@@ -2,8 +2,37 @@
 
 ## white-canvas
 
-<iframe src="/marp-theme-canvas/white-canvas/element/heading.html" width="100%" height="600" style="border: 1px solid #ccc; border-radius: 8px;"></iframe>
+:::details Embedded Slide
+
+<iframe src="/marp-theme-canvas/white-canvas/element/heading.html"></iframe>
+
+:::
+
+![](/white-canvas/element/heading.001.png)
+
+![](/white-canvas/element/heading.002.png)
+
+![](/white-canvas/element/heading.003.png)
+
+![](/white-canvas/element/heading.004.png)
+
+![](/white-canvas/element/heading.005.png)
 
 ## black-canvas
 
-<iframe src="/marp-theme-canvas/black-canvas/element/heading.html" width="100%" height="600" style="border: 1px solid #ccc; border-radius: 8px;"></iframe>
+:::details Embedded Slide
+
+<iframe src="/marp-theme-canvas/black-canvas/element/heading.html"></iframe>
+
+:::
+
+![](/black-canvas/element/heading.001.png)
+
+![](/black-canvas/element/heading.002.png)
+
+![](/black-canvas/element/heading.003.png)
+
+![](/black-canvas/element/heading.004.png)
+
+![](/black-canvas/element/heading.005.png)
+
