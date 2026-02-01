@@ -4,8 +4,8 @@ export default defineConfig({
   title: 'Marp Theme Canvas',
   description: 'Demo slides for marp-theme-canvas',
   base: '/marp-theme-canvas/',
-  outDir: '../public',
-
+  outDir: '../dist',
+  ignoreDeadLinks: true,
   themeConfig: {
     sidebar: [
       {
