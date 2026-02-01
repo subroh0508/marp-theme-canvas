@@ -232,9 +232,9 @@ Import base mixins from `canvas/` to create custom themes:
  */
 
 // Import base mixins
-@use '@subroh0508/marp-theme-canvas/canvas/element/heading' as heading;
-@use '@subroh0508/marp-theme-canvas/canvas/component/section' as section;
-@use '@subroh0508/marp-theme-canvas/canvas/pattern/title' as title;
+@use '@subroh0508/marp-theme-canvas/scss/canvas/element/heading' as heading;
+@use '@subroh0508/marp-theme-canvas/scss/canvas/component/section' as section;
+@use '@subroh0508/marp-theme-canvas/scss/canvas/pattern/title' as title;
 
 // Google Fonts
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap');
@@ -282,8 +282,8 @@ You can also import pre-configured theme files:
 
 ```scss
 // Import theme configuration files
-@use '@subroh0508/marp-theme-canvas/white-canvas/element/heading';
-@use '@subroh0508/marp-theme-canvas/white-canvas/component/section';
+@use '@subroh0508/marp-theme-canvas/scss/white-canvas/element/heading';
+@use '@subroh0508/marp-theme-canvas/scss/white-canvas/component/section';
 ```
 
 ### Using CSS Files Directly
