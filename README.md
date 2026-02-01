@@ -7,10 +7,9 @@
 
 A simple and minimal Marp theme. A design that eliminates unnecessary decorations and lets you focus on your content.
 
-## Demo
+## Docs
 
-- [White Canvas Demo](https://subroh0508.github.io/marp-theme-canvas/white_canvas_demo.html)
-- [Black Canvas Demo](https://subroh0508.github.io/marp-theme-canvas/black_canvas_demo.html)
+https://subroh0508.github.io/marp-theme-canvas/
 
 ## Features
 
