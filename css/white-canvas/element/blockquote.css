@@ -5,7 +5,7 @@
   --blockquote-color-text: var(--color-grey-medium);
   --blockquote-color-bg: color-mix(in srgb, var(--color-grey-light) 10%, transparent);
   --blockquote-color-mark: var(--color-grey-medium);
-  --blockquote-border-radius: 8px;
+  --blockquote-border-radius: var(--corner-radius-m);
 }
 
 blockquote {
