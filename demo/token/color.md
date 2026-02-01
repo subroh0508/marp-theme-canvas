@@ -2,15 +2,7 @@
 marp: true
 theme: default
 paginate: true
----
-
-<!-- _class: title -->
-<!-- _paginate: false -->
-
-# Color Token
-
-`scss/canvas/token/_color.scss`
-
+footer: scss/canvas/token/_color.scss
 ---
 
 ## CSS Variables

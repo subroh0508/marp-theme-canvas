@@ -2,19 +2,11 @@
 marp: true
 theme: default
 paginate: true
+footer: scss/canvas/element/_heading.scss
 style: |
   :root {
     --color-primary: #3b91c4;
   }
----
-
-<!-- _class: title -->
-<!-- _paginate: false -->
-
-# Heading
-
-`scss/canvas/element/_heading.scss`
-
 ---
 
 ## Heading Preview

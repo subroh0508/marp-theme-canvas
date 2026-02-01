@@ -2,6 +2,7 @@
 marp: true
 theme: default
 paginate: true
+footer: scss/canvas/pattern/_title.scss
 style: |
   :root {
     --color-primary: #3b91c4;
@@ -10,15 +11,7 @@ style: |
 
 <!-- _class: title -->
 <!-- _paginate: false -->
-
-# Title Pattern
-
-`scss/canvas/pattern/_title.scss`
-
----
-
-<!-- _class: title -->
-<!-- _paginate: false -->
+<!-- _footer: "" -->
 
 # Title Page<br/>Multiple lines display like this<small>- With a subtitle -</small>
 

@@ -2,17 +2,8 @@
 marp: true
 theme: default
 paginate: true
+footer: scss/canvas/component/_header.scss
 header: "Header Text"
----
-
-<!-- _class: title -->
-<!-- _paginate: false -->
-<!-- _header: "" -->
-
-# Header
-
-`scss/canvas/component/_header.scss`
-
 ---
 
 <!-- _header: "This is the header" -->

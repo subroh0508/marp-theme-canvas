@@ -2,15 +2,7 @@
 marp: true
 theme: default
 paginate: true
----
-
-<!-- _class: title -->
-<!-- _paginate: false -->
-
-# Blockquote
-
-`scss/canvas/element/_blockquote.scss`
-
+footer: scss/canvas/element/_blockquote.scss
 ---
 
 ## Blockquote Preview

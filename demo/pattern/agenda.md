@@ -2,19 +2,11 @@
 marp: true
 theme: default
 paginate: true
+footer: scss/canvas/pattern/_agenda.scss
 style: |
   :root {
     --color-primary: #3b91c4;
   }
----
-
-<!-- _class: title -->
-<!-- _paginate: false -->
-
-# Agenda Pattern
-
-`scss/canvas/pattern/_agenda.scss`
-
 ---
 
 <!-- _class: agenda -->

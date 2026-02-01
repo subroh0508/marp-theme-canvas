@@ -2,15 +2,7 @@
 marp: true
 theme: default
 paginate: true
----
-
-<!-- _class: title -->
-<!-- _paginate: false -->
-
-# List
-
-`scss/canvas/element/_list.scss`
-
+footer: scss/canvas/element/_list.scss
 ---
 
 ## Unordered List

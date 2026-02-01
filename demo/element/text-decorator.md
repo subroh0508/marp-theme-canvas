@@ -2,19 +2,11 @@
 marp: true
 theme: default
 paginate: true
+footer: scss/canvas/element/_text-decorator.scss
 style: |
   :root {
     --color-accent: #ead7a4;
   }
----
-
-<!-- _class: title -->
-<!-- _paginate: false -->
-
-# Text Decorator
-
-`scss/canvas/element/_text-decorator.scss`
-
 ---
 
 ## Text Decoration Preview

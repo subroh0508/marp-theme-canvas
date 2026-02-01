@@ -2,15 +2,7 @@
 marp: true
 theme: default
 paginate: true
----
-
-<!-- _class: title -->
-<!-- _paginate: false -->
-
-# Typography Token
-
-`scss/canvas/token/_typography.scss`
-
+footer: scss/canvas/token/_typography.scss
 ---
 
 ## Font Size

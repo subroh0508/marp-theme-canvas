@@ -2,15 +2,7 @@
 marp: true
 theme: default
 paginate: true
----
-
-<!-- _class: title -->
-<!-- _paginate: false -->
-
-# Link
-
-`scss/canvas/element/_link.scss`
-
+footer: scss/canvas/element/_link.scss
 ---
 
 ## Link Preview

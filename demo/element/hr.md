@@ -2,15 +2,7 @@
 marp: true
 theme: default
 paginate: true
----
-
-<!-- _class: title -->
-<!-- _paginate: false -->
-
-# Horizontal Rule
-
-`scss/canvas/element/_hr.scss`
-
+footer: scss/canvas/element/_hr.scss
 ---
 
 ## Horizontal Rule (Default / Solid)

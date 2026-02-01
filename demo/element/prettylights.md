@@ -2,15 +2,7 @@
 marp: true
 theme: default
 paginate: true
----
-
-<!-- _class: title -->
-<!-- _paginate: false -->
-
-# Prettylights
-
-`scss/canvas/element/prettylights/`
-
+footer: scss/canvas/element/prettylights/
 ---
 
 ## Syntax Highlighting

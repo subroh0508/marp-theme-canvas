@@ -2,19 +2,12 @@
 marp: true
 theme: default
 paginate: true
----
-
-<!-- _class: title -->
-<!-- _paginate: false -->
-
-# Section Pattern
-
-`scss/canvas/pattern/_section.scss`
-
+footer: scss/canvas/pattern/_section.scss
 ---
 
 <!-- _class: section -->
 <!-- _paginate: false -->
+<!-- _footer: "" -->
 
 Section Divider Page Demo
 

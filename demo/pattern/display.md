@@ -2,18 +2,11 @@
 marp: true
 theme: default
 paginate: true
----
-
-<!-- _class: title -->
-<!-- _paginate: false -->
-
-# Display Pattern
-
-`scss/canvas/pattern/_display.scss`
-
+footer: scss/canvas/pattern/_display.scss
 ---
 
 <!-- _class: display -->
+<!-- _footer: "" -->
 
 Display short text prominently
 

@@ -2,15 +2,7 @@
 marp: true
 theme: default
 paginate: true
----
-
-<!-- _class: title -->
-<!-- _paginate: false -->
-
-# Section
-
-`scss/canvas/component/_section.scss`
-
+footer: scss/canvas/component/_section.scss
 ---
 
 ## Section Component

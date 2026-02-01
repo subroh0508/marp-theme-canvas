@@ -2,17 +2,7 @@
 marp: true
 theme: default
 paginate: true
-footer: "Footer Text"
----
-
-<!-- _class: title -->
-<!-- _paginate: false -->
-<!-- _footer: "" -->
-
-# Footer
-
-`scss/canvas/component/_footer.scss`
-
+footer: scss/canvas/component/_footer.scss
 ---
 
 <!-- _footer: "This is the footer" -->

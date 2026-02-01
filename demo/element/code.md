@@ -2,15 +2,7 @@
 marp: true
 theme: default
 paginate: true
----
-
-<!-- _class: title -->
-<!-- _paginate: false -->
-
-# Code
-
-`scss/canvas/element/_code.scss`
-
+footer: scss/canvas/element/_code.scss
 ---
 
 ## Inline Code

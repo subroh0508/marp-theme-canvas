@@ -2,15 +2,7 @@
 marp: true
 theme: default
 paginate: true
----
-
-<!-- _class: title -->
-<!-- _paginate: false -->
-
-# Paragraph
-
-`scss/canvas/element/_paragraph.scss`
-
+footer: scss/canvas/element/_paragraph.scss
 ---
 
 ## Paragraph Preview
