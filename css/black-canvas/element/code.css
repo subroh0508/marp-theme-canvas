@@ -7,6 +7,7 @@
   --code-font-mono: var(--font-family-mono);
   --code-color-bg: color-mix(in srgb, var(--color-grey-light) 15%, transparent);
   --code-color-fg: var(--color-grey-lightest);
+  --code-border-radius: var(--corner-radius-m);
 }
 
 code, tt {
@@ -15,7 +16,7 @@ code, tt {
   font-size: 85%;
   white-space: break-spaces;
   background-color: var(--code-color-bg);
-  border-radius: 6px;
+  border-radius: var(--code-border-radius);
 }
 
 pre {
@@ -27,7 +28,7 @@ pre {
   line-height: 1.45;
   color: var(--code-color-fg);
   background-color: var(--code-color-bg);
-  border-radius: 6px;
+  border-radius: var(--code-border-radius);
 }
 
 pre > code {

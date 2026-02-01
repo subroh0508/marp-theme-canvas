@@ -9,11 +9,12 @@
  * https://github.com/sindresorhus/github-markdown-css/blob/main/license
  */
 
-@mixin configure($font-mono, $color-bg, $color-fg) {
+@mixin configure($font-mono, $color-bg, $color-fg, $border-radius) {
   :root {
     --code-font-mono: #{$font-mono};
     --code-color-bg: #{$color-bg};
     --code-color-fg: #{$color-fg};
+    --code-border-radius: #{$border-radius};
   }
 
   code, tt {
@@ -22,7 +23,7 @@
     font-size: 85%;
     white-space: break-spaces;
     background-color: var(--code-color-bg);
-    border-radius: 6px;
+    border-radius: var(--code-border-radius);
   }
   pre {
     margin-top: 0;
@@ -33,7 +34,7 @@
     line-height: 1.45;
     color: var(--code-color-fg);
     background-color: var(--code-color-bg);
-    border-radius: 6px;
+    border-radius: var(--code-border-radius);
   }
   pre > code {
     padding: 0;

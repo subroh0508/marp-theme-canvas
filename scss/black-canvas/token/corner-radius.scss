@@ -1,0 +1,5 @@
+// black-canvas corner-radius configuration
+
+@use '../../canvas/token/corner-radius' as base;
+
+@include base.configure();

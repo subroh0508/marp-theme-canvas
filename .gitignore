@@ -34,4 +34,10 @@ Thumbs.db
 # Test coverage
 coverage/
 
-*.html
+# VitePress
+docs/.vitepress/cache
+docs/.vitepress/dist
+
+# Build output
+docs/public/
+dist/
