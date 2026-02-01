@@ -1,0 +1,14 @@
+// ===== _corner-radius.scss =====
+// Corner radius design tokens
+
+@mixin configure(
+  $corner-radius-s: 4px,
+  $corner-radius-m: 8px,
+  $corner-radius-l: 12px
+) {
+  :root {
+    --corner-radius-s: #{$corner-radius-s};
+    --corner-radius-m: #{$corner-radius-m};
+    --corner-radius-l: #{$corner-radius-l};
+  }
+}
