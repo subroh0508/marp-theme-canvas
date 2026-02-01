@@ -25,16 +25,21 @@ paginate: true
 
 ## Corner Radius Preview
 
-<div style="display: flex; gap: 24px; align-items: center;">
-<div style="width: 120px; height: 120px; background: var(--color-grey-medium, #666); border-radius: 4px; display: flex; align-items: center; justify-content: center; color: white;">
+<style scoped>
+blockquote { flex: 1; font-style: normal; padding: 0.5em; text-align: center; }
+blockquote::before { display: none; }
+</style>
+
+<div style="display: flex; gap: 24px; align-items: flex-start;">
+<blockquote style="border-radius: var(--corner-radius-s);">
 S (4px)
-</div>
-<div style="width: 120px; height: 120px; background: var(--color-grey-medium, #666); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white;">
+</blockquote>
+<blockquote style="border-radius: var(--corner-radius-m);">
 M (8px)
-</div>
-<div style="width: 120px; height: 120px; background: var(--color-grey-medium, #666); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: white;">
+</blockquote>
+<blockquote style="border-radius: var(--corner-radius-l);">
 L (12px)
-</div>
+</blockquote>
 </div>
 
 ---
