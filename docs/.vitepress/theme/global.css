@@ -1,0 +1,10 @@
+/* Global custom styles for VitePress */
+
+/* iframe styles */
+iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 1px solid var(--vp-c-border);
+  border-radius: 8px;
+  pointer-events: none;
+}
