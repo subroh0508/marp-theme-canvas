@@ -1,5 +1,5 @@
 section.display {
-  --display-font-size: var(--font-size-x3l);
+  --display-font-size: var(--font-size-3xl);
   --display-font-weight: var(--font-weight-bold);
   justify-content: center;
   align-items: center;

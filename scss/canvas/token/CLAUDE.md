@@ -34,7 +34,7 @@ Each size is defined in `em` units as relative values to the base size.
 | L | `--font-size-l` | 1.15em | 46px |
 | XL | `--font-size-xl` | 1.3em | 52px |
 | XXL | `--font-size-xxl` | 2em | 80px |
-| X3L | `--font-size-x3l` | 2.5em | 100px |
+| 3XL | `--font-size-3xl` | 2.5em | 100px |
 
 ### Font Weight
 

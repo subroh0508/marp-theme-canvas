@@ -3,6 +3,6 @@
 @use '../../canvas/pattern/display' as base;
 
 @include base.configure(
-  $font-size: var(--font-size-x3l),
+  $font-size: var(--font-size-3xl),
   $font-weight-bold: var(--font-weight-bold)
 );
