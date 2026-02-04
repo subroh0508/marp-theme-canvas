@@ -47,7 +47,7 @@ Author name
 
 | CSS Variable | Default |
 |--------------|---------|
-| `--title-h1-font-size` | `var(--font-size-x3l)` (100px) |
+| `--title-h1-font-size` | `var(--font-size-3xl)` (100px) |
 | `--title-metadata-color-text` | `var(--color-grey-light)` |
 
 ---

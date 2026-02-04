@@ -17,7 +17,7 @@ Base size: `--font-size-base` = 40px
 | `--font-size-l` | 1.15em | 46px |
 | `--font-size-xl` | 1.3em | 52px |
 | `--font-size-xxl` | 2em | 80px |
-| `--font-size-x3l` | 2.5em | 100px |
+| `--font-size-3xl` | 2.5em | 100px |
 
 ---
 

@@ -50,7 +50,7 @@ Optional caption text
 
 | CSS Variable | Default |
 |--------------|---------|
-| `--display-font-size` | `var(--font-size-x3l)` (100px) |
+| `--display-font-size` | `var(--font-size-3xl)` (100px) |
 | `--display-font-weight` | bold |
 
 Note: Font size is only applied when no image or iframe is present.
