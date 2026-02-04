@@ -45,7 +45,7 @@
   --font-size-l: 1.15em;
   --font-size-xl: 1.3em;
   --font-size-xxl: 2em;
-  --font-size-x3l: 2.5em;
+  --font-size-3xl: 2.5em;
   --font-weight-normal: 400;
   --font-weight-bold: 700;
   --font-weight-black: 900;
@@ -687,7 +687,7 @@ section .cols > .col-10 p > * {
 }
 
 section.title {
-  --title-h1-font-size: var(--font-size-x3l);
+  --title-h1-font-size: var(--font-size-3xl);
   --title-metadata-color-text: var(--color-grey-light);
   justify-content: center;
 }
@@ -771,7 +771,7 @@ section.agenda > ol ol ol {
 }
 
 section.display {
-  --display-font-size: var(--font-size-x3l);
+  --display-font-size: var(--font-size-3xl);
   --display-font-weight: var(--font-weight-bold);
   justify-content: center;
   align-items: center;
