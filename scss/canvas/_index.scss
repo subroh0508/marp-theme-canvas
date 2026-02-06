@@ -27,7 +27,8 @@
 @forward 'component/header';
 @forward 'component/footer';
 @forward 'component/pagination';
-@forward 'component/columns';
+// Layout
+@forward 'layout/columns';
 
 // Pattern
 @forward 'pattern/title';

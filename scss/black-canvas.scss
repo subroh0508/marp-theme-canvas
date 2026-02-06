@@ -45,7 +45,8 @@
 @use 'black-canvas/component/pagination';
 @use 'black-canvas/component/header';
 @use 'black-canvas/component/footer';
-@use 'black-canvas/component/columns';
+// Layout
+@use 'black-canvas/layout/columns';
 
 // Pattern
 @use 'black-canvas/pattern/title';

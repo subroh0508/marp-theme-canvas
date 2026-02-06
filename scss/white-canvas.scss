@@ -45,7 +45,8 @@
 @use 'white-canvas/component/pagination';
 @use 'white-canvas/component/header';
 @use 'white-canvas/component/footer';
-@use 'white-canvas/component/columns';
+// Layout
+@use 'white-canvas/layout/columns';
 
 // Pattern
 @use 'white-canvas/pattern/title';

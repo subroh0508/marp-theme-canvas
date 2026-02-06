@@ -33,4 +33,10 @@ Manages reusable layout definitions referenced by multiple patterns
 CSS variable name: `--{layout-name}-{argument-name}`
 
 Examples:
-- `_columns.scss`'s `$gap` -> `--cols-gap`
+- `_columns.scss`'s `$gap` → `--cols-gap`
+
+## Existing Layouts
+
+| File | Selector | Purpose |
+|------|----------|---------|
+| `_columns.scss` | `section.cols`, `.cols`, `.col`, `.col-N` | Multi-column layout |

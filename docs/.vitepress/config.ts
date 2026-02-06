@@ -38,12 +38,13 @@ export default defineConfig({
           { text: 'header', link: '/component/header' },
           { text: 'footer', link: '/component/footer' },
           { text: 'pagination', link: '/component/pagination' },
-          { text: 'columns', link: '/component/columns' }
         ]
       },
       {
         text: 'Layout',
-        items: []
+        items: [
+          { text: 'columns', link: '/layout/columns' }
+        ]
       },
       {
         text: 'Decorator',
