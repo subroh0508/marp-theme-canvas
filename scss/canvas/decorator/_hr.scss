@@ -1,0 +1,26 @@
+// ===== _hr.scss =====
+// Horizontal rule decorator styles (solid / dashed)
+
+@mixin _hr($style, $height, $width, $color) {
+  width: $width;
+  // Reset browser default border
+  border: none;
+  border-top: $height $style $color;
+  margin: 0 0 1em;
+}
+
+@mixin configure(
+  $height,
+  $width,
+  $color
+) {
+  section {
+    &.hr-solid hr {
+      @include _hr(solid, $height, $width, $color);
+    }
+
+    &.hr-dashed hr {
+      @include _hr(dashed, $height, $width, $color);
+    }
+  }
+}

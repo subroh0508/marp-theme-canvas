@@ -1,14 +1,6 @@
 // ===== _hr.scss =====
 // Horizontal rule styles
 
-@mixin _hr($style) {
-  width: var(--hr-width);
-  // Reset browser default border
-  border: none;
-  border-top: var(--hr-height) $style var(--hr-color);
-  margin: 0 0 1em;
-}
-
 @mixin configure(
   $height,
   $width,
@@ -21,16 +13,10 @@
   }
 
   hr {
-    @include _hr(solid);
-  }
-
-  section {
-    &.hr-solid hr {
-      @include _hr(solid);
-    }
-
-    &.hr-dashed hr {
-      @include _hr(dashed);
-    }
+    width: var(--hr-width);
+    // Reset browser default border
+    border: none;
+    border-top: var(--hr-height) solid var(--hr-color);
+    margin: 0 0 1em;
   }
 }

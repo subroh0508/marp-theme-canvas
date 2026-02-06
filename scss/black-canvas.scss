@@ -45,6 +45,8 @@
 @use 'black-canvas/component/footer';
 // Layout
 @use 'black-canvas/layout/columns';
+// Decorator
+@use 'black-canvas/decorator/hr' as decorator-hr;
 
 // Pattern
 @use 'black-canvas/pattern/title';

@@ -30,6 +30,12 @@ Includes both text decorations (emphasis, highlights) and visual decorations (bo
 }
 ```
 
+## Existing Decorators
+
+| File | Class | Purpose |
+|------|-------|---------|
+| `_hr.scss` | `hr-solid`, `hr-dashed` | Horizontal rule style variants |
+
 ## CSS Variable Naming Convention
 
 CSS variable name: `--{decorator-name}-{argument-name}`

@@ -15,20 +15,6 @@ Content below the line
 
 ---
 
-<!-- _class: hr-dashed -->
-
-## Horizontal Rule (Dashed)
-
-Use `<!-- _class: hr-dashed -->` for dashed style.
-
-Content above the line
-
-<hr>
-
-Content below the line
-
----
-
 ## CSS Variables
 
 | CSS Variable | Default |
@@ -36,16 +22,6 @@ Content below the line
 | `--hr-height` | 1px |
 | `--hr-width` | 100% |
 | `--hr-color` | `var(--color-grey-light)` |
-
----
-
-## Style Classes
-
-| Class | Style |
-|-------|-------|
-| (default) | Solid line |
-| `hr-solid` | Solid line (explicit) |
-| `hr-dashed` | Dashed line |
 
 ---
 

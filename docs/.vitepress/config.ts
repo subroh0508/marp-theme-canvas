@@ -43,7 +43,9 @@ export default defineConfig({
       },
       {
         text: 'Decorator',
-        items: []
+        items: [
+          { text: 'hr', link: '/decorator/hr' }
+        ]
       },
       {
         text: 'Pattern',

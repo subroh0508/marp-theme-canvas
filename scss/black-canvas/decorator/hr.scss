@@ -1,0 +1,9 @@
+// black-canvas hr decorator configuration
+
+@use '../../canvas/decorator/hr' as base;
+
+@include base.configure(
+  $height: var(--hr-height),
+  $width: var(--hr-width),
+  $color: var(--hr-color)
+);

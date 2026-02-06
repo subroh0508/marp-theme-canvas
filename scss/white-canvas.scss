@@ -45,6 +45,8 @@
 @use 'white-canvas/component/footer';
 // Layout
 @use 'white-canvas/layout/columns';
+// Decorator
+@use 'white-canvas/decorator/hr' as decorator-hr;
 
 // Pattern
 @use 'white-canvas/pattern/title';

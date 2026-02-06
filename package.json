@@ -42,6 +42,9 @@
     "./canvas/component/prettylights/*": {
       "sass": "./scss/canvas/component/prettylights/*"
     },
+    "./canvas/decorator/*": {
+      "sass": "./scss/canvas/decorator/*"
+    },
     "./canvas/pattern/*": {
       "sass": "./scss/canvas/pattern/*"
     },

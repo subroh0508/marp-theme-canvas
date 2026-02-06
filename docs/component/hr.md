@@ -14,10 +14,6 @@
 
 ![](/white-canvas/component/hr.003.png)
 
-![](/white-canvas/component/hr.004.png)
-
-![](/white-canvas/component/hr.005.png)
-
 ## black-canvas
 
 :::details Embedded Slide
@@ -31,8 +27,3 @@
 ![](/black-canvas/component/hr.002.png)
 
 ![](/black-canvas/component/hr.003.png)
-
-![](/black-canvas/component/hr.004.png)
-
-![](/black-canvas/component/hr.005.png)
-
