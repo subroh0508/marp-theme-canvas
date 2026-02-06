@@ -1,0 +1,5 @@
+// white-canvas paragraph configuration
+
+@use '../../canvas/component/paragraph' as base;
+
+@include base.configure();

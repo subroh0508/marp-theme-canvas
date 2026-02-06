@@ -25,9 +25,10 @@ demo/
 │   ├── section.md          # Slide base layout
 │   ├── header.md           # Header
 │   ├── footer.md           # Footer
-│   ├── pagination.md       # Page numbers
+│   └── pagination.md       # Page numbers
+├── common-layout/          # Common layout demos
 │   └── columns.md          # Multi-column layout
-└── pattern/                # Page pattern demos
+└── slide-pattern/          # Slide pattern demos
     ├── title.md            # Title page
     ├── section.md          # Section divider
     ├── toc.md              # Table of contents

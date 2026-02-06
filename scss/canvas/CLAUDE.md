@@ -5,9 +5,10 @@ Base style definitions for canvas themes
 ## Directory Structure
 
 - `token/` - Design tokens (CSS variables)
-- `element/` - HTML element styles
-- `component/` - Composite components
-- `pattern/` - Page layout patterns
+- `component/` - Styles for HTML elements and their combinations (heading, table, code, section, etc.)
+- `common-layout/` - Reusable layout definitions referenced by multiple slide patterns
+- `decorator/` - Decorative styles requiring explicit class specification
+- `slide-pattern/` - Page layout patterns
 
 ## User-Defined Variables
 

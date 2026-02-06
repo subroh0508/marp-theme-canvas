@@ -1,0 +1,12 @@
+:root {
+  --hr-height: 1px;
+  --hr-width: 100%;
+  --hr-color: var(--color-grey-medium);
+}
+
+hr {
+  width: var(--hr-width);
+  border: none;
+  border-top: var(--hr-height) solid var(--hr-color);
+  margin: 0 0 1em;
+}

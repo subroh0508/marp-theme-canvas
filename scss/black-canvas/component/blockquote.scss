@@ -1,0 +1,12 @@
+// black-canvas blockquote configuration
+
+@use '../../canvas/component/blockquote' as base;
+
+@include base.configure(
+  $font-size: var(--font-size-m),
+  $line-height: var(--line-height-tight),
+  $color-text: var(--color-grey-medium),
+  $color-bg: color-mix(in srgb, var(--color-grey-light) 15%, transparent),
+  $color-mark: var(--color-grey-medium),
+  $border-radius: var(--corner-radius-m)
+);

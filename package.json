@@ -36,17 +36,20 @@
     "./canvas/token/*": {
       "sass": "./scss/canvas/token/*"
     },
-    "./canvas/element/*": {
-      "sass": "./scss/canvas/element/*"
-    },
-    "./canvas/element/prettylights/*": {
-      "sass": "./scss/canvas/element/prettylights/*"
-    },
     "./canvas/component/*": {
       "sass": "./scss/canvas/component/*"
     },
-    "./canvas/pattern/*": {
-      "sass": "./scss/canvas/pattern/*"
+    "./canvas/component/prettylights/*": {
+      "sass": "./scss/canvas/component/prettylights/*"
+    },
+    "./canvas/decorator/*": {
+      "sass": "./scss/canvas/decorator/*"
+    },
+    "./canvas/common-layout/*": {
+      "sass": "./scss/canvas/common-layout/*"
+    },
+    "./canvas/slide-pattern/*": {
+      "sass": "./scss/canvas/slide-pattern/*"
     },
     "./white-canvas.css": "./css/white-canvas.css",
     "./black-canvas.css": "./css/black-canvas.css",

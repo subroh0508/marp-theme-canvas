@@ -1,0 +1,7 @@
+// white-canvas link configuration
+
+@use '../../canvas/component/link' as base;
+
+@include base.configure(
+  $color-text: var(--color-blue)
+);

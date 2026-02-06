@@ -304,19 +304,6 @@ hr {
   margin: 0 0 1em;
 }
 
-section.hr-solid hr {
-  width: var(--hr-width);
-  border: none;
-  border-top: var(--hr-height) solid var(--hr-color);
-  margin: 0 0 1em;
-}
-section.hr-dashed hr {
-  width: var(--hr-width);
-  border: none;
-  border-top: var(--hr-height) dashed var(--hr-color);
-  margin: 0 0 1em;
-}
-
 :root {
   --strong-font-weight: var(--font-weight-bold);
   --mark-font-weight: var(--font-weight-bold);
@@ -684,6 +671,19 @@ section .cols > .col-10 {
 section .cols > .col-10 > *,
 section .cols > .col-10 p > * {
   max-width: 100%;
+}
+
+section.hr-solid hr {
+  width: var(--hr-width);
+  border: none;
+  border-top: var(--hr-height) solid var(--hr-color);
+  margin: 0 0 1em;
+}
+section.hr-dashed hr {
+  width: var(--hr-width);
+  border: none;
+  border-top: var(--hr-height) dashed var(--hr-color);
+  margin: 0 0 1em;
 }
 
 section.title {

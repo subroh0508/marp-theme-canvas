@@ -2,36 +2,37 @@
 //
 // Usage:
 //   @use '@subroh0508/marp-theme-canvas/scss/canvas' as canvas;
-//   @use '@subroh0508/marp-theme-canvas/scss/canvas/element/heading' as heading;
+//   @use '@subroh0508/marp-theme-canvas/scss/canvas/component/heading' as heading;
 
 // Token
 @forward 'token/color';
 @forward 'token/typography';
 
-// Element
-@forward 'element/heading';
-@forward 'element/paragraph';
-@forward 'element/list';
-@forward 'element/link';
-@forward 'element/table';
-@forward 'element/code';
-@forward 'element/blockquote';
-@forward 'element/hr';
-@forward 'element/text-decorator';
-@forward 'element/prettylights/base';
-@forward 'element/prettylights/light';
-@forward 'element/prettylights/dark';
-
 // Component
+@forward 'component/heading';
+@forward 'component/paragraph';
+@forward 'component/list';
+@forward 'component/link';
+@forward 'component/table';
+@forward 'component/code';
+@forward 'component/blockquote';
+@forward 'component/hr';
+@forward 'component/text-decorator';
+@forward 'component/prettylights/base';
+@forward 'component/prettylights/light';
+@forward 'component/prettylights/dark';
 @forward 'component/section';
 @forward 'component/header';
 @forward 'component/footer';
 @forward 'component/pagination';
-@forward 'component/columns';
+// Common Layout
+@forward 'common-layout/columns';
+// Decorator
+@forward 'decorator/hr';
 
-// Pattern
-@forward 'pattern/title';
-@forward 'pattern/toc';
-@forward 'pattern/section' as pattern-section-*;
-@forward 'pattern/agenda';
-@forward 'pattern/display';
+// Slide Pattern
+@forward 'slide-pattern/title';
+@forward 'slide-pattern/toc';
+@forward 'slide-pattern/section' as slide-pattern-section-*;
+@forward 'slide-pattern/agenda';
+@forward 'slide-pattern/display';

@@ -1,0 +1,7 @@
+// black-canvas section pattern configuration
+
+@use '../../canvas/slide-pattern/section' as base;
+
+@include base.configure(
+  $font-size: var(--font-size-xxl)
+);

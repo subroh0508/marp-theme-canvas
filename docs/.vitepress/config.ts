@@ -17,38 +17,44 @@ export default defineConfig({
         ]
       },
       {
-        text: 'Element',
-        items: [
-          { text: 'heading', link: '/element/heading' },
-          { text: 'paragraph', link: '/element/paragraph' },
-          { text: 'list', link: '/element/list' },
-          { text: 'link', link: '/element/link' },
-          { text: 'blockquote', link: '/element/blockquote' },
-          { text: 'table', link: '/element/table' },
-          { text: 'code', link: '/element/code' },
-          { text: 'hr', link: '/element/hr' },
-          { text: 'text-decorator', link: '/element/text-decorator' },
-          { text: 'prettylights', link: '/element/prettylights' }
-        ]
-      },
-      {
         text: 'Component',
         items: [
+          { text: 'heading', link: '/component/heading' },
+          { text: 'paragraph', link: '/component/paragraph' },
+          { text: 'list', link: '/component/list' },
+          { text: 'link', link: '/component/link' },
+          { text: 'blockquote', link: '/component/blockquote' },
+          { text: 'table', link: '/component/table' },
+          { text: 'code', link: '/component/code' },
+          { text: 'hr', link: '/component/hr' },
+          { text: 'text-decorator', link: '/component/text-decorator' },
+          { text: 'prettylights', link: '/component/prettylights' },
           { text: 'section', link: '/component/section' },
           { text: 'header', link: '/component/header' },
           { text: 'footer', link: '/component/footer' },
           { text: 'pagination', link: '/component/pagination' },
-          { text: 'columns', link: '/component/columns' }
         ]
       },
       {
-        text: 'Pattern',
+        text: 'Common Layout',
         items: [
-          { text: 'title', link: '/pattern/title' },
-          { text: 'section', link: '/pattern/section' },
-          { text: 'toc', link: '/pattern/toc' },
-          { text: 'agenda', link: '/pattern/agenda' },
-          { text: 'display', link: '/pattern/display' }
+          { text: 'columns', link: '/common-layout/columns' }
+        ]
+      },
+      {
+        text: 'Decorator',
+        items: [
+          { text: 'hr', link: '/decorator/hr' }
+        ]
+      },
+      {
+        text: 'Slide Pattern',
+        items: [
+          { text: 'title', link: '/slide-pattern/title' },
+          { text: 'section', link: '/slide-pattern/section' },
+          { text: 'toc', link: '/slide-pattern/toc' },
+          { text: 'agenda', link: '/slide-pattern/agenda' },
+          { text: 'display', link: '/slide-pattern/display' }
         ]
       }
     ]

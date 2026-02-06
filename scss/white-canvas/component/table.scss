@@ -1,0 +1,11 @@
+// white-canvas table configuration
+
+@use '../../canvas/component/table' as base;
+
+@include base.configure(
+  $color-row-bg: var(--color-white),
+  $color-header-bg: var(--color-grey-lightest),
+  $color-even-row-bg: var(--color-white),
+  $color-border-vert: var(--color-grey-light),
+  $color-border-horz: var(--color-grey-light)
+);

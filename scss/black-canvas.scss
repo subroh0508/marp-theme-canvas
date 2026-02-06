@@ -28,31 +28,32 @@
 @use 'black-canvas/token/typography';
 @use 'black-canvas/token/corner-radius';
 
-// Element
-@use 'black-canvas/element/heading';
-@use 'black-canvas/element/paragraph';
-@use 'black-canvas/element/list';
-@use 'black-canvas/element/link';
-@use 'black-canvas/element/table';
-@use 'black-canvas/element/code';
-@use 'black-canvas/element/blockquote';
-@use 'black-canvas/element/hr';
-@use 'black-canvas/element/text-decorator';
-@use 'black-canvas/element/prettylights/dark';
-
 // Component
+@use 'black-canvas/component/heading';
+@use 'black-canvas/component/paragraph';
+@use 'black-canvas/component/list';
+@use 'black-canvas/component/link';
+@use 'black-canvas/component/table';
+@use 'black-canvas/component/code';
+@use 'black-canvas/component/blockquote';
+@use 'black-canvas/component/hr';
+@use 'black-canvas/component/text-decorator';
+@use 'black-canvas/component/prettylights/dark';
 @use 'black-canvas/component/section';
 @use 'black-canvas/component/pagination';
 @use 'black-canvas/component/header';
 @use 'black-canvas/component/footer';
-@use 'black-canvas/component/columns';
+// Common Layout
+@use 'black-canvas/common-layout/columns';
+// Decorator
+@use 'black-canvas/decorator/hr' as decorator-hr;
 
-// Pattern
-@use 'black-canvas/pattern/title';
-@use 'black-canvas/pattern/toc';
-@use 'black-canvas/pattern/section' as pattern-section;
-@use 'black-canvas/pattern/agenda';
-@use 'black-canvas/pattern/display';
+// Slide Pattern
+@use 'black-canvas/slide-pattern/title';
+@use 'black-canvas/slide-pattern/toc';
+@use 'black-canvas/slide-pattern/section' as slide-pattern-section;
+@use 'black-canvas/slide-pattern/agenda';
+@use 'black-canvas/slide-pattern/display';
 
 // Google Fonts
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap');

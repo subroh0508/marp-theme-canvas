@@ -207,14 +207,14 @@ Canvasのスタイルはモジュール化されており、独自テーマ作�
 scss/
 ├── canvas/                 # ベースmixin（@useでインポート可能）
 │   ├── token/              # デザイントークン（色、タイポグラフィ）
-│   ├── element/            # HTML要素スタイル（見出し、テーブル、コード等）
-│   ├── component/          # 複合コンポーネント（セクション、ヘッダー、フッター等）
-│   └── pattern/            # ページレイアウトパターン（タイトル、目次、アジェンダ等）
+│   ├── component/          # HTML要素単体・組み合わせのスタイル（見出し、テーブル、コード、セクション等）
+│   ├── common-layout/      # 複数のslide-patternから参照される再利用可能なレイアウト定義
+│   ├── decorator/          # 明示的なクラス指定が必要な装飾スタイル
+│   └── slide-pattern/      # ページレイアウトパターン（タイトル、目次、アジェンダ等）
 ├── white-canvas/           # ライトテーマ設定
 │   ├── token/              # テーマ固有のトークン
-│   ├── element/            # 要素の設定
 │   ├── component/          # コンポーネントの設定
-│   └── pattern/            # パターンの設定
+│   └── slide-pattern/      # スライドパターンの設定
 ├── black-canvas/           # ダークテーマ設定
 │   └── （white-canvasと同じ構造）
 ├── white-canvas.scss       # ライトテーマのエントリーポイント
@@ -231,9 +231,9 @@ scss/
  */
 
 // ベースmixinをインポート
-@use '@subroh0508/marp-theme-canvas/scss/canvas/element/heading' as heading;
+@use '@subroh0508/marp-theme-canvas/scss/canvas/component/heading' as heading;
 @use '@subroh0508/marp-theme-canvas/scss/canvas/component/section' as section;
-@use '@subroh0508/marp-theme-canvas/scss/canvas/pattern/title' as title;
+@use '@subroh0508/marp-theme-canvas/scss/canvas/slide-pattern/title' as title;
 
 // Google Fonts
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap');
@@ -281,7 +281,7 @@ scss/
 
 ```scss
 // テーマ設定ファイルをインポート
-@use '@subroh0508/marp-theme-canvas/scss/white-canvas/element/heading';
+@use '@subroh0508/marp-theme-canvas/scss/white-canvas/component/heading';
 @use '@subroh0508/marp-theme-canvas/scss/white-canvas/component/section';
 ```
 
@@ -293,7 +293,7 @@ import '@subroh0508/marp-theme-canvas/white-canvas.css'
 import '@subroh0508/marp-theme-canvas/black-canvas.css'
 
 // 個別のCSSモジュールをインポート
-import '@subroh0508/marp-theme-canvas/white-canvas/element/heading.css'
+import '@subroh0508/marp-theme-canvas/white-canvas/component/heading.css'
 ```
 
 ## 開発

@@ -1,0 +1,22 @@
+// ===== _hr.scss =====
+// Horizontal rule styles
+
+@mixin configure(
+  $height,
+  $width,
+  $color
+) {
+  :root {
+    --hr-height: #{$height};
+    --hr-width: #{$width};
+    --hr-color: #{$color};
+  }
+
+  hr {
+    width: var(--hr-width);
+    // Reset browser default border
+    border: none;
+    border-top: var(--hr-height) solid var(--hr-color);
+    margin: 0 0 1em;
+  }
+}

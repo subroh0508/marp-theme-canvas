@@ -207,14 +207,14 @@ Canvas styles are modularized and can be imported individually when creating cus
 scss/
 ├── canvas/                 # Base mixins (importable via @use)
 │   ├── token/              # Design tokens (color, typography)
-│   ├── element/            # HTML element styles (heading, table, code, etc.)
-│   ├── component/          # Composite components (section, header, footer, etc.)
-│   └── pattern/            # Page layout patterns (title, toc, agenda, etc.)
+│   ├── component/          # Styles for HTML elements and their combinations (heading, table, code, section, etc.)
+│   ├── common-layout/      # Reusable layout definitions referenced by multiple slide patterns
+│   ├── decorator/          # Decorative styles requiring explicit class specification
+│   └── slide-pattern/      # Page layout patterns (title, toc, agenda, etc.)
 ├── white-canvas/           # Light theme configuration
 │   ├── token/              # Theme-specific tokens
-│   ├── element/            # Element configurations
 │   ├── component/          # Component configurations
-│   └── pattern/            # Pattern configurations
+│   └── slide-pattern/      # Slide pattern configurations
 ├── black-canvas/           # Dark theme configuration
 │   └── (same structure as white-canvas)
 ├── white-canvas.scss       # Light theme entry point
@@ -231,9 +231,9 @@ Import base mixins from `canvas/` to create custom themes:
  */
 
 // Import base mixins
-@use '@subroh0508/marp-theme-canvas/scss/canvas/element/heading' as heading;
+@use '@subroh0508/marp-theme-canvas/scss/canvas/component/heading' as heading;
 @use '@subroh0508/marp-theme-canvas/scss/canvas/component/section' as section;
-@use '@subroh0508/marp-theme-canvas/scss/canvas/pattern/title' as title;
+@use '@subroh0508/marp-theme-canvas/scss/canvas/slide-pattern/title' as title;
 
 // Google Fonts
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap');
@@ -281,7 +281,7 @@ You can also import pre-configured theme files:
 
 ```scss
 // Import theme configuration files
-@use '@subroh0508/marp-theme-canvas/scss/white-canvas/element/heading';
+@use '@subroh0508/marp-theme-canvas/scss/white-canvas/component/heading';
 @use '@subroh0508/marp-theme-canvas/scss/white-canvas/component/section';
 ```
 
@@ -293,7 +293,7 @@ import '@subroh0508/marp-theme-canvas/white-canvas.css'
 import '@subroh0508/marp-theme-canvas/black-canvas.css'
 
 // Import individual CSS modules
-import '@subroh0508/marp-theme-canvas/white-canvas/element/heading.css'
+import '@subroh0508/marp-theme-canvas/white-canvas/component/heading.css'
 ```
 
 ## Development
