@@ -28,19 +28,17 @@
 @use 'black-canvas/token/typography';
 @use 'black-canvas/token/corner-radius';
 
-// Element
-@use 'black-canvas/element/heading';
-@use 'black-canvas/element/paragraph';
-@use 'black-canvas/element/list';
-@use 'black-canvas/element/link';
-@use 'black-canvas/element/table';
-@use 'black-canvas/element/code';
-@use 'black-canvas/element/blockquote';
-@use 'black-canvas/element/hr';
-@use 'black-canvas/element/text-decorator';
-@use 'black-canvas/element/prettylights/dark';
-
 // Component
+@use 'black-canvas/component/heading';
+@use 'black-canvas/component/paragraph';
+@use 'black-canvas/component/list';
+@use 'black-canvas/component/link';
+@use 'black-canvas/component/table';
+@use 'black-canvas/component/code';
+@use 'black-canvas/component/blockquote';
+@use 'black-canvas/component/hr';
+@use 'black-canvas/component/text-decorator';
+@use 'black-canvas/component/prettylights/dark';
 @use 'black-canvas/component/section';
 @use 'black-canvas/component/pagination';
 @use 'black-canvas/component/header';

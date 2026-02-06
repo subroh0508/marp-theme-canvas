@@ -36,14 +36,11 @@
     "./canvas/token/*": {
       "sass": "./scss/canvas/token/*"
     },
-    "./canvas/element/*": {
-      "sass": "./scss/canvas/element/*"
-    },
-    "./canvas/element/prettylights/*": {
-      "sass": "./scss/canvas/element/prettylights/*"
-    },
     "./canvas/component/*": {
       "sass": "./scss/canvas/component/*"
+    },
+    "./canvas/component/prettylights/*": {
+      "sass": "./scss/canvas/component/prettylights/*"
     },
     "./canvas/pattern/*": {
       "sass": "./scss/canvas/pattern/*"

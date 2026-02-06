@@ -28,19 +28,17 @@
 @use 'white-canvas/token/typography';
 @use 'white-canvas/token/corner-radius';
 
-// Element
-@use 'white-canvas/element/heading';
-@use 'white-canvas/element/paragraph';
-@use 'white-canvas/element/list';
-@use 'white-canvas/element/link';
-@use 'white-canvas/element/table';
-@use 'white-canvas/element/code';
-@use 'white-canvas/element/blockquote';
-@use 'white-canvas/element/hr';
-@use 'white-canvas/element/text-decorator';
-@use 'white-canvas/element/prettylights/light';
-
 // Component
+@use 'white-canvas/component/heading';
+@use 'white-canvas/component/paragraph';
+@use 'white-canvas/component/list';
+@use 'white-canvas/component/link';
+@use 'white-canvas/component/table';
+@use 'white-canvas/component/code';
+@use 'white-canvas/component/blockquote';
+@use 'white-canvas/component/hr';
+@use 'white-canvas/component/text-decorator';
+@use 'white-canvas/component/prettylights/light';
 @use 'white-canvas/component/section';
 @use 'white-canvas/component/pagination';
 @use 'white-canvas/component/header';

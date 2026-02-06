@@ -8,14 +8,12 @@ Simple and minimal Marp theme
 scss/
 ├── canvas/                 # Base mixins (importable via @use)
 │   ├── token/              # Design tokens (color, typography)
-│   ├── element/            # HTML element styles (heading, table, code, etc.)
-│   ├── component/          # Styles for HTML elements and their combinations (no class required)
+│   ├── component/          # Styles for HTML elements and their combinations (heading, table, code, section, etc.)
 │   ├── layout/             # Reusable layout definitions referenced by multiple patterns
 │   ├── decorator/          # Decorative styles requiring explicit class specification
 │   └── pattern/            # Page layout patterns (title, toc, agenda, etc.)
 ├── white-canvas/           # Light theme configuration
 │   ├── token/              # Theme-specific tokens
-│   ├── element/            # Element configurations
 │   ├── component/          # Component configurations
 │   └── pattern/            # Pattern configurations
 ├── black-canvas/           # Dark theme configuration

@@ -1,0 +1,5 @@
+// black-canvas prettylights dark configuration
+
+@use '../../../canvas/component/prettylights/dark' as base;
+
+@include base.configure();

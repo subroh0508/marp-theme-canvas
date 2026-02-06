@@ -207,14 +207,12 @@ Canvasのスタイルはモジュール化されており、独自テーマ作�
 scss/
 ├── canvas/                 # ベースmixin（@useでインポート可能）
 │   ├── token/              # デザイントークン（色、タイポグラフィ）
-│   ├── element/            # HTML要素スタイル（見出し、テーブル、コード等）
-│   ├── component/          # HTML要素単体・組み合わせのスタイル（クラス指定不要）
+│   ├── component/          # HTML要素単体・組み合わせのスタイル（見出し、テーブル、コード、セクション等）
 │   ├── layout/             # 複数のpatternから参照される再利用可能なレイアウト定義
 │   ├── decorator/          # 明示的なクラス指定が必要な装飾スタイル
 │   └── pattern/            # ページレイアウトパターン（タイトル、目次、アジェンダ等）
 ├── white-canvas/           # ライトテーマ設定
 │   ├── token/              # テーマ固有のトークン
-│   ├── element/            # 要素の設定
 │   ├── component/          # コンポーネントの設定
 │   └── pattern/            # パターンの設定
 ├── black-canvas/           # ダークテーマ設定
@@ -233,7 +231,7 @@ scss/
  */
 
 // ベースmixinをインポート
-@use '@subroh0508/marp-theme-canvas/scss/canvas/element/heading' as heading;
+@use '@subroh0508/marp-theme-canvas/scss/canvas/component/heading' as heading;
 @use '@subroh0508/marp-theme-canvas/scss/canvas/component/section' as section;
 @use '@subroh0508/marp-theme-canvas/scss/canvas/pattern/title' as title;
 
@@ -283,7 +281,7 @@ scss/
 
 ```scss
 // テーマ設定ファイルをインポート
-@use '@subroh0508/marp-theme-canvas/scss/white-canvas/element/heading';
+@use '@subroh0508/marp-theme-canvas/scss/white-canvas/component/heading';
 @use '@subroh0508/marp-theme-canvas/scss/white-canvas/component/section';
 ```
 
@@ -295,7 +293,7 @@ import '@subroh0508/marp-theme-canvas/white-canvas.css'
 import '@subroh0508/marp-theme-canvas/black-canvas.css'
 
 // 個別のCSSモジュールをインポート
-import '@subroh0508/marp-theme-canvas/white-canvas/element/heading.css'
+import '@subroh0508/marp-theme-canvas/white-canvas/component/heading.css'
 ```
 
 ## 開発
