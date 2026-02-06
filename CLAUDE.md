@@ -9,7 +9,9 @@ scss/
 ├── canvas/                 # Base mixins (importable via @use)
 │   ├── token/              # Design tokens (color, typography)
 │   ├── element/            # HTML element styles (heading, table, code, etc.)
-│   ├── component/          # Composite components (section, header, footer, etc.)
+│   ├── component/          # Styles for HTML elements and their combinations (no class required)
+│   ├── layout/             # Reusable layout definitions referenced by multiple patterns
+│   ├── decorator/          # Decorative styles requiring explicit class specification
 │   └── pattern/            # Page layout patterns (title, toc, agenda, etc.)
 ├── white-canvas/           # Light theme configuration
 │   ├── token/              # Theme-specific tokens

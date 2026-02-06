@@ -6,7 +6,9 @@ Base style definitions for canvas themes
 
 - `token/` - Design tokens (CSS variables)
 - `element/` - HTML element styles
-- `component/` - Composite components
+- `component/` - Styles for HTML elements and their combinations (applied without class specification)
+- `layout/` - Reusable layout definitions referenced by multiple patterns
+- `decorator/` - Decorative styles requiring explicit class specification
 - `pattern/` - Page layout patterns
 
 ## User-Defined Variables

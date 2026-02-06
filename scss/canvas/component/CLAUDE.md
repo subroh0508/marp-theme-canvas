@@ -1,12 +1,13 @@
 # component
 
-Manages combinations of multiple elements and highly reusable classes
+Manages styles applied without explicit class specification, targeting individual HTML elements and combinations of multiple HTML elements
 
 ## Definition Method
 
 - Define as SCSS @mixin
 - All variables are defined as mixin arguments
 - Use semantic argument names
+- Styles are applied automatically to HTML element selectors (no class specification required)
 
 ## File Structure Template
 
@@ -21,7 +22,7 @@ Manages combinations of multiple elements and highly reusable classes
     --component-arg3: #{$arg3};
   }
 
-  .classname {
+  selector {
     property: var(--component-arg1);
   }
 }
@@ -33,9 +34,10 @@ CSS variable name: `--{component-name}-{argument-name}`
 
 Special prefix rules:
 - `_section.scss`: `--base-*` (padding/color/font/line-height)
-- `_columns.scss`: `--cols-*`
 
 Examples:
+- `_heading.scss`'s `$h1-font-size` → `--h1-font-size` (heading level as prefix)
+- `_blockquote.scss`'s `$color-text` → `--blockquote-color-text`
 - `_pagination.scss`'s `$margin-x` → `--pagination-margin-x`
 - `_header.scss`'s `$font-size` → `--header-font-size`
 - `_section.scss`'s `$padding-x` → `--base-padding-x`
@@ -49,10 +51,13 @@ Examples:
 | `_header.scss` | `header` | Header |
 | `_footer.scss` | `footer` | Footer |
 | `_pagination.scss` | `section::after` | Page number |
-| `_columns.scss` | `.cols`, `.col`, `.col-N` | Multi-column layout |
-
-## Planned Components
-
-| File | Class Name | Purpose |
-|------|------------|---------|
-| `_figure.scss` | `.figure` | Image with caption |
+| `_heading.scss` | `h1`-`h6` | Headings |
+| `_paragraph.scss` | `p` | Paragraphs |
+| `_list.scss` | `ul`, `ol` | Lists |
+| `_table.scss` | `table`, `th`, `td`, `tr` | Tables |
+| `_code.scss` | `code`, `pre` | Code blocks |
+| `_blockquote.scss` | `blockquote` | Blockquotes |
+| `_link.scss` | `a` | Links |
+| `_hr.scss` | `hr` | Horizontal rules |
+| `_text-decorator.scss` | `strong`, `mark`, `rp` | Text decoration |
+| `prettylights/` | `.hljs-*` | Syntax highlighting |

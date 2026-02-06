@@ -42,6 +42,14 @@ export default defineConfig({
         ]
       },
       {
+        text: 'Layout',
+        items: []
+      },
+      {
+        text: 'Decorator',
+        items: []
+      },
+      {
         text: 'Pattern',
         items: [
           { text: 'title', link: '/pattern/title' },
