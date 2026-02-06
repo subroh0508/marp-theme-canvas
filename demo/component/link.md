@@ -39,7 +39,7 @@ a {
 ## Customization Example
 
 <style scoped>
-:root {
+section {
   --link-color-text: #e74c3c;
 }
 </style>

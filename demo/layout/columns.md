@@ -102,7 +102,7 @@ Available: `col-1` to `col-10`
 ## Customization Example
 
 <style scoped>
-:root {
+section {
   --cols-gap: 2em;
 }
 </style>

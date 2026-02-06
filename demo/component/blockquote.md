@@ -42,7 +42,7 @@ Normal text after blockquote.
 ## Customization Example
 
 <style scoped>
-:root {
+section {
   --blockquote-color-text: #2563eb;
   --blockquote-color-bg: #dbeafe;
   --blockquote-color-mark: #2563eb;

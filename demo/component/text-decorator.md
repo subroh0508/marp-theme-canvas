@@ -4,7 +4,7 @@ theme: default
 paginate: true
 footer: scss/canvas/component/_text-decorator.scss
 style: |
-  :root {
+  section {
     --color-accent: #ead7a4;
   }
 ---
@@ -49,7 +49,7 @@ You can add <ruby>**ruby text**<rp>(</rp><rt>furigana</rt><rp>)</rp></ruby> anno
 ## Customization Example
 
 <style scoped>
-:root {
+section {
   --mark-color-bg: #fef3c7;
   --mark-font-weight: 900;
 }

@@ -49,7 +49,7 @@ This slide has no page number.
 ## Customization Example
 
 <style scoped>
-:root {
+section {
   --pagination-font-size: 1.2em;
   --pagination-color-text: #3b91c4;
 }

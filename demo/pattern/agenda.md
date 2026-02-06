@@ -4,7 +4,7 @@ theme: default
 paginate: true
 footer: scss/canvas/pattern/_agenda.scss
 style: |
-  :root {
+  section {
     --color-primary: #3b91c4;
   }
 ---

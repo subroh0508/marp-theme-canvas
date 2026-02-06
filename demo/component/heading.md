@@ -4,7 +4,7 @@ theme: default
 paginate: true
 footer: scss/canvas/component/_heading.scss
 style: |
-  :root {
+  section {
     --color-primary: #3b91c4;
   }
 ---
@@ -64,7 +64,7 @@ This is normal paragraph text.
 ## Customization Example
 
 <style scoped>
-:root {
+section {
   --h2-color-text: #e74c3c;
   --h2-font-size: 2.5em;
 }

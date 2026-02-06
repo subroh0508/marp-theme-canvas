@@ -58,7 +58,7 @@ This slide has no header.
 ## Customization Example
 
 <style scoped>
-:root {
+section {
   --header-font-size: 1em;
   --header-color-text: #3b91c4;
 }

@@ -60,7 +60,7 @@ echo "Hello, Marp!"
 ## Customization Example
 
 <style scoped>
-:root {
+section {
   --code-color-bg: #1e293b;
   --code-color-fg: #e2e8f0;
 }

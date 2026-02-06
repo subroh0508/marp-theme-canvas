@@ -57,7 +57,7 @@ This slide has no footer.
 ## Customization Example
 
 <style scoped>
-:root {
+section {
   --footer-font-size: 1em;
   --footer-color-text: #e74c3c;
 }

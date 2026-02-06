@@ -34,7 +34,7 @@ The section component defines the base layout for the entire slide.
 ## Customization Example
 
 <style scoped>
-:root {
+section {
   --base-color-bg: #f8fafc;
   --base-color-text: #1e293b;
   --base-font-size: 36px;

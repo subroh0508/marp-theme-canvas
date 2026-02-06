@@ -51,7 +51,7 @@ Note: `--corner-radius-s` and `--corner-radius-l` are defined but not yet used i
 ## Customization Example
 
 <style scoped>
-:root {
+section {
   --corner-radius-m: 24px;
 }
 </style>

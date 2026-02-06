@@ -42,7 +42,7 @@ footer: scss/canvas/component/_table.scss
 ## Customization Example
 
 <style scoped>
-:root {
+section {
   --table-color-header-bg: #3b91c4;
   --table-color-border-vert: #3b91c4;
   --table-color-border-horz: #3b91c4;

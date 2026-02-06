@@ -28,7 +28,7 @@ Content below the line
 ## Customization Example
 
 <style scoped>
-:root {
+section {
   --hr-height: 3px;
   --hr-color: #3b91c4;
 }

@@ -40,7 +40,7 @@ footer: scss/canvas/component/_list.scss
 ## Customization Example
 
 <style scoped>
-:root {
+section {
   --ul-indent: 2em;
   --ul-li-padding-left: 0.5em;
 }
