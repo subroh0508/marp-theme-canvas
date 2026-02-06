@@ -43,17 +43,17 @@
 @use 'white-canvas/component/pagination';
 @use 'white-canvas/component/header';
 @use 'white-canvas/component/footer';
-// Layout
-@use 'white-canvas/layout/columns';
+// Common Layout
+@use 'white-canvas/common-layout/columns';
 // Decorator
 @use 'white-canvas/decorator/hr' as decorator-hr;
 
-// Pattern
-@use 'white-canvas/pattern/title';
-@use 'white-canvas/pattern/toc';
-@use 'white-canvas/pattern/section' as pattern-section;
-@use 'white-canvas/pattern/agenda';
-@use 'white-canvas/pattern/display';
+// Slide Pattern
+@use 'white-canvas/slide-pattern/title';
+@use 'white-canvas/slide-pattern/toc';
+@use 'white-canvas/slide-pattern/section' as slide-pattern-section;
+@use 'white-canvas/slide-pattern/agenda';
+@use 'white-canvas/slide-pattern/display';
 
 // Google Fonts
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap');

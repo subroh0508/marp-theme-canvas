@@ -208,13 +208,13 @@ scss/
 ├── canvas/                 # ベースmixin（@useでインポート可能）
 │   ├── token/              # デザイントークン（色、タイポグラフィ）
 │   ├── component/          # HTML要素単体・組み合わせのスタイル（見出し、テーブル、コード、セクション等）
-│   ├── layout/             # 複数のpatternから参照される再利用可能なレイアウト定義
+│   ├── common-layout/      # 複数のslide-patternから参照される再利用可能なレイアウト定義
 │   ├── decorator/          # 明示的なクラス指定が必要な装飾スタイル
-│   └── pattern/            # ページレイアウトパターン（タイトル、目次、アジェンダ等）
+│   └── slide-pattern/      # ページレイアウトパターン（タイトル、目次、アジェンダ等）
 ├── white-canvas/           # ライトテーマ設定
 │   ├── token/              # テーマ固有のトークン
 │   ├── component/          # コンポーネントの設定
-│   └── pattern/            # パターンの設定
+│   └── slide-pattern/      # スライドパターンの設定
 ├── black-canvas/           # ダークテーマ設定
 │   └── （white-canvasと同じ構造）
 ├── white-canvas.scss       # ライトテーマのエントリーポイント
@@ -233,7 +233,7 @@ scss/
 // ベースmixinをインポート
 @use '@subroh0508/marp-theme-canvas/scss/canvas/component/heading' as heading;
 @use '@subroh0508/marp-theme-canvas/scss/canvas/component/section' as section;
-@use '@subroh0508/marp-theme-canvas/scss/canvas/pattern/title' as title;
+@use '@subroh0508/marp-theme-canvas/scss/canvas/slide-pattern/title' as title;
 
 // Google Fonts
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap');

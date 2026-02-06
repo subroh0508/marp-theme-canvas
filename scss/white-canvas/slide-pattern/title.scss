@@ -1,0 +1,8 @@
+// white-canvas title pattern configuration
+
+@use '../../canvas/slide-pattern/title' as base;
+
+@include base.configure(
+  $font-size-title: var(--font-size-3xl),
+  $color-metadata-text: var(--color-grey-light)
+);

@@ -1,0 +1,5 @@
+// white-canvas columns configuration
+
+@use '../../canvas/common-layout/columns' as base;
+
+@include base.configure();

@@ -36,9 +36,9 @@ export default defineConfig({
         ]
       },
       {
-        text: 'Layout',
+        text: 'Common Layout',
         items: [
-          { text: 'columns', link: '/layout/columns' }
+          { text: 'columns', link: '/common-layout/columns' }
         ]
       },
       {
@@ -48,13 +48,13 @@ export default defineConfig({
         ]
       },
       {
-        text: 'Pattern',
+        text: 'Slide Pattern',
         items: [
-          { text: 'title', link: '/pattern/title' },
-          { text: 'section', link: '/pattern/section' },
-          { text: 'toc', link: '/pattern/toc' },
-          { text: 'agenda', link: '/pattern/agenda' },
-          { text: 'display', link: '/pattern/display' }
+          { text: 'title', link: '/slide-pattern/title' },
+          { text: 'section', link: '/slide-pattern/section' },
+          { text: 'toc', link: '/slide-pattern/toc' },
+          { text: 'agenda', link: '/slide-pattern/agenda' },
+          { text: 'display', link: '/slide-pattern/display' }
         ]
       }
     ]

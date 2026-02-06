@@ -45,8 +45,11 @@
     "./canvas/decorator/*": {
       "sass": "./scss/canvas/decorator/*"
     },
-    "./canvas/pattern/*": {
-      "sass": "./scss/canvas/pattern/*"
+    "./canvas/common-layout/*": {
+      "sass": "./scss/canvas/common-layout/*"
+    },
+    "./canvas/slide-pattern/*": {
+      "sass": "./scss/canvas/slide-pattern/*"
     },
     "./white-canvas.css": "./css/white-canvas.css",
     "./black-canvas.css": "./css/black-canvas.css",

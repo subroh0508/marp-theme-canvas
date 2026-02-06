@@ -208,13 +208,13 @@ scss/
 ├── canvas/                 # Base mixins (importable via @use)
 │   ├── token/              # Design tokens (color, typography)
 │   ├── component/          # Styles for HTML elements and their combinations (heading, table, code, section, etc.)
-│   ├── layout/             # Reusable layout definitions referenced by multiple patterns
+│   ├── common-layout/      # Reusable layout definitions referenced by multiple slide patterns
 │   ├── decorator/          # Decorative styles requiring explicit class specification
-│   └── pattern/            # Page layout patterns (title, toc, agenda, etc.)
+│   └── slide-pattern/      # Page layout patterns (title, toc, agenda, etc.)
 ├── white-canvas/           # Light theme configuration
 │   ├── token/              # Theme-specific tokens
 │   ├── component/          # Component configurations
-│   └── pattern/            # Pattern configurations
+│   └── slide-pattern/      # Slide pattern configurations
 ├── black-canvas/           # Dark theme configuration
 │   └── (same structure as white-canvas)
 ├── white-canvas.scss       # Light theme entry point
@@ -233,7 +233,7 @@ Import base mixins from `canvas/` to create custom themes:
 // Import base mixins
 @use '@subroh0508/marp-theme-canvas/scss/canvas/component/heading' as heading;
 @use '@subroh0508/marp-theme-canvas/scss/canvas/component/section' as section;
-@use '@subroh0508/marp-theme-canvas/scss/canvas/pattern/title' as title;
+@use '@subroh0508/marp-theme-canvas/scss/canvas/slide-pattern/title' as title;
 
 // Google Fonts
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap');

@@ -8,9 +8,9 @@ This site showcases demo slides for each component of the marp-theme-canvas libr
 
 - **Token**: Design tokens (color, typography, corner-radius)
 - **Component**: Styles for HTML elements and their combinations (heading, table, code, section, etc.)
-- **Layout**: Reusable layout definitions referenced by multiple patterns
+- **Common Layout**: Reusable layout definitions referenced by multiple slide patterns
 - **Decorator**: Decorative styles requiring explicit class specification
-- **Pattern**: Page layout patterns (title, toc, agenda, etc.)
+- **Slide Pattern**: Page layout patterns (title, toc, agenda, etc.)
 
 ## Installation
 

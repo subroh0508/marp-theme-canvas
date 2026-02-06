@@ -25,14 +25,14 @@
 @forward 'component/header';
 @forward 'component/footer';
 @forward 'component/pagination';
-// Layout
-@forward 'layout/columns';
+// Common Layout
+@forward 'common-layout/columns';
 // Decorator
 @forward 'decorator/hr';
 
-// Pattern
-@forward 'pattern/title';
-@forward 'pattern/toc';
-@forward 'pattern/section' as pattern-section-*;
-@forward 'pattern/agenda';
-@forward 'pattern/display';
+// Slide Pattern
+@forward 'slide-pattern/title';
+@forward 'slide-pattern/toc';
+@forward 'slide-pattern/section' as slide-pattern-section-*;
+@forward 'slide-pattern/agenda';
+@forward 'slide-pattern/display';
