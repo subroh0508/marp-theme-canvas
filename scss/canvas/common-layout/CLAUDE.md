@@ -40,3 +40,4 @@ Examples:
 | File | Selector | Purpose |
 |------|----------|---------|
 | `_columns.scss` | `section.cols`, `.cols`, `.col`, `.col-N` | Multi-column layout |
+| `_flex.scss` | `section.justify-*`, `section.items-*`, `.col.justify-*`, `.col.items-*` | Flex alignment utilities |
