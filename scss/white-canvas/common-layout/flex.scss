@@ -1,0 +1,5 @@
+// white-canvas flex configuration
+
+@use '../../canvas/common-layout/flex' as base;
+
+@include base.configure();

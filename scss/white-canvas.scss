@@ -45,6 +45,7 @@
 @use 'white-canvas/component/footer';
 // Common Layout
 @use 'white-canvas/common-layout/columns';
+@use 'white-canvas/common-layout/flex';
 // Decorator
 @use 'white-canvas/decorator/hr' as decorator-hr;
 

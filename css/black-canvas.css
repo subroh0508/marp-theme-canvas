@@ -516,6 +516,8 @@ section.cols {
 section.cols > .col {
   flex: 1;
   min-width: 0;
+  display: flex;
+  flex-direction: column;
 }
 section.cols > .col > *,
 section.cols > .col p > * {
@@ -524,6 +526,8 @@ section.cols > .col p > * {
 section.cols > .col-1 {
   flex: 1;
   min-width: 0;
+  display: flex;
+  flex-direction: column;
 }
 section.cols > .col-1 > *,
 section.cols > .col-1 p > * {
@@ -532,6 +536,8 @@ section.cols > .col-1 p > * {
 section.cols > .col-2 {
   flex: 2;
   min-width: 0;
+  display: flex;
+  flex-direction: column;
 }
 section.cols > .col-2 > *,
 section.cols > .col-2 p > * {
@@ -540,6 +546,8 @@ section.cols > .col-2 p > * {
 section.cols > .col-3 {
   flex: 3;
   min-width: 0;
+  display: flex;
+  flex-direction: column;
 }
 section.cols > .col-3 > *,
 section.cols > .col-3 p > * {
@@ -548,6 +556,8 @@ section.cols > .col-3 p > * {
 section.cols > .col-4 {
   flex: 4;
   min-width: 0;
+  display: flex;
+  flex-direction: column;
 }
 section.cols > .col-4 > *,
 section.cols > .col-4 p > * {
@@ -556,6 +566,8 @@ section.cols > .col-4 p > * {
 section.cols > .col-6 {
   flex: 6;
   min-width: 0;
+  display: flex;
+  flex-direction: column;
 }
 section.cols > .col-6 > *,
 section.cols > .col-6 p > * {
@@ -564,6 +576,8 @@ section.cols > .col-6 p > * {
 section.cols > .col-7 {
   flex: 7;
   min-width: 0;
+  display: flex;
+  flex-direction: column;
 }
 section.cols > .col-7 > *,
 section.cols > .col-7 p > * {
@@ -572,6 +586,8 @@ section.cols > .col-7 p > * {
 section.cols > .col-8 {
   flex: 8;
   min-width: 0;
+  display: flex;
+  flex-direction: column;
 }
 section.cols > .col-8 > *,
 section.cols > .col-8 p > * {
@@ -580,6 +596,8 @@ section.cols > .col-8 p > * {
 section.cols > .col-9 {
   flex: 9;
   min-width: 0;
+  display: flex;
+  flex-direction: column;
 }
 section.cols > .col-9 > *,
 section.cols > .col-9 p > * {
@@ -588,6 +606,8 @@ section.cols > .col-9 p > * {
 section.cols > .col-10 {
   flex: 10;
   min-width: 0;
+  display: flex;
+  flex-direction: column;
 }
 section.cols > .col-10 > *,
 section.cols > .col-10 p > * {
@@ -601,6 +621,8 @@ section .cols {
 section .cols > .col {
   flex: 1;
   min-width: 0;
+  display: flex;
+  flex-direction: column;
 }
 section .cols > .col > *,
 section .cols > .col p > * {
@@ -609,6 +631,8 @@ section .cols > .col p > * {
 section .cols > .col-1 {
   flex: 1;
   min-width: 0;
+  display: flex;
+  flex-direction: column;
 }
 section .cols > .col-1 > *,
 section .cols > .col-1 p > * {
@@ -617,6 +641,8 @@ section .cols > .col-1 p > * {
 section .cols > .col-2 {
   flex: 2;
   min-width: 0;
+  display: flex;
+  flex-direction: column;
 }
 section .cols > .col-2 > *,
 section .cols > .col-2 p > * {
@@ -625,6 +651,8 @@ section .cols > .col-2 p > * {
 section .cols > .col-3 {
   flex: 3;
   min-width: 0;
+  display: flex;
+  flex-direction: column;
 }
 section .cols > .col-3 > *,
 section .cols > .col-3 p > * {
@@ -633,6 +661,8 @@ section .cols > .col-3 p > * {
 section .cols > .col-4 {
   flex: 4;
   min-width: 0;
+  display: flex;
+  flex-direction: column;
 }
 section .cols > .col-4 > *,
 section .cols > .col-4 p > * {
@@ -641,6 +671,8 @@ section .cols > .col-4 p > * {
 section .cols > .col-6 {
   flex: 6;
   min-width: 0;
+  display: flex;
+  flex-direction: column;
 }
 section .cols > .col-6 > *,
 section .cols > .col-6 p > * {
@@ -649,6 +681,8 @@ section .cols > .col-6 p > * {
 section .cols > .col-7 {
   flex: 7;
   min-width: 0;
+  display: flex;
+  flex-direction: column;
 }
 section .cols > .col-7 > *,
 section .cols > .col-7 p > * {
@@ -657,6 +691,8 @@ section .cols > .col-7 p > * {
 section .cols > .col-8 {
   flex: 8;
   min-width: 0;
+  display: flex;
+  flex-direction: column;
 }
 section .cols > .col-8 > *,
 section .cols > .col-8 p > * {
@@ -665,6 +701,8 @@ section .cols > .col-8 p > * {
 section .cols > .col-9 {
   flex: 9;
   min-width: 0;
+  display: flex;
+  flex-direction: column;
 }
 section .cols > .col-9 > *,
 section .cols > .col-9 p > * {
@@ -673,10 +711,102 @@ section .cols > .col-9 p > * {
 section .cols > .col-10 {
   flex: 10;
   min-width: 0;
+  display: flex;
+  flex-direction: column;
 }
 section .cols > .col-10 > *,
 section .cols > .col-10 p > * {
   max-width: 100%;
+}
+
+section.justify-start {
+  justify-content: flex-start;
+}
+section.justify-end {
+  justify-content: flex-end;
+}
+section.justify-center {
+  justify-content: center;
+}
+section.justify-between {
+  justify-content: space-between;
+}
+section.justify-around {
+  justify-content: space-around;
+}
+section.justify-evenly {
+  justify-content: space-evenly;
+}
+section.items-start {
+  align-items: flex-start;
+}
+section.items-end {
+  align-items: flex-end;
+}
+section.items-center {
+  align-items: center;
+}
+section.items-baseline {
+  align-items: baseline;
+}
+section.items-stretch {
+  align-items: stretch;
+}
+
+.col.justify-start,
+[class^=col-].justify-start,
+[class*=" col-"].justify-start {
+  justify-content: flex-start;
+}
+.col.justify-end,
+[class^=col-].justify-end,
+[class*=" col-"].justify-end {
+  justify-content: flex-end;
+}
+.col.justify-center,
+[class^=col-].justify-center,
+[class*=" col-"].justify-center {
+  justify-content: center;
+}
+.col.justify-between,
+[class^=col-].justify-between,
+[class*=" col-"].justify-between {
+  justify-content: space-between;
+}
+.col.justify-around,
+[class^=col-].justify-around,
+[class*=" col-"].justify-around {
+  justify-content: space-around;
+}
+.col.justify-evenly,
+[class^=col-].justify-evenly,
+[class*=" col-"].justify-evenly {
+  justify-content: space-evenly;
+}
+.col.items-start,
+[class^=col-].items-start,
+[class*=" col-"].items-start {
+  align-items: flex-start;
+}
+.col.items-end,
+[class^=col-].items-end,
+[class*=" col-"].items-end {
+  align-items: flex-end;
+}
+.col.items-center,
+[class^=col-].items-center,
+[class*=" col-"].items-center {
+  align-items: center;
+}
+.col.items-baseline,
+[class^=col-].items-baseline,
+[class*=" col-"].items-baseline {
+  align-items: baseline;
+}
+.col.items-stretch,
+[class^=col-].items-stretch,
+[class*=" col-"].items-stretch {
+  align-items: stretch;
 }
 
 section.hr-solid hr {

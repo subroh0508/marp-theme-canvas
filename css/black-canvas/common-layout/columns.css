@@ -9,6 +9,8 @@ section.cols {
 section.cols > .col {
   flex: 1;
   min-width: 0;
+  display: flex;
+  flex-direction: column;
 }
 section.cols > .col > *,
 section.cols > .col p > * {
@@ -17,6 +19,8 @@ section.cols > .col p > * {
 section.cols > .col-1 {
   flex: 1;
   min-width: 0;
+  display: flex;
+  flex-direction: column;
 }
 section.cols > .col-1 > *,
 section.cols > .col-1 p > * {
@@ -25,6 +29,8 @@ section.cols > .col-1 p > * {
 section.cols > .col-2 {
   flex: 2;
   min-width: 0;
+  display: flex;
+  flex-direction: column;
 }
 section.cols > .col-2 > *,
 section.cols > .col-2 p > * {
@@ -33,6 +39,8 @@ section.cols > .col-2 p > * {
 section.cols > .col-3 {
   flex: 3;
   min-width: 0;
+  display: flex;
+  flex-direction: column;
 }
 section.cols > .col-3 > *,
 section.cols > .col-3 p > * {
@@ -41,6 +49,8 @@ section.cols > .col-3 p > * {
 section.cols > .col-4 {
   flex: 4;
   min-width: 0;
+  display: flex;
+  flex-direction: column;
 }
 section.cols > .col-4 > *,
 section.cols > .col-4 p > * {
@@ -49,6 +59,8 @@ section.cols > .col-4 p > * {
 section.cols > .col-6 {
   flex: 6;
   min-width: 0;
+  display: flex;
+  flex-direction: column;
 }
 section.cols > .col-6 > *,
 section.cols > .col-6 p > * {
@@ -57,6 +69,8 @@ section.cols > .col-6 p > * {
 section.cols > .col-7 {
   flex: 7;
   min-width: 0;
+  display: flex;
+  flex-direction: column;
 }
 section.cols > .col-7 > *,
 section.cols > .col-7 p > * {
@@ -65,6 +79,8 @@ section.cols > .col-7 p > * {
 section.cols > .col-8 {
   flex: 8;
   min-width: 0;
+  display: flex;
+  flex-direction: column;
 }
 section.cols > .col-8 > *,
 section.cols > .col-8 p > * {
@@ -73,6 +89,8 @@ section.cols > .col-8 p > * {
 section.cols > .col-9 {
   flex: 9;
   min-width: 0;
+  display: flex;
+  flex-direction: column;
 }
 section.cols > .col-9 > *,
 section.cols > .col-9 p > * {
@@ -81,6 +99,8 @@ section.cols > .col-9 p > * {
 section.cols > .col-10 {
   flex: 10;
   min-width: 0;
+  display: flex;
+  flex-direction: column;
 }
 section.cols > .col-10 > *,
 section.cols > .col-10 p > * {
@@ -94,6 +114,8 @@ section .cols {
 section .cols > .col {
   flex: 1;
   min-width: 0;
+  display: flex;
+  flex-direction: column;
 }
 section .cols > .col > *,
 section .cols > .col p > * {
@@ -102,6 +124,8 @@ section .cols > .col p > * {
 section .cols > .col-1 {
   flex: 1;
   min-width: 0;
+  display: flex;
+  flex-direction: column;
 }
 section .cols > .col-1 > *,
 section .cols > .col-1 p > * {
@@ -110,6 +134,8 @@ section .cols > .col-1 p > * {
 section .cols > .col-2 {
   flex: 2;
   min-width: 0;
+  display: flex;
+  flex-direction: column;
 }
 section .cols > .col-2 > *,
 section .cols > .col-2 p > * {
@@ -118,6 +144,8 @@ section .cols > .col-2 p > * {
 section .cols > .col-3 {
   flex: 3;
   min-width: 0;
+  display: flex;
+  flex-direction: column;
 }
 section .cols > .col-3 > *,
 section .cols > .col-3 p > * {
@@ -126,6 +154,8 @@ section .cols > .col-3 p > * {
 section .cols > .col-4 {
   flex: 4;
   min-width: 0;
+  display: flex;
+  flex-direction: column;
 }
 section .cols > .col-4 > *,
 section .cols > .col-4 p > * {
@@ -134,6 +164,8 @@ section .cols > .col-4 p > * {
 section .cols > .col-6 {
   flex: 6;
   min-width: 0;
+  display: flex;
+  flex-direction: column;
 }
 section .cols > .col-6 > *,
 section .cols > .col-6 p > * {
@@ -142,6 +174,8 @@ section .cols > .col-6 p > * {
 section .cols > .col-7 {
   flex: 7;
   min-width: 0;
+  display: flex;
+  flex-direction: column;
 }
 section .cols > .col-7 > *,
 section .cols > .col-7 p > * {
@@ -150,6 +184,8 @@ section .cols > .col-7 p > * {
 section .cols > .col-8 {
   flex: 8;
   min-width: 0;
+  display: flex;
+  flex-direction: column;
 }
 section .cols > .col-8 > *,
 section .cols > .col-8 p > * {
@@ -158,6 +194,8 @@ section .cols > .col-8 p > * {
 section .cols > .col-9 {
   flex: 9;
   min-width: 0;
+  display: flex;
+  flex-direction: column;
 }
 section .cols > .col-9 > *,
 section .cols > .col-9 p > * {
@@ -166,6 +204,8 @@ section .cols > .col-9 p > * {
 section .cols > .col-10 {
   flex: 10;
   min-width: 0;
+  display: flex;
+  flex-direction: column;
 }
 section .cols > .col-10 > *,
 section .cols > .col-10 p > * {
