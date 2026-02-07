@@ -6,12 +6,13 @@
   --base-font-family: var(--font-family-base);
   --base-font-size: var(--font-size-base);
   --base-line-height: var(--line-height-normal);
+  --base-section-title-height: calc(var(--font-size-xl) * var(--line-height-tight) + var(--font-size-xl) * 0.8);
 }
 
 section {
   width: 1920px;
   height: 1080px;
-  padding: var(--base-padding-y) var(--base-padding-x);
+  padding: calc(var(--base-padding-y) + var(--base-section-title-height)) var(--base-padding-x) var(--base-padding-y);
   background-color: var(--base-color-bg);
   color: var(--base-color-text);
   font-family: var(--base-font-family);
@@ -21,4 +22,11 @@ section {
   flex-direction: column;
   box-sizing: border-box;
   overflow: hidden;
+  position: relative;
+}
+
+section > h2:first-child {
+  position: absolute;
+  top: var(--base-padding-y);
+  left: var(--base-padding-x);
 }

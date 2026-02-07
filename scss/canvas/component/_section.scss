@@ -1,6 +1,10 @@
 // ===== _section.scss =====
 // Styles for Marp slide section (body)
 
+@function section-title-height($h2-font-size, $h2-line-height) {
+  @return calc(#{$h2-font-size} * #{$h2-line-height} + #{$h2-font-size} * 0.8);
+}
+
 @mixin configure(
   $width,
   $height,
@@ -10,7 +14,8 @@
   $color-text,
   $font-family,
   $font-size,
-  $line-height
+  $line-height,
+  $section-title-height
 ) {
   :root {
     --base-padding-x: #{$padding-x};
@@ -20,12 +25,13 @@
     --base-font-family: #{$font-family};
     --base-font-size: #{$font-size};
     --base-line-height: #{$line-height};
+    --base-section-title-height: #{$section-title-height};
   }
 
   section {
     width: $width;
     height: $height;
-    padding: var(--base-padding-y) var(--base-padding-x);
+    padding: calc(var(--base-padding-y) + var(--base-section-title-height)) var(--base-padding-x) var(--base-padding-y);
     background-color: var(--base-color-bg);
     color: var(--base-color-text);
     font-family: var(--base-font-family);
@@ -35,5 +41,12 @@
     flex-direction: column;
     box-sizing: border-box;
     overflow: hidden;
+    position: relative;
+  }
+
+  section > h2:first-child {
+    position: absolute;
+    top: var(--base-padding-y);
+    left: var(--base-padding-x);
   }
 }
