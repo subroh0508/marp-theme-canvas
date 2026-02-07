@@ -1,0 +1,5 @@
+// white-canvas text-align configuration
+
+@use '../../canvas/common-layout/text-align' as base;
+
+@include base.configure();

@@ -20,6 +20,7 @@
 - **GitHub風シンタックスハイライト**: prettylightsベースのコードハイライト
 - **マルチカラムレイアウト**: 2カラム・3カラムレイアウトに対応
 - **Flexアラインメントユーティリティ**: Tailwind風のjustify-content・align-itemsクラス
+- **テキストアラインメントユーティリティ**: Tailwind風のtext-alignクラス
 
 ## インストール
 

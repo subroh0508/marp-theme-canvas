@@ -20,6 +20,7 @@ A simple and minimal Marp theme. A design that eliminates unnecessary decoration
 - **GitHub-style Syntax Highlighting**: Code highlighting based on prettylights
 - **Multi-column Layout**: Support for 2-column and 3-column layouts
 - **Flex Alignment Utilities**: Tailwind-style justify-content and align-items classes
+- **Text Alignment Utilities**: Tailwind-style text-align classes
 
 ## Installation
 

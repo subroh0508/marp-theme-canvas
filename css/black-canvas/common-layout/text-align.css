@@ -1,0 +1,49 @@
+section.text-left p {
+  text-align: left;
+}
+section.text-center p {
+  text-align: center;
+}
+section.text-right p {
+  text-align: right;
+}
+section.text-justify p {
+  text-align: justify;
+}
+section.text-start p {
+  text-align: start;
+}
+section.text-end p {
+  text-align: end;
+}
+
+.col.text-left p,
+[class^=col-].text-left p,
+[class*=" col-"].text-left p {
+  text-align: left;
+}
+.col.text-center p,
+[class^=col-].text-center p,
+[class*=" col-"].text-center p {
+  text-align: center;
+}
+.col.text-right p,
+[class^=col-].text-right p,
+[class*=" col-"].text-right p {
+  text-align: right;
+}
+.col.text-justify p,
+[class^=col-].text-justify p,
+[class*=" col-"].text-justify p {
+  text-align: justify;
+}
+.col.text-start p,
+[class^=col-].text-start p,
+[class*=" col-"].text-start p {
+  text-align: start;
+}
+.col.text-end p,
+[class^=col-].text-end p,
+[class*=" col-"].text-end p {
+  text-align: end;
+}
