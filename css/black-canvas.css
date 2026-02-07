@@ -436,7 +436,7 @@ pre :where(.hljs-deletion) {
   --base-font-family: var(--font-family-base);
   --base-font-size: var(--font-size-base);
   --base-line-height: var(--line-height-normal);
-  --base-section-title-height: calc(var(--font-size-xl) * var(--line-height-tight) + var(--font-size-xl) * 0.8);
+  --base-section-title-height: calc(var(--font-size-xl) * var(--line-height-tight) + var(--font-size-xl) * 0.8em / 1em);
 }
 
 section {
@@ -452,7 +452,6 @@ section {
   flex-direction: column;
   box-sizing: border-box;
   overflow: hidden;
-  position: relative;
 }
 
 section > h2:first-child {
