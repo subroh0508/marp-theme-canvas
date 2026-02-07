@@ -1,0 +1,87 @@
+// ===== _text-align.scss =====
+// Text alignment utility classes
+//
+// Usage: <!-- _class: text-center -->
+
+@mixin configure {
+  section {
+    &.text-left p {
+      text-align: left;
+    }
+
+    &.text-center p {
+      text-align: center;
+    }
+
+    &.text-right p {
+      text-align: right;
+    }
+
+    &.text-justify p {
+      text-align: justify;
+    }
+
+    &.text-start p {
+      text-align: start;
+    }
+
+    &.text-end p {
+      text-align: end;
+    }
+
+    // text-align for p elements containing non-emoji images
+    &.text-has-img-left p:has(img:not(.emoji)) {
+      text-align: left;
+    }
+
+    &.text-has-img-center p:has(img:not(.emoji)) {
+      text-align: center;
+    }
+
+    &.text-has-img-right p:has(img:not(.emoji)) {
+      text-align: right;
+    }
+  }
+
+  // .col text-align utilities
+  .col,
+  [class^='col-'],
+  [class*=' col-'] {
+    &.text-left p {
+      text-align: left;
+    }
+
+    &.text-center p {
+      text-align: center;
+    }
+
+    &.text-right p {
+      text-align: right;
+    }
+
+    &.text-justify p {
+      text-align: justify;
+    }
+
+    &.text-start p {
+      text-align: start;
+    }
+
+    &.text-end p {
+      text-align: end;
+    }
+
+    // text-align for p elements containing non-emoji images
+    &.text-has-img-left p:has(img:not(.emoji)) {
+      text-align: left;
+    }
+
+    &.text-has-img-center p:has(img:not(.emoji)) {
+      text-align: center;
+    }
+
+    &.text-has-img-right p:has(img:not(.emoji)) {
+      text-align: right;
+    }
+  }
+}

@@ -7,9 +7,11 @@ footer: scss/canvas/common-layout/_columns.scss
 
 <!-- _class: cols -->
 
+## Usage 1: `_class: cols`
+
 <div class="col">
 
-## Usage 1: `_class: cols`
+### Left Column
 
 The entire slide becomes a column layout.
 
@@ -20,7 +22,7 @@ The entire slide becomes a column layout.
 </div>
 <div class="col">
 
-## Right Column
+### Right Column
 
 `<div class="cols">` wrapper is not needed.
 
@@ -59,9 +61,10 @@ The entire slide becomes a column layout.
 
 ---
 
+<!-- _class: cols -->
+
 ## Column Width Specification
 
-<div class="cols">
 <div class="col-4">
 
 ![](https://picsum.photos/1200/800?image=50)
@@ -78,7 +81,6 @@ Layout for placing images and text side by side.
 
 Available: `col-1` to `col-10`
 
-</div>
 </div>
 
 ---

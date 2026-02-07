@@ -108,7 +108,6 @@ h2 {
   font-weight: var(--h2-font-weight);
   line-height: var(--h2-line-height);
   color: var(--h2-color-text);
-  margin: 0 0 0.8em;
 }
 
 h3 {
@@ -436,12 +435,13 @@ pre :where(.hljs-deletion) {
   --base-font-family: var(--font-family-base);
   --base-font-size: var(--font-size-base);
   --base-line-height: var(--line-height-normal);
+  --base-section-title-height: calc(var(--font-size-xl) * var(--line-height-tight) + var(--font-size-xl) * 0.8em / 1em);
 }
 
 section {
   width: 1920px;
   height: 1080px;
-  padding: var(--base-padding-y) var(--base-padding-x);
+  padding: calc(var(--base-padding-y) + var(--base-section-title-height)) var(--base-padding-x) var(--base-padding-y);
   background-color: var(--base-color-bg);
   color: var(--base-color-text);
   font-family: var(--base-font-family);
@@ -451,6 +451,12 @@ section {
   flex-direction: column;
   box-sizing: border-box;
   overflow: hidden;
+}
+
+section > h2:first-child {
+  position: absolute;
+  top: var(--base-padding-y);
+  left: var(--base-padding-x);
 }
 
 :root {
@@ -510,6 +516,8 @@ section.cols {
 section.cols > .col {
   flex: 1;
   min-width: 0;
+  display: flex;
+  flex-direction: column;
 }
 section.cols > .col > *,
 section.cols > .col p > * {
@@ -518,6 +526,8 @@ section.cols > .col p > * {
 section.cols > .col-1 {
   flex: 1;
   min-width: 0;
+  display: flex;
+  flex-direction: column;
 }
 section.cols > .col-1 > *,
 section.cols > .col-1 p > * {
@@ -526,6 +536,8 @@ section.cols > .col-1 p > * {
 section.cols > .col-2 {
   flex: 2;
   min-width: 0;
+  display: flex;
+  flex-direction: column;
 }
 section.cols > .col-2 > *,
 section.cols > .col-2 p > * {
@@ -534,6 +546,8 @@ section.cols > .col-2 p > * {
 section.cols > .col-3 {
   flex: 3;
   min-width: 0;
+  display: flex;
+  flex-direction: column;
 }
 section.cols > .col-3 > *,
 section.cols > .col-3 p > * {
@@ -542,6 +556,8 @@ section.cols > .col-3 p > * {
 section.cols > .col-4 {
   flex: 4;
   min-width: 0;
+  display: flex;
+  flex-direction: column;
 }
 section.cols > .col-4 > *,
 section.cols > .col-4 p > * {
@@ -550,6 +566,8 @@ section.cols > .col-4 p > * {
 section.cols > .col-6 {
   flex: 6;
   min-width: 0;
+  display: flex;
+  flex-direction: column;
 }
 section.cols > .col-6 > *,
 section.cols > .col-6 p > * {
@@ -558,6 +576,8 @@ section.cols > .col-6 p > * {
 section.cols > .col-7 {
   flex: 7;
   min-width: 0;
+  display: flex;
+  flex-direction: column;
 }
 section.cols > .col-7 > *,
 section.cols > .col-7 p > * {
@@ -566,6 +586,8 @@ section.cols > .col-7 p > * {
 section.cols > .col-8 {
   flex: 8;
   min-width: 0;
+  display: flex;
+  flex-direction: column;
 }
 section.cols > .col-8 > *,
 section.cols > .col-8 p > * {
@@ -574,6 +596,8 @@ section.cols > .col-8 p > * {
 section.cols > .col-9 {
   flex: 9;
   min-width: 0;
+  display: flex;
+  flex-direction: column;
 }
 section.cols > .col-9 > *,
 section.cols > .col-9 p > * {
@@ -582,6 +606,8 @@ section.cols > .col-9 p > * {
 section.cols > .col-10 {
   flex: 10;
   min-width: 0;
+  display: flex;
+  flex-direction: column;
 }
 section.cols > .col-10 > *,
 section.cols > .col-10 p > * {
@@ -595,6 +621,8 @@ section .cols {
 section .cols > .col {
   flex: 1;
   min-width: 0;
+  display: flex;
+  flex-direction: column;
 }
 section .cols > .col > *,
 section .cols > .col p > * {
@@ -603,6 +631,8 @@ section .cols > .col p > * {
 section .cols > .col-1 {
   flex: 1;
   min-width: 0;
+  display: flex;
+  flex-direction: column;
 }
 section .cols > .col-1 > *,
 section .cols > .col-1 p > * {
@@ -611,6 +641,8 @@ section .cols > .col-1 p > * {
 section .cols > .col-2 {
   flex: 2;
   min-width: 0;
+  display: flex;
+  flex-direction: column;
 }
 section .cols > .col-2 > *,
 section .cols > .col-2 p > * {
@@ -619,6 +651,8 @@ section .cols > .col-2 p > * {
 section .cols > .col-3 {
   flex: 3;
   min-width: 0;
+  display: flex;
+  flex-direction: column;
 }
 section .cols > .col-3 > *,
 section .cols > .col-3 p > * {
@@ -627,6 +661,8 @@ section .cols > .col-3 p > * {
 section .cols > .col-4 {
   flex: 4;
   min-width: 0;
+  display: flex;
+  flex-direction: column;
 }
 section .cols > .col-4 > *,
 section .cols > .col-4 p > * {
@@ -635,6 +671,8 @@ section .cols > .col-4 p > * {
 section .cols > .col-6 {
   flex: 6;
   min-width: 0;
+  display: flex;
+  flex-direction: column;
 }
 section .cols > .col-6 > *,
 section .cols > .col-6 p > * {
@@ -643,6 +681,8 @@ section .cols > .col-6 p > * {
 section .cols > .col-7 {
   flex: 7;
   min-width: 0;
+  display: flex;
+  flex-direction: column;
 }
 section .cols > .col-7 > *,
 section .cols > .col-7 p > * {
@@ -651,6 +691,8 @@ section .cols > .col-7 p > * {
 section .cols > .col-8 {
   flex: 8;
   min-width: 0;
+  display: flex;
+  flex-direction: column;
 }
 section .cols > .col-8 > *,
 section .cols > .col-8 p > * {
@@ -659,6 +701,8 @@ section .cols > .col-8 p > * {
 section .cols > .col-9 {
   flex: 9;
   min-width: 0;
+  display: flex;
+  flex-direction: column;
 }
 section .cols > .col-9 > *,
 section .cols > .col-9 p > * {
@@ -667,10 +711,176 @@ section .cols > .col-9 p > * {
 section .cols > .col-10 {
   flex: 10;
   min-width: 0;
+  display: flex;
+  flex-direction: column;
 }
 section .cols > .col-10 > *,
 section .cols > .col-10 p > * {
   max-width: 100%;
+}
+
+section.justify-start {
+  justify-content: flex-start;
+}
+section.justify-end {
+  justify-content: flex-end;
+}
+section.justify-center {
+  justify-content: center;
+}
+section.justify-between {
+  justify-content: space-between;
+}
+section.justify-around {
+  justify-content: space-around;
+}
+section.justify-evenly {
+  justify-content: space-evenly;
+}
+section.items-start {
+  align-items: flex-start;
+}
+section.items-end {
+  align-items: flex-end;
+}
+section.items-center {
+  align-items: center;
+}
+section.items-baseline {
+  align-items: baseline;
+}
+section.items-stretch {
+  align-items: stretch;
+}
+
+.col.justify-start,
+[class^=col-].justify-start,
+[class*=" col-"].justify-start {
+  justify-content: flex-start;
+}
+.col.justify-end,
+[class^=col-].justify-end,
+[class*=" col-"].justify-end {
+  justify-content: flex-end;
+}
+.col.justify-center,
+[class^=col-].justify-center,
+[class*=" col-"].justify-center {
+  justify-content: center;
+}
+.col.justify-between,
+[class^=col-].justify-between,
+[class*=" col-"].justify-between {
+  justify-content: space-between;
+}
+.col.justify-around,
+[class^=col-].justify-around,
+[class*=" col-"].justify-around {
+  justify-content: space-around;
+}
+.col.justify-evenly,
+[class^=col-].justify-evenly,
+[class*=" col-"].justify-evenly {
+  justify-content: space-evenly;
+}
+.col.items-start,
+[class^=col-].items-start,
+[class*=" col-"].items-start {
+  align-items: flex-start;
+}
+.col.items-end,
+[class^=col-].items-end,
+[class*=" col-"].items-end {
+  align-items: flex-end;
+}
+.col.items-center,
+[class^=col-].items-center,
+[class*=" col-"].items-center {
+  align-items: center;
+}
+.col.items-baseline,
+[class^=col-].items-baseline,
+[class*=" col-"].items-baseline {
+  align-items: baseline;
+}
+.col.items-stretch,
+[class^=col-].items-stretch,
+[class*=" col-"].items-stretch {
+  align-items: stretch;
+}
+
+section.text-left p {
+  text-align: left;
+}
+section.text-center p {
+  text-align: center;
+}
+section.text-right p {
+  text-align: right;
+}
+section.text-justify p {
+  text-align: justify;
+}
+section.text-start p {
+  text-align: start;
+}
+section.text-end p {
+  text-align: end;
+}
+section.text-has-img-left p:has(img:not(.emoji)) {
+  text-align: left;
+}
+section.text-has-img-center p:has(img:not(.emoji)) {
+  text-align: center;
+}
+section.text-has-img-right p:has(img:not(.emoji)) {
+  text-align: right;
+}
+
+.col.text-left p,
+[class^=col-].text-left p,
+[class*=" col-"].text-left p {
+  text-align: left;
+}
+.col.text-center p,
+[class^=col-].text-center p,
+[class*=" col-"].text-center p {
+  text-align: center;
+}
+.col.text-right p,
+[class^=col-].text-right p,
+[class*=" col-"].text-right p {
+  text-align: right;
+}
+.col.text-justify p,
+[class^=col-].text-justify p,
+[class*=" col-"].text-justify p {
+  text-align: justify;
+}
+.col.text-start p,
+[class^=col-].text-start p,
+[class*=" col-"].text-start p {
+  text-align: start;
+}
+.col.text-end p,
+[class^=col-].text-end p,
+[class*=" col-"].text-end p {
+  text-align: end;
+}
+.col.text-has-img-left p:has(img:not(.emoji)),
+[class^=col-].text-has-img-left p:has(img:not(.emoji)),
+[class*=" col-"].text-has-img-left p:has(img:not(.emoji)) {
+  text-align: left;
+}
+.col.text-has-img-center p:has(img:not(.emoji)),
+[class^=col-].text-has-img-center p:has(img:not(.emoji)),
+[class*=" col-"].text-has-img-center p:has(img:not(.emoji)) {
+  text-align: center;
+}
+.col.text-has-img-right p:has(img:not(.emoji)),
+[class^=col-].text-has-img-right p:has(img:not(.emoji)),
+[class*=" col-"].text-has-img-right p:has(img:not(.emoji)) {
+  text-align: right;
 }
 
 section.hr-solid hr {
@@ -689,6 +899,7 @@ section.hr-dashed hr {
 section.title {
   --title-h1-font-size: var(--font-size-3xl);
   --title-metadata-color-text: var(--color-grey-light);
+  padding-top: var(--base-padding-y);
   justify-content: center;
 }
 section.title h1 {
@@ -727,6 +938,7 @@ section.toc > ol {
 section.section {
   --section-font-size: var(--font-size-xxl);
   --section-font-weight: bold;
+  padding-top: var(--base-padding-y);
   justify-content: center;
 }
 section.section p {
@@ -773,6 +985,7 @@ section.agenda > ol ol ol {
 section.display {
   --display-font-size: var(--font-size-3xl);
   --display-font-weight: var(--font-weight-bold);
+  padding-top: var(--base-padding-y);
   justify-content: center;
   align-items: center;
 }

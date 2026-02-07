@@ -1,6 +1,7 @@
 section.section {
   --section-font-size: var(--font-size-xxl);
   --section-font-weight: bold;
+  padding-top: var(--base-padding-y);
   justify-content: center;
 }
 section.section p {

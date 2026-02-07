@@ -1,0 +1,89 @@
+section.justify-start {
+  justify-content: flex-start;
+}
+section.justify-end {
+  justify-content: flex-end;
+}
+section.justify-center {
+  justify-content: center;
+}
+section.justify-between {
+  justify-content: space-between;
+}
+section.justify-around {
+  justify-content: space-around;
+}
+section.justify-evenly {
+  justify-content: space-evenly;
+}
+section.items-start {
+  align-items: flex-start;
+}
+section.items-end {
+  align-items: flex-end;
+}
+section.items-center {
+  align-items: center;
+}
+section.items-baseline {
+  align-items: baseline;
+}
+section.items-stretch {
+  align-items: stretch;
+}
+
+.col.justify-start,
+[class^=col-].justify-start,
+[class*=" col-"].justify-start {
+  justify-content: flex-start;
+}
+.col.justify-end,
+[class^=col-].justify-end,
+[class*=" col-"].justify-end {
+  justify-content: flex-end;
+}
+.col.justify-center,
+[class^=col-].justify-center,
+[class*=" col-"].justify-center {
+  justify-content: center;
+}
+.col.justify-between,
+[class^=col-].justify-between,
+[class*=" col-"].justify-between {
+  justify-content: space-between;
+}
+.col.justify-around,
+[class^=col-].justify-around,
+[class*=" col-"].justify-around {
+  justify-content: space-around;
+}
+.col.justify-evenly,
+[class^=col-].justify-evenly,
+[class*=" col-"].justify-evenly {
+  justify-content: space-evenly;
+}
+.col.items-start,
+[class^=col-].items-start,
+[class*=" col-"].items-start {
+  align-items: flex-start;
+}
+.col.items-end,
+[class^=col-].items-end,
+[class*=" col-"].items-end {
+  align-items: flex-end;
+}
+.col.items-center,
+[class^=col-].items-center,
+[class*=" col-"].items-center {
+  align-items: center;
+}
+.col.items-baseline,
+[class^=col-].items-baseline,
+[class*=" col-"].items-baseline {
+  align-items: baseline;
+}
+.col.items-stretch,
+[class^=col-].items-stretch,
+[class*=" col-"].items-stretch {
+  align-items: stretch;
+}

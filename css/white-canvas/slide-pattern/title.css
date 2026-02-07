@@ -1,6 +1,7 @@
 section.title {
   --title-h1-font-size: var(--font-size-3xl);
   --title-metadata-color-text: var(--color-grey-light);
+  padding-top: var(--base-padding-y);
   justify-content: center;
 }
 section.title h1 {

@@ -3,10 +3,12 @@
 //
 // Usage: <!-- _class: display -->
 
-@mixin configure($font-size, $font-weight-bold: bold) {
+@mixin configure($padding-top, $font-size, $font-weight-bold: bold) {
   section.display {
     --display-font-size: #{$font-size};
     --display-font-weight: #{$font-weight-bold};
+
+    padding-top: #{$padding-top};
 
     // Center horizontally and vertically
     justify-content: center;

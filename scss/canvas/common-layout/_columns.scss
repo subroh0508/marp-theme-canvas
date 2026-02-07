@@ -18,6 +18,8 @@ $_col-widths: (1, 2, 3, 4, 6, 7, 8, 9, 10);
   > .col {
     flex: 1;
     min-width: 0;
+    display: flex;
+    flex-direction: column;
 
     > *,
     p > * {
@@ -29,6 +31,8 @@ $_col-widths: (1, 2, 3, 4, 6, 7, 8, 9, 10);
     > .col-#{$n} {
       flex: $n;
       min-width: 0;
+      display: flex;
+      flex-direction: column;
 
       > *,
       p > * {

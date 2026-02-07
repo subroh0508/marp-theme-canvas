@@ -11,5 +11,6 @@
   $color-text: var(--color-white),
   $font-family: var(--font-family-base),
   $font-size: var(--font-size-base),
-  $line-height: var(--line-height-normal)
+  $line-height: var(--line-height-normal),
+  $section-title-height: base.section-title-height(var(--font-size-xl), var(--line-height-tight))
 );
