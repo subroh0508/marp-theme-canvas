@@ -827,6 +827,15 @@ section.text-start p {
 section.text-end p {
   text-align: end;
 }
+section.text-has-img-left p:has(img:not(.emoji)) {
+  text-align: left;
+}
+section.text-has-img-center p:has(img:not(.emoji)) {
+  text-align: center;
+}
+section.text-has-img-right p:has(img:not(.emoji)) {
+  text-align: right;
+}
 
 .col.text-left p,
 [class^=col-].text-left p,
@@ -857,6 +866,21 @@ section.text-end p {
 [class^=col-].text-end p,
 [class*=" col-"].text-end p {
   text-align: end;
+}
+.col.text-has-img-left p:has(img:not(.emoji)),
+[class^=col-].text-has-img-left p:has(img:not(.emoji)),
+[class*=" col-"].text-has-img-left p:has(img:not(.emoji)) {
+  text-align: left;
+}
+.col.text-has-img-center p:has(img:not(.emoji)),
+[class^=col-].text-has-img-center p:has(img:not(.emoji)),
+[class*=" col-"].text-has-img-center p:has(img:not(.emoji)) {
+  text-align: center;
+}
+.col.text-has-img-right p:has(img:not(.emoji)),
+[class^=col-].text-has-img-right p:has(img:not(.emoji)),
+[class*=" col-"].text-has-img-right p:has(img:not(.emoji)) {
+  text-align: right;
 }
 
 section.hr-solid hr {

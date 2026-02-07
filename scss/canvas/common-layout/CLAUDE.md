@@ -41,4 +41,4 @@ Examples:
 |------|----------|---------|
 | `_columns.scss` | `section.cols`, `.cols`, `.col`, `.col-N` | Multi-column layout |
 | `_flex.scss` | `section.justify-*`, `section.items-*`, `.col.justify-*`, `.col.items-*` | Flex alignment utilities |
-| `_text-align.scss` | `section.text-*`, `.col.text-*` | Text alignment utilities |
+| `_text-align.scss` | `section.text-*`, `section.text-has-img-*`, `.col.text-*`, `.col.text-has-img-*` | Text alignment utilities |

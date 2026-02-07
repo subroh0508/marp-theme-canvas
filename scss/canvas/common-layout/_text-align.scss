@@ -28,6 +28,19 @@
     &.text-end p {
       text-align: end;
     }
+
+    // text-align for p elements containing non-emoji images
+    &.text-has-img-left p:has(img:not(.emoji)) {
+      text-align: left;
+    }
+
+    &.text-has-img-center p:has(img:not(.emoji)) {
+      text-align: center;
+    }
+
+    &.text-has-img-right p:has(img:not(.emoji)) {
+      text-align: right;
+    }
   }
 
   // .col text-align utilities
@@ -56,6 +69,19 @@
 
     &.text-end p {
       text-align: end;
+    }
+
+    // text-align for p elements containing non-emoji images
+    &.text-has-img-left p:has(img:not(.emoji)) {
+      text-align: left;
+    }
+
+    &.text-has-img-center p:has(img:not(.emoji)) {
+      text-align: center;
+    }
+
+    &.text-has-img-right p:has(img:not(.emoji)) {
+      text-align: right;
     }
   }
 }
