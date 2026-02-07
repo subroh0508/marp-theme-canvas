@@ -3,10 +3,12 @@
 //
 // Usage: <!-- _class: section -->
 
-@mixin configure($font-size, $font-weight: bold) {
+@mixin configure($padding-top, $font-size, $font-weight: bold) {
   section.section {
     --section-font-size: #{$font-size};
     --section-font-weight: #{$font-weight};
+
+    padding-top: #{$padding-top};
 
     justify-content: center;
 

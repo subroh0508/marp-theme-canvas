@@ -1,6 +1,7 @@
 section.display {
   --display-font-size: var(--font-size-3xl);
   --display-font-weight: var(--font-weight-bold);
+  padding-top: var(--base-padding-y);
   justify-content: center;
   align-items: center;
 }

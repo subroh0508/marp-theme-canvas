@@ -3,10 +3,12 @@
 //
 // Usage: <!-- _class: title -->
 
-@mixin configure($font-size-title, $color-metadata-text) {
+@mixin configure($padding-top, $font-size-title, $color-metadata-text) {
   section.title {
     --title-h1-font-size: #{$font-size-title};
     --title-metadata-color-text: #{$color-metadata-text};
+
+    padding-top: #{$padding-top};
 
     justify-content: center;
 

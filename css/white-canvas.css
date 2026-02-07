@@ -108,7 +108,6 @@ h2 {
   font-weight: var(--h2-font-weight);
   line-height: var(--h2-line-height);
   color: var(--h2-color-text);
-  margin: 0 0 0.8em;
 }
 
 h3 {
@@ -696,6 +695,7 @@ section.hr-dashed hr {
 section.title {
   --title-h1-font-size: var(--font-size-3xl);
   --title-metadata-color-text: var(--color-grey-light);
+  padding-top: var(--base-padding-y);
   justify-content: center;
 }
 section.title h1 {
@@ -734,6 +734,7 @@ section.toc > ol {
 section.section {
   --section-font-size: var(--font-size-xxl);
   --section-font-weight: bold;
+  padding-top: var(--base-padding-y);
   justify-content: center;
 }
 section.section p {
@@ -780,6 +781,7 @@ section.agenda > ol ol ol {
 section.display {
   --display-font-size: var(--font-size-3xl);
   --display-font-weight: var(--font-weight-bold);
+  padding-top: var(--base-padding-y);
   justify-content: center;
   align-items: center;
 }

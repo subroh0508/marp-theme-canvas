@@ -3,6 +3,7 @@
 @use '../../canvas/slide-pattern/display' as base;
 
 @include base.configure(
+  $padding-top: var(--base-padding-y),
   $font-size: var(--font-size-3xl),
   $font-weight-bold: var(--font-weight-bold)
 );
