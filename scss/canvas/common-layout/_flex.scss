@@ -3,103 +3,80 @@
 //
 // Usage: <!-- _class: justify-center items-start -->
 
+@mixin _flex-property($property, $value) {
+  #{$property}: $value;
+
+  > p {
+    display: flex;
+    flex-direction: column;
+
+    @if $property == justify-content {
+      justify-content: $value;
+      align-items: flex-start;
+    } @else if $property == align-items {
+      justify-content: flex-start;
+      align-items: $value;
+    }
+  }
+}
+
+@mixin _flex-utilities {
+  // justify-content utilities
+  &.justify-start {
+    @include _flex-property(justify-content, flex-start);
+  }
+
+  &.justify-end {
+    @include _flex-property(justify-content, flex-end);
+  }
+
+  &.justify-center {
+    @include _flex-property(justify-content, center);
+  }
+
+  &.justify-between {
+    @include _flex-property(justify-content, space-between);
+  }
+
+  &.justify-around {
+    @include _flex-property(justify-content, space-around);
+  }
+
+  &.justify-evenly {
+    @include _flex-property(justify-content, space-evenly);
+  }
+
+  // align-items utilities
+  &.items-start {
+    @include _flex-property(align-items, flex-start);
+  }
+
+  &.items-end {
+    @include _flex-property(align-items, flex-end);
+  }
+
+  &.items-center {
+    @include _flex-property(align-items, center);
+  }
+
+  &.items-baseline {
+    @include _flex-property(align-items, baseline);
+  }
+
+  &.items-stretch {
+    @include _flex-property(align-items, stretch);
+  }
+}
+
 @mixin configure {
   section {
-    // justify-content utilities
-    &.justify-start {
-      justify-content: flex-start;
-    }
-
-    &.justify-end {
-      justify-content: flex-end;
-    }
-
-    &.justify-center {
-      justify-content: center;
-    }
-
-    &.justify-between {
-      justify-content: space-between;
-    }
-
-    &.justify-around {
-      justify-content: space-around;
-    }
-
-    &.justify-evenly {
-      justify-content: space-evenly;
-    }
-
-    // align-items utilities
-    &.items-start {
-      align-items: flex-start;
-    }
-
-    &.items-end {
-      align-items: flex-end;
-    }
-
-    &.items-center {
-      align-items: center;
-    }
-
-    &.items-baseline {
-      align-items: baseline;
-    }
-
-    &.items-stretch {
-      align-items: stretch;
-    }
+    @include _flex-utilities;
   }
 
   // .col flex utilities
   .col,
   [class^='col-'],
   [class*=' col-'] {
-    // justify-content utilities
-    &.justify-start {
-      justify-content: flex-start;
-    }
-
-    &.justify-end {
-      justify-content: flex-end;
-    }
-
-    &.justify-center {
-      justify-content: center;
-    }
-
-    &.justify-between {
-      justify-content: space-between;
-    }
-
-    &.justify-around {
-      justify-content: space-around;
-    }
-
-    &.justify-evenly {
-      justify-content: space-evenly;
-    }
-
-    // align-items utilities
-    &.items-start {
-      align-items: flex-start;
-    }
-
-    &.items-end {
-      align-items: flex-end;
-    }
-
-    &.items-center {
-      align-items: center;
-    }
-
-    &.items-baseline {
-      align-items: baseline;
-    }
-
-    &.items-stretch {
-      align-items: stretch;
-    }
+    @include _flex-utilities;
   }
 }
