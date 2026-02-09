@@ -722,34 +722,111 @@ section .cols > .col-10 p > * {
 section.justify-start {
   justify-content: flex-start;
 }
+section.justify-start > p {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
 section.justify-end {
+  justify-content: flex-end;
+}
+section.justify-end > p {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
   justify-content: flex-end;
 }
 section.justify-center {
   justify-content: center;
 }
+section.justify-center > p {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  justify-content: center;
+}
 section.justify-between {
+  justify-content: space-between;
+}
+section.justify-between > p {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
   justify-content: space-between;
 }
 section.justify-around {
   justify-content: space-around;
 }
+section.justify-around > p {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  justify-content: space-around;
+}
 section.justify-evenly {
+  justify-content: space-evenly;
+}
+section.justify-evenly > p {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
   justify-content: space-evenly;
 }
 section.items-start {
   align-items: flex-start;
 }
+section.items-start > p {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-items: flex-start;
+}
 section.items-end {
+  align-items: flex-end;
+}
+section.items-end > p {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
   align-items: flex-end;
 }
 section.items-center {
   align-items: center;
 }
+section.items-center > p {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-items: center;
+}
 section.items-baseline {
   align-items: baseline;
 }
+section.items-baseline > p {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-items: baseline;
+}
 section.items-stretch {
+  align-items: stretch;
+}
+section.items-stretch > p {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
   align-items: stretch;
 }
 
@@ -758,9 +835,27 @@ section.items-stretch {
 [class*=" col-"].justify-start {
   justify-content: flex-start;
 }
+.col.justify-start > p,
+[class^=col-].justify-start > p,
+[class*=" col-"].justify-start > p {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
 .col.justify-end,
 [class^=col-].justify-end,
 [class*=" col-"].justify-end {
+  justify-content: flex-end;
+}
+.col.justify-end > p,
+[class^=col-].justify-end > p,
+[class*=" col-"].justify-end > p {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
   justify-content: flex-end;
 }
 .col.justify-center,
@@ -768,9 +863,27 @@ section.items-stretch {
 [class*=" col-"].justify-center {
   justify-content: center;
 }
+.col.justify-center > p,
+[class^=col-].justify-center > p,
+[class*=" col-"].justify-center > p {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  justify-content: center;
+}
 .col.justify-between,
 [class^=col-].justify-between,
 [class*=" col-"].justify-between {
+  justify-content: space-between;
+}
+.col.justify-between > p,
+[class^=col-].justify-between > p,
+[class*=" col-"].justify-between > p {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
   justify-content: space-between;
 }
 .col.justify-around,
@@ -778,9 +891,27 @@ section.items-stretch {
 [class*=" col-"].justify-around {
   justify-content: space-around;
 }
+.col.justify-around > p,
+[class^=col-].justify-around > p,
+[class*=" col-"].justify-around > p {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  justify-content: space-around;
+}
 .col.justify-evenly,
 [class^=col-].justify-evenly,
 [class*=" col-"].justify-evenly {
+  justify-content: space-evenly;
+}
+.col.justify-evenly > p,
+[class^=col-].justify-evenly > p,
+[class*=" col-"].justify-evenly > p {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
   justify-content: space-evenly;
 }
 .col.items-start,
@@ -788,9 +919,27 @@ section.items-stretch {
 [class*=" col-"].items-start {
   align-items: flex-start;
 }
+.col.items-start > p,
+[class^=col-].items-start > p,
+[class*=" col-"].items-start > p {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-items: flex-start;
+}
 .col.items-end,
 [class^=col-].items-end,
 [class*=" col-"].items-end {
+  align-items: flex-end;
+}
+.col.items-end > p,
+[class^=col-].items-end > p,
+[class*=" col-"].items-end > p {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
   align-items: flex-end;
 }
 .col.items-center,
@@ -798,14 +947,41 @@ section.items-stretch {
 [class*=" col-"].items-center {
   align-items: center;
 }
+.col.items-center > p,
+[class^=col-].items-center > p,
+[class*=" col-"].items-center > p {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-items: center;
+}
 .col.items-baseline,
 [class^=col-].items-baseline,
 [class*=" col-"].items-baseline {
   align-items: baseline;
 }
+.col.items-baseline > p,
+[class^=col-].items-baseline > p,
+[class*=" col-"].items-baseline > p {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-items: baseline;
+}
 .col.items-stretch,
 [class^=col-].items-stretch,
 [class*=" col-"].items-stretch {
+  align-items: stretch;
+}
+.col.items-stretch > p,
+[class^=col-].items-stretch > p,
+[class*=" col-"].items-stretch > p {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
   align-items: stretch;
 }
 
