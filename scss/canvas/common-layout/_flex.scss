@@ -9,9 +9,14 @@
   > p {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    #{$property}: $value;
+
+    @if $property == justify-content {
+      justify-content: $value;
+      align-items: flex-start;
+    } @else if $property == align-items {
+      justify-content: flex-start;
+      align-items: $value;
+    }
   }
 }
 

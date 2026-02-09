@@ -6,7 +6,6 @@ section.justify-start > p {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  justify-content: flex-start;
 }
 section.justify-end {
   justify-content: flex-end;
@@ -14,9 +13,8 @@ section.justify-end {
 section.justify-end > p {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
   justify-content: flex-end;
+  align-items: flex-start;
 }
 section.justify-center {
   justify-content: center;
@@ -24,9 +22,8 @@ section.justify-center {
 section.justify-center > p {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
   justify-content: center;
+  align-items: flex-start;
 }
 section.justify-between {
   justify-content: space-between;
@@ -34,9 +31,8 @@ section.justify-between {
 section.justify-between > p {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
   justify-content: space-between;
+  align-items: flex-start;
 }
 section.justify-around {
   justify-content: space-around;
@@ -44,9 +40,8 @@ section.justify-around {
 section.justify-around > p {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
   justify-content: space-around;
+  align-items: flex-start;
 }
 section.justify-evenly {
   justify-content: space-evenly;
@@ -54,9 +49,8 @@ section.justify-evenly {
 section.justify-evenly > p {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
   justify-content: space-evenly;
+  align-items: flex-start;
 }
 section.items-start {
   align-items: flex-start;
@@ -66,7 +60,6 @@ section.items-start > p {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  align-items: flex-start;
 }
 section.items-end {
   align-items: flex-end;
@@ -75,7 +68,6 @@ section.items-end > p {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: flex-start;
   align-items: flex-end;
 }
 section.items-center {
@@ -85,7 +77,6 @@ section.items-center > p {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: flex-start;
   align-items: center;
 }
 section.items-baseline {
@@ -95,7 +86,6 @@ section.items-baseline > p {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: flex-start;
   align-items: baseline;
 }
 section.items-stretch {
@@ -105,7 +95,6 @@ section.items-stretch > p {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: flex-start;
   align-items: stretch;
 }
 
@@ -121,7 +110,6 @@ section.items-stretch > p {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  justify-content: flex-start;
 }
 .col.justify-end,
 [class^=col-].justify-end,
@@ -133,9 +121,8 @@ section.items-stretch > p {
 [class*=" col-"].justify-end > p {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
   justify-content: flex-end;
+  align-items: flex-start;
 }
 .col.justify-center,
 [class^=col-].justify-center,
@@ -147,9 +134,8 @@ section.items-stretch > p {
 [class*=" col-"].justify-center > p {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
   justify-content: center;
+  align-items: flex-start;
 }
 .col.justify-between,
 [class^=col-].justify-between,
@@ -161,9 +147,8 @@ section.items-stretch > p {
 [class*=" col-"].justify-between > p {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
   justify-content: space-between;
+  align-items: flex-start;
 }
 .col.justify-around,
 [class^=col-].justify-around,
@@ -175,9 +160,8 @@ section.items-stretch > p {
 [class*=" col-"].justify-around > p {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
   justify-content: space-around;
+  align-items: flex-start;
 }
 .col.justify-evenly,
 [class^=col-].justify-evenly,
@@ -189,9 +173,8 @@ section.items-stretch > p {
 [class*=" col-"].justify-evenly > p {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
   justify-content: space-evenly;
+  align-items: flex-start;
 }
 .col.items-start,
 [class^=col-].items-start,
@@ -205,7 +188,6 @@ section.items-stretch > p {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  align-items: flex-start;
 }
 .col.items-end,
 [class^=col-].items-end,
@@ -218,7 +200,6 @@ section.items-stretch > p {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: flex-start;
   align-items: flex-end;
 }
 .col.items-center,
@@ -232,7 +213,6 @@ section.items-stretch > p {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: flex-start;
   align-items: center;
 }
 .col.items-baseline,
@@ -246,7 +226,6 @@ section.items-stretch > p {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: flex-start;
   align-items: baseline;
 }
 .col.items-stretch,
@@ -260,6 +239,5 @@ section.items-stretch > p {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: flex-start;
   align-items: stretch;
 }
