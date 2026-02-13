@@ -31,6 +31,16 @@ theme: white-canvas
 Content here...
 ```
 
+## Demo
+
+### white-canvas
+
+<iframe src="/marp-theme-canvas/white-canvas/index.html"></iframe>
+
+### black-canvas
+
+<iframe src="/marp-theme-canvas/black-canvas/index.html"></iframe>
+
 ## Links
 
 - [GitHub Repository](https://github.com/subroh0508/marp-theme-canvas)
