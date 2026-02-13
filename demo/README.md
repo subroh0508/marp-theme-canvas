@@ -25,7 +25,8 @@ demo/
 │   ├── section.md          # Slide base layout
 │   ├── header.md           # Header
 │   ├── footer.md           # Footer
-│   └── pagination.md       # Page numbers
+│   ├── pagination.md       # Page numbers
+│   └── image-caption.md    # Image caption
 ├── common-layout/          # Common layout demos
 │   └── columns.md          # Multi-column layout
 └── slide-pattern/          # Slide pattern demos
