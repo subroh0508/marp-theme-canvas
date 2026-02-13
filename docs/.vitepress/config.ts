@@ -33,6 +33,7 @@ export default defineConfig({
           { text: 'header', link: '/component/header' },
           { text: 'footer', link: '/component/footer' },
           { text: 'pagination', link: '/component/pagination' },
+          { text: 'image-caption', link: '/component/image-caption' },
         ]
       },
       {

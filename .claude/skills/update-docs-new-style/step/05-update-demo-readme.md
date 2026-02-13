@@ -1,4 +1,4 @@
-# Step 4: Update demo/README.md and demo/README.ja.md
+# Step 5: Update demo/README.md and demo/README.ja.md
 
 Add the new demo file entry to the `demo/README.md` and `demo/README.ja.md` directory structures.
 
