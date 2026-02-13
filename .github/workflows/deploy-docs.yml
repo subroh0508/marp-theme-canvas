@@ -4,9 +4,6 @@ on:
   push:
     tags:
       - 'v*'
-  pull_request:
-    types:
-      - closed
     branches:
       - main
 
@@ -14,17 +11,50 @@ permissions:
   contents: read
   pages: write
   id-token: write
+  pull-requests: read
 
 concurrency:
   group: pages
   cancel-in-progress: false
 
 jobs:
+  gate:
+    runs-on: ubuntu-latest
+    outputs:
+      should_deploy: ${{ steps.check.outputs.should_deploy }}
+    steps:
+      - name: Check if push came from docs/* PR
+        id: check
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+
+          # Tag push: always deploy
+          if [[ "$GITHUB_REF" == refs/tags/v* ]]; then
+            echo "should_deploy=true" >> "$GITHUB_OUTPUT"
+            echo "Tag push detected: $GITHUB_REF"
+            exit 0
+          fi
+
+          # Branch push: check if the commit came from a docs/* PR
+          PR_HEAD_REF=$(gh api \
+            -H "Accept: application/vnd.github+json" \
+            "repos/${GITHUB_REPOSITORY}/commits/${GITHUB_SHA}/pulls" \
+            --jq '.[0].head.ref // ""')
+
+          echo "PR head ref: $PR_HEAD_REF"
+
+          if [[ "$PR_HEAD_REF" == docs/* ]]; then
+            echo "should_deploy=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "should_deploy=false" >> "$GITHUB_OUTPUT"
+            echo "Skip: PR head ref '$PR_HEAD_REF' does not start with 'docs/'"
+          fi
+
   build:
-    if: >-
-      github.event_name == 'push' ||
-      (github.event.pull_request.merged == true &&
-       startsWith(github.event.pull_request.head.ref, 'docs/'))
+    needs: gate
+    if: needs.gate.outputs.should_deploy == 'true'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
