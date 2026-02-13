@@ -6,8 +6,13 @@
     --image-caption-font-size: #{$font-size};
   }
 
+  :has(> img + br + em) {
+    width: fit-content;
+  }
+
   img:has(+ br + em) {
     display: block;
+    margin: 0 auto;
   }
 
   img + br:has(+ em) {
@@ -15,8 +20,10 @@
   }
 
   img + br + em {
+    display: block;
     font-style: normal;
     font-size: var(--image-caption-font-size);
     color: inherit;
+    text-align: center;
   }
 }
