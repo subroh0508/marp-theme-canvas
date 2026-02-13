@@ -2,6 +2,16 @@
 
 Simple and minimal Marp theme for beautiful presentations.
 
+## Demo
+
+### white-canvas
+
+<iframe src="/marp-theme-canvas/white-canvas/index.html"></iframe>
+
+### black-canvas
+
+<iframe src="/marp-theme-canvas/black-canvas/index.html"></iframe>
+
 ## Overview
 
 This site showcases demo slides for each component of the marp-theme-canvas library.
