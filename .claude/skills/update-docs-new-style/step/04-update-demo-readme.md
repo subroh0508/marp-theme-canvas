@@ -1,17 +1,23 @@
-# Step 4: Update demo/README.md
+# Step 4: Update demo/README.md and demo/README.ja.md
 
-Add the new demo file entry to the `demo/README.md` directory structure.
+Add the new demo file entry to the `demo/README.md` and `demo/README.ja.md` directory structures.
 
 ## Procedure
 
-1. Read `demo/README.md`.
+1. Read `demo/README.md` and `demo/README.ja.md`.
 
-2. In the "Directory Structure" section, find the appropriate category directory in the tree.
+2. In each file's "Directory Structure" / "ディレクトリ構成" section, find the appropriate category directory in the tree.
 
 3. Add the new demo file entry in alphabetical order within its category:
 
+   **demo/README.md**:
    ```
-   │   ├── {name}.md            # {brief description}
+   │   ├── {name}.md            # {brief description in English}
+   ```
+
+   **demo/README.ja.md**:
+   ```
+   │   ├── {name}.md            # {brief description in Japanese}
    ```
 
    Use the same tree characters (`├──` for middle items, `└──` for last items) and alignment as the existing entries.
@@ -20,8 +26,8 @@ Add the new demo file entry to the `demo/README.md` directory structure.
 
 ## Commit
 
-After updating `demo/README.md`, commit and push:
+After updating `demo/README.md` and `demo/README.ja.md`, commit and push:
 
 ```
-docs: add {name} to demo/README.md directory structure
+docs: add {name} to demo README directory structure
 ```
