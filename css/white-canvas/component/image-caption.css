@@ -1,0 +1,13 @@
+:root {
+  --image-caption-font-size: var(--font-size-s);
+}
+
+img + br:has(+ em) {
+  display: none;
+}
+
+img + br + em {
+  font-style: normal;
+  font-size: var(--image-caption-font-size);
+  color: inherit;
+}
