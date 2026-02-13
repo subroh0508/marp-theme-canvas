@@ -14,6 +14,8 @@
 
 ![](/white-canvas/component/image-caption.003.png)
 
+![](/white-canvas/component/image-caption.004.png)
+
 ## black-canvas
 
 :::details Embedded Slide
@@ -27,3 +29,5 @@
 ![](/black-canvas/component/image-caption.002.png)
 
 ![](/black-canvas/component/image-caption.003.png)
+
+![](/black-canvas/component/image-caption.004.png)
