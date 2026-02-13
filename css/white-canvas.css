@@ -329,6 +329,10 @@ rp {
   --image-caption-font-size: var(--font-size-s);
 }
 
+img:has(+ br + em) {
+  display: block;
+}
+
 img + br:has(+ em) {
   display: none;
 }

@@ -6,6 +6,10 @@
     --image-caption-font-size: #{$font-size};
   }
 
+  img:has(+ br + em) {
+    display: block;
+  }
+
   img + br:has(+ em) {
     display: none;
   }
