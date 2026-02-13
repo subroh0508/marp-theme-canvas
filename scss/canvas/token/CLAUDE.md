@@ -28,6 +28,8 @@ Each size is defined in `em` units as relative values to the base size.
 
 | Token Name | CSS Variable | Value | px Value |
 |------------|--------------|-------|----------|
+| 3XS | `--font-size-3xs` | 0.5em | 20px |
+| XXS | `--font-size-xxs` | 0.6em | 24px |
 | XS | `--font-size-xs` | 0.7em | 28px |
 | S | `--font-size-s` | 0.85em | 34px |
 | M | `--font-size-m` | 1em | 40px |

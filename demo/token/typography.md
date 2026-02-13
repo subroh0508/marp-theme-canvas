@@ -11,6 +11,8 @@ Base size: `--font-size-base` = 40px
 
 | CSS Variable | Value | px |
 |--------------|-------|----|
+| `--font-size-3xs` | 0.5em | 20px |
+| `--font-size-xxs` | 0.6em | 24px |
 | `--font-size-xs` | 0.7em | 28px |
 | `--font-size-s` | 0.85em | 34px |
 | `--font-size-m` | 1em | 40px |
@@ -24,6 +26,8 @@ Base size: `--font-size-base` = 40px
 ## Font Size Preview
 
 <div style="line-height: 1.4;">
+<div style="font-size: 0.5em;">3XS (0.5em / 20px)</div>
+<div style="font-size: 0.6em;">XXS (0.6em / 24px)</div>
 <div style="font-size: 0.7em;">XS (0.7em / 28px)</div>
 <div style="font-size: 0.85em;">S (0.85em / 34px)</div>
 <div style="font-size: 1em;">M (1em / 40px)</div>

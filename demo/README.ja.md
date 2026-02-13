@@ -25,7 +25,8 @@ demo/
 │   ├── section.md          # スライドベースレイアウト
 │   ├── header.md           # ヘッダー
 │   ├── footer.md           # フッター
-│   └── pagination.md       # ページ番号
+│   ├── pagination.md       # ページ番号
+│   └── image-caption.md    # 画像キャプション
 ├── common-layout/          # 共通レイアウトのデモ
 │   └── columns.md          # マルチカラムレイアウト
 └── slide-pattern/          # スライドパターンのデモ

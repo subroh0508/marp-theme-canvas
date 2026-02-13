@@ -1,0 +1,7 @@
+// black-canvas image-caption configuration
+
+@use '../../canvas/component/image-caption' as base;
+
+@include base.configure(
+  $font-size: var(--font-size-s)
+);

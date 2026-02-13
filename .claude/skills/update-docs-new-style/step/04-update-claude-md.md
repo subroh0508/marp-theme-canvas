@@ -1,4 +1,4 @@
-# Step 3: Update CLAUDE.md
+# Step 4: Update CLAUDE.md
 
 Update the CLAUDE.md files in the `scss/canvas/` directory to document the new SCSS file.
 

@@ -1,4 +1,4 @@
-# Step 5: Update README.md and README.ja.md
+# Step 6: Update README.md and README.ja.md
 
 Update both `README.md` (English) and `README.ja.md` (Japanese) based on the category of the new SCSS file.
 

@@ -14,9 +14,10 @@ Execute each step file in order. After completing each step, commit and push the
 
 1. Read and execute `.claude/skills/update-docs-new-style/step/01-detect-changes.md`
 2. Read and execute `.claude/skills/update-docs-new-style/step/02-create-demo.md`
-3. Read and execute `.claude/skills/update-docs-new-style/step/03-update-claude-md.md`
-4. Read and execute `.claude/skills/update-docs-new-style/step/04-update-demo-readme.md`
-5. Read and execute `.claude/skills/update-docs-new-style/step/05-update-readme.md`
+3. Read and execute `.claude/skills/update-docs-new-style/step/03-create-docs-page.md`
+4. Read and execute `.claude/skills/update-docs-new-style/step/04-update-claude-md.md`
+5. Read and execute `.claude/skills/update-docs-new-style/step/05-update-demo-readme.md`
+6. Read and execute `.claude/skills/update-docs-new-style/step/06-update-readme.md`
 
 ## Commit Convention
 

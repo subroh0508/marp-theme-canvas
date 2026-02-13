@@ -39,6 +39,8 @@
 
 :root {
   --font-size-base: 40px;
+  --font-size-3xs: 0.5em;
+  --font-size-xxs: 0.6em;
   --font-size-xs: 0.7em;
   --font-size-s: 0.85em;
   --font-size-m: 1em;
@@ -321,6 +323,31 @@ mark {
 
 rp {
   font-weight: var(--rp-font-weight);
+}
+
+:root {
+  --image-caption-font-size: var(--font-size-s);
+}
+
+:has(> img + br + em) {
+  width: fit-content;
+}
+
+img:has(+ br + em) {
+  display: block;
+  margin: 0 auto;
+}
+
+img + br:has(+ em) {
+  display: none;
+}
+
+img + br + em {
+  display: block;
+  font-style: normal;
+  font-size: var(--image-caption-font-size);
+  color: inherit;
+  text-align: center;
 }
 
 /*!

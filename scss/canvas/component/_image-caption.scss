@@ -1,0 +1,29 @@
+// ===== _image-caption.scss =====
+// Image caption styles for img followed by em element
+
+@mixin configure($font-size) {
+  :root {
+    --image-caption-font-size: #{$font-size};
+  }
+
+  :has(> img + br + em) {
+    width: fit-content;
+  }
+
+  img:has(+ br + em) {
+    display: block;
+    margin: 0 auto;
+  }
+
+  img + br:has(+ em) {
+    display: none;
+  }
+
+  img + br + em {
+    display: block;
+    font-style: normal;
+    font-size: var(--image-caption-font-size);
+    color: inherit;
+    text-align: center;
+  }
+}
