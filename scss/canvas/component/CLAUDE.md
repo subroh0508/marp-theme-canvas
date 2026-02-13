@@ -60,4 +60,5 @@ Examples:
 | `_link.scss` | `a` | Links |
 | `_hr.scss` | `hr` | Horizontal rules |
 | `_text-decorator.scss` | `strong`, `mark`, `rp` | Text decoration |
+| `_image-caption.scss` | `img + br + em` | Image caption |
 | `prettylights/` | `.hljs-*` | Syntax highlighting |
