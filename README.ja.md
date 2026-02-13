@@ -182,6 +182,7 @@ marp --theme node_modules/@subroh0508/marp-theme-canvas/css/white-canvas.css sli
 | `--ol-indent` | 番号付きリスト(ol)インデント | `1.1em` |
 | `--ul-li-padding-left` | 箇条書きリスト項目(li)の左余白 | `0.2em` |
 | `--ol-li-padding-left` | 番号付きリスト項目(li)の左余白 | `0.2em` |
+| `--image-caption-font-size` | 画像キャプションのフォントサイズ | `var(--font-size-s)` |
 
 ### カスタマイズ例
 

@@ -182,6 +182,7 @@ You can override CSS variables in the frontmatter style.
 | `--ol-indent` | Numbered list (ol) indent | `1.1em` |
 | `--ul-li-padding-left` | Bullet list item (li) padding | `0.2em` |
 | `--ol-li-padding-left` | Numbered list item (li) padding | `0.2em` |
+| `--image-caption-font-size` | Image caption font size | `var(--font-size-s)` |
 
 ### Customization Example
 
