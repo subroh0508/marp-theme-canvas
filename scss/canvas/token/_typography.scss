@@ -3,6 +3,8 @@
 
 @mixin configure(
   $font-size-base: 40px,
+  $font-size-3xs: 0.5em,
+  $font-size-xxs: 0.6em,
   $font-size-xs: 0.7em,
   $font-size-s: 0.85em,
   $font-size-m: 1em,
@@ -20,6 +22,8 @@
   :root {
     // Font Size
     --font-size-base: #{$font-size-base};
+    --font-size-3xs: #{$font-size-3xs};
+    --font-size-xxs: #{$font-size-xxs};
     --font-size-xs: #{$font-size-xs};
     --font-size-s: #{$font-size-s};
     --font-size-m: #{$font-size-m};
