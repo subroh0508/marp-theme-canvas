@@ -19,10 +19,10 @@
     ".": {
       "sass": "./scss/canvas/_index.scss"
     },
-    "./white-canvas": {
+    "./white-canvas.scss": {
       "sass": "./scss/white-canvas.scss"
     },
-    "./black-canvas": {
+    "./black-canvas.scss": {
       "sass": "./scss/black-canvas.scss"
     },
     "./canvas": {
