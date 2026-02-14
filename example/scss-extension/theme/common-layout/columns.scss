@@ -1,5 +1,5 @@
 // cool columns configuration
 
-@use '../../../../scss/canvas/common-layout/columns' as base;
+@use 'pkg:@subroh0508/marp-theme-canvas/canvas/common-layout/columns' as base;
 
 @include base.configure();

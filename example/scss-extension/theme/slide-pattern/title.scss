@@ -1,6 +1,6 @@
 // cool title pattern configuration
 
-@use '../../../../scss/canvas/slide-pattern/title' as base;
+@use 'pkg:@subroh0508/marp-theme-canvas/canvas/slide-pattern/title' as base;
 
 @include base.configure(
   $padding-top: var(--base-padding-y),

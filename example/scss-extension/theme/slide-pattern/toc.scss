@@ -1,6 +1,6 @@
 // cool toc pattern configuration
 
-@use '../../../../scss/canvas/slide-pattern/toc' as base;
+@use 'pkg:@subroh0508/marp-theme-canvas/canvas/slide-pattern/toc' as base;
 
 @include base.configure(
   $font-size: var(--font-size-xl),

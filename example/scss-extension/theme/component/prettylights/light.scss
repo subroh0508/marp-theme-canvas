@@ -1,5 +1,5 @@
 // cool prettylights light configuration
 
-@use '../../../../../scss/canvas/component/prettylights/light' as base;
+@use 'pkg:@subroh0508/marp-theme-canvas/canvas/component/prettylights/light' as base;
 
 @include base.configure();

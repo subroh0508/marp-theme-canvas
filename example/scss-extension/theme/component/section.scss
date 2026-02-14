@@ -1,6 +1,6 @@
 // cool section configuration
 
-@use '../../../../scss/canvas/component/section' as base;
+@use 'pkg:@subroh0508/marp-theme-canvas/canvas/component/section' as base;
 
 @include base.configure(
   $width: 1920px,

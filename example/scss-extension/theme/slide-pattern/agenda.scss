@@ -1,6 +1,6 @@
 // cool agenda pattern configuration
 
-@use '../../../../scss/canvas/slide-pattern/agenda' as base;
+@use 'pkg:@subroh0508/marp-theme-canvas/canvas/slide-pattern/agenda' as base;
 
 @include base.configure(
   $font-size-heading: var(--font-size-xl),

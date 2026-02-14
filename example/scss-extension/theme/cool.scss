@@ -5,10 +5,10 @@
  * It imports base mixins from scss/canvas/ and applies a cool color scheme.
  *
  * Build:
- *   sass --no-source-map example/scss-extension/theme/cool.scss example/scss-extension/css/cool.css
+ *   pnpm build
  *
  * Preview:
- *   marp --allow-local-files --html --theme example/scss-extension/css/cool.css -s example/scss-extension
+ *   pnpm serve
  *
  * @theme cool
  * @author subroh_0508

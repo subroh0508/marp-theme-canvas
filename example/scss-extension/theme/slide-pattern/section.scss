@@ -1,6 +1,6 @@
 // cool section pattern configuration
 
-@use '../../../../scss/canvas/slide-pattern/section' as base;
+@use 'pkg:@subroh0508/marp-theme-canvas/canvas/slide-pattern/section' as base;
 
 @include base.configure(
   $padding-top: var(--base-padding-y),

@@ -1,6 +1,6 @@
 // cool table configuration
 
-@use '../../../../scss/canvas/component/table' as base;
+@use 'pkg:@subroh0508/marp-theme-canvas/canvas/component/table' as base;
 
 @include base.configure(
   $color-row-bg: var(--color-white),

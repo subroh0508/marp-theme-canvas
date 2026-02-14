@@ -1,6 +1,6 @@
 // cool color configuration
 
-@use '../../../../scss/canvas/token/color' as base;
+@use 'pkg:@subroh0508/marp-theme-canvas/canvas/token/color' as base;
 
 @include base.configure(
   $color-blue: #0d9488,

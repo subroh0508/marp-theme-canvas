@@ -6,10 +6,7 @@
  * No build step required.
  *
  * Preview:
- *   marp --allow-local-files --html \
- *     --theme-set css/white-canvas.css \
- *     --theme example/css-extension/theme/warm.css \
- *     -s example/css-extension
+ *   pnpm serve
  *
  * @theme warm
  * @author subroh_0508

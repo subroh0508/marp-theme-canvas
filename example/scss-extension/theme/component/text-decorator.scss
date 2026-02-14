@@ -1,6 +1,6 @@
 // cool text-decorator configuration
 
-@use '../../../../scss/canvas/component/text-decorator' as base;
+@use 'pkg:@subroh0508/marp-theme-canvas/canvas/component/text-decorator' as base;
 
 @include base.configure(
   $strong-font-weight: var(--font-weight-bold),

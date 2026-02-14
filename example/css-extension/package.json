@@ -1,0 +1,12 @@
+{
+  "name": "@subroh0508/marp-theme-canvas-example-css-extension",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "serve": "marp --allow-local-files --html --theme-set node_modules/@subroh0508/marp-theme-canvas/css/white-canvas.css --theme theme/warm.css -s ."
+  },
+  "devDependencies": {
+    "@marp-team/marp-cli": "^4.2.3",
+    "@subroh0508/marp-theme-canvas": "^0.3.2"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "@subroh0508/marp-theme-canvas-example-scss-extension",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "build": "sass --no-source-map --pkg-importer=node theme/cool.scss theme/cool.css",
+    "serve": "pnpm build && marp --allow-local-files --html --theme theme/cool.css -s ."
+  },
+  "devDependencies": {
+    "@marp-team/marp-cli": "^4.2.3",
+    "@subroh0508/marp-theme-canvas": "^0.3.2",
+    "sass": "^1.97.2"
+  }
+}

@@ -1,6 +1,6 @@
 // cool code configuration
 
-@use '../../../../scss/canvas/component/code' as base;
+@use 'pkg:@subroh0508/marp-theme-canvas/canvas/component/code' as base;
 
 @include base.configure(
   $font-mono: var(--font-family-mono),

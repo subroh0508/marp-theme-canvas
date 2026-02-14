@@ -1,6 +1,6 @@
 // cool header configuration
 
-@use '../../../../scss/canvas/component/header' as base;
+@use 'pkg:@subroh0508/marp-theme-canvas/canvas/component/header' as base;
 
 @include base.configure(
   $margin-x: var(--outer-margin-x),

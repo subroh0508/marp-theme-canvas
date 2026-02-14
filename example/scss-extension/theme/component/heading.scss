@@ -1,6 +1,6 @@
 // cool heading configuration
 
-@use '../../../../scss/canvas/component/heading' as base;
+@use 'pkg:@subroh0508/marp-theme-canvas/canvas/component/heading' as base;
 
 @include base.configure(
   $h1-font-size: var(--font-size-xxl),

@@ -1,6 +1,6 @@
 // cool blockquote configuration
 
-@use '../../../../scss/canvas/component/blockquote' as base;
+@use 'pkg:@subroh0508/marp-theme-canvas/canvas/component/blockquote' as base;
 
 @include base.configure(
   $font-size: var(--font-size-m),

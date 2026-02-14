@@ -1,6 +1,6 @@
 // cool pagination configuration
 
-@use '../../../../scss/canvas/component/pagination' as base;
+@use 'pkg:@subroh0508/marp-theme-canvas/canvas/component/pagination' as base;
 
 @include base.configure(
   $margin-x: var(--outer-margin-x),

@@ -1,6 +1,6 @@
 // cool hr configuration
 
-@use '../../../../scss/canvas/component/hr' as base;
+@use 'pkg:@subroh0508/marp-theme-canvas/canvas/component/hr' as base;
 
 @include base.configure(
   $height: 1px,
