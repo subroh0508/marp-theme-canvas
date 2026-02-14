@@ -21,7 +21,7 @@
  * https://github.com/subroh0508/marp-theme-canvas/blob/main/LICENSE
  */
 
-@use 'white-canvas';
+@use 'pkg:@subroh0508/marp-theme-canvas/white-canvas.scss';
 
 // Custom Slide Pattern
 @use 'slide-pattern/case-studies';
