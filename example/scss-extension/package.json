@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "build": "sass --no-source-map --pkg-importer=node theme/cool.scss theme/cool.css",
-    "serve": "pnpm build && marp --allow-local-files --html --theme theme/cool.css -wp demo.md"
+    "preview": "pnpm build && marp --allow-local-files --html --theme theme/cool.css -wp demo.md"
   },
   "devDependencies": {
     "@marp-team/marp-cli": "^4.2.3",
