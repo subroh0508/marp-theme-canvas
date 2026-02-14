@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "serve": "marp --allow-local-files --html --theme-set node_modules/@subroh0508/marp-theme-canvas/css/white-canvas.css --theme theme/warm.css -s ."
+    "serve": "marp --allow-local-files --html --theme-set node_modules/@subroh0508/marp-theme-canvas/css/white-canvas.css --theme theme/warm.css -wp demo.md"
   },
   "devDependencies": {
     "@marp-team/marp-cli": "^4.2.3",
