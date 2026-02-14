@@ -8,7 +8,7 @@
   },
   "devDependencies": {
     "@marp-team/marp-cli": "^4.2.3",
-    "@subroh0508/marp-theme-canvas": "^0.3.3",
+    "@subroh0508/marp-theme-canvas": "^0.3.4",
     "sass": "^1.97.2"
   }
 }
