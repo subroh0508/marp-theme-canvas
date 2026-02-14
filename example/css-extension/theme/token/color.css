@@ -1,0 +1,21 @@
+/*
+ * Warm color token overrides
+ *
+ * This snippet shows how to override white-canvas color tokens.
+ * All overrides are included in warm.css - this file is for reference only.
+ */
+
+:root {
+  --color-white: #faf6f1;
+  --color-grey-lightest: #d4b896;
+  --color-grey-lighter: #b08968;
+  --color-grey-light: #8b6f47;
+  --color-grey-medium: #6b5233;
+  --color-grey-dark: #4a3728;
+  --color-grey-darker: #3d2b1f;
+  --color-grey-darkest: #2c1810;
+  --color-blue: #b45309;
+
+  --color-primary: #c2410c;
+  --color-accent: #d4a574;
+}

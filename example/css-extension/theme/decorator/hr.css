@@ -1,0 +1,11 @@
+/*
+ * Warm hr decorator overrides
+ *
+ * Example: change horizontal rule style.
+ * All overrides are included in warm.css - this file is for reference only.
+ *
+ * Available variables:
+ *   --hr-height, --hr-width, --hr-color
+ */
+
+/* HR color is driven by --color-grey-light */

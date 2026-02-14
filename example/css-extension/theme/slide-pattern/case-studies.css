@@ -1,0 +1,51 @@
+/*
+ * Warm case-studies slide pattern
+ *
+ * A custom slide pattern for displaying case study cards.
+ * This pattern is not part of white-canvas and is added as new CSS rules.
+ * The full implementation is included in warm.css.
+ *
+ * Available variables:
+ *   --case-studies-gap
+ *   --case-studies-title-font-size
+ *   --case-studies-body-font-size
+ *   --case-studies-border-radius-image
+ *
+ * Usage:
+ *   <!-- _class: case-studies -->
+ */
+
+section.case-studies {
+  --case-studies-gap: 40px;
+  --case-studies-title-font-size: var(--font-size-l);
+  --case-studies-body-font-size: var(--font-size-m);
+  --case-studies-border-radius-image: var(--corner-radius-m);
+
+  flex-direction: row;
+  gap: var(--case-studies-gap);
+  align-items: flex-start;
+}
+
+section.case-studies > div {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+section.case-studies > div img:not(.emoji) {
+  width: 100%;
+  border-radius: var(--case-studies-border-radius-image);
+  object-fit: cover;
+}
+
+section.case-studies > div h3,
+section.case-studies > div h4 {
+  font-size: var(--case-studies-title-font-size);
+  margin: 0.5em 0 0.25em;
+}
+
+section.case-studies > div p {
+  font-size: var(--case-studies-body-font-size);
+  margin: 0;
+}

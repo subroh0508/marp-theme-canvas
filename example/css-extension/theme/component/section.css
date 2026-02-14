@@ -1,0 +1,13 @@
+/*
+ * Warm section overrides
+ *
+ * Example: change slide background, text color, padding, etc.
+ * All overrides are included in warm.css - this file is for reference only.
+ *
+ * Available variables:
+ *   --base-padding-x, --base-padding-y
+ *   --base-color-bg, --base-color-text
+ *   --base-font-family, --base-font-size, --base-line-height
+ */
+
+/* Background and text colors are driven by --color-white and --color-grey-darkest */
