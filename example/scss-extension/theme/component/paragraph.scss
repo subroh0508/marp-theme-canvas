@@ -1,0 +1,5 @@
+// cool paragraph configuration
+
+@use '../../../../scss/canvas/component/paragraph' as base;
+
+@include base.configure();

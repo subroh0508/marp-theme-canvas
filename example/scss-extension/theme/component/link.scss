@@ -1,0 +1,7 @@
+// cool link configuration
+
+@use '../../../../scss/canvas/component/link' as base;
+
+@include base.configure(
+  $color-text: var(--color-blue)
+);

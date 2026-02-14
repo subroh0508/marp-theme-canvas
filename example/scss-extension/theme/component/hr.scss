@@ -1,0 +1,9 @@
+// cool hr configuration
+
+@use '../../../../scss/canvas/component/hr' as base;
+
+@include base.configure(
+  $height: 1px,
+  $width: 100%,
+  $color: var(--color-grey-light)
+);
