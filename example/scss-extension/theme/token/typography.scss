@@ -1,0 +1,5 @@
+// cool typography configuration
+
+@use '../../../../scss/canvas/token/typography' as base;
+
+@include base.configure();

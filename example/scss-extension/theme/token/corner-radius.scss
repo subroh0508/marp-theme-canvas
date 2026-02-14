@@ -1,0 +1,5 @@
+// cool corner-radius configuration
+
+@use '../../../../scss/canvas/token/corner-radius' as base;
+
+@include base.configure();
