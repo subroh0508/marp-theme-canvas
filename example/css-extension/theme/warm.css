@@ -7,6 +7,7 @@
  *
  * Preview:
  *   marp --allow-local-files --html \
+ *     --theme-set css/white-canvas.css \
  *     --theme example/css-extension/theme/warm.css \
  *     -s example/css-extension
  *
@@ -15,7 +16,7 @@
  *
  */
 
-@import-theme 'https://raw.githubusercontent.com/subroh0508/marp-theme-canvas/refs/tags/v0.3.2/css/white-canvas.css';
+@import "white-canvas";
 
 :root {
   /* Color overrides - warm terracotta/gold scheme */

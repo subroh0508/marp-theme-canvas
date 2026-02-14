@@ -60,7 +60,7 @@
   "scripts": {
     "serve:white": "marp --allow-local-files --html --theme css/white-canvas.css -s demo",
     "serve:black": "marp --allow-local-files --html --theme css/black-canvas.css -s demo",
-    "serve:sample:warm": "marp --allow-local-files --html --theme example/css-extension/theme/warm.css -s example/css-extension",
+    "serve:sample:warm": "marp --allow-local-files --html --theme-set css/white-canvas.css --theme example/css-extension/theme/warm.css -s example/css-extension",
     "serve:sample:cool": "sass --no-source-map example/scss-extension/theme/cool.scss example/scss-extension/css/cool.css && marp --allow-local-files --html --theme example/scss-extension/css/cool.css -s example/scss-extension",
     "build": "find scss -name '[!_]*.scss' -type f | while read f; do out=\"css/${f#scss/}\"; out=\"${out%.scss}.css\"; mkdir -p \"$(dirname \"$out\")\"; sass --no-source-map \"$f\" \"$out\"; done",
     "build:html:white": "for dir in demo/*/; do marp --allow-local-files --html --theme css/white-canvas.css --input-dir \"$dir\" --output \"docs/public/white-canvas/$(basename \"$dir\")\"; done && marp --allow-local-files --html --theme css/white-canvas.css demo/index.md -o docs/public/white-canvas/index.html",
