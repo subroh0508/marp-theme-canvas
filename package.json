@@ -22,7 +22,13 @@
     "./white-canvas": {
       "sass": "./scss/white-canvas.scss"
     },
+    "./white-canvas.scss": {
+      "sass": "./scss/white-canvas.scss"
+    },
     "./black-canvas": {
+      "sass": "./scss/black-canvas.scss"
+    },
+    "./black-canvas.scss": {
       "sass": "./scss/black-canvas.scss"
     },
     "./canvas": {
