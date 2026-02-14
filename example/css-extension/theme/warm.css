@@ -1,0 +1,71 @@
+/*!
+ * Warm - A warm-toned Marp theme extending white-canvas via CSS
+ *
+ * This is an example of building a custom theme using CSS extension.
+ * It inherits from white-canvas and overrides CSS variables for a warm color scheme.
+ * No build step required.
+ *
+ * Preview:
+ *   marp --allow-local-files --html \
+ *     --theme-set css/white-canvas.css \
+ *     --theme example/css-extension/theme/warm.css \
+ *     -s example/css-extension
+ *
+ * @theme warm
+ * @author subroh_0508
+ *
+ * @import-theme white-canvas
+ */
+
+:root {
+  /* Color overrides - warm terracotta/gold scheme */
+  --color-white: #faf6f1;
+  --color-grey-lightest: #d4b896;
+  --color-grey-lighter: #b08968;
+  --color-grey-light: #8b6f47;
+  --color-grey-medium: #6b5233;
+  --color-grey-dark: #4a3728;
+  --color-grey-darker: #3d2b1f;
+  --color-grey-darkest: #2c1810;
+  --color-blue: #b45309;
+
+  /* Theme-specific colors */
+  --color-primary: #c2410c;
+  --color-accent: #d4a574;
+}
+
+/* Case Studies - custom slide pattern */
+section.case-studies {
+  --case-studies-gap: 40px;
+  --case-studies-title-font-size: var(--font-size-l);
+  --case-studies-body-font-size: var(--font-size-m);
+  --case-studies-border-radius-image: var(--corner-radius-m);
+
+  flex-direction: row;
+  gap: var(--case-studies-gap);
+  align-items: flex-start;
+}
+
+section.case-studies > div {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+section.case-studies > div img:not(.emoji) {
+  width: 100%;
+  border-radius: var(--case-studies-border-radius-image);
+  object-fit: cover;
+}
+
+section.case-studies > div h3,
+section.case-studies > div h4 {
+  font-size: var(--case-studies-title-font-size);
+  margin: 0.5em 0 0.25em;
+}
+
+section.case-studies > div p {
+  font-size: var(--case-studies-body-font-size);
+  margin: 0;
+}
