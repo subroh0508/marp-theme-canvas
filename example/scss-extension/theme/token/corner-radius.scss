@@ -1,5 +1,0 @@
-// cool corner-radius configuration
-
-@use 'pkg:@subroh0508/marp-theme-canvas/canvas/token/corner-radius' as base;
-
-@include base.configure();

@@ -1,7 +1,0 @@
-// cool link configuration
-
-@use 'pkg:@subroh0508/marp-theme-canvas/canvas/component/link' as base;
-
-@include base.configure(
-  $color-text: var(--color-blue)
-);

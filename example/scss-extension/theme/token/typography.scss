@@ -1,5 +1,0 @@
-// cool typography configuration
-
-@use 'pkg:@subroh0508/marp-theme-canvas/canvas/token/typography' as base;
-
-@include base.configure();

@@ -1,17 +1,41 @@
 @charset "UTF-8";
 /*!
- * Cool - A cool-toned Marp theme extending canvas base mixins
+ * Cool - A cool-toned Marp theme extending white-canvas
  *
  * This is an example of building a custom theme using SCSS extension.
- * It imports base mixins from scss/canvas/ and applies a cool color scheme.
+ * It imports white-canvas and overrides color CSS variables for a cool color scheme.
  *
  * Build:
  *   pnpm build
  *
  * Preview:
- *   pnpm serve
+ *   pnpm preview
  *
  * @theme cool
+ * @author subroh_0508
+ *
+ * @auto-scaling true
+ * @size 16:9 1920px 1080px
+ *
+ * MIT License
+ * Copyright (c) 2026 Subroh Nishikori
+ * https://github.com/subroh0508/marp-theme-canvas/blob/main/LICENSE
+ */
+/*!
+ * White Canvas - A simple light slide theme with minimal styling
+ *
+ * When using, you must define the following variables in Marp's inline style:
+ * - --color-primary: Primary color (e.g., h2 text color)
+ * - --color-accent: Accent color (e.g., mark tag background)
+ *
+ * Example:
+ *   style: |
+ *     :root {
+ *       --color-primary: #3b91c4;
+ *       --color-accent: #ead7a4;
+ *     }
+ *
+ * @theme white-canvas
  * @author subroh_0508
  *
  * @auto-scaling true
@@ -24,15 +48,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap");
 :root {
   --color-black: #000;
-  --color-white: #f5f3ff;
-  --color-grey-lightest: #c4b5fd;
-  --color-grey-lighter: #8b5cf6;
-  --color-grey-light: #6d28d9;
-  --color-grey-medium: #4c1d95;
-  --color-grey-dark: #3b0764;
-  --color-grey-darker: #2e1065;
-  --color-grey-darkest: #1e1b4b;
-  --color-blue: #0d9488;
+  --color-white: #fff;
+  --color-grey-lightest: #cbd5e1;
+  --color-grey-lighter: #94a3b8;
+  --color-grey-light: #64748b;
+  --color-grey-medium: #475569;
+  --color-grey-dark: #334155;
+  --color-grey-darker: #1e293b;
+  --color-grey-darkest: #0f172a;
+  --color-blue: #2563eb;
 }
 
 :root {
@@ -1185,6 +1209,15 @@ section.display:has(p) img:not(.emoji), section.display:has(p) iframe {
   margin: 0 0 1em;
 }
 
+:root {
+  --slide-padding-x: 80px;
+  --slide-padding-y: 80px;
+  --font-family-base: 'Noto Sans JP', sans-serif;
+  --font-family-mono: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
+  --outer-margin-x: var(--slide-padding-x);
+  --outer-margin-y: 20px;
+}
+
 section.case-studies {
   --case-studies-gap: 40px;
   --case-studies-title-font-size: var(--font-size-l);
@@ -1215,12 +1248,15 @@ section.case-studies > div p {
 }
 
 :root {
-  --slide-padding-x: 80px;
-  --slide-padding-y: 80px;
-  --font-family-base: 'Noto Sans JP', sans-serif;
-  --font-family-mono: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
-  --outer-margin-x: var(--slide-padding-x);
-  --outer-margin-y: 20px;
+  --color-white: #f5f3ff;
+  --color-grey-lightest: #c4b5fd;
+  --color-grey-lighter: #8b5cf6;
+  --color-grey-light: #6d28d9;
+  --color-grey-medium: #4c1d95;
+  --color-grey-dark: #3b0764;
+  --color-grey-darker: #2e1065;
+  --color-grey-darkest: #1e1b4b;
+  --color-blue: #0d9488;
   --color-primary: #7c3aed;
   --color-accent: #a78bfa;
 }

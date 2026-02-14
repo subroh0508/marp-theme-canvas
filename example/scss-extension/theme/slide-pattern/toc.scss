@@ -1,8 +1,0 @@
-// cool toc pattern configuration
-
-@use 'pkg:@subroh0508/marp-theme-canvas/canvas/slide-pattern/toc' as base;
-
-@include base.configure(
-  $font-size: var(--font-size-xl),
-  $line-height: var(--line-height-loose)
-);

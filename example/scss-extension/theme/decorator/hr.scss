@@ -1,9 +1,0 @@
-// cool hr decorator configuration
-
-@use 'pkg:@subroh0508/marp-theme-canvas/canvas/decorator/hr' as base;
-
-@include base.configure(
-  $height: var(--hr-height),
-  $width: var(--hr-width),
-  $color: var(--hr-color)
-);

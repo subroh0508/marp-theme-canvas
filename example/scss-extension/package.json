@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "build": "sass --no-source-map --pkg-importer=node theme/cool.scss theme/cool.css",
+    "build": "sass --no-source-map --load-path=node_modules/@subroh0508/marp-theme-canvas/scss theme/cool.scss theme/cool.css",
     "preview": "pnpm build && marp --allow-local-files --html --theme theme/cool.css -wp demo.md"
   },
   "devDependencies": {

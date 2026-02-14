@@ -1,9 +1,0 @@
-// cool title pattern configuration
-
-@use 'pkg:@subroh0508/marp-theme-canvas/canvas/slide-pattern/title' as base;
-
-@include base.configure(
-  $padding-top: var(--base-padding-y),
-  $font-size-title: var(--font-size-3xl),
-  $color-metadata-text: var(--color-grey-light)
-);

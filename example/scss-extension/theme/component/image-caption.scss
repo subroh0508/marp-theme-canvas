@@ -1,7 +1,0 @@
-// cool image-caption configuration
-
-@use 'pkg:@subroh0508/marp-theme-canvas/canvas/component/image-caption' as base;
-
-@include base.configure(
-  $font-size: var(--font-size-s)
-);
