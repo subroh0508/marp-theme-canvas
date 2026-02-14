@@ -1,0 +1,5 @@
+// cool columns configuration
+
+@use '../../../../scss/canvas/common-layout/columns' as base;
+
+@include base.configure();

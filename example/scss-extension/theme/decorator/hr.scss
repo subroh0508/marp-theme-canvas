@@ -1,0 +1,9 @@
+// cool hr decorator configuration
+
+@use '../../../../scss/canvas/decorator/hr' as base;
+
+@include base.configure(
+  $height: var(--hr-height),
+  $width: var(--hr-width),
+  $color: var(--hr-color)
+);

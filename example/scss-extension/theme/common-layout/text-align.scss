@@ -1,0 +1,5 @@
+// cool text-align configuration
+
+@use '../../../../scss/canvas/common-layout/text-align' as base;
+
+@include base.configure();

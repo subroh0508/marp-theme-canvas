@@ -1,0 +1,36 @@
+// cool case-studies pattern
+// This is a custom slide pattern specific to the cool theme example.
+
+section.case-studies {
+  --case-studies-gap: 40px;
+  --case-studies-title-font-size: var(--font-size-l);
+  --case-studies-body-font-size: var(--font-size-m);
+  --case-studies-border-radius-image: var(--corner-radius-m);
+
+  flex-direction: row;
+  gap: var(--case-studies-gap);
+  align-items: flex-start;
+
+  > div {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+
+    img:not(.emoji) {
+      width: 100%;
+      border-radius: var(--case-studies-border-radius-image);
+      object-fit: cover;
+    }
+
+    h3, h4 {
+      font-size: var(--case-studies-title-font-size);
+      margin: 0.5em 0 0.25em;
+    }
+
+    p {
+      font-size: var(--case-studies-body-font-size);
+      margin: 0;
+    }
+  }
+}

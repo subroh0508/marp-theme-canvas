@@ -1,0 +1,5 @@
+// cool flex configuration
+
+@use '../../../../scss/canvas/common-layout/flex' as base;
+
+@include base.configure();
