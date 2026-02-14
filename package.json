@@ -20,12 +20,10 @@
       "sass": "./scss/canvas/_index.scss"
     },
     "./white-canvas": {
-      "sass": "./scss/white-canvas.scss",
-      "style": "./css/white-canvas.css"
+      "sass": "./scss/white-canvas.scss"
     },
     "./black-canvas": {
-      "sass": "./scss/black-canvas.scss",
-      "style": "./css/black-canvas.css"
+      "sass": "./scss/black-canvas.scss"
     },
     "./canvas": {
       "sass": "./scss/canvas/_index.scss"
