@@ -11,6 +11,13 @@
 
 [subroh0508.github.io/marp-theme-canvas/](https://subroh0508.github.io/marp-theme-canvas/)
 
+## デモ
+
+| white-canvas | black-canvas |
+|:---:|:---:|
+| 白背景のライトテーマ | 黒背景のダークテーマ |
+| [デモ](https://subroh0508.github.io/marp-theme-canvas/white-canvas/index.html) | [デモ](https://subroh0508.github.io/marp-theme-canvas/black-canvas/index.html) |
+
 ## 特徴
 
 - **2種類のテーマ**: ライトモード（white-canvas）とダークモード（black-canvas）

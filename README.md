@@ -11,6 +11,13 @@ A simple and minimal Marp theme. A design that eliminates unnecessary decoration
 
 [subroh0508.github.io/marp-theme-canvas/](https://subroh0508.github.io/marp-theme-canvas/)
 
+## Demo
+
+| white-canvas | black-canvas |
+|:---:|:---:|
+| Light theme with white background | Dark theme with black background |
+| [Demo](https://subroh0508.github.io/marp-theme-canvas/white-canvas/index.html) | [Demo](https://subroh0508.github.io/marp-theme-canvas/black-canvas/index.html) |
+
 ## Features
 
 - **2 Theme Variants**: Light mode (white-canvas) and dark mode (black-canvas)
