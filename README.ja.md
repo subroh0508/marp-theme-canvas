@@ -200,104 +200,21 @@ style: |
 ---
 ```
 
-## SCSSモジュール
+## テーマの拡張
 
-Canvasのスタイルはモジュール化されており、独自テーマ作成時に個別にインポートできます。
+ベーステーマを拡張して独自のカスタムテーマを作成できます。
 
-### モジュール構成
+### CSS拡張
 
-```
-scss/
-├── canvas/                 # ベースmixin（@useでインポート可能）
-│   ├── token/              # デザイントークン（色、タイポグラフィ）
-│   ├── component/          # HTML要素単体・組み合わせのスタイル（見出し、テーブル、コード、セクション等）
-│   ├── common-layout/      # 複数のslide-patternから参照される再利用可能なレイアウト定義
-│   ├── decorator/          # 明示的なクラス指定が必要な装飾スタイル
-│   └── slide-pattern/      # ページレイアウトパターン（タイトル、目次、アジェンダ等）
-├── white-canvas/           # ライトテーマ設定
-│   ├── token/              # テーマ固有のトークン
-│   ├── component/          # コンポーネントの設定
-│   └── slide-pattern/      # スライドパターンの設定
-├── black-canvas/           # ダークテーマ設定
-│   └── （white-canvasと同じ構造）
-├── white-canvas.scss       # ライトテーマのエントリーポイント
-└── black-canvas.scss       # ダークテーマのエントリーポイント
-```
+CSS変数の上書きとカスタムスタイルの追加で、ビルド不要でテーマを拡張できます。
 
-### ベースmixinを使用する
+[CSS Extension ガイド](https://subroh0508.github.io/marp-theme-canvas/extension/css)と[サンプルプロジェクト](./example/css-extension/)を参照してください。
 
-`canvas/`からベースmixinをインポートしてカスタムテーマを作成できます:
+### SCSS拡張
 
-```scss
-/*!
- * @theme my-custom-theme
- */
+SCSSの機能（ネスト、パーシャル、モジュールシステム）を活用した高度なテーマカスタマイズが可能です。
 
-// ベースmixinをインポート
-@use '@subroh0508/marp-theme-canvas/scss/canvas/component/heading' as heading;
-@use '@subroh0508/marp-theme-canvas/scss/canvas/component/section' as section;
-@use '@subroh0508/marp-theme-canvas/scss/canvas/slide-pattern/title' as title;
-
-// Google Fonts
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap');
-
-// スタイルを適用
-@include heading.configure(
-  $h1-font-size: 2em,
-  $h2-font-size: 1.5em,
-  $h1-font-weight: 700,
-  $h2-font-weight: 700,
-  $h3-font-weight: 700,
-  $h4-font-weight: 700,
-  $h5-font-weight: 400,
-  $h6-font-weight: 400,
-  $h1-line-height: 1.2,
-  $h2-line-height: 1.2,
-  $h3-line-height: 1.2,
-  $h4-line-height: 1.2,
-  $h5-line-height: 1.2,
-  $h6-line-height: 1.2,
-  $h2-color-text: var(--color-primary)
-);
-
-@include section.configure(
-  $width: 1920px,
-  $height: 1080px,
-  $padding-x: 80px,
-  $padding-y: 80px,
-  $color-bg: #fff,
-  $color-text: #0f172a,
-  $font-family: 'Noto Sans JP', sans-serif,
-  $font-size: 40px,
-  $line-height: 1.45
-);
-
-@include title.configure(
-  $font-size-title: 2.5em,
-  $color-metadata-text: #64748b
-);
-```
-
-### テーマ設定ファイルをインポートする
-
-設定済みのテーマファイルをインポートすることもできます:
-
-```scss
-// テーマ設定ファイルをインポート
-@use '@subroh0508/marp-theme-canvas/scss/white-canvas/component/heading';
-@use '@subroh0508/marp-theme-canvas/scss/white-canvas/component/section';
-```
-
-### CSSファイルを直接使用する
-
-```js
-// JavaScript/TypeScriptでCSSをインポート
-import '@subroh0508/marp-theme-canvas/white-canvas.css'
-import '@subroh0508/marp-theme-canvas/black-canvas.css'
-
-// 個別のCSSモジュールをインポート
-import '@subroh0508/marp-theme-canvas/white-canvas/component/heading.css'
-```
+[SCSS Extension ガイド](https://subroh0508.github.io/marp-theme-canvas/extension/scss)と[サンプルプロジェクト](./example/scss-extension/)を参照してください。
 
 ## 開発
 
