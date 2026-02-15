@@ -10,7 +10,7 @@ demo/
 │   ├── color.md            # カラーパレット
 │   ├── typography.md       # フォントサイズ、ウェイト、行間
 │   └── corner-radius.md    # ボーダー半径トークン
-├── element/                # HTML要素のデモ
+├── component/              # コンポーネントのデモ
 │   ├── heading.md          # H1-H6見出し
 │   ├── paragraph.md        # 段落テキスト
 │   ├── list.md             # 箇条書き・番号付きリスト
@@ -20,15 +20,18 @@ demo/
 │   ├── code.md             # インラインコードとコードブロック
 │   ├── hr.md               # 水平線
 │   ├── text-decorator.md   # 太字、マーク、ルビ
-│   └── prettylights.md     # シンタックスハイライト
-├── component/              # コンポーネントのデモ
+│   ├── prettylights.md     # シンタックスハイライト
 │   ├── section.md          # スライドベースレイアウト
 │   ├── header.md           # ヘッダー
 │   ├── footer.md           # フッター
 │   ├── pagination.md       # ページ番号
 │   └── image-caption.md    # 画像キャプション
 ├── common-layout/          # 共通レイアウトのデモ
-│   └── columns.md          # マルチカラムレイアウト
+│   ├── columns.md          # マルチカラムレイアウト
+│   ├── flex.md             # Flexアラインメントユーティリティ
+│   └── text-align.md       # テキストアラインメントユーティリティ
+├── decorator/              # デコレータのデモ
+│   └── hr.md               # 水平線デコレータ
 └── slide-pattern/          # スライドパターンのデモ
     ├── title.md            # タイトルページ
     ├── section.md          # セクション区切り

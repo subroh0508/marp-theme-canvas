@@ -10,7 +10,7 @@ demo/
 │   ├── color.md            # Color palette
 │   ├── typography.md       # Font size, weight, line height
 │   └── corner-radius.md    # Border radius tokens
-├── element/                # HTML element demos
+├── component/              # Component demos
 │   ├── heading.md          # H1-H6 headings
 │   ├── paragraph.md        # Paragraph text
 │   ├── list.md             # Unordered/ordered lists
@@ -20,15 +20,18 @@ demo/
 │   ├── code.md             # Inline code and code blocks
 │   ├── hr.md               # Horizontal rules
 │   ├── text-decorator.md   # Strong, mark, ruby
-│   └── prettylights.md     # Syntax highlighting
-├── component/              # Component demos
+│   ├── prettylights.md     # Syntax highlighting
 │   ├── section.md          # Slide base layout
 │   ├── header.md           # Header
 │   ├── footer.md           # Footer
 │   ├── pagination.md       # Page numbers
 │   └── image-caption.md    # Image caption
 ├── common-layout/          # Common layout demos
-│   └── columns.md          # Multi-column layout
+│   ├── columns.md          # Multi-column layout
+│   ├── flex.md             # Flex alignment utilities
+│   └── text-align.md       # Text alignment utilities
+├── decorator/              # Decorator demos
+│   └── hr.md               # Horizontal rule decorator
 └── slide-pattern/          # Slide pattern demos
     ├── title.md            # Title page
     ├── section.md          # Section divider
