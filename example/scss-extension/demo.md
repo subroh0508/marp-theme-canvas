@@ -1,4 +1,5 @@
 ---
+title: Cool Theme - SCSS Extension Example -
 marp: true
 theme: cool
 paginate: true

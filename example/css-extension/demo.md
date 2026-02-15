@@ -1,4 +1,5 @@
 ---
+title: Warm Theme - CSS Extension Example -
 marp: true
 theme: warm
 paginate: true
