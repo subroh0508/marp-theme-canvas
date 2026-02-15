@@ -20,7 +20,7 @@ A cool-toned theme built with SCSS extension
 
 1. Slide Patterns
 1. Column Layout
-1. Case Studies
+1. Decorators
 1. Components
 
 ---
@@ -65,6 +65,40 @@ Use `<!-- _class: style-name -->` to switch styles for each page.
 
 
 Display: large text emphasis
+
+---
+
+<!-- _class: case-studies -->
+
+## Case Studies
+
+<div class="col">
+
+![](https://picsum.photos/600/400?image=10)
+
+### Project Alpha
+
+A data visualization dashboard built with modern web technologies.
+
+</div>
+<div class="col">
+
+![](https://picsum.photos/600/400?image=20)
+
+### Project Beta
+
+Mobile-first responsive design for an e-commerce platform.
+
+</div>
+<div class="col">
+
+![](https://picsum.photos/600/400?image=30)
+
+### Project Gamma
+
+Real-time collaboration tool for distributed teams.
+
+</div>
 
 ---
 
@@ -130,39 +164,27 @@ This allows flexible image-text combinations.
 <!-- _paginate: false -->
 
 
-Case Studies
+Decorators
 
 ---
 
-<!-- _class: case-studies -->
+## Card
 
-## Case Studies
+Use `<div class="card">` to add background color and rounded corners to elements.
 
-<div class="col">
+<div class="card">
 
-![](https://picsum.photos/600/400?image=10)
+### Card Title
 
-### Project Alpha
-
-A data visualization dashboard built with modern web technologies.
+Card content with background and rounded corners.
 
 </div>
-<div class="col">
 
-![](https://picsum.photos/600/400?image=20)
+<br/>
 
-### Project Beta
+<div class="card">
 
-Mobile-first responsive design for an e-commerce platform.
-
-</div>
-<div class="col">
-
-![](https://picsum.photos/600/400?image=30)
-
-### Project Gamma
-
-Real-time collaboration tool for distributed teams.
+A simple text card without a heading.
 
 </div>
 

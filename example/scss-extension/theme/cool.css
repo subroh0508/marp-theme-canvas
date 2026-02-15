@@ -1223,6 +1223,15 @@ section.case-studies > div p {
   margin: 0;
 }
 
+.card {
+  --card-color-bg: var(--color-grey-lightest);
+  --card-border-radius: var(--corner-radius-m);
+  --card-padding: 1em 1.5em;
+  background-color: var(--card-color-bg);
+  border-radius: var(--card-border-radius);
+  padding: var(--card-padding);
+}
+
 :root {
   --color-white: #f5f3ff;
   --color-grey-lightest: #c4b5fd;

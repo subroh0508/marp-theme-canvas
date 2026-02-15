@@ -33,6 +33,17 @@
   --link-color-text: #b45309;
 }
 
+/* Card - decorator for rounded background elements */
+.card {
+  --card-color-bg: var(--color-grey-lightest);
+  --card-border-radius: var(--corner-radius-m);
+  --card-padding: 1em 1.5em;
+
+  background-color: var(--card-color-bg);
+  border-radius: var(--card-border-radius);
+  padding: var(--card-padding);
+}
+
 /* Case Studies - custom slide pattern */
 section.case-studies {
   --case-studies-gap: 40px;

@@ -26,6 +26,9 @@
 // Custom Slide Pattern
 @use 'slide-pattern/case-studies';
 
+// Custom Decorator
+@use 'decorator/card';
+
 :root {
   --color-white: #f5f3ff;
   --color-grey-lightest: #c4b5fd;
