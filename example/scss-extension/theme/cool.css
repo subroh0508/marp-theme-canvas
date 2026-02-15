@@ -1223,6 +1223,21 @@ section.case-studies > div p {
   margin: 0;
 }
 
+section > h2:first-child {
+  right: var(--base-padding-x);
+  padding-bottom: 0.25em;
+}
+
+h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: var(--color-primary);
+}
+
 section[data-marpit-pagination]::after {
   content: attr(data-marpit-pagination) " / " attr(data-marpit-pagination-total);
 }

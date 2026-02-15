@@ -1,0 +1,17 @@
+// cool heading component
+// Adds full-width underline to h2
+
+section > h2:first-child {
+  right: var(--base-padding-x);
+  padding-bottom: 0.25em;
+}
+
+h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: var(--color-primary);
+}
