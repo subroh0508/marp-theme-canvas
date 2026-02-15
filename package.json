@@ -20,10 +20,10 @@
       "sass": "./scss/canvas/_index.scss"
     },
     "./white-canvas.scss": {
-      "sass": "./scss/white-canvas.scss"
+      "sass": "./scss/white-canvas/_index.scss"
     },
     "./black-canvas.scss": {
-      "sass": "./scss/black-canvas.scss"
+      "sass": "./scss/black-canvas/_index.scss"
     },
     "./canvas": {
       "sass": "./scss/canvas/_index.scss"
@@ -50,11 +50,7 @@
       "sass": "./scss/canvas/slide-pattern/*"
     },
     "./white-canvas.css": "./css/white-canvas.css",
-    "./black-canvas.css": "./css/black-canvas.css",
-    "./white-canvas/*.css": "./css/white-canvas/*.css",
-    "./black-canvas/*.css": "./css/black-canvas/*.css",
-    "./white-canvas/*/*.css": "./css/white-canvas/*/*.css",
-    "./black-canvas/*/*.css": "./css/black-canvas/*/*.css"
+    "./black-canvas.css": "./css/black-canvas.css"
   },
   "files": [
     "css",

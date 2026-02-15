@@ -1,0 +1,47 @@
+// Token
+@use 'token/color';
+@use 'token/typography';
+@use 'token/corner-radius';
+
+// Component
+@use 'component/heading';
+@use 'component/paragraph';
+@use 'component/list';
+@use 'component/link';
+@use 'component/table';
+@use 'component/code';
+@use 'component/blockquote';
+@use 'component/hr';
+@use 'component/text-decorator';
+@use 'component/image-caption';
+@use 'component/prettylights/light';
+@use 'component/section';
+@use 'component/pagination';
+@use 'component/header';
+@use 'component/footer';
+// Common Layout
+@use 'common-layout/columns';
+@use 'common-layout/flex';
+@use 'common-layout/text-align';
+// Decorator
+@use 'decorator/hr' as decorator-hr;
+
+// Slide Pattern
+@use 'slide-pattern/title';
+@use 'slide-pattern/toc';
+@use 'slide-pattern/section' as slide-pattern-section;
+@use 'slide-pattern/agenda';
+@use 'slide-pattern/display';
+
+// Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap');
+
+:root {
+  --slide-padding-x: 80px;
+  --slide-padding-y: 80px;
+  --font-family-base: 'Noto Sans JP', sans-serif;
+  --font-family-mono: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
+
+  --outer-margin-x: var(--slide-padding-x);
+  --outer-margin-y: 20px;
+}
