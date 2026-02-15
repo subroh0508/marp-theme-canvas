@@ -12,8 +12,8 @@ importers:
         specifier: ^4.2.3
         version: 4.2.3
       '@subroh0508/marp-theme-canvas':
-        specifier: ^0.3.2
-        version: 0.3.2
+        specifier: ^0.4.0
+        version: 0.4.0
 
 packages:
 
@@ -70,8 +70,8 @@ packages:
     engines: {node: '>=18'}
     hasBin: true
 
-  '@subroh0508/marp-theme-canvas@0.3.2':
-    resolution: {integrity: sha512-oBLDGWUJWaA8qE/yyZuvVPCPjKpEjeEfK3AzZ35uXZbsg2MAEpJ46ehINTNzPQjVAk/vf+ROqdz5E+uB6L9sRg==}
+  '@subroh0508/marp-theme-canvas@0.4.0':
+    resolution: {integrity: sha512-oRkVgEB1wl8dvytuu2WRJ+Kp8zzsuRNmKPHOrM1IpdXGp5ZoHsAcLNGWjB/jQYpzJk0RWkU7DEyw7Q3kxMkDog==}
 
   '@tootallnate/quickjs-emscripten@0.23.0':
     resolution: {integrity: sha512-C5Mc6rdnsaJDjO3UpGW/CQTHtCKaYlScZTly4JIu97Jxo/odCiH0ITnDXSJPTOrEKk/ycSZ0AOgTmkDtkOsvIA==}
@@ -724,7 +724,7 @@ snapshots:
       - react-native-b4a
       - supports-color
 
-  '@subroh0508/marp-theme-canvas@0.3.2': {}
+  '@subroh0508/marp-theme-canvas@0.4.0': {}
 
   '@tootallnate/quickjs-emscripten@0.23.0': {}
 
