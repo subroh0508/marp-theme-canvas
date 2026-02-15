@@ -9,6 +9,13 @@ export default defineConfig({
   themeConfig: {
     sidebar: [
       {
+        text: 'Extension',
+        items: [
+          { text: 'CSS', link: '/extension/css' },
+          { text: 'SCSS', link: '/extension/scss' },
+        ]
+      },
+      {
         text: 'Token',
         items: [
           { text: 'color', link: '/token/color' },
