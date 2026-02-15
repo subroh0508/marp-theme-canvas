@@ -50,11 +50,7 @@
       "sass": "./scss/canvas/slide-pattern/*"
     },
     "./white-canvas.css": "./css/white-canvas.css",
-    "./black-canvas.css": "./css/black-canvas.css",
-    "./white-canvas/*.css": "./css/white-canvas/*.css",
-    "./black-canvas/*.css": "./css/black-canvas/*.css",
-    "./white-canvas/*/*.css": "./css/white-canvas/*/*.css",
-    "./black-canvas/*/*.css": "./css/black-canvas/*/*.css"
+    "./black-canvas.css": "./css/black-canvas.css"
   },
   "files": [
     "css",
