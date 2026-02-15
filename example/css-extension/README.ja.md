@@ -13,13 +13,9 @@ pnpm preview
 
 ## 仕組み
 
-`theme/warm.css` でベーステーマを `@import` でインポートし、CSS変数を上書きしています:
+1. `@import "white-canvas"` でベーステーマをインポート
+2. `:root {}` でCSS変数（色、フォント、レイアウト）を上書き
+3. カスタムスタイル（見出し下線、ページネーション、デコレータ、スライドパターン）を追加
+4. Marp CLIで `--theme-set`（ベースCSS）+ `--theme`（カスタムCSS）を指定してプレビュー — ビルド不要
 
-```css
-@import "white-canvas";
-
-:root {
-  --color-primary: #c2410c;
-  --color-accent: #d4a574;
-}
-```
+詳細なガイドは [CSS Extension ドキュメント](https://subroh0508.github.io/marp-theme-canvas/extension/css) を参照してください。

@@ -13,20 +13,9 @@ This will compile the SCSS theme and open a live preview in your browser.
 
 ## How It Works
 
-The `theme/cool.scss` file imports the base theme via `@use` and adds custom styles:
+1. Import the base theme with `@use 'pkg:@subroh0508/marp-theme-canvas/white-canvas.scss'`
+2. Split custom styles into partials (component, decorator, slide-pattern) and import them with `@use`
+3. Override CSS variables (colors, fonts, layout) in `:root {}`
+4. Build with `sass --pkg-importer=node` and preview with Marp CLI using `--theme` only — the base theme is compiled into the output CSS
 
-```scss
-@use 'pkg:@subroh0508/marp-theme-canvas/white-canvas.scss';
-
-// Custom Component
-@use 'component/heading';
-@use 'component/pagination';
-
-// Custom Decorator
-@use 'decorator/card';
-
-:root {
-  --color-primary: #7c3aed;
-  --color-accent: #a78bfa;
-}
-```
+For a detailed guide, see the [SCSS Extension documentation](https://subroh0508.github.io/marp-theme-canvas/extension/scss).

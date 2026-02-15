@@ -13,20 +13,9 @@ SCSSテーマをコンパイルし、ブラウザでライブプレビューを�
 
 ## 仕組み
 
-`theme/cool.scss` でベーステーマを `@use` でインポートし、カスタムスタイルを追加しています:
+1. `@use 'pkg:@subroh0508/marp-theme-canvas/white-canvas.scss'` でベーステーマをインポート
+2. カスタムスタイルをパーシャル（component、decorator、slide-pattern）に分割し、`@use` でインポート
+3. `:root {}` でCSS変数（色、フォント、レイアウト）を上書き
+4. `sass --pkg-importer=node` でビルドし、Marp CLIでは `--theme` のみでプレビュー — ベーステーマは出力CSSにコンパイル済み
 
-```scss
-@use 'pkg:@subroh0508/marp-theme-canvas/white-canvas.scss';
-
-// Custom Component
-@use 'component/heading';
-@use 'component/pagination';
-
-// Custom Decorator
-@use 'decorator/card';
-
-:root {
-  --color-primary: #7c3aed;
-  --color-accent: #a78bfa;
-}
-```
+詳細なガイドは [SCSS Extension ドキュメント](https://subroh0508.github.io/marp-theme-canvas/extension/scss) を参照してください。

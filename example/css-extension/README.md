@@ -13,13 +13,9 @@ This will open a live preview in your browser.
 
 ## How It Works
 
-The `theme/warm.css` file imports the base theme via `@import` and overrides CSS variables:
+1. Import the base theme with `@import "white-canvas"`
+2. Override CSS variables (colors, fonts, layout) in `:root {}`
+3. Add custom styles (heading underline, pagination format, decorators, slide patterns)
+4. Preview with Marp CLI using `--theme-set` (base CSS) + `--theme` (custom CSS) — no build step required
 
-```css
-@import "white-canvas";
-
-:root {
-  --color-primary: #c2410c;
-  --color-accent: #d4a574;
-}
-```
+For a detailed guide, see the [CSS Extension documentation](https://subroh0508.github.io/marp-theme-canvas/extension/css).
