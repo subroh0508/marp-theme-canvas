@@ -1,0 +1,12 @@
+// cool card decorator
+// Adds rounded corners and background color to elements with the card class.
+
+.card {
+  --card-color-bg: var(--color-grey-lightest);
+  --card-border-radius: var(--corner-radius-m);
+  --card-padding: 1em 1.5em;
+
+  background-color: var(--card-color-bg);
+  border-radius: var(--card-border-radius);
+  padding: var(--card-padding);
+}

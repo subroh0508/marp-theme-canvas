@@ -38,6 +38,12 @@ coverage/
 docs/.vitepress/cache
 docs/.vitepress/dist
 
+# Example dependencies
+example/*/node_modules/
+
+# Example build output
+example/*/*.html
+
 # Build output
 docs/public/
 dist/

@@ -11,6 +11,13 @@ A simple and minimal Marp theme. A design that eliminates unnecessary decoration
 
 [subroh0508.github.io/marp-theme-canvas/](https://subroh0508.github.io/marp-theme-canvas/)
 
+## Demo
+
+| white-canvas | black-canvas |
+|:---:|:---:|
+| Light theme with white background | Dark theme with black background |
+| [Demo](https://subroh0508.github.io/marp-theme-canvas/white-canvas/index.html) | [Demo](https://subroh0508.github.io/marp-theme-canvas/black-canvas/index.html) |
+
 ## Features
 
 - **2 Theme Variants**: Light mode (white-canvas) and dark mode (black-canvas)
@@ -200,104 +207,21 @@ style: |
 ---
 ```
 
-## SCSS Modules
+## Theme Extension
 
-Canvas styles are modularized and can be imported individually when creating custom themes.
+You can create your own custom theme by extending the base theme.
 
-### Module Structure
+### CSS Extension
 
-```
-scss/
-├── canvas/                 # Base mixins (importable via @use)
-│   ├── token/              # Design tokens (color, typography)
-│   ├── component/          # Styles for HTML elements and their combinations (heading, table, code, section, etc.)
-│   ├── common-layout/      # Reusable layout definitions referenced by multiple slide patterns
-│   ├── decorator/          # Decorative styles requiring explicit class specification
-│   └── slide-pattern/      # Page layout patterns (title, toc, agenda, etc.)
-├── white-canvas/           # Light theme configuration
-│   ├── token/              # Theme-specific tokens
-│   ├── component/          # Component configurations
-│   └── slide-pattern/      # Slide pattern configurations
-├── black-canvas/           # Dark theme configuration
-│   └── (same structure as white-canvas)
-├── white-canvas.scss       # Light theme entry point
-└── black-canvas.scss       # Dark theme entry point
-```
+Override CSS variables and add custom styles — no build step required.
 
-### Using Base Mixins
+See the [CSS Extension guide](https://subroh0508.github.io/marp-theme-canvas/extension/css) and the [example project](./example/css-extension/).
 
-Import base mixins from `canvas/` to create custom themes:
+### SCSS Extension
 
-```scss
-/*!
- * @theme my-custom-theme
- */
+Use SCSS features (nesting, partials, module system) for advanced theme customization.
 
-// Import base mixins
-@use '@subroh0508/marp-theme-canvas/scss/canvas/component/heading' as heading;
-@use '@subroh0508/marp-theme-canvas/scss/canvas/component/section' as section;
-@use '@subroh0508/marp-theme-canvas/scss/canvas/slide-pattern/title' as title;
-
-// Google Fonts
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap');
-
-// Apply styles with your values
-@include heading.configure(
-  $h1-font-size: 2em,
-  $h2-font-size: 1.5em,
-  $h1-font-weight: 700,
-  $h2-font-weight: 700,
-  $h3-font-weight: 700,
-  $h4-font-weight: 700,
-  $h5-font-weight: 400,
-  $h6-font-weight: 400,
-  $h1-line-height: 1.2,
-  $h2-line-height: 1.2,
-  $h3-line-height: 1.2,
-  $h4-line-height: 1.2,
-  $h5-line-height: 1.2,
-  $h6-line-height: 1.2,
-  $h2-color-text: var(--color-primary)
-);
-
-@include section.configure(
-  $width: 1920px,
-  $height: 1080px,
-  $padding-x: 80px,
-  $padding-y: 80px,
-  $color-bg: #fff,
-  $color-text: #0f172a,
-  $font-family: 'Noto Sans JP', sans-serif,
-  $font-size: 40px,
-  $line-height: 1.45
-);
-
-@include title.configure(
-  $font-size-title: 2.5em,
-  $color-metadata-text: #64748b
-);
-```
-
-### Importing Theme Configuration Files
-
-You can also import pre-configured theme files:
-
-```scss
-// Import theme configuration files
-@use '@subroh0508/marp-theme-canvas/scss/white-canvas/component/heading';
-@use '@subroh0508/marp-theme-canvas/scss/white-canvas/component/section';
-```
-
-### Using CSS Files Directly
-
-```js
-// Import CSS in JavaScript/TypeScript
-import '@subroh0508/marp-theme-canvas/white-canvas.css'
-import '@subroh0508/marp-theme-canvas/black-canvas.css'
-
-// Import individual CSS modules
-import '@subroh0508/marp-theme-canvas/white-canvas/component/heading.css'
-```
+See the [SCSS Extension guide](https://subroh0508.github.io/marp-theme-canvas/extension/scss) and the [example project](./example/scss-extension/).
 
 ## Development
 

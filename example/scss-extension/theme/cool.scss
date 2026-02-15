@@ -1,0 +1,50 @@
+/*!
+ * Cool - A cool-toned Marp theme extending white-canvas
+ *
+ * This is an example of building a custom theme using SCSS extension.
+ * It imports white-canvas and overrides color CSS variables for a cool color scheme.
+ *
+ * Build:
+ *   pnpm build
+ *
+ * Preview:
+ *   pnpm preview
+ *
+ * @theme cool
+ * @author subroh_0508
+ *
+ * @auto-scaling true
+ * @size 16:9 1920px 1080px
+ *
+ * MIT License
+ * Copyright (c) 2026 Subroh Nishikori
+ * https://github.com/subroh0508/marp-theme-canvas/blob/main/LICENSE
+ */
+
+@use 'pkg:@subroh0508/marp-theme-canvas/white-canvas.scss';
+
+// Custom Slide Pattern
+@use 'slide-pattern/case-studies';
+
+// Custom Component
+@use 'component/heading';
+@use 'component/pagination';
+
+// Custom Decorator
+@use 'decorator/card';
+
+:root {
+  --color-white: #f5f3ff;
+  --color-grey-lightest: #c4b5fd;
+  --color-grey-lighter: #8b5cf6;
+  --color-grey-light: #6d28d9;
+  --color-grey-medium: #4c1d95;
+  --color-grey-dark: #3b0764;
+  --color-grey-darker: #2e1065;
+  --color-grey-darkest: #1e1b4b;
+
+  --color-primary: #7c3aed;
+  --color-accent: #a78bfa;
+
+  --link-color-text: #0d9488;
+}
