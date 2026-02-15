@@ -2,7 +2,7 @@
 marp: true
 theme: default
 paginate: true
-footer: Canvas v0.3.4
+footer: Canvas v0.4.0
 style: |
   section {
     --color-primary: #3b91c4;
