@@ -33,6 +33,11 @@
   --link-color-text: #b45309;
 }
 
+/* Pagination - display "current / total" format */
+section[data-marpit-pagination]::after {
+  content: attr(data-marpit-pagination) " / " attr(data-marpit-pagination-total);
+}
+
 /* Card - decorator for rounded background elements */
 .card {
   --card-color-bg: var(--color-grey-lightest);

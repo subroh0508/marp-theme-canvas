@@ -1223,6 +1223,10 @@ section.case-studies > div p {
   margin: 0;
 }
 
+section[data-marpit-pagination]::after {
+  content: attr(data-marpit-pagination) " / " attr(data-marpit-pagination-total);
+}
+
 .card {
   --card-color-bg: var(--color-grey-lightest);
   --card-border-radius: var(--corner-radius-m);

@@ -1,0 +1,6 @@
+// cool pagination component
+// Overrides pagination to display "current / total" format
+
+section[data-marpit-pagination]::after {
+  content: attr(data-marpit-pagination) " / " attr(data-marpit-pagination-total);
+}

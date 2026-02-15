@@ -190,6 +190,24 @@ A simple text card without a heading.
 
 ---
 
+## Pagination
+
+Page numbers display as "current / total" format (see bottom-right).
+
+Override with CSS variables:
+
+```yaml
+---
+style: |
+  :root {
+    --pagination-font-size: 1.2em;
+    --pagination-color-text: #3b91c4;
+  }
+---
+```
+
+---
+
 <!-- _class: section -->
 <!-- _paginate: false -->
 
