@@ -25,11 +25,12 @@
   --color-grey-dark: #4a3728;
   --color-grey-darker: #3d2b1f;
   --color-grey-darkest: #2c1810;
-  --color-blue: #b45309;
 
   /* Theme-specific colors */
   --color-primary: #c2410c;
   --color-accent: #d4a574;
+
+  --link-color-text: #b45309;
 }
 
 /* Case Studies - custom slide pattern */
