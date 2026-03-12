@@ -6,20 +6,20 @@
     --image-caption-font-size: #{$font-size};
   }
 
-  :has(> img + br + em) {
+  :has(> img:not(.emoji) + br + em) {
     width: fit-content;
   }
 
-  img:has(+ br + em) {
+  img:not(.emoji):has(+ br + em) {
     display: block;
     margin: 0 auto;
   }
 
-  img + br:has(+ em) {
+  img:not(.emoji) + br:has(+ em) {
     display: none;
   }
 
-  img + br + em {
+  img:not(.emoji) + br + em {
     display: block;
     font-style: normal;
     font-size: var(--image-caption-font-size);
