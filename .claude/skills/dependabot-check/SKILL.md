@@ -1,7 +1,7 @@
 ---
 name: dependabot-check
 description: Dependabot PRの影響調査を完全自動化する。npm（sass / @marp-team/marp-cli / vitepress 他）と github-actions の両方のエコシステムで、リリースノート要約・該当コードの特定・ローカル検証（CSSビルドdiff、Marpレンダリング、docs:build）・PRへの構造化コメント投稿・無影響時の自動Approveまでを一気通貫で実行する。「dependabot」「依存関係更新」「PR影響調査」「マイナー/メジャー更新の影響を確認して」「このdependabot通していい？」と言われたら必ず使う。マージは絶対に行わない。
-allowed-tools: Bash, Read, Glob, Grep, AskUserQuestion
+allowed-tools: Bash, Bash(gh pr list:*), Bash(gh pr view:*), Bash(gh pr comment:*), Bash(gh pr review:*), Bash(gh pr checkout:*), Bash(gh release view:*), Bash(gh api:*), Bash(gh auth status:*), Read, Glob, Grep, AskUserQuestion
 ---
 
 # dependabot-check
