@@ -4,13 +4,6 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
-    # Pin actions to commit SHAs (with version comment) for supply-chain safety.
-    # Dependabot preserves the existing SHA-pinning style and bumps both the SHA
-    # and the trailing version comment together.
-    groups:
-      github-actions:
-        patterns:
-          - "*"
 
   - package-ecosystem: "npm"
     directory: "/"
